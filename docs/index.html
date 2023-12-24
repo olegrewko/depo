@@ -7,25 +7,7 @@
     <title>bw</title>
     <!-- <link rel="icon" href="img/favicon.ico"> -->
   <link rel="icon" href="/favicon.ico">
-  <!-- <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/manifest.json">
-  <meta name="msapplication-TileColor" content="#ffffff">
-  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-  <meta name="theme-color" content="#ffffff">
  
-  <meta name="viewport" content="wih5h=device-wih5h, initial-scale=1"> -->
    
    <link rel="stylesheet" href="../dist/css/main.min.css" />
     <link rel="stylesheet" href="css/normalize.css" />
@@ -58,7 +40,7 @@
                 
                  <div class="dropdown-content" id="myDropdown">
 									<a href="#heat">Loudspeakers</a>
-                 	<a href="">Sound Bars</a>
+                 	                <a href="">Sound Bars</a>
 									<a href="">Home Theater</a>
 									<a href="">Integrated Solutions</a>
 								 </div>
@@ -70,7 +52,7 @@
                 
                  <div class="dropdown-content" id="myHeadphones">
 									<a href="#headphones">Headphones</a>
-                 	<a href="">Earbuds</a>
+                 	                <a href="">Earbuds</a>
 									
 								 </div>
                 </li>
@@ -86,8 +68,12 @@
 								 </div>
                 </li>
                 <li class="menu__list-item dropdown">
-                  <a class="dropbtn" >Find Store</a>
-                                            
+                  <a class="dropbtn" onclick="myFunctionFind()" >Find Store</a>
+                      <div class="dropdown-content" id="myFind">
+									<a href="#headphones">Stores</a>
+                 	                <a href="">Cart</a>
+									
+								 </div>                        
                                 
                 </li>
              
@@ -243,7 +229,7 @@
           <div class="septic__left">
    
        
-        <h3 class="text-left">Bowers&Wilkins 602 S2</h3>
+            <h3 class="text-left">Bowers&Wilkins 602 S2</h3>
  
             
             <h5> 
@@ -259,41 +245,59 @@
                Количество полос:<br>
                3-полосная с фазоинвертором<br>
 
-Диапазон воспроизводимых частот:
-35 — 24000 Гц<br>
+                Диапазон воспроизводимых частот:
+                35 — 24000 Гц<br>
 
-Сопротивление:
-8 Ом<br>
+                Сопротивление:
+                8 Ом<br>
 
-Чувствительность:
+                Чувствительность:
 
-90Дб<br>
+                90Дб<br>
 
-Габариты:
-1087 × 366 × 414 мм<br>
+                Габариты:
+                1087 × 366 × 414 мм<br>
 
-Выбор расцветки
-<label class="radio option">
-<input class="real-radio-black" type="radio" id="black" name="cat" value="black">
+                Выбор расцветки
+                <label class="radio option">
+                <input class="real-radio-black" type="radio" id="black" name="cat" value="black">
 
-<span class="custom-radio-black"></span>
-<span class="custom-radio-text">black</span>
+                <span class="custom-radio-black"></span>
+                <span class="custom-radio-text">black</span>
 
-</label> 
-<label class="radio option">	
-<input class="real-radio-white" type="radio" id="white" name="cat" value="white">
-<span class="custom-radio-white"></span>
-<span class="custom-radio-text">white</span>
-</label> 
-<label class="radio option">	
-<input class="real-radio-brown" type="radio" id="brown" name="cat" value="brown">
-<span class="custom-radio-brown"></span>
-<span class="custom-radio-text">brown</span>
-</label>
+                </label> 
+                <label class="radio option">	
+                <input class="real-radio-white" type="radio" id="white" name="cat" value="white">
+                <span class="custom-radio-white"></span>
+                <span class="custom-radio-text">white</span>
+                </label> 
+                <label class="radio option">	
+                <input class="real-radio-brown" type="radio" id="brown" name="cat" value="brown">
+                <span class="custom-radio-brown"></span>
+                <span class="custom-radio-text">brown</span>
+                </label>
              
                          
               <p>Стоимость: 705 000 р  </p>
-           
+                   <div class="card-info__stepper stepper">
+                    <button
+                        class="btn-reset stepper__btn stepper__btn--minus stepper__btn--disabled"
+                        aria-label="minus"
+                    >
+                    <img src="img/minus.png" alt="">
+                    
+                    </button>
+                    <input type="text" class="stepper__input" value="1" maxlength="4" />
+                    <button
+                        class="btn-reset stepper__btn stepper__btn--plus"
+                        aria-label="plus"
+                    >
+                    <img src="img/plus.png" alt="">
+                    
+                    </button>
+                    </div>
+                    <button class="btn-reset card-info__btn38 card-info__btn--tocart">Add to cart</button>
+                    <!-- <button class="btn-reset card-info__btn38 card-info__btn--towishlist">Add to wishlist</button> -->
 
                 
       </div>
@@ -378,7 +382,24 @@
              
                          
               <p>Стоимость: 905 000 р  </p>
-           
+                       <div class="card-info__stepper stepper">
+                    <button
+                        class="btn-reset stepper__btn stepper__btn--minus stepper__btn--disabled"
+                        aria-label="minus"
+                    >
+                    <img src="img/minus.png" alt="">
+                    
+                    </button>
+                    <input type="text" class="stepper__input" value="1" maxlength="4" />
+                    <button
+                        class="btn-reset stepper__btn stepper__btn--plus"
+                        aria-label="plus"
+                    >
+                    <img src="img/plus.png" alt="">
+                    
+                    </button>
+                    </div>
+                    <button class="btn-reset card-info__btn38 card-info__btn--tocart">Add to cart</button>       
 
                 
       </div>
@@ -444,7 +465,24 @@ WiFi, Apple® AirPlay 2®, Spotify® Connect, Roon и Bluetooth совмести
                <h5>Эксклюзивная беспроводная технология FORMATION обеспечивает идеальную синхронизацию колонок в комнате.
                  Каждая деталь будет услышана в идеальной гармонии.
                 </h5>
-             
+               <div class="card-info__stepper stepper">
+                    <button
+                        class="btn-reset stepper__btn stepper__btn--minus stepper__btn--disabled"
+                        aria-label="minus"
+                    >
+                    <img src="img/minus.png" alt="">
+                    
+                    </button>
+                    <input type="text" class="stepper__input" value="1" maxlength="4" />
+                    <button
+                        class="btn-reset stepper__btn stepper__btn--plus"
+                        aria-label="plus"
+                    >
+                    <img src="img/plus.png" alt="">
+                    
+                    </button>
+                    </div>
+                    <button class="btn-reset card-info__btn38 card-info__btn--tocart">Add to cart</button>             
 
            
 
@@ -522,9 +560,26 @@ WiFi, Apple® AirPlay 2®, Spotify® Connect, Roon и Bluetooth совмести
           </div>
 
           <div class="z__left">
-          <img src="img/a1.jpg" alt="img/a1.jpg" >   
+                <img src="img/a1.jpg" alt="img/a1.jpg" >   
        
- 
+                    <!-- <div class="card-info__stepper stepper">
+                    <button
+                        class="btn-reset stepper__btn stepper__btn--minus stepper__btn--disabled"
+                        aria-label="minus"
+                    >
+                    <img src="img/minus.png" alt="">
+                    
+                    </button>
+                    <input type="text" class="stepper__input" value="1" maxlength="4" />
+                    <button
+                        class="btn-reset stepper__btn stepper__btn--plus"
+                        aria-label="plus"
+                    >
+                    <img src="img/plus.png" alt="">
+                    
+                    </button>
+                    </div>
+                    <button class="btn-reset card-info__btn38 card-info__btn--tocart">Add to cart</button> -->
            
 
                 
@@ -601,7 +656,24 @@ WiFi, Apple® AirPlay 2®, Spotify® Connect, Roon и Bluetooth совмести
                          
               <p>Стоимость: 905 000 р  </p>
            
-
+               <div class="card-info__stepper stepper">
+                    <button
+                        class="btn-reset stepper__btn stepper__btn--minus stepper__btn--disabled"
+                        aria-label="minus"
+                    >
+                    <img src="img/minus.png" alt="">
+                    
+                    </button>
+                    <input type="text" class="stepper__input" value="1" maxlength="4" />
+                    <button
+                        class="btn-reset stepper__btn stepper__btn--plus"
+                        aria-label="plus"
+                    >
+                    <img src="img/plus.png" alt="">
+                    
+                    </button>
+                    </div>
+                    <button class="btn-reset card-info__btn38 card-info__btn--tocart">Add to cart</button>
                 
           </div>
           
@@ -624,6 +696,28 @@ WiFi, Apple® AirPlay 2®, Spotify® Connect, Roon и Bluetooth совмести
               <p>Беспроводные наушники с шумоподавлением.</p>
               <div class="dummy"></div>
               <h6>Цена&nbsp1 500&nbspруб</h6>
+            <div class="product__content-box">
+                 <div class="card-info__stepper stepper-mini">
+                    <button
+                        class="btn-reset stepper__btn stepper__btn--minus stepper__btn--disabled"
+                        aria-label="minus"
+                    >
+                    <img src="img/minus.png" alt="">
+                    
+                    </button>
+                    <input type="text" class="stepper__input" value="1" maxlength="4" />
+                    <button
+                        class="btn-reset stepper__btn stepper__btn--plus"
+                        aria-label="plus"
+                    >
+                    <img src="img/plus.png" alt="">
+                    
+                    </button>
+                </div>
+                 <button class="btn-reset card-info__btn card-info__btn--tocart">
+                Add to cart
+              </button>
+            </div>
             </div>
 
             <div class="card">
@@ -633,6 +727,28 @@ WiFi, Apple® AirPlay 2®, Spotify® Connect, Roon и Bluetooth совмести
               <p>Беспроводные наушники с шумоподавлением.</p>
               <div class="dummy"></div>
               <h6>Цена&nbsp1 200&nbspруб</h6>
+              <div class="product__content-box">
+                 <div class="card-info__stepper stepper-mini">
+                    <button
+                        class="btn-reset stepper__btn stepper__btn--minus stepper__btn--disabled"
+                        aria-label="minus"
+                    >
+                    <img src="img/minus.png" alt="">
+                    
+                    </button>
+                    <input type="text" class="stepper__input" value="1" maxlength="4" />
+                    <button
+                        class="btn-reset stepper__btn stepper__btn--plus"
+                        aria-label="plus"
+                    >
+                    <img src="img/plus.png" alt="">
+                    
+                    </button>
+                </div>
+                 <button class="btn-reset card-info__btn card-info__btn--tocart">
+                Add to cart
+              </button>
+            </div>
             </div>
           </div>
           <div class="cell-600">
@@ -643,6 +759,28 @@ WiFi, Apple® AirPlay 2®, Spotify® Connect, Roon и Bluetooth совмести
               <p>Беспроводные наушники с шумоподавлением.</p>
               <div class="dummy"></div>
               <h6>Цена&nbsp1 200&nbspруб</h6>
+              <div class="product__content-box">
+                 <div class="card-info__stepper stepper-mini">
+                    <button
+                        class="btn-reset stepper__btn stepper__btn--minus stepper__btn--disabled"
+                        aria-label="minus"
+                    >
+                    <img src="img/minus.png" alt="">
+                    
+                    </button>
+                    <input type="text" class="stepper__input" value="1" maxlength="4" />
+                    <button
+                        class="btn-reset stepper__btn stepper__btn--plus"
+                        aria-label="plus"
+                    >
+                    <img src="img/plus.png" alt="">
+                    
+                    </button>
+                </div>
+                 <button class="btn-reset card-info__btn card-info__btn--tocart">
+                Add to cart
+              </button>
+            </div>  
             </div>
 
             <div class="card">
@@ -652,6 +790,28 @@ WiFi, Apple® AirPlay 2®, Spotify® Connect, Roon и Bluetooth совмести
               <p>Беспроводные наушники с шумоподавлением.</p>
               <div class="dummy"></div>
               <h6>Цена&nbsp1 200&nbspруб</h6>
+              <div class="product__content-box">
+                 <div class="card-info__stepper stepper-mini">
+                    <button
+                        class="btn-reset stepper__btn stepper__btn--minus stepper__btn--disabled"
+                        aria-label="minus"
+                    >
+                    <img src="img/minus.png" alt="">
+                    
+                    </button>
+                    <input type="text" class="stepper__input" value="1" maxlength="4" />
+                    <button
+                        class="btn-reset stepper__btn stepper__btn--plus"
+                        aria-label="plus"
+                    >
+                    <img src="img/plus.png" alt="">
+                    
+                    </button>
+                </div>
+                 <button class="btn-reset card-info__btn card-info__btn--tocart">
+                Add to cart
+              </button>
+            </div>
             </div>
           </div>
         </div>
@@ -768,14 +928,13 @@ WiFi, Apple® AirPlay 2®, Spotify® Connect, Roon и Bluetooth совмести
             </ul>
           </div>
         </div>
-      
-
-     
+          
 
       </div>
-      <div class="footer__bottom">
+
+ <div class="footer__bottom">
       <div class="container">
-      <div class="footer__bottom-wrap">
+    <div class="footer__bottom-wrap">
           <div class="footer__navigation">
           <a class="logo" href="#body">
               <h3 class="white__title">Bowers&Wilkins</h3>
@@ -783,7 +942,7 @@ WiFi, Apple® AirPlay 2®, Spotify® Connect, Roon и Bluetooth совмести
           </div>
        <div class="social">
         <div class="container ">
-        <div class="social-inner">
+          <div class="social-inner">
           <div class="" title="В контакте">
             <div class="roll">
               <img class="regular" src="./img/icons/vk45gray.png" /><a
@@ -944,10 +1103,10 @@ WiFi, Apple® AirPlay 2®, Spotify® Connect, Roon и Bluetooth совмести
               /></a>
             </div>
           </div>
-        </div>
+          </div>
          </div>
        </div>
-      </div>
+    </div>
       </div>
       <div class="container">
       <div class="tiny-footer">
@@ -974,7 +1133,7 @@ WiFi, Apple® AirPlay 2®, Spotify® Connect, Roon и Bluetooth совмести
         </ul>
       </div>
       </div>
-    </div>
+ </div>
     </footer>
    
    
