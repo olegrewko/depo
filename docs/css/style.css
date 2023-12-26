@@ -1713,7 +1713,10 @@ color: grey;
       line-height: 1.7px;
     }
 .card-info__btn {
-    margin-bottom: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-bottom: 5px; */
 
     width: 100%;
     height: 18px;
@@ -2057,7 +2060,7 @@ align-items: center;
 
 
 
-.pricing__item {
+/* .pricing__item {
 width: 100%;
 margin: 5px;
 }  
@@ -2118,13 +2121,11 @@ align-items: center;
 .team__item {
   margin: 10px; 
   padding: 10px;
-}
+} */
 .footer__inner {
   flex-wrap: wrap;
 }
-/* .social {
-  display: none;
-}   */
+
 
 }
 
@@ -2183,7 +2184,7 @@ display: flex;
 
 justify-content: flex-start;
 align-items: center;
-    @include xs640 {
+@media screen and (max-width: 640px) {
       flex-direction: column;
       justify-content: flex-start;
       align-items: flex-start;
@@ -2284,8 +2285,8 @@ height: 33px;
     justify-content: center;
   text-align: center;
   margin: 0 auto;
-  padding: 0 var(--container-offset);
-  max-width: var(--container-width);
+  padding: 0 ;
+  
   max-width: 1170px;
   width: 100%;
 } 
@@ -2295,7 +2296,7 @@ height: 33px;
   max-width: 900px;
   width: 100%;
    
-   @include xs640 {
+@media screen and (max-width: 640px) {
     
      display: flex;
     flex-direction: column;
@@ -2318,7 +2319,7 @@ height: 33px;
     color: black;
     padding: 2px 0;
     border-bottom: 0.5px solid #eee;
-    @include xs640 {
+@media screen and (max-width: 640px) {
     
      display: flex;
     flex-direction: column;
@@ -2390,8 +2391,8 @@ width: 100%;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-// margin-right: 5px;
-// padding: 5px 0;
+/* // margin-right: 5px;
+// padding: 5px 0; */
 		}
 
 .card__list-order-n{
@@ -2438,9 +2439,9 @@ transition: all 0.3s;
       cursor: pointer;
 
      &:hover{
-      color: var(--color-dark);
+      color: black;
       background-color: transparent;
-      border: 2px solid var(--color-dark);
+      border: 2px solid black;
       transition: all 0.3s;
       cursor: pointer;
      }
