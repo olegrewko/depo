@@ -78,6 +78,8 @@ html {
 
 body {
   margin: 0;
+  padding: 0;
+  width: 100%;
   min-height: 100vh;
   font-family: 'Montserrat', sans-serif;
   font-style: normal;
@@ -1136,8 +1138,14 @@ transition: all .4s;
   margin-bottom: 10px;  
 }
 
+.slider02 {
+  /* width: 100%; */
+  background-color: black;
+  padding: 0px 0;
+  margin-top: 0px;
+} 
  .slider-blog {
-  width: 100%;
+  /* width: 100%; */
   background-color: black;
   padding: 0px 0;
   margin-top: 0px;
@@ -1334,7 +1342,7 @@ align-items: flex-start;
 .footer {
    
    background-color: black;
-   width: 100%;
+   /* width: 100%; */
  
 }
 .footer__bottom-wrap {
