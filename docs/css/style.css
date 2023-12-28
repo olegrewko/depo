@@ -730,7 +730,7 @@ transition: all .4s;
 .container {
   max-width: 1200px;
   width: 100%;
-  padding: 0 10px;
+  padding: 0 0px;
   margin: 0 auto;
 
 }
@@ -738,6 +738,12 @@ transition: all .4s;
 
   margin-left: 150px;
   margin-bottom: 20px;
+}
+.monitors-inner {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, auto);
+    gap: 1px;
 }
 .shadow {
     background: #fc0; /* Цвет фона */
@@ -812,7 +818,7 @@ color: white;
 font-family: 'Montserrat';
 font-style: normal;
 font-weight: 900;
-font-size: 18px;
+font-size: 24px;
 color: darkslategray; 
 }
 .section__title {
@@ -1059,12 +1065,17 @@ transition: all .4s;
 }
 
 .card {
- max-width: 280px;
+ max-width: 270px;
  width: 100%;
  /* border-left: 2px solid lightgrey; */
  padding: 5px;
  margin: 5px;
  background-color: #eee;
+ display: flex;
+ flex-direction: column;
+}
+.dummy {
+    flex-grow: 1;
 }
 .heat__inner {
   display: flex;
