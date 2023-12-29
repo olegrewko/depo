@@ -722,6 +722,7 @@ transition: all .4s;
   font-size: 12px;
   line-height: 20px;
   color: black;
+  flex-grow: 1;
  /* margin-bottom: 5px;  */
 }
 
@@ -1074,8 +1075,17 @@ transition: all .4s;
  display: flex;
  flex-direction: column;
 }
-.dummy {
+.dummy1 {
     flex-grow: 1;
+}
+.dummy2 {
+    flex-grow: 2;
+}
+.dummy3 {
+    flex-grow: 3;
+}
+.dummy4 {
+    flex-grow: 4;
 }
 .heat__inner {
   display: flex;
