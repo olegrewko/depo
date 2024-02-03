@@ -743,7 +743,7 @@ transition: all .4s;
     padding: 5px;
    }
 .header {
-  height: 60px;
+  min-height: 40px;
   width: 100%; 
 }
 .header__top {
@@ -769,7 +769,7 @@ transition: all .4s;
     
 }
 .slider {
-  margin-top: 60px;
+  margin-top: 40px;
 }
 .menu__btn {
   display: none;
@@ -785,7 +785,7 @@ transition: all .4s;
 .menu__list-item {
   position: relative;
   display: inline-block;
-	padding: 10px 10px;
+	padding: 5px 10px;
 }
 
 
@@ -1155,7 +1155,7 @@ transition: all .4s;
 .slider-blog__img {
   max-width: 800px;
   width: 100%;
-  margin-top: 5px;
+  margin-top: 15px;
   margin: 0 auto;
 }
 .head-blog__img {
@@ -1172,7 +1172,7 @@ transition: all .4s;
   
 }
 .slick-dots button {
-width: 16px;
+width: 20px;
 height: 6px;
 
 border: none;
@@ -1190,9 +1190,9 @@ background: tomato;
 
 }
 
- /* li + li {
-  margin-left: 10px;
-} */
+ li + li {
+  margin-left: 0px;
+}
 
 .team {
   padding: 80px 0 30px;
@@ -1357,7 +1357,7 @@ align-items: flex-start;
 
   }
 .footer-widget-subscribe {
-  max-width: 450px;
+  max-width: 350px;
   width: 100%;
 }
 .subscribe-form-black {
@@ -1365,7 +1365,7 @@ align-items: flex-start;
 }
 .subscribe-form-black__btn {
     position: absolute;
-    right: 5px;
+    right: 45px;
     bottom: 10px;
     font-size: 12px;
     line-height: 14px;
@@ -1375,18 +1375,18 @@ align-items: flex-start;
 .subscribe-form-black__field{
     display: block;
     
-    width: 100%;
+    width: 90%;
     border-bottom: 1px solid DarkSlateGrey;
     padding-bottom: 5px;
   }
 .subscribe-form-black  input{
-    max-width: 500px;
+    max-width: 300px;
     width: 100%;
     border: none;
     font-size: 12px;
     line-height: 14px;
     font-weight: 500;
-    padding-right: 80px;
+    padding-right: 5px;
     background-color: black;
 
   }
@@ -1946,7 +1946,7 @@ align-items: center;
     padding: 0;
     cursor: pointer;
     margin-top: 15px;
-    margin-bottom: 12px;;
+    margin-bottom: 16px;;
   }
   .expertise__items {
     display: block;
