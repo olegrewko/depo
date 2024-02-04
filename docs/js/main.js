@@ -46,7 +46,14 @@ $(function () {
   });
 
  
-  
+ $(".radio input").on("click", function (e) {
+   console.clear();
+   console.log(this.checked); // всегда true;
+   e.preventDefault();
+
+   setTimeout(() => $(this).prop("checked", !this.checked).trigger("change"));
+ });
+ 
 });
 
          function myFunction() {
