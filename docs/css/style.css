@@ -822,6 +822,14 @@ font-weight: 900;
 font-size: 24px;
 color: darkslategray; 
 }
+.menu__title-right {
+text-align: right;
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 900;
+font-size: 24px;
+color: darkslategray; 
+}
 .section__title {
 font-family: 'Montserrat';
 font-style: normal;
@@ -1392,12 +1400,13 @@ align-items: flex-start;
   width: 100%;
 }
 .subscribe-form-black {
-  position: relative;
+  /* position: relative; */
 }
 .subscribe-form-black__btn {
-    position: absolute;
+    /* position: absolute;
     right: 45px;
-    bottom: 10px;
+    bottom: 10px; */
+    height: 30px;
     font-size: 12px;
     line-height: 14px;
     font-weight: 500;
@@ -1547,11 +1556,7 @@ color: grey;
  
  font-weight: 500; 
 }
-/* .custom-radio-text:visited {
- font-size: 10px;
- 
- font-weight: 900; 
-} */
+
 .custom-radio-text:hover {
  font-size: 10px;
  
@@ -1936,10 +1941,10 @@ align-items: center;
   position: absolute;
   left: 0;
   right: 30%;
-  top: 62px;
-  box-shadow: 0 0 2px rgba(0,0,0,0.5); 
-
-  background-color: rgba(255,255,255,0.95);
+  top: 62.36px;
+  /* box-shadow: 0 0 2px rgba(0,0,0,0.5);  */
+  background:rgba(96, 212, 212, 0.66);  
+  /* background-color: rgba(255,255,255,0.95); */
   /* border-top: 4px solid black;
   border-bottom: 4px solid black; */
   display: flex;
