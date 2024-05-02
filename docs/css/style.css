@@ -1046,7 +1046,7 @@ transition: all .4s;
  flex-wrap: wrap;
 }
 .grid-products {
-  /* display: grid; */
+  display: grid;
   grid-template-columns: 200px 200px 200px 200px;
   grid-template-rows: 60px;
  
