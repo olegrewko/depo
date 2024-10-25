@@ -84,6 +84,7 @@ $(function () {
         }
       }
     }
+    
  $stepper: document.querySelector('.stepper');    
  if (vars.$stepper) {
 
