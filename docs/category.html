@@ -1,0 +1,2751 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <link
+      href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.2/fotorama.css"
+      rel="stylesheet"
+    />
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.2/fotorama.js"></script>
+    <link rel="stylesheet" href="./owlcarousel/owl.carousel.min.css" />
+    <link rel="stylesheet" href="./owlcarousel/owl.theme.default.min.css" />
+    <title>b&w&500/category</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div class="header-top">
+        <div class="row d-flex justify-content-start">
+          <div class="col-6 col-sm-3">
+            <div
+              class="header-top-phone d-flex justify-content-between align-items-center mt-2"
+            >
+              <a
+                class="d-flex justify-content-end text-secondary"
+                href="tel:8-9998525821"
+                >8-999-852-58-21</a
+              >
+            </div>
+          </div>
+          <div class="col-sm-6 d-flex align-items-center">
+            <form action="">
+              <div class="input-group mb-3">
+                <input
+                  type="search"
+                  class="form-control me-0"
+                  placeholder="Search..."
+                  aria-describedby="button-addon2"
+                />
+                <button
+                  class="btn btn-outline-secondary"
+                  type="button"
+                  id="button-addon2"
+                >
+                  Search
+                </button>
+              </div>
+            </form>
+          </div>
+          <div class="col-6 col-sm-3 z-one">
+            <ul class="ul-user">
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown">
+                  <img class="user" src="./img/icons/user.png" alt="" />
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li><a href="#" class="dropdown-item">Регистрация</a></li>
+                  <li><a href="#" class="dropdown-item">Авторизация</a></li>
+                  <li>
+                    <a href="#" class="dropdown-item">Личный кабинет</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="header-bottom sticky-top">
+        <nav class="navbar navbar-expand-md bg-dark" data-bs-theme="dark">
+          <a class="navbar-brand" href="./index.html">Bowers&Wilkins</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="navbarNavDropdown"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="offcanvas offcanvas-start"
+            style="width: 200px"
+            id="offcanvasNavbar"
+          >
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasExampleLabel">
+                Bowers&Wilkins
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Speakers
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a class="dropdown-item" href="#loudspeakers"
+                        >Loudspeakers</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#monitors">Monitors</a>
+                    </li>
+                    <li><a class="dropdown-item" href="#">Home theater</a></li>
+                    <li>
+                      <a class="dropdown-item" href="#">Integrated solutions</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Headphones
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a class="dropdown-item" href="#headphones">Headphones</a>
+                    </li>
+                    <li><a class="dropdown-item" href="#">Earbuds</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Wireless speakers
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a class="dropdown-item" href="#zeppelin">Zeppelin</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#duo">Formation DUO</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Loudspeakers shelf</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link minicart" href="./category.html"
+                    >Catalog</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <a class="minicart" href="./cart.html">Cart</a>
+
+            <div id="sidebar" class="sidebar">
+              <div class="d-flex justify-content-around">
+                <a id="close-btn">
+                  <img src="./img/icons/close16.png" alt="" />
+                </a>
+
+                <p>Minicart</p>
+              </div>
+              <div class="col-lg-12 bg-white">
+                <!-- <h5 class="section-title"><span>Cart</span></h5> -->
+                <div class="cart-content h-90">
+                  <div class="table-responsive">
+                    <table class="table table-light align-middle table-hover">
+                      <thead class="table-light">
+                        <tr>
+                          <th>Photo</th>
+                          <th>Product</th>
+                          <th>Price</th>
+                          <th>Qty</th>
+                          <th>Delete</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="product-img-td">
+                            <a href="#">
+                              <img src="./img/products/1.jpg" alt="" />
+                            </a>
+                          </td>
+                          <td>
+                            <a href="#" class="cart-content-title">
+                              Product 1
+                            </a>
+                          </td>
+                          <td>$65</td>
+                          <td>
+                            <input
+                              type="number"
+                              value="1"
+                              class="form-control cart-qty"
+                            />
+                          </td>
+                          <td>
+                            <button class="btn btn-info">
+                              <img
+                                src="./img/icons/close16.png"
+                                alt="./img/icons/close16.png"
+                              />
+                            </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="product-img-td">
+                            <a href="#">
+                              <img src="./img/products/2.jpg" alt="" />
+                            </a>
+                          </td>
+                          <td>
+                            <a href="#" class="cart-content-title">Product 2</a>
+                          </td>
+                          <td>$80</td>
+                          <td>
+                            <input
+                              type="number"
+                              value="2"
+                              class="form-control cart-qty"
+                            />
+                          </td>
+                          <td>
+                            <button class="btn btn-info">
+                              <img
+                                src="./img/icons/close16.png"
+                                alt="./img/icons/close16.png"
+                              />
+                            </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="product-img-td">
+                            <a href="#">
+                              <img src="./img/products/3.jpg" alt="" />
+                            </a>
+                          </td>
+                          <td>
+                            <a href="#" class="cart-content-title">Product 3</a>
+                          </td>
+                          <td>$100</td>
+                          <td>
+                            <input
+                              type="number"
+                              value="1"
+                              class="form-control cart-qty"
+                            />
+                          </td>
+                          <td>
+                            <button class="btn btn-info">
+                              <img
+                                src="./img/icons/close16.png"
+                                alt="./img/icons/close16.png"
+                              />
+                            </button>
+                          </td>
+                        </tr>
+                      </tbody>
+                      <tfoot>
+                        <tr>
+                          <td colspan="5" class="text-end">
+                            <button class="btn btn-outline-info">
+                              Update Cart
+                            </button>
+                          </td>
+                        </tr>
+                      </tfoot>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- minicart -->
+          </div>
+        </nav>
+      </div>
+
+      <main class="main">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <nav class="breadcrumbs">
+                <ul>
+                  <li><a href="index.html">Home</a></li>
+
+                  <li><span>Category</span></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-3 col-md-4">
+              <div class="sidebar-category">
+                <button
+                  class="btn btn-warning w-100 text-start collapse-filters-btn mb-3"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseFilters"
+                  aria-expanded="false"
+                  aria-controls="collapseExample"
+                >
+                  <i class="fa-solid fa-filter"></i> Filters
+                </button>
+                <div class="tab">
+                  <button
+                    class="grid-products__btn tablinks"
+                    onclick="openCity(event, 'Loudspeakers')"
+                    id="defaultOpen"
+                  >
+                    Loudspeakers
+                  </button>
+                  <button
+                    class="grid-products__btn tablinks"
+                    onclick="openCity(event, 'Mini Theater')"
+                  >
+                    Mini Theater
+                  </button>
+                  <button
+                    class="grid-products__btn tablinks"
+                    onclick="openCity(event, 'Wireless Speakers')"
+                  >
+                    Wireless Speakers
+                  </button>
+                  <button
+                    class="grid-products__btn tablinks"
+                    onclick="openCity(event, 'New Zeppelin')"
+                  >
+                    New Zeppelin
+                  </button>
+                  <button
+                    class="grid-products__btn tablinks"
+                    onclick="openCity(event, 'Car Audio')"
+                  >
+                    Car Audio
+                  </button>
+                  <button
+                    class="grid-products__btn tablinks"
+                    onclick="openCity(event, 'Formation DUO')"
+                  >
+                    Formation DUO
+                  </button>
+                  <button
+                    class="grid-products__btn tablinks"
+                    onclick="openCity(event, 'Headphones')"
+                  >
+                    Headphones
+                  </button>
+                  <button
+                    class="grid-products__btn tablinks"
+                    onclick="openCity(event, 'Compact Monitors')"
+                  >
+                    Compact Monitors
+                  </button>
+                  <button
+                    class="grid-products__btn tablinks"
+                    onclick="openCity(event, 'Integrated solutions')"
+                  >
+                    Integrated solutions
+                  </button>
+                  <button
+                    class="grid-products__btn tablinks"
+                    onclick="openCity(event, 'Soundbars')"
+                  >
+                    Soundbars
+                  </button>
+                  <button
+                    class="grid-products__btn tablinks"
+                    onclick="openCity(event, 'Subwoofers')"
+                  >
+                    Subwoofers
+                  </button>
+                  <button
+                    class="grid-products__btn tablinks"
+                    onclick="openCity(event, 'Shelf Monitors')"
+                  >
+                    Shelf Monitors
+                  </button>
+                </div>
+
+                <!-- <div class="collapse collapse-filters" id="collapseFilters">
+                  <div class="filter-block">
+                    <h5 class="section-title"><span>Filter by color</span></h5>
+                    <form action="">
+                      <div class="form-check d-flex justify-content-between">
+                        <div>
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            value=""
+                            id="black"
+                          />
+                          <label class="form-check-label" for="black">
+                            Black
+                          </label>
+                        </div>
+                        <span class="badge border rounded-0">100</span>
+                      </div>
+                      <div class="form-check d-flex justify-content-between">
+                        <div>
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            value=""
+                            id="white"
+                          />
+                          <label class="form-check-label" for="white">
+                            White
+                          </label>
+                        </div>
+                        <span class="badge border rounded-0">87</span>
+                      </div>
+                      <div class="form-check d-flex justify-content-between">
+                        <div>
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            value=""
+                            id="red"
+                          />
+                          <label class="form-check-label" for="red">
+                            Red
+                          </label>
+                        </div>
+                        <span class="badge border rounded-0">50</span>
+                      </div>
+                      <div class="form-check d-flex justify-content-between">
+                        <div>
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            value=""
+                            id="blue"
+                          />
+                          <label class="form-check-label" for="blue">
+                            Blue
+                          </label>
+                        </div>
+                        <span class="badge border rounded-0">115</span>
+                      </div>
+                    </form>
+                  </div>
+
+                  <div class="filter-block">
+                    <h5 class="section-title">
+                      <span>Filter by size</span>
+                    </h5>
+
+                    <form action="">
+                      <div class="form-check d-flex justify-content-between">
+                        <div>
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            value=""
+                            id="xs"
+                          />
+                          <label class="form-check-label" for="xs"> XS </label>
+                        </div>
+                        <span class="badge border rounded-0">44</span>
+                      </div>
+                      <div class="form-check d-flex justify-content-between">
+                        <div>
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            value=""
+                            id="s"
+                          />
+                          <label class="form-check-label" for="s"> S </label>
+                        </div>
+                        <span class="badge border rounded-0">105</span>
+                      </div>
+                      <div class="form-check d-flex justify-content-between">
+                        <div>
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            value=""
+                            id="m"
+                          />
+                          <label class="form-check-label" for="m"> M </label>
+                        </div>
+                        <span class="badge border rounded-0">35</span>
+                      </div>
+                      <div class="form-check d-flex justify-content-between">
+                        <div>
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            value=""
+                            id="l"
+                          />
+                          <label class="form-check-label" for="l"> L </label>
+                        </div>
+                        <span class="badge border rounded-0">57</span>
+                      </div>
+                      <div class="form-check d-flex justify-content-between">
+                        <div>
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            value=""
+                            id="xl"
+                          />
+                          <label class="form-check-label" for="xl"> XL </label>
+                        </div>
+                        <span class="badge border rounded-0">12</span>
+                      </div>
+                    </form>
+                  </div>
+
+                  <div class="filter-block">
+                    <h5 class="section-title">
+                      <span>Filter by type</span>
+                    </h5>
+
+                    <form action="">
+                      <div class="form-check d-flex justify-content-between">
+                        <div>
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            value=""
+                            id="man"
+                          />
+                          <label class="form-check-label" for="man">
+                            Man
+                          </label>
+                        </div>
+                        <span class="badge border rounded-0">44</span>
+                      </div>
+                      <div class="form-check d-flex justify-content-between">
+                        <div>
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            value=""
+                            id="woman"
+                          />
+                          <label class="form-check-label" for="woman">
+                            Woman
+                          </label>
+                        </div>
+                        <span class="badge border rounded-0">105</span>
+                      </div>
+                      <div class="form-check d-flex justify-content-between">
+                        <div>
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            value=""
+                            id="baby"
+                          />
+                          <label class="form-check-label" for="baby">
+                            Baby
+                          </label>
+                        </div>
+                        <span class="badge border rounded-0">35</span>
+                      </div>
+                    </form>
+                  </div>
+                </div> -->
+              </div>
+            </div>
+
+            <div class="col-lg-9 col-md-8">
+              <div class="row mb-3">
+                <div class="col-12 d-flex justify-content-start">
+                  <!-- <h1 class="section-title h5"><span>Category Name:</span></h1> -->
+                  <!--tabcontent  -->
+                  <div id="Loudspeakers" class="tabcontent">
+                    <h4 class="section-title h5"><span>Loudspeakers</span></h4>
+
+                    <hr />
+                    <div class="row">
+                      <div class="col-lg-2 col-sm-2">
+                        <div class="input-group mb-3">
+                          <span class="input-group-text">Sort By:</span>
+                          <select class="form-select" aria-label="Sort by:">
+                            <option selected>Default</option>
+                            <option value="1">Name (a-z)</option>
+                            <option value="2">Name (z-a)</option>
+                            <option value="3">Price (low &gt; high)</option>
+                            <option value="4">Price (high &gt; low)</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-lg-2 col-sm-2">
+                        <div class="input-group mb-3">
+                          <span class="input-group-text">Цвет:</span>
+                          <select class="form-select" aria-label="Show:">
+                            <option selected>9</option>
+                            <option value="15">15</option>
+                            <option value="30">30</option>
+                            <option value="45">45</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-lg-2 col-sm-2">
+                        <div class="input-group mb-3">
+                          <span class="input-group-text">Вес:</span>
+                          <select class="form-select" aria-label="Sort by:">
+                            <option selected>Default</option>
+                            <option value="1">100кг</option>
+                            <option value="2">50кг</option>
+                            <option value="3">20кг</option>
+                            <option value="4">10кг</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-lg-2 col-sm-2">
+                        <div class="input-group mb-3">
+                          <span class="input-group-text">Sort By:</span>
+                          <select class="form-select" aria-label="Sort by:">
+                            <option selected>Default</option>
+                            <option value="1">Name (a-z)</option>
+                            <option value="2">Name (z-a)</option>
+                            <option value="3">Price (low &gt; high)</option>
+                            <option value="4">Price (high &gt; low)</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-lg-2 col-sm-2">
+                        <div class="input-group mb-3">
+                          <span class="input-group-text">Цена:</span>
+                          <select class="form-select" aria-label="Show:">
+                            <option selected>9</option>
+                            <option value="15">15</option>
+                            <option value="30">30</option>
+                            <option value="45">45</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-lg-2 col-sm-2">
+                        <div class="input-group mb-3">
+                          <span class="input-group-text">Sort By:</span>
+                          <select class="form-select" aria-label="Sort by:">
+                            <option selected>Default</option>
+                            <option value="1">Name (a-z)</option>
+                            <option value="2">Name (z-a)</option>
+                            <option value="3">Price (low &gt; high)</option>
+                            <option value="4">Price (high &gt; low)</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                      <div class="col-lg-4 col-sm-6 mb-3">
+                        <div class="product-card">
+                          <div class="product-card-offer">
+                            <div class="offer-hit">Hit</div>
+                            <div class="offer-new">New</div>
+                          </div>
+                          <div class="product-thumb">
+                            <a href="product.html"
+                              ><img src="./img/products/1.jpg" alt=""
+                            /></a>
+                          </div>
+                          <div class="product-details">
+                            <h4>
+                              <a href="product.html"
+                                >Product 1 Lorem ipsum dolor, sit amet
+                                consectetur adipisicing.</a
+                              >
+                            </h4>
+                            <p class="product-excerpt">
+                              Lorem ipsum dolor, sit amet consectetur
+                              adipisicing elit. Placeat, aperiam!
+                            </p>
+                            <div
+                              class="product-bottom-details d-flex justify-content-between"
+                            >
+                              <div class="product-price">
+                                <small>$70</small>
+                                $65
+                              </div>
+                              <div class="product-links">
+                                <a
+                                  href="#"
+                                  class="btn btn-outline-warning add-to-cart"
+                                >
+                                  <svg
+                                    width="20"
+                                    height="19"
+                                    viewBox="0 0 20 19"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <path
+                                      d="M20 6.57893H16.6038L13.0359 0.319309C12.8589 0.0083658 12.475 -0.093156
+                                                 12.1784 0.0938088C11.8823 0.280773 11.7865 0.684867 11.9641 0.996475L15.1461
+                                                  6.57893H4.85388L8.03587 0.996431C8.21348 0.684823 8.11767 0.280729 7.82164
+                                                   0.0937645C7.52439 -0.0932003 7.14173 0.00832153 6.96411 0.319265L3.39617
+                                                    6.57888H0V7.89468H1.35651L2.94432 16.8103C3.11033 17.7438 3.88547 18.421
+                                                     4.78761 18.421H15.2124C16.1145 18.421 16.8896 17.7438 17.055 16.811L18.6434
+                                                      7.89468H20C20 7.89468 20 6.57893 20 6.57893ZM15.8264 16.5688C15.7715 16.8797
+                                                       15.5133 17.1053 15.2124 17.1053H4.78761C4.4867 17.1053 4.22854 16.8798
+                                                        4.173 16.5681L2.62789 7.89468H17.3721L15.8264 16.5688Z"
+                                    />
+                                  </svg>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-lg-4 col-sm-6 mb-3">
+                        <div class="product-card">
+                          <div class="product-card-offer">
+                            <div class="offer-hit">Hit</div>
+                          </div>
+                          <div class="product-thumb">
+                            <a href="product.html"
+                              ><img src="./img/products/2.jpg" alt=""
+                            /></a>
+                          </div>
+                          <div class="product-details">
+                            <h4>
+                              <a href="product.html">Product 2</a>
+                            </h4>
+                            <p class="product-excerpt">Lorem ipsum dolor</p>
+                            <div
+                              class="product-bottom-details d-flex justify-content-between"
+                            >
+                              <div class="product-price">$65</div>
+                              <div class="product-links">
+                                <a
+                                  href="#"
+                                  class="btn btn-outline-warning add-to-cart"
+                                >
+                                  <svg
+                                    width="20"
+                                    height="19"
+                                    viewBox="0 0 20 19"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <path
+                                      d="M20 6.57893H16.6038L13.0359 0.319309C12.8589 0.0083658 12.475 -0.093156
+                                                 12.1784 0.0938088C11.8823 0.280773 11.7865 0.684867 11.9641 0.996475L15.1461
+                                                  6.57893H4.85388L8.03587 0.996431C8.21348 0.684823 8.11767 0.280729 7.82164
+                                                   0.0937645C7.52439 -0.0932003 7.14173 0.00832153 6.96411 0.319265L3.39617
+                                                    6.57888H0V7.89468H1.35651L2.94432 16.8103C3.11033 17.7438 3.88547 18.421
+                                                     4.78761 18.421H15.2124C16.1145 18.421 16.8896 17.7438 17.055 16.811L18.6434
+                                                      7.89468H20C20 7.89468 20 6.57893 20 6.57893ZM15.8264 16.5688C15.7715 16.8797
+                                                       15.5133 17.1053 15.2124 17.1053H4.78761C4.4867 17.1053 4.22854 16.8798
+                                                        4.173 16.5681L2.62789 7.89468H17.3721L15.8264 16.5688Z"
+                                    />
+                                  </svg>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-lg-4 col-sm-6 mb-3">
+                        <div class="product-card">
+                          <div class="product-card-offer">
+                            <!-- <div class="offer-hit">Hit</div>
+                                        <div class="offer-new">New</div> -->
+                          </div>
+                          <div class="product-thumb">
+                            <a href="product.html"
+                              ><img src="./img/products/3.jpg" alt=""
+                            /></a>
+                          </div>
+                          <div class="product-details">
+                            <h4>
+                              <a href="product.html">Product 3 Lorem ipsum</a>
+                            </h4>
+                            <p class="product-excerpt">Lorem ipsum</p>
+                            <div
+                              class="product-bottom-details d-flex justify-content-between"
+                            >
+                              <div class="product-price">$100</div>
+                              <div class="product-links">
+                                <a
+                                  href="#"
+                                  class="btn btn-outline-warning add-to-cart"
+                                >
+                                  <svg
+                                    width="20"
+                                    height="19"
+                                    viewBox="0 0 20 19"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <path
+                                      d="M20 6.57893H16.6038L13.0359 0.319309C12.8589 0.0083658 12.475 -0.093156
+                                                 12.1784 0.0938088C11.8823 0.280773 11.7865 0.684867 11.9641 0.996475L15.1461
+                                                  6.57893H4.85388L8.03587 0.996431C8.21348 0.684823 8.11767 0.280729 7.82164
+                                                   0.0937645C7.52439 -0.0932003 7.14173 0.00832153 6.96411 0.319265L3.39617
+                                                    6.57888H0V7.89468H1.35651L2.94432 16.8103C3.11033 17.7438 3.88547 18.421
+                                                     4.78761 18.421H15.2124C16.1145 18.421 16.8896 17.7438 17.055 16.811L18.6434
+                                                      7.89468H20C20 7.89468 20 6.57893 20 6.57893ZM15.8264 16.5688C15.7715 16.8797
+                                                       15.5133 17.1053 15.2124 17.1053H4.78761C4.4867 17.1053 4.22854 16.8798
+                                                        4.173 16.5681L2.62789 7.89468H17.3721L15.8264 16.5688Z"
+                                    />
+                                  </svg>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-lg-4 col-sm-6 mb-3">
+                        <div class="product-card">
+                          <div class="product-card-offer">
+                            <div class="offer-hit">Hit</div>
+                          </div>
+                          <div class="product-thumb">
+                            <a href="product.html"
+                              ><img src="./img/products/4.jpg" alt=""
+                            /></a>
+                          </div>
+                          <div class="product-details">
+                            <h4>
+                              <a href="product.html">Product 4</a>
+                            </h4>
+                            <p class="product-excerpt">Lorem ipsum dolor</p>
+                            <div
+                              class="product-bottom-details d-flex justify-content-between"
+                            >
+                              <div class="product-price">
+                                <small>$70</small>
+                                $65
+                              </div>
+                              <div class="product-links">
+                                <a
+                                  href="#"
+                                  class="btn btn-outline-warning add-to-cart"
+                                >
+                                  <svg
+                                    width="20"
+                                    height="19"
+                                    viewBox="0 0 20 19"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <path
+                                      d="M20 6.57893H16.6038L13.0359 0.319309C12.8589 0.0083658 12.475 -0.093156
+                                                 12.1784 0.0938088C11.8823 0.280773 11.7865 0.684867 11.9641 0.996475L15.1461
+                                                  6.57893H4.85388L8.03587 0.996431C8.21348 0.684823 8.11767 0.280729 7.82164
+                                                   0.0937645C7.52439 -0.0932003 7.14173 0.00832153 6.96411 0.319265L3.39617
+                                                    6.57888H0V7.89468H1.35651L2.94432 16.8103C3.11033 17.7438 3.88547 18.421
+                                                     4.78761 18.421H15.2124C16.1145 18.421 16.8896 17.7438 17.055 16.811L18.6434
+                                                      7.89468H20C20 7.89468 20 6.57893 20 6.57893ZM15.8264 16.5688C15.7715 16.8797
+                                                       15.5133 17.1053 15.2124 17.1053H4.78761C4.4867 17.1053 4.22854 16.8798
+                                                        4.173 16.5681L2.62789 7.89468H17.3721L15.8264 16.5688Z"
+                                    />
+                                  </svg>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-lg-4 col-sm-6 mb-3">
+                        <div class="product-card">
+                          <div class="product-card-offer">
+                            <div class="offer-hit">Hit</div>
+                            <div class="offer-new">New</div>
+                          </div>
+                          <div class="product-thumb">
+                            <a href="product.html"
+                              ><img src="./img/products/5.jpg" alt=""
+                            /></a>
+                          </div>
+                          <div class="product-details">
+                            <h4>
+                              <a href="product.html"
+                                >Product 5 Lorem ipsum dolor, sit amet
+                                consectetur adipisicing.</a
+                              >
+                            </h4>
+                            <p class="product-excerpt">
+                              Lorem ipsum dolor, sit amet consectetur
+                              adipisicing elit. Placeat, aperiam!
+                            </p>
+                            <div
+                              class="product-bottom-details d-flex justify-content-between"
+                            >
+                              <div class="product-price">
+                                <small>$70</small>
+                                $65
+                              </div>
+                              <div class="product-links">
+                                <a
+                                  href="#"
+                                  class="btn btn-outline-warning add-to-cart"
+                                >
+                                  <svg
+                                    width="20"
+                                    height="19"
+                                    viewBox="0 0 20 19"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <path
+                                      d="M20 6.57893H16.6038L13.0359 0.319309C12.8589 0.0083658 12.475 -0.093156
+                                                 12.1784 0.0938088C11.8823 0.280773 11.7865 0.684867 11.9641 0.996475L15.1461
+                                                  6.57893H4.85388L8.03587 0.996431C8.21348 0.684823 8.11767 0.280729 7.82164
+                                                   0.0937645C7.52439 -0.0932003 7.14173 0.00832153 6.96411 0.319265L3.39617
+                                                    6.57888H0V7.89468H1.35651L2.94432 16.8103C3.11033 17.7438 3.88547 18.421
+                                                     4.78761 18.421H15.2124C16.1145 18.421 16.8896 17.7438 17.055 16.811L18.6434
+                                                      7.89468H20C20 7.89468 20 6.57893 20 6.57893ZM15.8264 16.5688C15.7715 16.8797
+                                                       15.5133 17.1053 15.2124 17.1053H4.78761C4.4867 17.1053 4.22854 16.8798
+                                                        4.173 16.5681L2.62789 7.89468H17.3721L15.8264 16.5688Z"
+                                    />
+                                  </svg>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-lg-4 col-sm-6 mb-3">
+                        <div class="product-card">
+                          <div class="product-card-offer">
+                            <div class="offer-hit">Hit</div>
+                            <div class="offer-new">New</div>
+                          </div>
+                          <div class="product-thumb">
+                            <a href="product.html"
+                              ><img src="./img/products/6.jpg" alt=""
+                            /></a>
+                          </div>
+                          <div class="product-details">
+                            <h4>
+                              <a href="product.html">Product 6</a>
+                            </h4>
+                            <p class="product-excerpt"></p>
+                            <div
+                              class="product-bottom-details d-flex justify-content-between"
+                            >
+                              <div class="product-price">
+                                <small>$70</small>
+                                $65
+                              </div>
+                              <div class="product-links">
+                                <a
+                                  href="#"
+                                  class="btn btn-outline-warning add-to-cart"
+                                >
+                                  <svg
+                                    width="20"
+                                    height="19"
+                                    viewBox="0 0 20 19"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <path
+                                      d="M20 6.57893H16.6038L13.0359 0.319309C12.8589 0.0083658 12.475 -0.093156
+                                                 12.1784 0.0938088C11.8823 0.280773 11.7865 0.684867 11.9641 0.996475L15.1461
+                                                  6.57893H4.85388L8.03587 0.996431C8.21348 0.684823 8.11767 0.280729 7.82164
+                                                   0.0937645C7.52439 -0.0932003 7.14173 0.00832153 6.96411 0.319265L3.39617
+                                                    6.57888H0V7.89468H1.35651L2.94432 16.8103C3.11033 17.7438 3.88547 18.421
+                                                     4.78761 18.421H15.2124C16.1145 18.421 16.8896 17.7438 17.055 16.811L18.6434
+                                                      7.89468H20C20 7.89468 20 6.57893 20 6.57893ZM15.8264 16.5688C15.7715 16.8797
+                                                       15.5133 17.1053 15.2124 17.1053H4.78761C4.4867 17.1053 4.22854 16.8798
+                                                        4.173 16.5681L2.62789 7.89468H17.3721L15.8264 16.5688Z"
+                                    />
+                                  </svg>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-lg-4 col-sm-6 mb-3">
+                        <div class="product-card">
+                          <div class="product-card-offer">
+                            <div class="offer-hit">Hit</div>
+                            <div class="offer-new">New</div>
+                          </div>
+                          <div class="product-thumb">
+                            <a href="product.html"
+                              ><img src="./img/products/7.jpg" alt=""
+                            /></a>
+                          </div>
+                          <div class="product-details">
+                            <h4>
+                              <a href="product.html">Product 7</a>
+                            </h4>
+                            <p class="product-excerpt">
+                              Lorem ipsum dolor, sit amet consectetur
+                              adipisicing elit. Placeat, aperiam!
+                            </p>
+                            <div
+                              class="product-bottom-details d-flex justify-content-between"
+                            >
+                              <div class="product-price">
+                                <small>$70</small>
+                                $65
+                              </div>
+                              <div class="product-links">
+                                <a
+                                  href="#"
+                                  class="btn btn-outline-warning add-to-cart"
+                                >
+                                  <svg
+                                    width="20"
+                                    height="19"
+                                    viewBox="0 0 20 19"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <path
+                                      d="M20 6.57893H16.6038L13.0359 0.319309C12.8589 0.0083658 12.475 -0.093156
+                                                 12.1784 0.0938088C11.8823 0.280773 11.7865 0.684867 11.9641 0.996475L15.1461
+                                                  6.57893H4.85388L8.03587 0.996431C8.21348 0.684823 8.11767 0.280729 7.82164
+                                                   0.0937645C7.52439 -0.0932003 7.14173 0.00832153 6.96411 0.319265L3.39617
+                                                    6.57888H0V7.89468H1.35651L2.94432 16.8103C3.11033 17.7438 3.88547 18.421
+                                                     4.78761 18.421H15.2124C16.1145 18.421 16.8896 17.7438 17.055 16.811L18.6434
+                                                      7.89468H20C20 7.89468 20 6.57893 20 6.57893ZM15.8264 16.5688C15.7715 16.8797
+                                                       15.5133 17.1053 15.2124 17.1053H4.78761C4.4867 17.1053 4.22854 16.8798
+                                                        4.173 16.5681L2.62789 7.89468H17.3721L15.8264 16.5688Z"
+                                    />
+                                  </svg>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-lg-4 col-sm-6 mb-3">
+                        <div class="product-card">
+                          <div class="product-card-offer">
+                            <div class="offer-hit">Hit</div>
+                            <div class="offer-new">New</div>
+                          </div>
+                          <div class="product-thumb">
+                            <a href="product.html"
+                              ><img src="./img/products/8.jpg" alt=""
+                            /></a>
+                          </div>
+                          <div class="product-details">
+                            <h4>
+                              <a href="product.html">Product 8 Lorem</a>
+                            </h4>
+                            <p class="product-excerpt">Lorem ipsum dolor</p>
+                            <div
+                              class="product-bottom-details d-flex justify-content-between"
+                            >
+                              <div class="product-price">
+                                <small>$70</small>
+                                $65
+                              </div>
+                              <div class="product-links">
+                                <a
+                                  href="#"
+                                  class="btn btn-outline-warning add-to-cart"
+                                >
+                                  <svg
+                                    width="20"
+                                    height="19"
+                                    viewBox="0 0 20 19"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <path
+                                      d="M20 6.57893H16.6038L13.0359 0.319309C12.8589 0.0083658 12.475 -0.093156
+                                                 12.1784 0.0938088C11.8823 0.280773 11.7865 0.684867 11.9641 0.996475L15.1461
+                                                  6.57893H4.85388L8.03587 0.996431C8.21348 0.684823 8.11767 0.280729 7.82164
+                                                   0.0937645C7.52439 -0.0932003 7.14173 0.00832153 6.96411 0.319265L3.39617
+                                                    6.57888H0V7.89468H1.35651L2.94432 16.8103C3.11033 17.7438 3.88547 18.421
+                                                     4.78761 18.421H15.2124C16.1145 18.421 16.8896 17.7438 17.055 16.811L18.6434
+                                                      7.89468H20C20 7.89468 20 6.57893 20 6.57893ZM15.8264 16.5688C15.7715 16.8797
+                                                       15.5133 17.1053 15.2124 17.1053H4.78761C4.4867 17.1053 4.22854 16.8798
+                                                        4.173 16.5681L2.62789 7.89468H17.3721L15.8264 16.5688Z"
+                                    />
+                                  </svg>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-lg-4 col-sm-6 mb-3">
+                        <div class="product-card">
+                          <div class="product-card-offer">
+                            <div class="offer-hit">Hit</div>
+                            <div class="offer-new">New</div>
+                          </div>
+                          <div class="product-thumb">
+                            <a href="product.html"
+                              ><img src="./img/products/1.jpg" alt=""
+                            /></a>
+                          </div>
+                          <div class="product-details">
+                            <h4>
+                              <a href="product.html"
+                                >Product 1 Lorem ipsum dolor, sit amet
+                                consectetur adipisicing.</a
+                              >
+                            </h4>
+                            <p class="product-excerpt">
+                              Lorem ipsum dolor, sit amet consectetur
+                              adipisicing elit. Placeat, aperiam!
+                            </p>
+                            <div
+                              class="product-bottom-details d-flex justify-content-between"
+                            >
+                              <div class="product-price">
+                                <small>$70</small>
+                                $65
+                              </div>
+                              <div class="product-links">
+                                <a
+                                  href="#"
+                                  class="btn btn-outline-warning add-to-cart"
+                                >
+                                  <svg
+                                    width="20"
+                                    height="19"
+                                    viewBox="0 0 20 19"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <path
+                                      d="M20 6.57893H16.6038L13.0359 0.319309C12.8589 0.0083658 12.475 -0.093156
+                                                 12.1784 0.0938088C11.8823 0.280773 11.7865 0.684867 11.9641 0.996475L15.1461
+                                                  6.57893H4.85388L8.03587 0.996431C8.21348 0.684823 8.11767 0.280729 7.82164
+                                                   0.0937645C7.52439 -0.0932003 7.14173 0.00832153 6.96411 0.319265L3.39617
+                                                    6.57888H0V7.89468H1.35651L2.94432 16.8103C3.11033 17.7438 3.88547 18.421
+                                                     4.78761 18.421H15.2124C16.1145 18.421 16.8896 17.7438 17.055 16.811L18.6434
+                                                      7.89468H20C20 7.89468 20 6.57893 20 6.57893ZM15.8264 16.5688C15.7715 16.8797
+                                                       15.5133 17.1053 15.2124 17.1053H4.78761C4.4867 17.1053 4.22854 16.8798
+                                                        4.173 16.5681L2.62789 7.89468H17.3721L15.8264 16.5688Z"
+                                    />
+                                  </svg>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="Mini Theater" class="tabcontent">
+                    <h4 class="section-title h5"><span>Mini Theater</span></h4>
+                    <!--  -->
+                    <hr />
+                    <div class="row">
+                      <div class="col-lg-2 col-sm-2">
+                        <div class="input-group mb-3">
+                          <span class="input-group-text">Sort By:</span>
+                          <select class="form-select" aria-label="Sort by:">
+                            <option selected>Default</option>
+                            <option value="1">Name (a-z)</option>
+                            <option value="2">Name (z-a)</option>
+                            <option value="3">Price (low &gt; high)</option>
+                            <option value="4">Price (high &gt; low)</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-lg-2 col-sm-2">
+                        <div class="input-group mb-3">
+                          <span class="input-group-text">Цвет:</span>
+                          <select class="form-select" aria-label="Show:">
+                            <option selected>9</option>
+                            <option value="15">15</option>
+                            <option value="30">30</option>
+                            <option value="45">45</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-lg-2 col-sm-2">
+                        <div class="input-group mb-3">
+                          <span class="input-group-text">Вес:</span>
+                          <select class="form-select" aria-label="Sort by:">
+                            <option selected>Default</option>
+                            <option value="1">100кг</option>
+                            <option value="2">50кг</option>
+                            <option value="3">20кг</option>
+                            <option value="4">10кг</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-lg-2 col-sm-2">
+                        <div class="input-group mb-3">
+                          <span class="input-group-text">Sort By:</span>
+                          <select class="form-select" aria-label="Sort by:">
+                            <option selected>Default</option>
+                            <option value="1">Name (a-z)</option>
+                            <option value="2">Name (z-a)</option>
+                            <option value="3">Price (low &gt; high)</option>
+                            <option value="4">Price (high &gt; low)</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-lg-2 col-sm-2">
+                        <div class="input-group mb-3">
+                          <span class="input-group-text">Цена:</span>
+                          <select class="form-select" aria-label="Show:">
+                            <option selected>9</option>
+                            <option value="15">15</option>
+                            <option value="30">30</option>
+                            <option value="45">45</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-lg-2 col-sm-2">
+                        <div class="input-group mb-3">
+                          <span class="input-group-text">Sort By:</span>
+                          <select class="form-select" aria-label="Sort by:">
+                            <option selected>Default</option>
+                            <option value="1">Name (a-z)</option>
+                            <option value="2">Name (z-a)</option>
+                            <option value="3">Price (low &gt; high)</option>
+                            <option value="4">Price (high &gt; low)</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                      <!-- <div class="col-lg-4 col-sm-6 mb-3">
+                        <div class="product-card">
+                          <div class="product-card-offer">
+                            <div class="offer-hit">Hit</div>
+                            <div class="offer-new">New</div>
+                          </div>
+                          <div class="product-thumb">
+                            <a href="product.html"
+                              ><img src="./img/products/1.jpg" alt=""
+                            /></a>
+                          </div>
+                          <div class="product-details">
+                            <h4>
+                              <a href="product.html"
+                                >Product 1 Lorem ipsum dolor, sit amet
+                                consectetur adipisicing.</a
+                              >
+                            </h4>
+                            <p class="product-excerpt">
+                              Lorem ipsum dolor, sit amet consectetur
+                              adipisicing elit. Placeat, aperiam!
+                            </p>
+                            <div
+                              class="product-bottom-details d-flex justify-content-between"
+                            >
+                              <div class="product-price">
+                                <small>$70</small>
+                                $65
+                              </div>
+                              <div class="product-links">
+                                <a
+                                  href="#"
+                                  class="btn btn-outline-warning add-to-cart"
+                                >
+                                  <svg
+                                    width="20"
+                                    height="19"
+                                    viewBox="0 0 20 19"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <path
+                                      d="M20 6.57893H16.6038L13.0359 0.319309C12.8589 0.0083658 12.475 -0.093156
+                                                 12.1784 0.0938088C11.8823 0.280773 11.7865 0.684867 11.9641 0.996475L15.1461
+                                                  6.57893H4.85388L8.03587 0.996431C8.21348 0.684823 8.11767 0.280729 7.82164
+                                                   0.0937645C7.52439 -0.0932003 7.14173 0.00832153 6.96411 0.319265L3.39617
+                                                    6.57888H0V7.89468H1.35651L2.94432 16.8103C3.11033 17.7438 3.88547 18.421
+                                                     4.78761 18.421H15.2124C16.1145 18.421 16.8896 17.7438 17.055 16.811L18.6434
+                                                      7.89468H20C20 7.89468 20 6.57893 20 6.57893ZM15.8264 16.5688C15.7715 16.8797
+                                                       15.5133 17.1053 15.2124 17.1053H4.78761C4.4867 17.1053 4.22854 16.8798
+                                                        4.173 16.5681L2.62789 7.89468H17.3721L15.8264 16.5688Z"
+                                    />
+                                  </svg>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-lg-4 col-sm-6 mb-3">
+                        <div class="product-card">
+                          <div class="product-card-offer">
+                            <div class="offer-hit">Hit</div>
+                          </div>
+                          <div class="product-thumb">
+                            <a href="product.html"
+                              ><img src="./img/products/2.jpg" alt=""
+                            /></a>
+                          </div>
+                          <div class="product-details">
+                            <h4>
+                              <a href="product.html">Product 2</a>
+                            </h4>
+                            <p class="product-excerpt">Lorem ipsum dolor</p>
+                            <div
+                              class="product-bottom-details d-flex justify-content-between"
+                            >
+                              <div class="product-price">$65</div>
+                              <div class="product-links">
+                                <a
+                                  href="#"
+                                  class="btn btn-outline-warning add-to-cart"
+                                >
+                                  <svg
+                                    width="20"
+                                    height="19"
+                                    viewBox="0 0 20 19"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <path
+                                      d="M20 6.57893H16.6038L13.0359 0.319309C12.8589 0.0083658 12.475 -0.093156
+                                                 12.1784 0.0938088C11.8823 0.280773 11.7865 0.684867 11.9641 0.996475L15.1461
+                                                  6.57893H4.85388L8.03587 0.996431C8.21348 0.684823 8.11767 0.280729 7.82164
+                                                   0.0937645C7.52439 -0.0932003 7.14173 0.00832153 6.96411 0.319265L3.39617
+                                                    6.57888H0V7.89468H1.35651L2.94432 16.8103C3.11033 17.7438 3.88547 18.421
+                                                     4.78761 18.421H15.2124C16.1145 18.421 16.8896 17.7438 17.055 16.811L18.6434
+                                                      7.89468H20C20 7.89468 20 6.57893 20 6.57893ZM15.8264 16.5688C15.7715 16.8797
+                                                       15.5133 17.1053 15.2124 17.1053H4.78761C4.4867 17.1053 4.22854 16.8798
+                                                        4.173 16.5681L2.62789 7.89468H17.3721L15.8264 16.5688Z"
+                                    />
+                                  </svg>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-lg-4 col-sm-6 mb-3">
+                        <div class="product-card">
+                          <div class="product-card-offer">
+                        
+                          </div>
+                          <div class="product-thumb">
+                            <a href="product.html"
+                              ><img src="./img/products/3.jpg" alt=""
+                            /></a>
+                          </div>
+                          <div class="product-details">
+                            <h4>
+                              <a href="product.html">Product 3 Lorem ipsum</a>
+                            </h4>
+                            <p class="product-excerpt">Lorem ipsum</p>
+                            <div
+                              class="product-bottom-details d-flex justify-content-between"
+                            >
+                              <div class="product-price">$100</div>
+                              <div class="product-links">
+                                <a
+                                  href="#"
+                                  class="btn btn-outline-warning add-to-cart"
+                                >
+                                  <svg
+                                    width="20"
+                                    height="19"
+                                    viewBox="0 0 20 19"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <path
+                                      d="M20 6.57893H16.6038L13.0359 0.319309C12.8589 0.0083658 12.475 -0.093156
+                                                 12.1784 0.0938088C11.8823 0.280773 11.7865 0.684867 11.9641 0.996475L15.1461
+                                                  6.57893H4.85388L8.03587 0.996431C8.21348 0.684823 8.11767 0.280729 7.82164
+                                                   0.0937645C7.52439 -0.0932003 7.14173 0.00832153 6.96411 0.319265L3.39617
+                                                    6.57888H0V7.89468H1.35651L2.94432 16.8103C3.11033 17.7438 3.88547 18.421
+                                                     4.78761 18.421H15.2124C16.1145 18.421 16.8896 17.7438 17.055 16.811L18.6434
+                                                      7.89468H20C20 7.89468 20 6.57893 20 6.57893ZM15.8264 16.5688C15.7715 16.8797
+                                                       15.5133 17.1053 15.2124 17.1053H4.78761C4.4867 17.1053 4.22854 16.8798
+                                                        4.173 16.5681L2.62789 7.89468H17.3721L15.8264 16.5688Z"
+                                    />
+                                  </svg>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div> -->
+
+                      <div class="col-lg-4 col-sm-6 mb-3">
+                        <div class="product-card">
+                          <div class="product-card-offer">
+                            <div class="offer-hit">Hit</div>
+                          </div>
+                          <div class="product-thumb">
+                            <a href="product.html"
+                              ><img src="./img/products/4.jpg" alt=""
+                            /></a>
+                          </div>
+                          <div class="product-details">
+                            <h4>
+                              <a href="product.html">Product 4</a>
+                            </h4>
+                            <p class="product-excerpt">Lorem ipsum dolor</p>
+                            <div
+                              class="product-bottom-details d-flex justify-content-between"
+                            >
+                              <div class="product-price">
+                                <small>$70</small>
+                                $65
+                              </div>
+                              <div class="product-links">
+                                <a
+                                  href="#"
+                                  class="btn btn-outline-warning add-to-cart"
+                                >
+                                  <svg
+                                    width="20"
+                                    height="19"
+                                    viewBox="0 0 20 19"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <path
+                                      d="M20 6.57893H16.6038L13.0359 0.319309C12.8589 0.0083658 12.475 -0.093156
+                                                 12.1784 0.0938088C11.8823 0.280773 11.7865 0.684867 11.9641 0.996475L15.1461
+                                                  6.57893H4.85388L8.03587 0.996431C8.21348 0.684823 8.11767 0.280729 7.82164
+                                                   0.0937645C7.52439 -0.0932003 7.14173 0.00832153 6.96411 0.319265L3.39617
+                                                    6.57888H0V7.89468H1.35651L2.94432 16.8103C3.11033 17.7438 3.88547 18.421
+                                                     4.78761 18.421H15.2124C16.1145 18.421 16.8896 17.7438 17.055 16.811L18.6434
+                                                      7.89468H20C20 7.89468 20 6.57893 20 6.57893ZM15.8264 16.5688C15.7715 16.8797
+                                                       15.5133 17.1053 15.2124 17.1053H4.78761C4.4867 17.1053 4.22854 16.8798
+                                                        4.173 16.5681L2.62789 7.89468H17.3721L15.8264 16.5688Z"
+                                    />
+                                  </svg>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-lg-4 col-sm-6 mb-3">
+                        <div class="product-card">
+                          <div class="product-card-offer">
+                            <div class="offer-hit">Hit</div>
+                            <div class="offer-new">New</div>
+                          </div>
+                          <div class="product-thumb">
+                            <a href="product.html"
+                              ><img src="./img/products/5.jpg" alt=""
+                            /></a>
+                          </div>
+                          <div class="product-details">
+                            <h4>
+                              <a href="product.html"
+                                >Product 5 Lorem ipsum dolor, sit amet
+                                consectetur adipisicing.</a
+                              >
+                            </h4>
+                            <p class="product-excerpt">
+                              Lorem ipsum dolor, sit amet consectetur
+                              adipisicing elit. Placeat, aperiam!
+                            </p>
+                            <div
+                              class="product-bottom-details d-flex justify-content-between"
+                            >
+                              <div class="product-price">
+                                <small>$70</small>
+                                $65
+                              </div>
+                              <div class="product-links">
+                                <a
+                                  href="#"
+                                  class="btn btn-outline-warning add-to-cart"
+                                >
+                                  <svg
+                                    width="20"
+                                    height="19"
+                                    viewBox="0 0 20 19"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <path
+                                      d="M20 6.57893H16.6038L13.0359 0.319309C12.8589 0.0083658 12.475 -0.093156
+                                                 12.1784 0.0938088C11.8823 0.280773 11.7865 0.684867 11.9641 0.996475L15.1461
+                                                  6.57893H4.85388L8.03587 0.996431C8.21348 0.684823 8.11767 0.280729 7.82164
+                                                   0.0937645C7.52439 -0.0932003 7.14173 0.00832153 6.96411 0.319265L3.39617
+                                                    6.57888H0V7.89468H1.35651L2.94432 16.8103C3.11033 17.7438 3.88547 18.421
+                                                     4.78761 18.421H15.2124C16.1145 18.421 16.8896 17.7438 17.055 16.811L18.6434
+                                                      7.89468H20C20 7.89468 20 6.57893 20 6.57893ZM15.8264 16.5688C15.7715 16.8797
+                                                       15.5133 17.1053 15.2124 17.1053H4.78761C4.4867 17.1053 4.22854 16.8798
+                                                        4.173 16.5681L2.62789 7.89468H17.3721L15.8264 16.5688Z"
+                                    />
+                                  </svg>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-lg-4 col-sm-6 mb-3">
+                        <div class="product-card">
+                          <div class="product-card-offer">
+                            <div class="offer-hit">Hit</div>
+                            <div class="offer-new">New</div>
+                          </div>
+                          <div class="product-thumb">
+                            <a href="product.html"
+                              ><img src="./img/products/6.jpg" alt=""
+                            /></a>
+                          </div>
+                          <div class="product-details">
+                            <h4>
+                              <a href="product.html">Product 6</a>
+                            </h4>
+                            <p class="product-excerpt"></p>
+                            <div
+                              class="product-bottom-details d-flex justify-content-between"
+                            >
+                              <div class="product-price">
+                                <small>$70</small>
+                                $65
+                              </div>
+                              <div class="product-links">
+                                <a
+                                  href="#"
+                                  class="btn btn-outline-warning add-to-cart"
+                                >
+                                  <svg
+                                    width="20"
+                                    height="19"
+                                    viewBox="0 0 20 19"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <path
+                                      d="M20 6.57893H16.6038L13.0359 0.319309C12.8589 0.0083658 12.475 -0.093156
+                                                 12.1784 0.0938088C11.8823 0.280773 11.7865 0.684867 11.9641 0.996475L15.1461
+                                                  6.57893H4.85388L8.03587 0.996431C8.21348 0.684823 8.11767 0.280729 7.82164
+                                                   0.0937645C7.52439 -0.0932003 7.14173 0.00832153 6.96411 0.319265L3.39617
+                                                    6.57888H0V7.89468H1.35651L2.94432 16.8103C3.11033 17.7438 3.88547 18.421
+                                                     4.78761 18.421H15.2124C16.1145 18.421 16.8896 17.7438 17.055 16.811L18.6434
+                                                      7.89468H20C20 7.89468 20 6.57893 20 6.57893ZM15.8264 16.5688C15.7715 16.8797
+                                                       15.5133 17.1053 15.2124 17.1053H4.78761C4.4867 17.1053 4.22854 16.8798
+                                                        4.173 16.5681L2.62789 7.89468H17.3721L15.8264 16.5688Z"
+                                    />
+                                  </svg>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-lg-4 col-sm-6 mb-3">
+                        <div class="product-card">
+                          <div class="product-card-offer">
+                            <div class="offer-hit">Hit</div>
+                            <div class="offer-new">New</div>
+                          </div>
+                          <div class="product-thumb">
+                            <a href="product.html"
+                              ><img src="./img/products/7.jpg" alt=""
+                            /></a>
+                          </div>
+                          <div class="product-details">
+                            <h4>
+                              <a href="product.html">Product 7</a>
+                            </h4>
+                            <p class="product-excerpt">
+                              Lorem ipsum dolor, sit amet consectetur
+                              adipisicing elit. Placeat, aperiam!
+                            </p>
+                            <div
+                              class="product-bottom-details d-flex justify-content-between"
+                            >
+                              <div class="product-price">
+                                <small>$70</small>
+                                $65
+                              </div>
+                              <div class="product-links">
+                                <a
+                                  href="#"
+                                  class="btn btn-outline-warning add-to-cart"
+                                >
+                                  <svg
+                                    width="20"
+                                    height="19"
+                                    viewBox="0 0 20 19"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <path
+                                      d="M20 6.57893H16.6038L13.0359 0.319309C12.8589 0.0083658 12.475 -0.093156
+                                                 12.1784 0.0938088C11.8823 0.280773 11.7865 0.684867 11.9641 0.996475L15.1461
+                                                  6.57893H4.85388L8.03587 0.996431C8.21348 0.684823 8.11767 0.280729 7.82164
+                                                   0.0937645C7.52439 -0.0932003 7.14173 0.00832153 6.96411 0.319265L3.39617
+                                                    6.57888H0V7.89468H1.35651L2.94432 16.8103C3.11033 17.7438 3.88547 18.421
+                                                     4.78761 18.421H15.2124C16.1145 18.421 16.8896 17.7438 17.055 16.811L18.6434
+                                                      7.89468H20C20 7.89468 20 6.57893 20 6.57893ZM15.8264 16.5688C15.7715 16.8797
+                                                       15.5133 17.1053 15.2124 17.1053H4.78761C4.4867 17.1053 4.22854 16.8798
+                                                        4.173 16.5681L2.62789 7.89468H17.3721L15.8264 16.5688Z"
+                                    />
+                                  </svg>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-lg-4 col-sm-6 mb-3">
+                        <div class="product-card">
+                          <div class="product-card-offer">
+                            <div class="offer-hit">Hit</div>
+                            <div class="offer-new">New</div>
+                          </div>
+                          <div class="product-thumb">
+                            <a href="product.html"
+                              ><img src="./img/products/8.jpg" alt=""
+                            /></a>
+                          </div>
+                          <div class="product-details">
+                            <h4>
+                              <a href="product.html">Product 8 Lorem</a>
+                            </h4>
+                            <p class="product-excerpt">Lorem ipsum dolor</p>
+                            <div
+                              class="product-bottom-details d-flex justify-content-between"
+                            >
+                              <div class="product-price">
+                                <small>$70</small>
+                                $65
+                              </div>
+                              <div class="product-links">
+                                <a
+                                  href="#"
+                                  class="btn btn-outline-warning add-to-cart"
+                                >
+                                  <svg
+                                    width="20"
+                                    height="19"
+                                    viewBox="0 0 20 19"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <path
+                                      d="M20 6.57893H16.6038L13.0359 0.319309C12.8589 0.0083658 12.475 -0.093156
+                                                 12.1784 0.0938088C11.8823 0.280773 11.7865 0.684867 11.9641 0.996475L15.1461
+                                                  6.57893H4.85388L8.03587 0.996431C8.21348 0.684823 8.11767 0.280729 7.82164
+                                                   0.0937645C7.52439 -0.0932003 7.14173 0.00832153 6.96411 0.319265L3.39617
+                                                    6.57888H0V7.89468H1.35651L2.94432 16.8103C3.11033 17.7438 3.88547 18.421
+                                                     4.78761 18.421H15.2124C16.1145 18.421 16.8896 17.7438 17.055 16.811L18.6434
+                                                      7.89468H20C20 7.89468 20 6.57893 20 6.57893ZM15.8264 16.5688C15.7715 16.8797
+                                                       15.5133 17.1053 15.2124 17.1053H4.78761C4.4867 17.1053 4.22854 16.8798
+                                                        4.173 16.5681L2.62789 7.89468H17.3721L15.8264 16.5688Z"
+                                    />
+                                  </svg>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-lg-4 col-sm-6 mb-3">
+                        <div class="product-card">
+                          <div class="product-card-offer">
+                            <div class="offer-hit">Hit</div>
+                            <div class="offer-new">New</div>
+                          </div>
+                          <div class="product-thumb">
+                            <a href="product.html"
+                              ><img src="./img/products/1.jpg" alt=""
+                            /></a>
+                          </div>
+                          <div class="product-details">
+                            <h4>
+                              <a href="product.html"
+                                >Product 1 Lorem ipsum dolor, sit amet
+                                consectetur adipisicing.</a
+                              >
+                            </h4>
+                            <p class="product-excerpt">
+                              Lorem ipsum dolor, sit amet consectetur
+                              adipisicing elit. Placeat, aperiam!
+                            </p>
+                            <div
+                              class="product-bottom-details d-flex justify-content-between"
+                            >
+                              <div class="product-price">
+                                <small>$70</small>
+                                $65
+                              </div>
+                              <div class="product-links">
+                                <a
+                                  href="#"
+                                  class="btn btn-outline-warning add-to-cart"
+                                >
+                                  <svg
+                                    width="20"
+                                    height="19"
+                                    viewBox="0 0 20 19"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <path
+                                      d="M20 6.57893H16.6038L13.0359 0.319309C12.8589 0.0083658 12.475 -0.093156
+                                                 12.1784 0.0938088C11.8823 0.280773 11.7865 0.684867 11.9641 0.996475L15.1461
+                                                  6.57893H4.85388L8.03587 0.996431C8.21348 0.684823 8.11767 0.280729 7.82164
+                                                   0.0937645C7.52439 -0.0932003 7.14173 0.00832153 6.96411 0.319265L3.39617
+                                                    6.57888H0V7.89468H1.35651L2.94432 16.8103C3.11033 17.7438 3.88547 18.421
+                                                     4.78761 18.421H15.2124C16.1145 18.421 16.8896 17.7438 17.055 16.811L18.6434
+                                                      7.89468H20C20 7.89468 20 6.57893 20 6.57893ZM15.8264 16.5688C15.7715 16.8797
+                                                       15.5133 17.1053 15.2124 17.1053H4.78761C4.4867 17.1053 4.22854 16.8798
+                                                        4.173 16.5681L2.62789 7.89468H17.3721L15.8264 16.5688Z"
+                                    />
+                                  </svg>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!--  -->
+                  </div>
+                  <div id="Wireless Speakers" class="tabcontent">
+                    <h1 class="section-title h5">
+                      <span>Wireless Speakers</span>
+                    </h1>
+                  </div>
+                  <div id="New Zeppelin" class="tabcontent">
+                    <h1 class="section-title h5"><span>New Zeppelin</span></h1>
+                  </div>
+                  <div id="Car Audio" class="tabcontent">
+                    <h1 class="section-title h5"><span>Car Audio</span></h1>
+                  </div>
+                  <div id="Formation DUO" class="tabcontent">
+                    <h1 class="section-title h5"><span>Formation DUO</span></h1>
+                  </div>
+                  <div id="Headphones" class="tabcontent">
+                    <h1 class="section-title h5"><span>Headphones</span></h1>
+                  </div>
+                  <div id="Compact Monitors" class="tabcontent">
+                    <h1 class="section-title h5">
+                      <span>Compact Monitors</span>
+                    </h1>
+                  </div>
+                  <div id="Integrated solutions" class="tabcontent">
+                    <h1 class="section-title h5">
+                      <span>Integrated solutions</span>
+                    </h1>
+                  </div>
+                  <div id="Soundbars" class="tabcontent">
+                    <h1 class="section-title h5"><span>Soundbars</span></h1>
+                  </div>
+                  <div id="Subwoofers" class="tabcontent">
+                    <h1 class="section-title h5"><span>Subwoofers</span></h1>
+                  </div>
+                  <div id="Shelf Monitors" class="tabcontent">
+                    <h1 class="section-title h5">
+                      <span>Shelf Monitors</span>
+                    </h1>
+                  </div>
+                </div>
+                <!-- <div class="col-4 col-sm-2">
+                                <img src="assets/img/products/8.jpg" alt="" class="img-thumbnail">
+                            </div> -->
+                <!-- <div class="row">
+                  <div class="col-lg-2 col-sm-2">
+                    <div class="input-group mb-3">
+                      <span class="input-group-text">Sort By:</span>
+                      <select class="form-select" aria-label="Sort by:">
+                        <option selected>Default</option>
+                        <option value="1">Name (a-z)</option>
+                        <option value="2">Name (z-a)</option>
+                        <option value="3">Price (low &gt; high)</option>
+                        <option value="4">Price (high &gt; low)</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-lg-2 col-sm-2">
+                    <div class="input-group mb-3">
+                      <span class="input-group-text">Цвет:</span>
+                      <select class="form-select" aria-label="Show:">
+                        <option selected>9</option>
+                        <option value="15">15</option>
+                        <option value="30">30</option>
+                        <option value="45">45</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-lg-2 col-sm-2">
+                    <div class="input-group mb-3">
+                      <span class="input-group-text">Вес:</span>
+                      <select class="form-select" aria-label="Sort by:">
+                        <option selected>Default</option>
+                        <option value="1">100кг</option>
+                        <option value="2">50кг</option>
+                        <option value="3">20кг</option>
+                        <option value="4">10кг</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-lg-2 col-sm-2">
+                    <div class="input-group mb-3">
+                      <span class="input-group-text">Sort By:</span>
+                      <select class="form-select" aria-label="Sort by:">
+                        <option selected>Default</option>
+                        <option value="1">Name (a-z)</option>
+                        <option value="2">Name (z-a)</option>
+                        <option value="3">Price (low &gt; high)</option>
+                        <option value="4">Price (high &gt; low)</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-lg-2 col-sm-2">
+                    <div class="input-group mb-3">
+                      <span class="input-group-text">Цена:</span>
+                      <select class="form-select" aria-label="Show:">
+                        <option selected>9</option>
+                        <option value="15">15</option>
+                        <option value="30">30</option>
+                        <option value="45">45</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-lg-2 col-sm-2">
+                    <div class="input-group mb-3">
+                      <span class="input-group-text">Sort By:</span>
+                      <select class="form-select" aria-label="Sort by:">
+                        <option selected>Default</option>
+                        <option value="1">Name (a-z)</option>
+                        <option value="2">Name (z-a)</option>
+                        <option value="3">Price (low &gt; high)</option>
+                        <option value="4">Price (high &gt; low)</option>
+                      </select>
+                    </div>
+                  </div>
+                </div> -->
+              </div>
+
+              <hr />
+
+              <!-- <div class="row">
+                <div class="col-lg-4 col-sm-6 mb-3">
+                  <div class="product-card">
+                    <div class="product-card-offer">
+                      <div class="offer-hit">Hit</div>
+                      <div class="offer-new">New</div>
+                    </div>
+                    <div class="product-thumb">
+                      <a href="product.html"
+                        ><img src="./img/products/1.jpg" alt=""
+                      /></a>
+                    </div>
+                    <div class="product-details">
+                      <h4>
+                        <a href="product.html"
+                          >Product 1 Lorem ipsum dolor, sit amet consectetur
+                          adipisicing.</a
+                        >
+                      </h4>
+                      <p class="product-excerpt">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Placeat, aperiam!
+                      </p>
+                      <div
+                        class="product-bottom-details d-flex justify-content-between"
+                      >
+                        <div class="product-price">
+                          <small>$70</small>
+                          $65
+                        </div>
+                        <div class="product-links">
+                          <a
+                            href="#"
+                            class="btn btn-outline-warning add-to-cart"
+                          >
+                            <svg
+                              width="20"
+                              height="19"
+                              viewBox="0 0 20 19"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M20 6.57893H16.6038L13.0359 0.319309C12.8589 0.0083658 12.475 -0.093156
+                                                 12.1784 0.0938088C11.8823 0.280773 11.7865 0.684867 11.9641 0.996475L15.1461
+                                                  6.57893H4.85388L8.03587 0.996431C8.21348 0.684823 8.11767 0.280729 7.82164
+                                                   0.0937645C7.52439 -0.0932003 7.14173 0.00832153 6.96411 0.319265L3.39617
+                                                    6.57888H0V7.89468H1.35651L2.94432 16.8103C3.11033 17.7438 3.88547 18.421
+                                                     4.78761 18.421H15.2124C16.1145 18.421 16.8896 17.7438 17.055 16.811L18.6434
+                                                      7.89468H20C20 7.89468 20 6.57893 20 6.57893ZM15.8264 16.5688C15.7715 16.8797
+                                                       15.5133 17.1053 15.2124 17.1053H4.78761C4.4867 17.1053 4.22854 16.8798
+                                                        4.173 16.5681L2.62789 7.89468H17.3721L15.8264 16.5688Z"
+                              />
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 col-sm-6 mb-3">
+                  <div class="product-card">
+                    <div class="product-card-offer">
+                      <div class="offer-hit">Hit</div>
+                    </div>
+                    <div class="product-thumb">
+                      <a href="product.html"
+                        ><img src="./img/products/2.jpg" alt=""
+                      /></a>
+                    </div>
+                    <div class="product-details">
+                      <h4>
+                        <a href="product.html">Product 2</a>
+                      </h4>
+                      <p class="product-excerpt">Lorem ipsum dolor</p>
+                      <div
+                        class="product-bottom-details d-flex justify-content-between"
+                      >
+                        <div class="product-price">$65</div>
+                        <div class="product-links">
+                          <a
+                            href="#"
+                            class="btn btn-outline-warning add-to-cart"
+                          >
+                            <svg
+                              width="20"
+                              height="19"
+                              viewBox="0 0 20 19"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M20 6.57893H16.6038L13.0359 0.319309C12.8589 0.0083658 12.475 -0.093156
+                                                 12.1784 0.0938088C11.8823 0.280773 11.7865 0.684867 11.9641 0.996475L15.1461
+                                                  6.57893H4.85388L8.03587 0.996431C8.21348 0.684823 8.11767 0.280729 7.82164
+                                                   0.0937645C7.52439 -0.0932003 7.14173 0.00832153 6.96411 0.319265L3.39617
+                                                    6.57888H0V7.89468H1.35651L2.94432 16.8103C3.11033 17.7438 3.88547 18.421
+                                                     4.78761 18.421H15.2124C16.1145 18.421 16.8896 17.7438 17.055 16.811L18.6434
+                                                      7.89468H20C20 7.89468 20 6.57893 20 6.57893ZM15.8264 16.5688C15.7715 16.8797
+                                                       15.5133 17.1053 15.2124 17.1053H4.78761C4.4867 17.1053 4.22854 16.8798
+                                                        4.173 16.5681L2.62789 7.89468H17.3721L15.8264 16.5688Z"
+                              />
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 col-sm-6 mb-3">
+                  <div class="product-card">
+                    <div class="product-card-offer">
+                       <div class="offer-hit">Hit</div>
+                                        <div class="offer-new">New</div> 
+                    </div>
+                    <div class="product-thumb">
+                      <a href="product.html"
+                        ><img src="./img/products/3.jpg" alt=""
+                      /></a>
+                    </div>
+                    <div class="product-details">
+                      <h4>
+                        <a href="product.html">Product 3 Lorem ipsum</a>
+                      </h4>
+                      <p class="product-excerpt">Lorem ipsum</p>
+                      <div
+                        class="product-bottom-details d-flex justify-content-between"
+                      >
+                        <div class="product-price">$100</div>
+                        <div class="product-links">
+                          <a
+                            href="#"
+                            class="btn btn-outline-warning add-to-cart"
+                          >
+                            <svg
+                              width="20"
+                              height="19"
+                              viewBox="0 0 20 19"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M20 6.57893H16.6038L13.0359 0.319309C12.8589 0.0083658 12.475 -0.093156
+                                                 12.1784 0.0938088C11.8823 0.280773 11.7865 0.684867 11.9641 0.996475L15.1461
+                                                  6.57893H4.85388L8.03587 0.996431C8.21348 0.684823 8.11767 0.280729 7.82164
+                                                   0.0937645C7.52439 -0.0932003 7.14173 0.00832153 6.96411 0.319265L3.39617
+                                                    6.57888H0V7.89468H1.35651L2.94432 16.8103C3.11033 17.7438 3.88547 18.421
+                                                     4.78761 18.421H15.2124C16.1145 18.421 16.8896 17.7438 17.055 16.811L18.6434
+                                                      7.89468H20C20 7.89468 20 6.57893 20 6.57893ZM15.8264 16.5688C15.7715 16.8797
+                                                       15.5133 17.1053 15.2124 17.1053H4.78761C4.4867 17.1053 4.22854 16.8798
+                                                        4.173 16.5681L2.62789 7.89468H17.3721L15.8264 16.5688Z"
+                              />
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 col-sm-6 mb-3">
+                  <div class="product-card">
+                    <div class="product-card-offer">
+                      <div class="offer-hit">Hit</div>
+                    </div>
+                    <div class="product-thumb">
+                      <a href="product.html"
+                        ><img src="./img/products/4.jpg" alt=""
+                      /></a>
+                    </div>
+                    <div class="product-details">
+                      <h4>
+                        <a href="product.html">Product 4</a>
+                      </h4>
+                      <p class="product-excerpt">Lorem ipsum dolor</p>
+                      <div
+                        class="product-bottom-details d-flex justify-content-between"
+                      >
+                        <div class="product-price">
+                          <small>$70</small>
+                          $65
+                        </div>
+                        <div class="product-links">
+                          <a
+                            href="#"
+                            class="btn btn-outline-warning add-to-cart"
+                          >
+                            <svg
+                              width="20"
+                              height="19"
+                              viewBox="0 0 20 19"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M20 6.57893H16.6038L13.0359 0.319309C12.8589 0.0083658 12.475 -0.093156
+                                                 12.1784 0.0938088C11.8823 0.280773 11.7865 0.684867 11.9641 0.996475L15.1461
+                                                  6.57893H4.85388L8.03587 0.996431C8.21348 0.684823 8.11767 0.280729 7.82164
+                                                   0.0937645C7.52439 -0.0932003 7.14173 0.00832153 6.96411 0.319265L3.39617
+                                                    6.57888H0V7.89468H1.35651L2.94432 16.8103C3.11033 17.7438 3.88547 18.421
+                                                     4.78761 18.421H15.2124C16.1145 18.421 16.8896 17.7438 17.055 16.811L18.6434
+                                                      7.89468H20C20 7.89468 20 6.57893 20 6.57893ZM15.8264 16.5688C15.7715 16.8797
+                                                       15.5133 17.1053 15.2124 17.1053H4.78761C4.4867 17.1053 4.22854 16.8798
+                                                        4.173 16.5681L2.62789 7.89468H17.3721L15.8264 16.5688Z"
+                              />
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 col-sm-6 mb-3">
+                  <div class="product-card">
+                    <div class="product-card-offer">
+                      <div class="offer-hit">Hit</div>
+                      <div class="offer-new">New</div>
+                    </div>
+                    <div class="product-thumb">
+                      <a href="product.html"
+                        ><img src="./img/products/5.jpg" alt=""
+                      /></a>
+                    </div>
+                    <div class="product-details">
+                      <h4>
+                        <a href="product.html"
+                          >Product 5 Lorem ipsum dolor, sit amet consectetur
+                          adipisicing.</a
+                        >
+                      </h4>
+                      <p class="product-excerpt">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Placeat, aperiam!
+                      </p>
+                      <div
+                        class="product-bottom-details d-flex justify-content-between"
+                      >
+                        <div class="product-price">
+                          <small>$70</small>
+                          $65
+                        </div>
+                        <div class="product-links">
+                          <a
+                            href="#"
+                            class="btn btn-outline-warning add-to-cart"
+                          >
+                            <svg
+                              width="20"
+                              height="19"
+                              viewBox="0 0 20 19"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M20 6.57893H16.6038L13.0359 0.319309C12.8589 0.0083658 12.475 -0.093156
+                                                 12.1784 0.0938088C11.8823 0.280773 11.7865 0.684867 11.9641 0.996475L15.1461
+                                                  6.57893H4.85388L8.03587 0.996431C8.21348 0.684823 8.11767 0.280729 7.82164
+                                                   0.0937645C7.52439 -0.0932003 7.14173 0.00832153 6.96411 0.319265L3.39617
+                                                    6.57888H0V7.89468H1.35651L2.94432 16.8103C3.11033 17.7438 3.88547 18.421
+                                                     4.78761 18.421H15.2124C16.1145 18.421 16.8896 17.7438 17.055 16.811L18.6434
+                                                      7.89468H20C20 7.89468 20 6.57893 20 6.57893ZM15.8264 16.5688C15.7715 16.8797
+                                                       15.5133 17.1053 15.2124 17.1053H4.78761C4.4867 17.1053 4.22854 16.8798
+                                                        4.173 16.5681L2.62789 7.89468H17.3721L15.8264 16.5688Z"
+                              />
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 col-sm-6 mb-3">
+                  <div class="product-card">
+                    <div class="product-card-offer">
+                      <div class="offer-hit">Hit</div>
+                      <div class="offer-new">New</div>
+                    </div>
+                    <div class="product-thumb">
+                      <a href="product.html"
+                        ><img src="./img/products/6.jpg" alt=""
+                      /></a>
+                    </div>
+                    <div class="product-details">
+                      <h4>
+                        <a href="product.html">Product 6</a>
+                      </h4>
+                      <p class="product-excerpt"></p>
+                      <div
+                        class="product-bottom-details d-flex justify-content-between"
+                      >
+                        <div class="product-price">
+                          <small>$70</small>
+                          $65
+                        </div>
+                        <div class="product-links">
+                          <a
+                            href="#"
+                            class="btn btn-outline-warning add-to-cart"
+                          >
+                            <svg
+                              width="20"
+                              height="19"
+                              viewBox="0 0 20 19"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M20 6.57893H16.6038L13.0359 0.319309C12.8589 0.0083658 12.475 -0.093156
+                                                 12.1784 0.0938088C11.8823 0.280773 11.7865 0.684867 11.9641 0.996475L15.1461
+                                                  6.57893H4.85388L8.03587 0.996431C8.21348 0.684823 8.11767 0.280729 7.82164
+                                                   0.0937645C7.52439 -0.0932003 7.14173 0.00832153 6.96411 0.319265L3.39617
+                                                    6.57888H0V7.89468H1.35651L2.94432 16.8103C3.11033 17.7438 3.88547 18.421
+                                                     4.78761 18.421H15.2124C16.1145 18.421 16.8896 17.7438 17.055 16.811L18.6434
+                                                      7.89468H20C20 7.89468 20 6.57893 20 6.57893ZM15.8264 16.5688C15.7715 16.8797
+                                                       15.5133 17.1053 15.2124 17.1053H4.78761C4.4867 17.1053 4.22854 16.8798
+                                                        4.173 16.5681L2.62789 7.89468H17.3721L15.8264 16.5688Z"
+                              />
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 col-sm-6 mb-3">
+                  <div class="product-card">
+                    <div class="product-card-offer">
+                      <div class="offer-hit">Hit</div>
+                      <div class="offer-new">New</div>
+                    </div>
+                    <div class="product-thumb">
+                      <a href="product.html"
+                        ><img src="./img/products/7.jpg" alt=""
+                      /></a>
+                    </div>
+                    <div class="product-details">
+                      <h4>
+                        <a href="product.html">Product 7</a>
+                      </h4>
+                      <p class="product-excerpt">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Placeat, aperiam!
+                      </p>
+                      <div
+                        class="product-bottom-details d-flex justify-content-between"
+                      >
+                        <div class="product-price">
+                          <small>$70</small>
+                          $65
+                        </div>
+                        <div class="product-links">
+                          <a
+                            href="#"
+                            class="btn btn-outline-warning add-to-cart"
+                          >
+                            <svg
+                              width="20"
+                              height="19"
+                              viewBox="0 0 20 19"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M20 6.57893H16.6038L13.0359 0.319309C12.8589 0.0083658 12.475 -0.093156
+                                                 12.1784 0.0938088C11.8823 0.280773 11.7865 0.684867 11.9641 0.996475L15.1461
+                                                  6.57893H4.85388L8.03587 0.996431C8.21348 0.684823 8.11767 0.280729 7.82164
+                                                   0.0937645C7.52439 -0.0932003 7.14173 0.00832153 6.96411 0.319265L3.39617
+                                                    6.57888H0V7.89468H1.35651L2.94432 16.8103C3.11033 17.7438 3.88547 18.421
+                                                     4.78761 18.421H15.2124C16.1145 18.421 16.8896 17.7438 17.055 16.811L18.6434
+                                                      7.89468H20C20 7.89468 20 6.57893 20 6.57893ZM15.8264 16.5688C15.7715 16.8797
+                                                       15.5133 17.1053 15.2124 17.1053H4.78761C4.4867 17.1053 4.22854 16.8798
+                                                        4.173 16.5681L2.62789 7.89468H17.3721L15.8264 16.5688Z"
+                              />
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 col-sm-6 mb-3">
+                  <div class="product-card">
+                    <div class="product-card-offer">
+                      <div class="offer-hit">Hit</div>
+                      <div class="offer-new">New</div>
+                    </div>
+                    <div class="product-thumb">
+                      <a href="product.html"
+                        ><img src="./img/products/8.jpg" alt=""
+                      /></a>
+                    </div>
+                    <div class="product-details">
+                      <h4>
+                        <a href="product.html">Product 8 Lorem</a>
+                      </h4>
+                      <p class="product-excerpt">Lorem ipsum dolor</p>
+                      <div
+                        class="product-bottom-details d-flex justify-content-between"
+                      >
+                        <div class="product-price">
+                          <small>$70</small>
+                          $65
+                        </div>
+                        <div class="product-links">
+                          <a
+                            href="#"
+                            class="btn btn-outline-warning add-to-cart"
+                          >
+                            <svg
+                              width="20"
+                              height="19"
+                              viewBox="0 0 20 19"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M20 6.57893H16.6038L13.0359 0.319309C12.8589 0.0083658 12.475 -0.093156
+                                                 12.1784 0.0938088C11.8823 0.280773 11.7865 0.684867 11.9641 0.996475L15.1461
+                                                  6.57893H4.85388L8.03587 0.996431C8.21348 0.684823 8.11767 0.280729 7.82164
+                                                   0.0937645C7.52439 -0.0932003 7.14173 0.00832153 6.96411 0.319265L3.39617
+                                                    6.57888H0V7.89468H1.35651L2.94432 16.8103C3.11033 17.7438 3.88547 18.421
+                                                     4.78761 18.421H15.2124C16.1145 18.421 16.8896 17.7438 17.055 16.811L18.6434
+                                                      7.89468H20C20 7.89468 20 6.57893 20 6.57893ZM15.8264 16.5688C15.7715 16.8797
+                                                       15.5133 17.1053 15.2124 17.1053H4.78761C4.4867 17.1053 4.22854 16.8798
+                                                        4.173 16.5681L2.62789 7.89468H17.3721L15.8264 16.5688Z"
+                              />
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 col-sm-6 mb-3">
+                  <div class="product-card">
+                    <div class="product-card-offer">
+                      <div class="offer-hit">Hit</div>
+                      <div class="offer-new">New</div>
+                    </div>
+                    <div class="product-thumb">
+                      <a href="product.html"
+                        ><img src="./img/products/1.jpg" alt=""
+                      /></a>
+                    </div>
+                    <div class="product-details">
+                      <h4>
+                        <a href="product.html"
+                          >Product 1 Lorem ipsum dolor, sit amet consectetur
+                          adipisicing.</a
+                        >
+                      </h4>
+                      <p class="product-excerpt">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Placeat, aperiam!
+                      </p>
+                      <div
+                        class="product-bottom-details d-flex justify-content-between"
+                      >
+                        <div class="product-price">
+                          <small>$70</small>
+                          $65
+                        </div>
+                        <div class="product-links">
+                          <a
+                            href="#"
+                            class="btn btn-outline-warning add-to-cart"
+                          >
+                            <svg
+                              width="20"
+                              height="19"
+                              viewBox="0 0 20 19"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M20 6.57893H16.6038L13.0359 0.319309C12.8589 0.0083658 12.475 -0.093156
+                                                 12.1784 0.0938088C11.8823 0.280773 11.7865 0.684867 11.9641 0.996475L15.1461
+                                                  6.57893H4.85388L8.03587 0.996431C8.21348 0.684823 8.11767 0.280729 7.82164
+                                                   0.0937645C7.52439 -0.0932003 7.14173 0.00832153 6.96411 0.319265L3.39617
+                                                    6.57888H0V7.89468H1.35651L2.94432 16.8103C3.11033 17.7438 3.88547 18.421
+                                                     4.78761 18.421H15.2124C16.1145 18.421 16.8896 17.7438 17.055 16.811L18.6434
+                                                      7.89468H20C20 7.89468 20 6.57893 20 6.57893ZM15.8264 16.5688C15.7715 16.8797
+                                                       15.5133 17.1053 15.2124 17.1053H4.78761C4.4867 17.1053 4.22854 16.8798
+                                                        4.173 16.5681L2.62789 7.89468H17.3721L15.8264 16.5688Z"
+                              />
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div> -->
+
+              <div class="row">
+                <div class="col-12">
+                  <nav aria-label="Page navigation example">
+                    <ul class="pagination">
+                      <li class="page-item">
+                        <a class="page-link" href="#">Previous</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">1</a>
+                      </li>
+                      <li class="page-item active" aria-current="page">
+                        <a class="page-link" href="#">2</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">3</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">4</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">5</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">Next</a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <section class="container-fluid socialmap">
+          <div id="map" class="text-center">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2669.822174089799!2d37.61030017050038!3d55.757739672412825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a454f72f4ff%3A0x923352d5be7df67b!2z0KLQstC10YDRgdC60LDRjyDRg9C7LiwgNSwg0JzQvtGB0LrQstCwLCDQoNC-0YHRgdC40Y8sIDEyNTAwOQ!5e0!3m2!1sru!2sua!4v1596189839076!5m2!1sru!2sua"
+              width="100%"
+              height="300"
+              frameborder="0"
+              style="border: 0"
+              allowfullscreen=""
+              aria-hidden="false"
+              tabindex="0"
+            >
+            </iframe>
+          </div>
+        </section>
+        <!--  -->
+      </main>
+      <footer class="footer">
+        <div class="container">
+          <div class="footer__inner">
+            <div class="footer-widget">
+              <ul class="list-unstyled">
+                <li><p class="white ml-10">Shop</p></li>
+
+                <li><a class="grey" href="#pro">Speakers</a></li>
+                <li><a class="grey" href="#pro">Headphones</a></li>
+                <li><a class="grey" href="#pro">Wireless Headphones</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-widget">
+              <ul class="list-unstyled">
+                <li><p class="white ml-10">About</p></li>
+                <li><a class="grey" href="#home">Our stories</a></li>
+                <li><a class="grey" href="#first">Blog</a></li>
+                <li><a class="grey" href="#third">Careers</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-widget">
+              <ul class="list-unstyled">
+                <li><p class="white ml-10">Support</p></li>
+                <li><a class="grey" href="#home">Contact Us</a></li>
+                <li><a class="grey" href="#first">Find a Retailer</a></li>
+                <li><a class="grey" href="#third">Product Registration</a></li>
+                <li><a class="grey" href="#six">Product Support</a></li>
+                <li><a class="grey" href="#seven">Product Archive</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-widget-subscribe">
+              <ul class="list-unstyled">
+                <li><p class="white ml-10">Our Newsletter</p></li>
+                <form action="" class="footer__form subscribe-form-black ml-10">
+                  <label for="" class="subscribe-form-black__field">
+                    <input
+                      class="subscribe-form-black__placeholder"
+                      type="email"
+                      required
+                      placeholder="Email Address"
+                    />
+                  </label>
+                  <button
+                    class="subscribe-form-black__btn btn-reset"
+                    type="submit"
+                  >
+                    Subscribe
+                  </button>
+                </form>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__bottom">
+          <div class="container">
+            <div class="footer__bottom-wrap">
+              <div class="footer__navigation">
+                <a class="logo" href="#body">
+                  <h5 class="white__title">Bowers&Wilkins</h5>
+                </a>
+              </div>
+              <div class="social">
+                <div class="container">
+                  <div class="social-inner">
+                    <div class="" title="В контакте">
+                      <div class="roll">
+                        <img class="regular" src="./img/icons/vk45gray.png" /><a
+                          href="http://vk.com/share.php?url=[URL]&title=[TITLE]&description=[DESC]&image=[IMAGE]&noparse=true"
+                          ><img class="rollover" src="./img/icons/vk45.png"
+                        /></a>
+                      </div>
+                    </div>
+
+                    <div class="" title="В контакте">
+                      <div class="roll">
+                        <img class="regular" src="./img/icons/vk50gray.png" /><a
+                          href="http://vk.com/share.php?url=[URL]&title=[TITLE]&description=[DESC]&image=[IMAGE]&noparse=true"
+                          ><img class="rollover" src="./img/icons/vk50.png"
+                        /></a>
+                      </div>
+                    </div>
+
+                    <div class="" title="Фэйсбук">
+                      <div class="roll">
+                        <img class="regular" src="./img/icons/fb45gray.png" /><a
+                          href="https://www.facebook.com/sharer/sharer.php?u=[URL]"
+                          ><img class="rollover" src="./img/icons/fb45.png"
+                        /></a>
+                      </div>
+                    </div>
+
+                    <div class="" title="Одноклассники">
+                      <div class="roll">
+                        <img class="regular" src="./img/icons/o46gray.png" /><a
+                          href="http://ok.ru"
+                          ><img class="rollover" src="./img/icons/o46.png"
+                        /></a>
+                      </div>
+                    </div>
+
+                    <div class="" title="Инстаграмм">
+                      <div class="roll">
+                        <img class="regular" src="./img/icons/i45gray.png" /><a
+                          href="https://www.instagram.com/"
+                          ><img class="rollover" src="./img/icons/i45.png"
+                        /></a>
+                      </div>
+                    </div>
+
+                    <div class="" title="Твиттер">
+                      <div class="roll">
+                        <img
+                          class="regular"
+                          src="./img/icons/twittergray.png"
+                        /><a
+                          href="https://twitter.com/share?url=[URL]&text=[TITLE]"
+                          ><img class="rollover" src="./img/icons/twitter.png"
+                        /></a>
+                      </div>
+                    </div>
+
+                    <div class="" title="Реддит">
+                      <div class="roll">
+                        <img class="regular" src="./img/icons/re50gray.png" /><a
+                          href="https://www.reddit.com"
+                          ><img class="rollover" src="./img/icons/re50.png"
+                        /></a>
+                      </div>
+                    </div>
+
+                    <div class="" title="Рутуб">
+                      <div class="roll">
+                        <img
+                          class="regular"
+                          src="./img/icons/rutube45grey.png"
+                        /><a href="https://rutube.ru/search/?query=olegrewko"
+                          ><img class="rollover" src="./img/icons/rutube45.png"
+                        /></a>
+                      </div>
+                    </div>
+                    <div class="" title="Гитхаб">
+                      <div class="roll">
+                        <img
+                          class="regular"
+                          src="./img/icons/ghbl45gray.png"
+                        /><a
+                          href="https://github.com/olegrewko/olegrewko.github.io"
+                          ><img class="rollover" src="./img/icons/ghbl45.png"
+                        /></a>
+                      </div>
+                    </div>
+
+                    <div class="" title="Ютуб">
+                      <div class="roll">
+                        <img
+                          class="regular"
+                          src="./img/icons/youtube45gray01.png"
+                        /><a
+                          href="https://www.youtube.com/channel/UCU-sIbAKpKDuuheQClfKspA"
+                          ><img
+                            class="rollover"
+                            src="./img/icons/youtubemaroon.png"
+                        /></a>
+                      </div>
+                    </div>
+
+                    <div class="" title="tagged">
+                      <div class="roll">
+                        <img
+                          class="regular"
+                          src="./img/icons/taggedgray.png"
+                        /><a href="https://secure.tagged.com/"
+                          ><img class="rollover" src="./img/icons/tagged.png"
+                        /></a>
+                      </div>
+                    </div>
+
+                    <div class="" title="flikr">
+                      <div class="roll">
+                        <img
+                          class="regular"
+                          src="./img/icons/flikrgray.png"
+                        /><a href="https://www.flickr.com"
+                          ><img class="rollover" src="./img/icons/flikr.png"
+                        /></a>
+                      </div>
+                    </div>
+
+                    <div class="" title="pinterest">
+                      <div class="roll">
+                        <img
+                          class="regular"
+                          src="./img/icons/pinterest.png"
+                        /><a href="https://ru.pinterest.com/"
+                          ><img
+                            class="rollover"
+                            src="./img/icons/pinterest002.png"
+                        /></a>
+                      </div>
+                    </div>
+
+                    <div class="" title="meetme">
+                      <div class="roll">
+                        <img
+                          class="regular"
+                          src="./img/icons/meetmegray.png"
+                        /><a
+                          href="http://seoslim.ru/gg/socialnaya-set-meetme.html"
+                          ><img class="rollover" src="./img/icons/meetme.png"
+                        /></a>
+                      </div>
+                    </div>
+
+                    <div class="" title="meetup">
+                      <div class="roll">
+                        <img
+                          class="regular"
+                          src="./img/icons/meetupgray.png"
+                        /><a
+                          href="http://seoslim.ru/gg/socialnaya-set-meetup-com.html"
+                          ><img class="rollover" src="./img/icons/meetup.png"
+                        /></a>
+                      </div>
+                    </div>
+
+                    <div class="" title="myspace">
+                      <div class="roll">
+                        <img
+                          class="regular"
+                          src="./img/icons/myspacegray.png"
+                        /><a href="https://www.myspace.com"
+                          ><img class="rollover" src="./img/icons/myspace.png"
+                        /></a>
+                      </div>
+                    </div>
+
+                    <div class="" title="periscope">
+                      <div class="roll">
+                        <img
+                          class="regular"
+                          src="./img/icons/periscope001.png"
+                        /><a href="https://www.periscope.tv/"
+                          ><img
+                            class="rollover"
+                            src="./img/icons/periscopegreen.png"
+                        /></a>
+                      </div>
+                    </div>
+
+                    <div class="" title="tumblr">
+                      <div class="roll">
+                        <img
+                          class="regular"
+                          src="./img/icons/tumblrgray.png"
+                        /><a href="https://www.tumblr.com"
+                          ><img class="rollover" src="./img/icons/tumblr.png"
+                        /></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="tiny-footer">
+              <p class="tiny-grey">
+                © All Rights Reserved 2020 | Bowers&Wilkins
+              </p>
+              <ul class="tiny-card">
+                <li class="tiny-card__item">
+                  <a href="#" class="tiny-card__link">
+                    <img src="./img/icons/paypal.png" alt="" />
+                  </a>
+                </li>
+                <li class="tiny-card__item">
+                  <a href="#" class="tiny-card__link">
+                    <img src="./img/icons/master.png" alt="" />
+                  </a>
+                </li>
+                <li class="tiny-card__item">
+                  <a href="#" class="tiny-card__link">
+                    <img src="./img/icons/visa.png" alt="" />
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    s
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/jquery.js"></script>
+    <script src="./js/jquery341.min.js"></script>
+    <script src="./js/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="./owlcarousel/owl.carousel.min.js"></script>
+    <script src="./js/main.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        var defaults = {
+          containerID: "toTop",
+          containerHoverID: "toTopHover",
+          scrollSpeed: 1200,
+          easingType: "linear",
+        };
+
+        $().UItoTop({
+          easingType: "easeOutQuart",
+        });
+      });
+    </script>
+
+    <a href="#" id="toTop" style="display: block">
+      <span id="toTopHover" style="opacity: 1"> </span
+    ></a>
+    <!-- tabs -->
+    <script>
+      function openCity(evt, cityName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+      }
+
+      // Get the element with id="defaultOpen" and click on it
+      document.getElementById("defaultOpen").click();
+    </script>
+    <script>
+      document
+        .getElementById("menu-toggle")
+        .addEventListener("click", function () {
+          document.getElementById("sidebar").classList.toggle("open");
+        });
+
+      document
+        .getElementById("close-btn")
+        .addEventListener("click", function () {
+          document.getElementById("sidebar").classList.remove("open");
+        });
+    </script>
+  </body>
+</html>

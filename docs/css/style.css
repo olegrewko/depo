@@ -103,6 +103,30 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Jost";
+  src: url("../fonts/Jost-Thin.woff2") format("woff2");
+  font-weight: 100;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Jost";
+  src: url("../fonts/Jost-Italic.woff2") format("woff2");
+  font-weight: 200;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Jost";
+  src: url("../fonts/Jost-Regular.woff2") format("woff2");
+  font-weight: 300;
+  font-display: swap;
+  font-style: normal;
+}
+
 html {
   scroll-behavior: smooth;
   line-height: 1.15;
@@ -142,7 +166,7 @@ body {
   flex-direction: column;
 }
 
-main.main {
+.main {
   flex: 1 1 auto;
 }
 
@@ -750,6 +774,29 @@ li {
 
 }
 
+.mt-50 {
+  margin-top: -50px;
+}
+
+.mt-100 {
+  margin-top: 50px;
+}
+
+.mt-200 {
+  padding-top: 200px;
+}
+
+.bt-2 {
+  border-top: 1px solid #ccc;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.bg-white {
+
+  background-color: #fff;
+}
+
 .maroon {
   color: maroon;
   transition: all .4s;
@@ -789,6 +836,7 @@ li {
 
 .bg-black {
   background-color: black;
+  min-height: auto;
   /* color: white; */
 }
 
@@ -870,9 +918,9 @@ li {
   left: 0;
   right: 0;
   top: 0;
-
-  background-color: #fff;
-  /* box-shadow: 0 0 10px rgba(0,0,0,0.5);  */
+  /* background: #34495e;  */
+  /* background-color: #fff; */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   z-index: 1;
 }
 
@@ -882,7 +930,7 @@ li {
   justify-content: space-between;
   align-items: center;
 
-  background-color: #fff;
+  /* background-color: #fff; */
 
 
 }
@@ -1071,8 +1119,8 @@ li {
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  padding-top: 0;
+  padding-bottom: 0;
 
 }
 
@@ -1087,13 +1135,23 @@ li {
 }
 
 .bg-grey {
-  background-color: rgba(96, 212, 212, 0.16);
+  /* background-color: rgba(96, 212, 212, 0.16); */
+  background: #34495e;
+}
+
+.ml-100 {
+  margin-left: -100px;
+  /* padding-left: -200px; */
+}
+
+.mb-100 {
+  margin-bottom: 100px;
 }
 
 .about__cell {
   max-width: 500px;
   width: 100%;
-  margin: 5px;
+  margin: 0px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1161,6 +1219,16 @@ li {
   margin: 0 auto;
 }
 
+.relat {
+  position: relative;
+}
+
+.ab {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
 .duo {
   background-color: #eee;
 }
@@ -1168,12 +1236,12 @@ li {
 .cell-900--flex {
   max-width: 1400px;
   width: 100%;
-  margin: 5px;
-  padding: 5px;
+  margin: 0px;
+  padding: 0px;
   margin: 0 auto;
 
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: flex-start;
   flex-wrap: wrap;
 }
@@ -1345,14 +1413,16 @@ li {
 
   background-color: black;
   padding: 0px 0;
-  margin-top: 100px;
+  margin-top: 0px;
+  z-index: 0;
 }
 
 .slider-blog {
   /* width: 100%; */
   background-color: black;
   padding: 0px 0;
-  margin-top: 0px;
+  /* margin-top: -10px; */
+  z-index: -10;
 }
 
 .slider-blog__item {
@@ -1543,7 +1613,7 @@ form {
 
 .socialmap {
   padding-top: 0.4rem;
-  max-width: 1200px;
+  max-width: 1400px;
   width: 100%;
   background-color: #071e26;
 }
@@ -2351,12 +2421,16 @@ form {
 } */
 .dummy08 {
   min-height: 40px;
+  /* font-family: 'Jost-Thin'; */
+
+  font-weight: 500;
 }
 
 
 
 .cadetblue {
-  background-color: cadetblue;
+  /* background-color: cadetblue; */
+  background: #34495e;
 }
 
 .ml-10 {
@@ -2506,7 +2580,7 @@ form {
   margin: 0 auto;
   padding: 0;
 
-  max-width: 1200px;
+  max-width: 1300px;
   width: 100%;
 }
 
@@ -2664,7 +2738,41 @@ form {
   margin: 0 auto;
 }
 
+.title-6r {
+  /* font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 100px; */
+  line-height: 45px;
+  font-size: 4.2rem;
+  color: #34495e;
+  font-weight: 500;
+
+}
+
+.mb-10 {
+  margin-bottom: 10px;
+}
+
 .blog-content__content {
   max-width: 800px;
   width: 100%;
+}
+
+.grid-5 {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 100px;
+  max-width: 1400px;
+  width: 100%;
+}
+
+/* .col-lg-3 {
+  height: 50px;
+  border-left: 0px solid #000;
+
+} */
+
+.mt-50 {
+  margin-top: 50px;
 }
