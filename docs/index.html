@@ -22,6 +22,286 @@
     <link rel="stylesheet" href="css/media.css" />
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
 
+  <!-- Стили для карточек -->
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+
+    .container-card {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      max-width: 1480px;
+      margin: 0 auto;
+    }
+
+    .container {
+      max-width: 1480px;
+      /* 5 карточек * 280px + отступы  */
+      margin: 0 auto;
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 5px;
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+
+    /* Делаем все карточки одинаковой высоты */
+    .product-card {
+      min-height: 450px;
+      /* Минимальная высота для выравнивания */
+    }
+
+    .product-image img {
+      width: 100%;
+      height: auto;
+      border-radius: 0px;
+      object-fit: cover;
+    }
+
+    .product-content {
+      padding-left: 30px;
+      padding-right: 30px;
+      /* margin-left: 10px; */
+      flex: 1;
+      /* Занимает все доступное пространство */
+      display: flex;
+      flex-direction: column;
+    }
+
+
+
+
+    .product-card {
+      /* position: relative; */
+      max-width: 500px;
+      width: 100%;
+      height: auto;
+      background: transparent;
+      border-radius: 2px;
+      padding: 0px;
+      /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); */
+      transition: all 0.3s ease;
+      cursor: pointer;
+      border: 0px solid #e0e0e0;
+      font-weight: 500;
+      font-size: 12px;
+      /* Основная магия - flex колонка с прижатым низом */
+      display: flex;
+      flex-direction: column;
+    }
+
+    .product-card:hover {
+      transform: translateZ(-15px);
+      box-shadow: 0 8px 10px rgba(45, 1, 1, 0.15);
+      /* border-color: #007bff; */
+    }
+
+    .product-image {
+      width: 100%;
+      height: auto;
+      background: linear-gradient(135deg, #1c1c1d 0%, #181818 100%);
+      border-radius: 2px;
+      margin-bottom: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .product-title {
+      font-family: 'Jost';
+      font-size: 14px;
+      /* font-weight: 500; */
+      margin-bottom: 5px;
+      color: #333;
+      font-weight: 700;
+
+    }
+
+    .product-description {
+      font-family: 'Jost';
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 1.5;
+      color: #666;
+      margin-bottom: 5px;
+      flex: 1;
+      /* Описание растягивается, чтобы прижать нижний блок */
+    }
+
+    .product-bottom {
+      margin-top: auto;
+      /* Прижимаем к низу */
+      padding-top: 10px;
+      border-top: 0px solid #f0f0f0;
+      /* background-color: #77ede7; */
+    }
+
+    .product-price {
+      font-family: 'Jost';
+      font-size: 18px;
+      font-weight: 700;
+      color: #011932;
+      margin-bottom: 2px;
+    }
+
+    .product-rating {
+      color: maroon;
+      margin-bottom: 5px;
+    }
+
+    .buy-button {
+      width: 100%;
+      padding: 5px;
+      /* background: var(--contrast-color); */
+      background: transparent;
+      color: var(--color-tundora);
+      border: 1px solid var(--color-tundora);
+      border-radius: 3px;
+
+      cursor: pointer;
+      transition: background 0.3s ease;
+      font-family: 'Jost';
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .buy-button:hover {
+      background: var(--color-tundora);
+      color: #e0e0e0;
+    }
+
+    /* Адаптация для планшетов */
+    @media (max-width: 1200px) {
+      .products-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .container {
+        max-width: 920px;
+      }
+    }
+
+    /* Адаптация для мобильных */
+    @media (max-width: 768px) {
+      .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+      }
+
+      /* .container {
+        max-width: 100%;
+        padding: 0 10px;
+      } */
+
+      .product-card {
+        width: 100%;
+        max-width: 280px;
+        margin: 0 auto;
+      }
+    }
+
+    /* Адаптация для очень маленьких экранов */
+    @media (max-width: 480px) {
+      .products-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .product-card {
+        max-width: 100%;
+      }
+    }
+  </style>
+  <!-- Стили для карточек -->
+  <!--Вертикальный текст  -->
+  <style>
+    .rotated-char {
+      display: inline-block;
+      /* Обязательно! */
+      transform: rotate(90deg);
+      /* Поворот на 90° */
+      /* или */
+      transform: rotate(-90deg);
+      /* Поворот на -90° */
+
+      transform-origin: center;
+      /* Точка вращения (по умолчанию center) */
+    }
+
+    .vertical-chars {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .vertical-chars span {
+      display: inline-block;
+      transform: rotate(90deg);
+      font-size: 28px;
+      font-weight: bold;
+      color: #333;
+      text-transform: uppercase;
+      letter-spacing: 0;
+    }
+
+    .left-chars span {
+      transform: rotate(-90deg);
+      /* Поворот в другую сторону */
+    }
+
+    .video-with-text {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .video-container {
+      flex: 0 0 auto;
+    }
+
+    .video-container video {
+      width: 640px;
+      height: 360px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .vertical-text {
+      writing-mode: vertical-rl;
+      /* Вертикальное написание */
+      text-orientation: mixed;
+      font-size: 24px;
+      font-weight: bold;
+      letter-spacing: 3px;
+      color: #333;
+      text-transform: uppercase;
+    }
+
+    .left-text {
+      transform: rotate(180deg);
+      /* Переворачиваем для чтения снизу вверх */
+    }
+
+    .right-text {
+      /* Оставляем как есть - читается сверху вниз */
+    }
+  </style>
+  <!--  -->
 </head>
 
 <body id="body">
@@ -122,9 +402,7 @@
         </div>
       </div>
       <section class="advantages mt-50">
-        <!-- <h5 class="section-title container">
-          Наши преимущества
-        </h5> -->
+
         <div class="container1400">
 
           <div class="grid-5">
@@ -201,6 +479,14 @@
                   Результат позволяет вам слышать музыку и фильмы с
                   поразительной точностью и реалистичностью оригинальной
                   записи, без добавления и убавления чего-либо.
+                  Нет ничего лучше, чем настоящий звук Bowers & Wilkins.
+                  Преданные своему делу инженеры разрабатывают и интегрируют в
+                  наши продукты самые высокие стандарты аудиотехнологий.
+                  Результат позволяет вам слышать музыку и фильмы с
+                  поразительной точностью и реалистичностью оригинальной
+                  записи, без добавления и убавления чего-либо.
+
+
                 </p>
               </div>
             </div>
@@ -221,8 +507,9 @@
           </div>
         </div>
       </section>
+      <!-- <h3 class="menu__title-right">Our story</h3> -->
       <div class="container">
-        <!-- <h3 class="menu__title-right">Our story</h3> -->
+
         <section class="about mb-100" id="about">
           <div class="container">
             <div class="about__inner">
@@ -262,34 +549,35 @@
           </div>
         </section>
       </div>
-      <!-- <h3 class="menu__title">Каталог</h3> -->
+
       <div class="container">
+        <div class="ml-290">
+          <div class="cell-900--flex">
+            <a href="./category.html">
+              <button class="ffc107">Каталог</button>
+            </a>
+            <button class="grid-products__btn">Home Audio</button>
 
-        <div class="cell-900--flex">
-          <a href="./category.html">
-            <button class="ffc107">Каталог</button>
-          </a>
-          <button class="grid-products__btn">Home Audio</button>
-
-          <button class="grid-products__btn">Mini Theater</button>
-          <button class="grid-products__btn">Wireless Speakers</button>
-          <button class="grid-products__btn">New Zeppelin</button>
-
-
-          <button class="grid-products__btn">Car Audio</button>
-
-          <button class="grid-products__btn">Formation DUO</button>
-
-          <button class="grid-products__btn">Headphones</button>
-          <!-- <button class="grid-products__btn">Compact Monitors</button> -->
+            <button class="grid-products__btn">Mini Theater</button>
+            <button class="grid-products__btn">Wireless Speakers</button>
+            <button class="grid-products__btn">New Zeppelin</button>
 
 
-          <button class="grid-products__btn">Integrated solutions</button>
-          <button class="grid-products__btn">Soundbars</button>
-          <button class="grid-products__btn">Subwoofers</button>
-          <button class="grid-products__btn">Shelf Monitors</button>
+            <button class="grid-products__btn">Car Audio</button>
+
+            <button class="grid-products__btn">Formation DUO</button>
+
+            <button class="grid-products__btn">Headphones</button>
+            <button class="grid-products__btn">Compact Monitors</button>
 
 
+            <button class="grid-products__btn">Integrated solutions</button>
+            <button class="grid-products__btn">Soundbars</button>
+            <button class="grid-products__btn">Subwoofers</button>
+            <button class="grid-products__btn">Shelf Monitors</button>
+
+
+          </div>
         </div>
       </div>
       <div class="loudspeakers mt-50" id="heat">
@@ -566,7 +854,7 @@
 
         </div>
       </div>
-
+      <!-- Duo -->
       <div class="loudspeakers" id="duo"></div>
       <div class="container">
         <div class="about__inner">
@@ -618,13 +906,261 @@
 
         </div>
       </div>
-      <!-- </div> -->
+
       <h4 class="text-center">Технические характеристики Formation DUO</h4>
+      <div class="container1400">
+        <div class="specs-table">
+          <!-- Первая колонка -->
+          <div class="table-column">
+            <div class="table-row">
+              <div class="table-cell header-cell">
+                <h5>Модель</h5>
+              </div>
+              <div class="table-cell">
+                <p>Formation Duo</p>
+              </div>
+            </div>
 
-      <!-- <div class="bg-grey"> -->
+            <div class="table-row">
+              <div class="table-cell header-cell">
+                <h5>Описание</h5>
+              </div>
+              <div class="table-cell">
+                <p>Высококачественные беспроводные акустические системы</p>
+              </div>
+            </div>
 
-      <div class="container1400 grid-5">
-        <!-- <div class="cell-900--flex "> -->
+            <div class="table-row">
+              <div class="table-cell header-cell">
+                <h5>Функции</h5>
+              </div>
+              <div class="table-cell">
+                <p>Технология Apple AirPlay 2®<br>
+                  Spotify® Connect<br>
+                  Roon Ready<br>
+                  Встроенный Bluetooth<br>
+                  Dolby Digital<br>
+                  Цифровая обработка сигналов (DSP)<br>
+                  Цифровой усилитель<br>
+                  Динамическая эквализация - Dynamic EQ</p>
+              </div>
+            </div>
+
+            <div class="table-row">
+              <div class="table-cell header-cell">
+                <h5>Динамики</h5>
+              </div>
+              <div class="table-cell">
+                <p>1 x 25 мм (1 in) твитер с карбоновым куполом<br>
+                  1 x 165 мм (6.5 in) НЧ/СЧ-драйвер с диффузором Continuum</p>
+              </div>
+            </div>
+
+            <div class="table-row">
+              <div class="table-cell header-cell">
+                <h5>Диапазон воспроизводимых частот</h5>
+              </div>
+              <div class="table-cell">
+                <p>25 Гц – 33 кГц</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Вторая колонка -->
+          <div class="table-column">
+            <div class="table-row">
+              <div class="table-cell header-cell">
+                <h5>Встроенная мощность усилителя</h5>
+              </div>
+              <div class="table-cell">
+                <p>2 x 125 Вт</p>
+              </div>
+            </div>
+
+            <div class="table-row">
+              <div class="table-cell header-cell">
+                <h5>Соединения</h5>
+              </div>
+              <div class="table-cell">
+                <p>Сеть (RJ45 Ethernet или WiFi)<br>
+                  USB – только для сервиса<br>
+                  Bluetooth<br>
+                  Bluetooth® v4.1, Class 2<br>
+                  AptX HD<br>
+                  AAC<br>
+                  SBC</p>
+              </div>
+            </div>
+
+            <div class="table-row">
+              <div class="table-cell header-cell">
+                <h5>Размеры</h5>
+              </div>
+              <div class="table-cell">
+                <p>Высота: 395мм (15.5 in)<br>
+                  Ширина: 197мм (7.8 in)<br>
+                  Глубина: 305мм (12 in)<br>
+                  Вес: 10.6 кг (23.4lb)</p>
+              </div>
+            </div>
+
+            <div class="table-row">
+              <div class="table-cell header-cell">
+                <h5>Потребление</h5>
+              </div>
+              <div class="table-cell">
+                <p>Менее 6 Вт (в режиме Sleep)</p>
+              </div>
+            </div>
+
+            <div class="table-row">
+              <div class="table-cell header-cell">
+                <h5>Сопротивление</h5>
+              </div>
+              <div class="table-cell">
+                <p>Сеть (RJ45 Ethernet или WiFi)<br>
+                  USB – только для сервиса<br>
+                  Bluetooth<br>
+                  Bluetooth® v4.1, Class 2<br>
+                  AptX HD<br>
+                  AAC<br>
+                  SBC</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <style>
+        .container1400 {
+          max-width: 1400px;
+          margin: 0 auto;
+          padding: 20px;
+        }
+
+        .specs-table {
+          display: flex;
+          gap: 20px;
+          background: #fff;
+          border-radius: 12px;
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+          overflow: hidden;
+        }
+
+        .table-column {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+        }
+
+        .table-row {
+          display: flex;
+          border-bottom: 1px solid #eaeaea;
+          min-height: 60px;
+        }
+
+        .table-row:last-child {
+          border-bottom: none;
+        }
+
+        .table-cell {
+          flex: 1;
+          padding: 15px;
+          display: flex;
+          align-items: flex-start;
+        }
+
+        .header-cell {
+          background: #f8f9fa;
+          font-weight: bold;
+          min-width: 200px;
+          border-right: 1px solid #eaeaea;
+        }
+
+        .header-cell h5 {
+          margin: 0;
+          color: #2c3e50;
+          font-size: 14px;
+          line-height: 1.4;
+        }
+
+        .table-cell p {
+          margin: 0;
+          color: #555;
+          line-height: 1.5;
+          font-size: 14px;
+        }
+
+        /* Адаптивность */
+        @media (max-width: 768px) {
+          .specs-table {
+            flex-direction: column;
+          }
+
+          .table-row {
+            flex-direction: column;
+            border-bottom: 1px solid #eaeaea;
+          }
+
+          .header-cell {
+            min-width: auto;
+            border-right: none;
+            border-bottom: 1px solid #eaeaea;
+          }
+        }
+
+        /* Альтернативный вариант с CSS Grid */
+        .specs-table-grid {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 0;
+          background: #fff;
+          border-radius: 12px;
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+          overflow: hidden;
+        }
+
+        .specs-table-grid .table-column {
+          display: contents;
+        }
+
+        .specs-table-grid .table-row {
+          display: contents;
+        }
+
+        .specs-table-grid .header-cell {
+          grid-column: 1;
+          background: #f8f9fa;
+          padding: 15px;
+          border-bottom: 1px solid #eaeaea;
+          border-right: 1px solid #eaeaea;
+        }
+
+        .specs-table-grid .table-cell:not(.header-cell) {
+          grid-column: 2;
+          padding: 15px;
+          border-bottom: 1px solid #eaeaea;
+        }
+
+        @media (max-width: 768px) {
+          .specs-table-grid {
+            grid-template-columns: 1fr;
+          }
+
+          .specs-table-grid .header-cell,
+          .specs-table-grid .table-cell:not(.header-cell) {
+            grid-column: 1;
+          }
+
+          .specs-table-grid .header-cell {
+            border-right: none;
+          }
+        }
+      </style>
+
+
+      <!-- <div class="container1400 grid-5">
+
         <div class="card ">
           <h5>Модель</h5>
           <p>Formation Duo</p>
@@ -704,13 +1240,10 @@
           <h5>Потребление</h5>
           <p>Менее 6 Вт (в режиме Sleep)</p>
         </div>
-      </div>
-      <!-- </div> -->
+      </div> -->
 
-      <div class="container">
-
-
-
+      <!-- Endjoy -->
+      <div class="container-narrow">
 
         <div class="about__inner">
 
@@ -734,15 +1267,21 @@
         </div>
 
       </div>
+      <!--Zeppelin  -->
       <div class="loudspeakers" id="zeppelin"></div>
+      <div class="container1400">
+        <h4 class="menu__title">Zeppelin</h4>
+      </div>
       <div class="container">
         <div class="cell-800 ">
-          <h4 class="menu__title">Zeppelin</h4>
+
 
 
           <div class="about__inner">
 
             <div class="about__cell">
+
+
               <img src="img/zeppelin.jpeg" alt="img/zeppelin.jpeg">
             </div>
 
@@ -822,177 +1361,402 @@
 
         </div>
       </div>
-
+      <!-- Monitors -->
       <div class="monitors" id="monitors">
         <div class="container1400">
           <h3 class="menu__title">Monitors</h3>
           <div class="container-hr"></div>
-          <div class="grid-5">
 
-            <div class="card">
-              <h6 class="text-black">Bowers&Wilkins 805 D4</h6>
-              <div class="dummy2">
-                <img src="img/m02.jpg" alt="img/m02.jpg">
-              </div>
-              <div class="dummy3">
-                <p>Идеальный выбор для предпочитающих компактные полочные АС. 805 D4 идеально продумана и звучит
-                  невероятно точно</p>
-              </div>
-              <h6>Цена&nbsp1 500&nbspруб</h6>
-              <div class="product__content-box">
-                <div class="card-info__stepper stepper-mini">
-                  <button class="btn-reset stepper__btn stepper__btn--minus stepper__btn--disabled" aria-label="minus">
-                    <img src="img/minus.png" alt="">
+          <div class="products-grid">
+            <!-- Карточка 1 -->
 
-                  </button>
-                  <input type="text" class="stepper__input" value="1" maxlength="4" />
-                  <button class="btn-reset stepper__btn stepper__btn--plus" aria-label="plus">
-                    <img src="img/plus.png" alt="">
+            <div class="product-card">
 
-                  </button>
+              <div class="about__cell">
+
+                <div class="fotorama bg-grey" data-nav="thumbs">
+                  <img src="img/s970.png" alt="img/s970.png" />
+                  <img src="img/214.970.png" alt="img/214.970.png" />
+                  <img src="img/white702.png" alt="img/white702.png" />
+                  <img src="img/s970.png" alt="img/s970.png" />
+                  <img src="img/214.970.png" alt="img/214.970.png" />
+                  <img src="img/white702.png" alt="img/white702.png" />
+                  <img src="img/s970.png" alt="img/s970.png" />
+                  <img src="img/214.970.png" alt="img/214.970.png" />
+                  <img src="img/white702.png" alt="img/white702.png" />
+
                 </div>
-                <button class="card-info__btn ">
-                  Add to cart
-                </button>
               </div>
+              <div class="product-content">
+                <div class="product-bottom">
+                  <h3 class="product-title">Bowers&Wilkins 805 D4</h3>
+                  <p class="product-description">
+                    Серия 600 Anniversary Edition – это начальный уровень для Bowers&Wilkins.
+                    Предлагая широкий выбор моделей для hi-fi систем и домашних театров, она идеально подходит для
+                    самого
+                    широкого
+                    круга потенциальных покупателей.
+                  </p>
+                  <div class="product-price">12 799 ₽</div>
+                  <!-- <p>Стоимость: 705 000 р </p> -->
+                  <div class="card-info__stepper stepper">
+                    <button class="btn-reset stepper__btn stepper__btn--minus stepper__btn--disabled"
+                      aria-label="minus">
+                      <img src="img/minus.png" alt="">
+
+                    </button>
+                    <input type="text" class="stepper__input" value="1" maxlength="4" />
+                    <button class="btn-reset stepper__btn stepper__btn--plus" aria-label="plus">
+                      <img src="img/plus.png" alt="">
+
+                    </button>
+                  </div>
+                  <button class="card-info__btn--tocart">Add to cart</button>
+                  <!-- <div class="product-rating">★★★★☆</div>
+                  <button class="buy-button">В корзину</button> -->
+                </div>
+              </div>
+
+            </div>
+            <!-- Карточка 2 -->
+            <div class="product-card">
+
+              <div class="about__cell">
+
+                <div class="fotorama bg-grey" data-nav="thumbs">
+                  <img src="img/s970.png" alt="img/s970.png" />
+                  <img src="img/214.970.png" alt="img/214.970.png" />
+                  <img src="img/white702.png" alt="img/white702.png" />
+
+                </div>
+              </div>
+              <div class="product-content">
+                <div class="product-bottom">
+                  <h3 class="product-title">Bowers&Wilkins 805 D4</h3>
+                  <p class="product-description">
+                    Серия 600 Anniversary Edition – это начальный уровень для Bowers&Wilkins.
+
+                  </p>
+                  <div class="product-price">12 799 ₽</div>
+                  <!-- <p>Стоимость: 705 000 р </p> -->
+                  <div class="card-info__stepper stepper">
+                    <button class="btn-reset stepper__btn stepper__btn--minus stepper__btn--disabled"
+                      aria-label="minus">
+                      <img src="img/minus.png" alt="">
+
+                    </button>
+                    <input type="text" class="stepper__input" value="1" maxlength="4" />
+                    <button class="btn-reset stepper__btn stepper__btn--plus" aria-label="plus">
+                      <img src="img/plus.png" alt="">
+
+                    </button>
+                  </div>
+                  <button class="card-info__btn--tocart">Add to cart</button>
+                  <!-- <div class="product-rating">★★★★☆</div>
+                              <button class="buy-button">В корзину</button> -->
+                </div>
+              </div>
+
+            </div>
+            <!-- Карточка 3 -->
+            <div class="product-card">
+
+              <div class="about__cell">
+
+                <div class="fotorama bg-grey" data-nav="thumbs">
+                  <img src="img/s970.png" alt="img/s970.png" />
+                  <img src="img/214.970.png" alt="img/214.970.png" />
+                  <img src="img/white702.png" alt="img/white702.png" />
+
+                </div>
+              </div>
+              <div class="product-content">
+                <div class="product-bottom">
+                  <h3 class="product-title">Bowers&Wilkins 805 D4</h3>
+                  <p class="product-description">
+                    Серия 600 Anniversary Edition – это начальный уровень для Bowers&Wilkins.
+
+                  </p>
+                  <div class="product-price">12 799 ₽</div>
+                  <!-- <p>Стоимость: 705 000 р </p> -->
+                  <div class="card-info__stepper stepper">
+                    <button class="btn-reset stepper__btn stepper__btn--minus stepper__btn--disabled"
+                      aria-label="minus">
+                      <img src="img/minus.png" alt="">
+
+                    </button>
+                    <input type="text" class="stepper__input" value="1" maxlength="4" />
+                    <button class="btn-reset stepper__btn stepper__btn--plus" aria-label="plus">
+                      <img src="img/plus.png" alt="">
+
+                    </button>
+                  </div>
+                  <button class="card-info__btn--tocart">Add to cart</button>
+                  <!-- <div class="product-rating">★★★★☆</div>
+                              <button class="buy-button">В корзину</button> -->
+                </div>
+              </div>
+
             </div>
 
-            <div class="card">
-              <h6 class="text-black">Bowers&Wilkins 805 D4</h6>
-              <div class="dummy2">
-                <img src="img/m02.jpg" alt="img/m02.jpg">
-              </div>
-              <div class="dummy3">
-                <p>Идеальный выбор для предпочитающих компактные полочные АС. 805 D4 идеально продумана и звучит
-                  невероятно точно</p>
-              </div>
-              <h6>Цена&nbsp1 500&nbspруб</h6>
-              <div class="product__content-box">
-                <div class="card-info__stepper stepper-mini">
-                  <button class="btn-reset stepper__btn stepper__btn--minus stepper__btn--disabled" aria-label="minus">
-                    <img src="img/minus.png" alt="">
-
-                  </button>
-                  <input type="text" class="stepper__input" value="1" maxlength="4" />
-                  <button class="btn-reset stepper__btn stepper__btn--plus" aria-label="plus">
-                    <img src="img/plus.png" alt="">
-
-                  </button>
-                </div>
-                <button class="card-info__btn ">
-                  Add to cart
-                </button>
-              </div>
-            </div>
-
-            <div class="card">
-              <h6 class="text-black">Bowers&Wilkins 607 S2 Anniversary Edition</h6>
-              <div class="dummy2">
-                <img src="img/m01.jpg" alt="img/m1.jpg">
-              </div>
-              <div class="dummy3">
-                <p>Предлагая мощь и масштабность звука, противоречащие компактным размерам, 607 S2 Anniversary
-                  Edition
-                  оснащена диффузором Continuum™ и обновленным кроссовером, чтобы обеспечить исключительную
-                  музыкальность и разрешение. Идеально подходит для стерео систем или окружающего звука.</p>
-              </div>
-              <h6>Цена&nbsp1 200&nbspруб</h6>
-              <div class="product__content-box">
-                <div class="card-info__stepper stepper-mini">
-                  <button class="btn-reset stepper__btn stepper__btn--minus stepper__btn--disabled" aria-label="minus">
-                    <img src="img/minus.png" alt="">
-
-                  </button>
-                  <input type="text" class="stepper__input" value="1" maxlength="4" />
-                  <button class="btn-reset stepper__btn stepper__btn--plus" aria-label="plus">
-                    <img src="img/plus.png" alt="">
-
-                  </button>
-                </div>
-                <button class="card-info__btn">
-                  Add to cart
-                </button>
-              </div>
-            </div>
-            <!-- </div> -->
-            <!-- <div class="cell-600"> -->
-            <div class="card">
-              <h6 class="text-black">Bowers&Wilkins 606 S2 Anniversary Edition</h6>
-              <div class="dummy2">
-                <img src="img/m01.jpg" alt="img/m01.jpg">
-              </div>
-              <div class="dummy3">
-                <p>606 S2 Anniversary Edition - это уже седьмое поколение нашей культовой полочной колонки серии
-                  600.
-                  Идеально сочетая размеры и мощь, она оснащена передовым диффузором Continuum™ и улучшенным
-                  кроссовером
-                  - для еще большего проникновения в суть музыки. 25 лет спустя она остается стандартом для
-                  доступных
-                  АС
-                  высокого качества.</p>
-              </div>
-              <h6>Цена&nbsp1 500&nbspруб</h6>
-              <div class="product__content-box">
-                <div class="card-info__stepper stepper-mini">
-                  <button class="btn-reset stepper__btn stepper__btn--minus stepper__btn--disabled" aria-label="minus">
-                    <img src="img/minus.png" alt="">
-
-                  </button>
-                  <input type="text" class="stepper__input" value="1" maxlength="4" />
-                  <button class="btn-reset stepper__btn stepper__btn--plus" aria-label="plus">
-                    <img src="img/plus.png" alt="">
-
-                  </button>
-                </div>
-                <button class="card-info__btn ">
-                  Add to cart
-                </button>
-              </div>
-            </div>
-
-            <div class="card">
-              <h6 class="text-black">Bowers&Wilkins 606 S2 Anniversary Edition</h6>
-              <img src="img/m02.jpg" alt="img/m02.jpg">
-              <div class="dummy"></div>
-              <p>606 S2 Anniversary Edition - это уже седьмое поколение нашей культовой полочной колонки серии
-                600.
-                Идеально сочетая размеры и мощь, она оснащена передовым диффузором Continuum™ и улучшенным
-                кроссовером
-                -
-                для еще большего проникновения в суть музыки. 25 лет спустя она остается стандартом для
-                доступных АС
-                высокого качества.</p>
-              <div class="dummy"></div>
-              <h6>Цена&nbsp1 200&nbspруб</h6>
-              <div class="product__content-box">
-                <div class="card-info__stepper stepper-mini">
-                  <button class="btn-reset stepper__btn stepper__btn--minus stepper__btn--disabled" aria-label="minus">
-                    <img src="img/minus.png" alt="">
-
-                  </button>
-                  <input type="text" class="stepper__input" value="1" maxlength="4" />
-                  <button class="btn-reset stepper__btn stepper__btn--plus" aria-label="plus">
-                    <img src="img/plus.png" alt="">
-
-                  </button>
-                </div>
-                <button class="card-info__btn">
-                  Add to cart
-                </button>
-              </div>
-            </div>
-            <!-- </div> -->
           </div>
 
         </div>
       </div>
       <div class="lssh" id="lssh">
-        <div class="container">
+        <div class="container1400">
           <h3 class="menu__title">Loudspeakers shelf</h3>
-          <div class="container-hr"></div>
-          <div class="grid-5">
-            <!-- <div class="cell-600"> -->
-            <div class="card">
+
+          <div class="grid-3">
+            <!-- Карточка 1 -->
+            <div class="product-card">
+
+              <div class="about__cell">
+
+                <div class="fotorama bg-grey" data-nav="thumbs">
+                  <img src="img/s970.png" alt="img/s970.png" />
+                  <img src="img/214.970.png" alt="img/214.970.png" />
+                  <img src="img/white702.png" alt="img/white702.png" />
+
+                </div>
+              </div>
+              <div class="product-content">
+                <div class="product-bottom">
+                  <h3 class="product-title">Bowers&Wilkins 805 D4</h3>
+                  <p class="product-description">
+                    Серия 600 Anniversary Edition – это начальный уровень для Bowers&Wilkins.
+                    Предлагая широкий выбор моделей для hi-fi систем и домашних театров, она идеально подходит для
+                    самого
+                    широкого
+                    круга потенциальных покупателей.
+                  </p>
+                  <div class="product-price">12 799 ₽</div>
+                  <!-- <p>Стоимость: 705 000 р </p> -->
+                  <div class="card-info__stepper stepper">
+                    <button class="btn-reset stepper__btn stepper__btn--minus stepper__btn--disabled"
+                      aria-label="minus">
+                      <img src="img/minus.png" alt="">
+
+                    </button>
+                    <input type="text" class="stepper__input" value="1" maxlength="4" />
+                    <button class="btn-reset stepper__btn stepper__btn--plus" aria-label="plus">
+                      <img src="img/plus.png" alt="">
+
+                    </button>
+                  </div>
+                  <button class="card-info__btn--tocart">Add to cart</button>
+                  <!-- <div class="product-rating">★★★★☆</div>
+                              <button class="buy-button">В корзину</button> -->
+                </div>
+              </div>
+
+            </div>
+            <!-- Карточка 2 -->
+            <div class="product-card">
+
+              <div class="about__cell">
+
+                <div class="fotorama bg-grey" data-nav="thumbs">
+                  <img src="img/s970.png" alt="img/s970.png" />
+                  <img src="img/214.970.png" alt="img/214.970.png" />
+                  <img src="img/white702.png" alt="img/white702.png" />
+
+                </div>
+              </div>
+              <div class="product-content">
+                <div class="product-bottom">
+                  <h3 class="product-title">Bowers&Wilkins 805 D4</h3>
+                  <p class="product-description">
+                    Серия 600 Anniversary Edition – это начальный уровень для Bowers&Wilkins.
+
+                  </p>
+                  <div class="product-price">12 799 ₽</div>
+                  <!-- <p>Стоимость: 705 000 р </p> -->
+                  <div class="card-info__stepper stepper">
+                    <button class="btn-reset stepper__btn stepper__btn--minus stepper__btn--disabled"
+                      aria-label="minus">
+                      <img src="img/minus.png" alt="">
+
+                    </button>
+                    <input type="text" class="stepper__input" value="1" maxlength="4" />
+                    <button class="btn-reset stepper__btn stepper__btn--plus" aria-label="plus">
+                      <img src="img/plus.png" alt="">
+
+                    </button>
+                  </div>
+                  <button class="card-info__btn--tocart">Add to cart</button>
+                  <!-- <div class="product-rating">★★★★☆</div>
+                                          <button class="buy-button">В корзину</button> -->
+                </div>
+              </div>
+
+            </div>
+            <!-- Карточка 3 -->
+            <div class="product-card">
+
+              <div class="about__cell">
+
+                <div class="fotorama bg-grey" data-nav="thumbs">
+                  <img src="img/s970.png" alt="img/s970.png" />
+                  <img src="img/214.970.png" alt="img/214.970.png" />
+                  <img src="img/white702.png" alt="img/white702.png" />
+
+                </div>
+              </div>
+              <div class="product-content">
+                <div class="product-bottom">
+                  <h3 class="product-title">Bowers&Wilkins 805 D4</h3>
+                  <p class="product-description">
+                    Серия 600 Anniversary Edition – это начальный уровень для Bowers&Wilkins.
+
+                  </p>
+                  <div class="product-price">12 799 ₽</div>
+                  <!-- <p>Стоимость: 705 000 р </p> -->
+                  <div class="card-info__stepper stepper">
+                    <button class="btn-reset stepper__btn stepper__btn--minus stepper__btn--disabled"
+                      aria-label="minus">
+                      <img src="img/minus.png" alt="">
+
+                    </button>
+                    <input type="text" class="stepper__input" value="1" maxlength="4" />
+                    <button class="btn-reset stepper__btn stepper__btn--plus" aria-label="plus">
+                      <img src="img/plus.png" alt="">
+
+                    </button>
+                  </div>
+                  <button class="card-info__btn--tocart">Add to cart</button>
+                  <!-- <div class="product-rating">★★★★☆</div>
+                                          <button class="buy-button">В корзину</button> -->
+                </div>
+              </div>
+
+            </div>
+            <!-- Карточка 1 -->
+
+            <div class="product-card">
+
+              <div class="about__cell">
+
+                <div class="fotorama bg-grey" data-nav="thumbs">
+                  <img src="img/s970.png" alt="img/s970.png" />
+                  <img src="img/214.970.png" alt="img/214.970.png" />
+                  <img src="img/white702.png" alt="img/white702.png" />
+
+                </div>
+              </div>
+              <div class="product-content">
+                <div class="product-bottom">
+                  <h3 class="product-title">Bowers&Wilkins 805 D4</h3>
+                  <p class="product-description">
+                    Серия 600 Anniversary Edition – это начальный уровень для Bowers&Wilkins.
+                    Предлагая широкий выбор моделей для hi-fi систем и домашних театров, она идеально подходит для
+                    самого
+                    широкого
+                    круга потенциальных покупателей.
+                  </p>
+                  <div class="product-price">12 799 ₽</div>
+                  <!-- <p>Стоимость: 705 000 р </p> -->
+                  <div class="card-info__stepper stepper">
+                    <button class="btn-reset stepper__btn stepper__btn--minus stepper__btn--disabled"
+                      aria-label="minus">
+                      <img src="img/minus.png" alt="">
+
+                    </button>
+                    <input type="text" class="stepper__input" value="1" maxlength="4" />
+                    <button class="btn-reset stepper__btn stepper__btn--plus" aria-label="plus">
+                      <img src="img/plus.png" alt="">
+
+                    </button>
+                  </div>
+                  <button class="card-info__btn--tocart">Add to cart</button>
+                  <!-- <div class="product-rating">★★★★☆</div>
+                              <button class="buy-button">В корзину</button> -->
+                </div>
+              </div>
+
+            </div>
+            <!-- Карточка 2 -->
+            <div class="product-card">
+
+              <div class="about__cell">
+
+                <div class="fotorama bg-grey" data-nav="thumbs">
+                  <img src="img/s970.png" alt="img/s970.png" />
+                  <img src="img/214.970.png" alt="img/214.970.png" />
+                  <img src="img/white702.png" alt="img/white702.png" />
+
+                </div>
+              </div>
+              <div class="product-content">
+                <div class="product-bottom">
+                  <h3 class="product-title">Bowers&Wilkins 805 D4</h3>
+                  <p class="product-description">
+                    Серия 600 Anniversary Edition – это начальный уровень для Bowers&Wilkins.
+
+                  </p>
+                  <div class="product-price">12 799 ₽</div>
+                  <!-- <p>Стоимость: 705 000 р </p> -->
+                  <div class="card-info__stepper stepper">
+                    <button class="btn-reset stepper__btn stepper__btn--minus stepper__btn--disabled"
+                      aria-label="minus">
+                      <img src="img/minus.png" alt="">
+
+                    </button>
+                    <input type="text" class="stepper__input" value="1" maxlength="4" />
+                    <button class="btn-reset stepper__btn stepper__btn--plus" aria-label="plus">
+                      <img src="img/plus.png" alt="">
+
+                    </button>
+                  </div>
+                  <button class="card-info__btn--tocart">Add to cart</button>
+                  <!-- <div class="product-rating">★★★★☆</div>
+                                          <button class="buy-button">В корзину</button> -->
+                </div>
+              </div>
+
+            </div>
+            <!-- Карточка 3 -->
+            <div class="product-card">
+
+              <div class="about__cell">
+
+                <div class="fotorama bg-grey" data-nav="thumbs">
+                  <img src="img/s970.png" alt="img/s970.png" />
+                  <img src="img/214.970.png" alt="img/214.970.png" />
+                  <img src="img/white702.png" alt="img/white702.png" />
+
+                </div>
+              </div>
+              <div class="product-content">
+                <div class="product-bottom">
+                  <h3 class="product-title">Bowers&Wilkins 805 D4</h3>
+                  <p class="product-description">
+                    Серия 600 Anniversary Edition – это начальный уровень для Bowers&Wilkins.
+
+                  </p>
+                  <div class="product-price">12 799 ₽</div>
+                  <!-- <p>Стоимость: 705 000 р </p> -->
+                  <div class="card-info__stepper stepper">
+                    <button class="btn-reset stepper__btn stepper__btn--minus stepper__btn--disabled"
+                      aria-label="minus">
+                      <img src="img/minus.png" alt="">
+
+                    </button>
+                    <input type="text" class="stepper__input" value="1" maxlength="4" />
+                    <button class="btn-reset stepper__btn stepper__btn--plus" aria-label="plus">
+                      <img src="img/plus.png" alt="">
+
+                    </button>
+                  </div>
+                  <button class="card-info__btn--tocart">Add to cart</button>
+                  <!-- <div class="product-rating">★★★★☆</div>
+                                          <button class="buy-button">В корзину</button> -->
+                </div>
+              </div>
+
+            </div>
+
+            <!-- <div class="card">
               <div class="product-card-offer">
                 <div class="offer-hit">Hit</div>
                 <div class="offer-new">New</div>
@@ -1157,13 +1921,14 @@
                   Add to cart
                 </button>
               </div>
-            </div>
+            </div> -->
 
 
           </div>
 
         </div>
       </div>
+      <!-- headfones -->
       <div class="loudspeakers" id="headphones">
         <div class="container1400">
           <h3 class="menu__title">Headphones</h3>
@@ -1194,7 +1959,7 @@
           </div>
 
 
-          <div class="grid-5">
+          <div class="grid-3">
 
             <div class="card">
               <h6 class="text-black">Bowers&Wilkins PX7</h6>
@@ -1324,13 +2089,35 @@
 
           </div>
         </div>
-
       </div>
+      <!-- video -->
+      <section class="video">
+        <div class="video-with-text">
+          <!-- Левый вертикальный текст -->
+          <!-- <div class="vertical-chars left-chars">
+            <span>Т</span><span>Е</span><span>К</span><span>С</span><span>Т</span>
+          </div> -->
+          <div class="vertical-text left-text">
+            <span>HEADPHONES</span>
+          </div>
+          <div class="video-container">
+            <video controls poster="preview.jpg">
+              <source src="video-bw.mp4" type="video/mp4">
 
+            </video>
+          </div>
+          <!-- Правый вертикальный текст -->
+          <div class="vertical-text right-text">
+            <span>HEADPHONES</span>
+          </div>
+        </div>
+      </section>
+      <!-- </div> -->
+      <!-- stores -->
       <div class="stores" id="stores">
         <div class="container1400">
           <h3 class="menu__title">Our stores</h3>
-          <section class="socialmap">
+          <section class="container-fluid socialmap">
             <div id="map" class="text-center">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2669.822174089799!2d37.61030017050038!3d55.757739672412825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a454f72f4ff%3A0x923352d5be7df67b!2z0KLQstC10YDRgdC60LDRjyDRg9C7LiwgNSwg0JzQvtGB0LrQstCwLCDQoNC-0YHRgdC40Y8sIDEyNTAwOQ!5e0!3m2!1sru!2sua!4v1596189839076!5m2!1sru!2sua"
@@ -1339,6 +2126,15 @@
               </iframe>
             </div>
           </section>
+          <!-- <section class="socialmap">
+            <div id="map" class="text-center">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2669.822174089799!2d37.61030017050038!3d55.757739672412825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a454f72f4ff%3A0x923352d5be7df67b!2z0KLQstC10YDRgdC60LDRjyDRg9C7LiwgNSwg0JzQvtGB0LrQstCwLCDQoNC-0YHRgdC40Y8sIDEyNTAwOQ!5e0!3m2!1sru!2sua!4v1596189839076!5m2!1sru!2sua"
+                width="100%" height="300" frameborder="0" style="border: 0" allowfullscreen="" aria-hidden="false"
+                tabindex="0">
+              </iframe>
+            </div>
+          </section> -->
           <div class="container1400">
             <div class="container-narrow ">
               <h3 class="menu__title">Наличие в магазинах</h3>
@@ -1506,38 +2302,6 @@
 
         </div>
       </div>
-      <!-- </footer> -->
-
-      <!-- <div class="container1400 text-right mb-10">
-        <p class="title-6r "> h&nbsp;e&nbsp;a&nbsp;d&nbsp;p&nbsp;h&nbsp;o&nbsp;n&nbsp;e&nbsp;s</p>
-      </div>
-
-      <div class="slider02">
-        <div class="slider-blog">
-          <div class="slider-blog__inner">
-
-            <div class="slider-blog__item">
-              <img class="head-blog__img" src="img/manaudio.png" alt="img/manaudio.png" />
-            </div>
-            <div class="slider-blog__item">
-              <img class="head-blog__img" src="img/girlaudio.png" alt="img/girlaudio.png" />
-            </div>
-            <div class="slider-blog__item">
-              <img class="head-blog__img" src="img/head.png" alt="img/head.png" />
-            </div>
-            <div class="slider-blog__item">
-              <img class="head-blog__img" src="img/g3.png" alt="img/g3.png" />
-            </div>
-            <div class="slider-blog__item">
-              <img class="head-blog__img" src="img/girl200.png" alt="img/girl200.png" />
-            </div>
-
-          </div>
-
-        </div>
-
-      </div> -->
-
 
     </div>
 
