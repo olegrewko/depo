@@ -12,6 +12,249 @@
   <title>b&w/Product</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
   <link rel="stylesheet" href="./css/style.css" />
+  <!-- tabs-styles -->
+  <style>
+    :root {
+      --color-dark: #4d4d4d;
+      --color-light: #808080;
+      --color-accent: #4f6b88;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    ul {
+      list-style-type: none;
+    }
+
+    .btn {
+      border: none;
+      padding: 14px 0;
+      border-radius: 4px;
+      width: 100%;
+      color: #fff;
+      background-color: var(--color-accent);
+      cursor: pointer;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    .btn:hover {
+      background-color: #6078f1;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    .btn:disabled {
+      opacity: 0.4;
+      pointer-events: none;
+    }
+
+    body {
+      background-color: #fafafa;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+      font-weight: 400;
+      overflow-anchor: none;
+    }
+
+    .tabs {
+      position: relative;
+    }
+
+    .tabs__list {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      align-items: center;
+    }
+
+    .tabs__item:not(:last-child) {
+      margin-right: 10px;
+    }
+
+    .tabs__btn {
+      padding: 15px 62px;
+      border: none;
+      background-color: var(--color-accent);
+      color: #fff;
+      cursor: pointer;
+      border-top-left-radius: 4px;
+      border-top-right-radius: 20px;
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 16px;
+      text-align: center;
+      letter-spacing: 0.06em;
+
+      transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    }
+
+    .tabs__btn:hover {
+      background-color: #fff;
+      color: var(--color-accent);
+    }
+
+    .tabs__btn--active {
+      background-color: #fff;
+      color: var(--color-accent);
+      transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+      pointer-events: none;
+    }
+
+    .tabs__content {
+      display: none;
+      background-color: #fff;
+    }
+
+    .tabs__content--active {
+      display: block;
+    }
+
+    .content {
+      padding: 40px 60px;
+      width: 796px;
+    }
+
+    .content__title {
+      margin: 0;
+      margin-bottom: 20px;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 28px;
+      color: var(--color-dark);
+    }
+
+    .content__descr {
+      margin: 0;
+      margin-bottom: 59px;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+      color: var(--color-dark);
+    }
+
+    .content__list {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .content__link {
+      padding: 14px;
+      width: 200px;
+      height: 120px;
+      display: inline-block;
+      border-radius: 4px;
+      background-color: #ebecf3;
+      background-repeat: no-repeat;
+      background-position: right bottom;
+    }
+
+    .content__text {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 16px;
+      color: #a2a6c0;
+    }
+
+    .tabs__arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 60px;
+      height: 60px;
+      padding: 0;
+      border: none;
+      background-color: var(--color-accent);
+      border-radius: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    .tabs__arrow svg {
+      pointer-events: none;
+      fill: #fff;
+      transition: fill 0.3s ease-in-out;
+    }
+
+    .tabs__arrow:hover {
+      background-color: #fff;
+    }
+
+    .tabs__arrow:hover svg {
+      fill: var(--color-accent);
+    }
+
+    .tabs__arrow--next {
+      right: -54px;
+    }
+
+    .tabs__arrow--prev {
+      left: -54px;
+    }
+  </style>
+  <!-- tabs-styles -->
+      <style>
+        .breadcrumbs {
+          padding: 24px 0;
+          font-family: Jost;
+          font-weight: 500;
+        }
+
+        .breadcrumbs ul {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+          display: flex;
+          align-items: center;
+          flex-wrap: wrap;
+        }
+
+        .breadcrumbs li {
+          display: flex;
+          align-items: center;
+        }
+
+        .breadcrumbs li:not(:last-child)::after {
+          content: "/";
+          margin: 0 16px;
+          color: #cbd5e1;
+          font-weight: 500;
+        }
+
+        .breadcrumbs a p {
+          color: #64748b;
+          text-decoration: none;
+          font-size: 15px;
+          font-weight: 500;
+          transition: all 0.3s ease;
+          position: relative;
+          padding: 6px 12px;
+          border-radius: 8px;
+        }
+
+
+        .breadcrumbs li:last-child a {
+          color: #0f172a;
+          font-weight: 500;
+          background: #eff6ff;
+          pointer-events: none;
+        }
+      </style>
 </head>
 
 <body>
@@ -126,9 +369,95 @@
         </div>
       </nav>
     </div> -->
+<header class="header">
+      <div class="header__top bg-white">
+        <div class="container">
+          <div class="header__top-inner bg-white">
+            <a class="logo" href="#body">
+              <h3 class="logo__title">Bowers&Wilkins</h3>
+            </a>
+            <a class="tel" href="#">
+              <h3 class="logo__title">8-999-852-58-21</h3>
+            </a>
+            <nav class="menu header__nav">
+              <button class="menu__btn">
+                <img src="img/menu-btn.svg" alt="" />
+              </button>
+              <ul class="menu__list">
 
+                <li class="menu__list-item dropdown">
+                  <a class="menu__list-link dropbtn " onclick="myFunction()">Speakers</a>
+
+
+                  <div class="dropdown-content" id="myDropdown">
+                    <a href="#heat">Loudspeakers</a>
+                    <a href="">Sound Bars</a>
+                    <a href="">Home Theater</a>
+                    <a href="./blog.html">blog</a>
+                  </div>
+                </li>
+
+                <li class="menu__list-item dropdown">
+                  <a class="dropbtn" onclick="myFunctionHeadphones()">Headphones</a>
+
+
+                  <div class="dropdown-content" id="myHeadphones">
+                    <a href="#headphones">Headphones</a>
+                    <a href="">Earbuds</a>
+
+                  </div>
+                </li>
+                <li class="menu__list-item dropdown">
+                  <a class="dropbtn" onclick="myFunctionWireless()">Wireless speakers</a>
+
+
+                  <div class="dropdown-content" id="myWireless">
+                    <a href="#zeppelin">Zeppelin</a>
+                    <a href="#duo">Formation DUO</a>
+                    <a href="#monitors">Loudspeakers shelf</a>
+
+                  </div>
+                </li>
+                <li class="menu__list-item dropdown">
+                  <a class="dropbtn" onclick="myFunctionFind()">Find Store</a>
+                  <div class="dropdown-content" id="myFind">
+                    <a href="#stores">Stores</a>
+                    <!-- <a href="">Cart</a> -->
+
+                  </div>
+
+                </li>
+                <li class="menu__list-item dropdown">
+                  <a class="dropbtn">Cart</a>
+
+                </li>
+
+
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+
+    </header>
     <main class="main">
-
+      <div class="container1400">
+        <div class="row">
+          <div class="col-12">
+            <nav class="breadcrumbs">
+              <ul>
+                <li><a href="index.html">
+                    Home
+                  </a>
+                </li>
+                <li>
+                  Product</p>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
       <div class="container1400">
         <div class="row gy-2 items">
           <div class="col-lg-5 col-sm-12 text-right">
@@ -186,39 +515,20 @@
           </div>
         </div>
       </div>
-      <div class="row mt-3">
-        <div class="col-12 container">
-          <div class="product-content-details bg-white p-4">
-            <ul class="nav nav-tabs" id="myTab" role="tablist">
-              <li class="nav-item" role="presentation">
-                <button class="nav-link active" id="description-tab" data-bs-toggle="tab"
-                  data-bs-target="#description-tab-pane" type="button" role="tab" aria-controls="description-tab-pane"
-                  aria-selected="true">
-                  Description
-                </button>
-              </li>
-              <li class="nav-item" role="presentation">
-                <button class="nav-link" id="features-tab" data-bs-toggle="tab" data-bs-target="#features-tab-pane"
-                  type="button" role="tab" aria-controls="features-tab-pane" aria-selected="false">
-                  Features
-                </button>
-              </li>
-              <li class="nav-item" role="presentation">
-                <button class="nav-link" id="reviews-tab" data-bs-toggle="tab" data-bs-target="#reviews-tab-pane"
-                  type="button" role="tab" aria-controls="reviews-tab-pane" aria-selected="false">
-                  Reviews (10)
-                </button>
-              </li>
-              <li class="nav-item" role="presentation">
-                <button class="nav-link" id="video-tab" data-bs-toggle="tab" data-bs-target="#video-tab-pane"
-                  type="button" role="tab" aria-controls="video-tab-pane" aria-selected="false">
-                  Video
-                </button>
-              </li>
-            </ul>
-            <div class="tab-content p-3" id="myTabContent">
-              <div class="tab-pane fade show active" id="description-tab-pane" role="tabpanel"
-                aria-labelledby="description-tab" tabindex="0">
+
+      <!-- tabs02 -->
+
+      <div class="container">
+  <div class="tabs" style="height: 400px; margin-top: 200px;">
+    <ul class="tabs__list">
+      <li class="tabs__item"><button class="tabs__btn tabs__btn--active" data-tabs-path="main">Описание</button></li>
+      <li class="tabs__item"><button class="tabs__btn" data-tabs-path="archive">Характеристики</button></li>
+      <li class="tabs__item"><button class="tabs__btn" data-tabs-path="settings">Отзывы</button></li>
+<li class="tabs__item"><button class="tabs__btn" data-tabs-path="cart">Корзина</button></li>
+      <li class="tabs__item"><button class="tabs__btn" data-tabs-path="payment">Оплата</button></li>
+    </ul>
+    <div class="tabs__content tabs__content--active" data-tabs-target="main">
+      <div class="content">
                 <p>
                   Флагманская напольная акустическая система Серии 700
                   оснащена самыми совершенными технологиями, включая твитер с
@@ -239,27 +549,31 @@
 
                   Габариты: 1087 × 366 × 414 мм<br />
                 </p>
-              </div>
-              <div class="tab-pane fade" id="features-tab-pane" role="tabpanel" aria-labelledby="features-tab"
-                tabindex="0">
-                <table class="table">
-                  <tbody>
-                    <tr>
-                      <th scope="row">Colors</th>
-                      <td>white, black, pink</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">Sizes</th>
-                      <td>S, M, L</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-
-              <div class="tab-pane fade" id="reviews-tab-pane" role="tabpanel" aria-labelledby="reviews-tab"
-                tabindex="0">
+      </div>
+    </div>
+    <div class="tabs__content" data-tabs-target="archive">
+      <div class="content">
+                          <p class="faq__text500">
+                      Главным преимуществом электродных котлов ЭОУ является
+                      суперэкономичность, отличающая их от продукции ближайших
+                      конкурентов. Инновационная запатентованная технология нагрева
+                      жидкостей позволяет достичь высокий КПД до 99% (1 литр воды за
+                      30 сек) дающая возможность обогрева помещений большой площади от
+                      120 до 220 кв. метров (зависит от модели котла) от сети 380
+                      вольт , потребляя значительно меньше электроэнергии ( в
+                      зависимости от выбранного температурного режима работы). Мы
+                      предлагаем электрокотёл с уникальными свойствами, превосходящими
+                      в экономии электричества любые тэновые и индукционные котлы как
+                      минимум на 30-40% и приближенным по своим экономическим и
+                      эксплуатационным показателям к использованию газового
+                      оборудования.
+                    </p>
+      </div>
+    </div>
+    <div class="tabs__content" data-tabs-target="settings">
+      <div class="content">
                 <!-- Button trigger modal -->
-                <button type="button" class="btn btn-warning mb-3" data-bs-toggle="modal" data-bs-target="#reviewModal">
+                <button type="button" class="tabs__btn  mb-3" data-bs-toggle="modal" data-bs-target="#reviewModal">
                   Write review
                 </button>
 
@@ -337,13 +651,7 @@
                     </div>
 
                     <div class="card-text">
-                      <!-- <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing
-                        elit. Itaque obcaecati laborum deleniti id consequatur
-                        possimus repellendus eius tempora corrupti. Doloribus
-                        in nisi consequatur ipsam repudiandae eaque
-                        perspiciatis quas minima provident!
-                      </p> -->
+
                       <p>
                         Est amet libero voluptates aspernatur quam nisi velit
                         quaerat natus et? Vero quasi veritatis necessitatibus,
@@ -353,96 +661,70 @@
                     </div>
                   </div>
                 </div>
-
-                <div class="card product-review mb-3">
-                  <div class="card-body">
-                    <div class="product-review-header">
-                      <h5 class="card-title">John Doe</h5>
-                      <span class="review-date">27.02.2024</span>
-                    </div>
-
-                    <div class="product-rating mb-3">
-                      <i class="fa-solid fa-star active"></i>
-                      <i class="fa-solid fa-star active"></i>
-                      <i class="fa-solid fa-star active"></i>
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                    </div>
-
-                    <div class="card-text">
-                      <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing
-                        elit. Itaque obcaecati laborum deleniti id consequatur
-                        possimus repellendus eius tempora corrupti. Doloribus
-                        in nisi consequatur ipsam repudiandae eaque
-                        perspiciatis quas minima provident!
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="card product-review mb-3">
-                  <div class="card-body">
-                    <div class="product-review-header">
-                      <h5 class="card-title">John Doe</h5>
-                      <span class="review-date">27.02.2024</span>
-                    </div>
-
-                    <div class="product-rating mb-3">
-                      <i class="fa-solid fa-star active"></i>
-                      <i class="fa-solid fa-star active"></i>
-                      <i class="fa-solid fa-star active"></i>
-                      <i class="fa-solid fa-star active"></i>
-                      <i class="fa-solid fa-star active"></i>
-                    </div>
-
-                    <div class="card-text">
-                      <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing
-                        elit. Itaque obcaecati laborum deleniti id consequatur
-                        possimus repellendus eius tempora corrupti. Doloribus
-                        in nisi consequatur ipsam repudiandae eaque
-                        perspiciatis quas minima provident!
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="tab-pane fade" id="video-tab-pane" role="tabpanel" aria-labelledby="video-tab" tabindex="0">
-                <div class="ratio ratio-16x9">
-                  <!-- <video
-                      id="wistia_simple_video_55"
-                      crossorigin="anonymous"
-                      poster="https://fast.wistia.com/assets/images/blank.gif"
-                      aria-label="Video"
-                      src="blob:https://www.bowerswilkins.com/5246d873-0a57-4cca-8b8d-2d0227b041b5"
-                      controlslist="nodownload"
-                      playsinline=""
-                      loop=""
-                      preload="auto"
-                      type="video/m3u8"
-                      x-webkit-airplay="allow"
-                      style="
-                        background: transparent;
-                        display: block;
-                        height: 100%;
-                        max-height: none;
-                        max-width: none;
-                        position: static;
-                        visibility: visible;
-                        width: 100%;
-                        object-fit: contain;
-                      "
-                    ></video> -->
-                  <video src="./video-bw.mp4" controls></video>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+      </div>
+    </div>
+    <div class="tabs__content" data-tabs-target="cart">
+      <div class="content">
+        <h2 class="content__title">Добро пожаловать!2</h2>
+        <p class="content__descr">Здесь находятся все ваши активные заказы.</p>
+        <ul class="content__list">
+          <li class="content__item">
+            <a href="#" class="content__link" style="background-image: url('./img/1.png');">
+              <span class="content__text">Занятия йогой</span>
+            </a>
+          </li>
+          <li class="content__item">
+            <a href="#" class="content__link" style="background-image: url('./img/1.png');">
+              <span class="content__text">Кардио</span>
+            </a>
+          </li>
+          <li class="content__item">
+            <a href="#" class="content__link" style="background-image: url('./img/1.png');">
+              <span class="content__text">Силовые тренировки</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="tabs__content" data-tabs-target="payment">
+      <div class="content">
+        <h2 class="content__title">Добро пожаловать!3</h2>
+        <p class="content__descr">Здесь находятся все ваши активные заказы.</p>
+        <ul class="content__list">
+          <li class="content__item">
+            <a href="#" class="content__link" style="background-image: url('./img/01.png');">
+              <span class="content__text">Занятия йогой</span>
+            </a>
+          </li>
+          <li class="content__item">
+            <a href="#" class="content__link" style="background-image: url('./img/02.png');">
+              <span class="content__text">Кардио</span>
+            </a>
+          </li>
+          <li class="content__item">
+            <a href="#" class="content__link" style="background-image: url('./img/3.png');">
+              <span class="content__text">Силовые тренировки</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <button class="tabs__arrow tabs__arrow--prev" aria-label="Назад">
+      <svg width="21" height="12" viewBox="0 0 21 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M0.46967 6.53033C0.176777 6.23744 0.176777 5.76256 0.46967 5.46967L5.24264 0.696699C5.53553 0.403806 6.01041 0.403806 6.3033 0.696699C6.59619 0.989592 6.59619 1.46447 6.3033 1.75736L2.06066 6L6.3033 10.2426C6.59619 10.5355 6.59619 11.0104 6.3033 11.3033C6.01041 11.5962 5.53553 11.5962 5.24264 11.3033L0.46967 6.53033ZM21 6.75H1V5.25H21V6.75Z" />
+      </svg>
+    </button>
+    <button class="tabs__arrow tabs__arrow--next" aria-label="Вперед">
+      <svg width="21" height="12" viewBox="0 0 21 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M20.5303 6.53033C20.8232 6.23744 20.8232 5.76256 20.5303 5.46967L15.7574 0.696699C15.4645 0.403806 14.9896 0.403806 14.6967 0.696699C14.4038 0.989592 14.4038 1.46447 14.6967 1.75736L18.9393 6L14.6967 10.2426C14.4038 10.5355 14.4038 11.0104 14.6967 11.3033C14.9896 11.5962 15.4645 11.5962 15.7574 11.3033L20.5303 6.53033ZM0 6.75H20V5.25H0V6.75Z" />
+      </svg>
+    </button>
+  </div>
       </div>
 
+      <!-- tabs02 end-->
       <div class="container">
         <h2 class="menu__title">Наличие в магазинах</h2>
         <div class="shop-grid">
@@ -536,6 +818,7 @@
           </p>
         </div>
       </div>
+
       <section class="stores" id="stores">
         <div class="container">
           <h3 class="menu__title">Посмотреть на карте</h3>
@@ -551,13 +834,64 @@
         </section>
       </section>
     </main>
+    <style>
+/* Стили для формы подписки */
+.subscribe-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 300px;
+}
+
+.subscribe-form-input {
+    width: 100%;
+    height: 45px;
+    padding: 0 15px;
+    border: 2px solid rgba(27, 26, 26, 0.9);
+    border-radius: 3px;
+    background: transparent;
+    color: rgb(21, 21, 21);
+    font-family: 'Jost', sans-serif;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.subscribe-form-input::placeholder {
+    color: rgba(42, 42, 42, 0.7);
+}
+
+.subscribe-form-input:focus {
+    outline: none;
+    border-color: white;
+    background: rgba(255,255,255,0.1);
+}
+
+.subscribe-form-btn {
+    width: 100%;
+    height: 45px;
+    background: white;
+    color: #34495e;
+    border: 2px solid rgb(10, 10, 10);
+    border-radius: 3px;
+    font-family: 'Jost', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.subscribe-form-btn:hover {
+    background: black;
+    color: rgb(197, 11, 27);
+}
+    </style>
     <footer class="footer">
       <div class="container">
         <div class="footer__inner">
           <div class="footer-widget">
             <ul class="list-unstyled">
               <li>
-                <p class="white">Shop</p>
+                <p class="black">Shop</p>
               </li>
 
               <li><a class="grey" href="#pro">Speakers</a></li>
@@ -569,7 +903,7 @@
           <div class="footer-widget">
             <ul class="list-unstyled">
               <li>
-                <p class="white">About</p>
+                <p class="black">About</p>
               </li>
               <li><a class="grey" href="#home">Our stories</a></li>
               <li><a class="grey" href="#first">Blog</a></li>
@@ -580,7 +914,7 @@
           <div class="footer-widget">
             <ul class="list-unstyled">
               <li>
-                <p class="white">Support</p>
+                <p class="black">Support</p>
               </li>
               <li><a class="grey" href="#home">Contact Us</a></li>
               <li><a class="grey" href="#first">Find a Retailer</a></li>
@@ -589,14 +923,27 @@
               <li><a class="grey" href="#seven">Product Archive</a></li>
             </ul>
           </div>
+<div class="footer-widget-subscribe">
+                <ul class="list-unstyled">
+                    <li>
+                        <p class="black">Our Newsletter</p>
+                    </li>
+                    <form action="" class="footer__form">
+                        <div class="subscribe-form-group">
+                            <input class="subscribe-form-input" type="email" required placeholder="Email Address">
+                            <button class="subscribe-form-btn" type="submit">Subscribe</button>
+                        </div>
+                    </form>
+                </ul>
+            </div>
 
-          <div class="footer-widget-subscribe">
+          <!-- <div class="footer-widget-subscribe">
             <ul class="list-unstyled">
               <li>
                 <p class="white">Our Newsletter</p>
               </li>
               <form action="" class="footer__form subscribe-form-black">
-                <label for="" class="subscribe-form-black__field">
+                <label for="" class="subscribe-form-black__field--product">
                   <input class="subscribe-form-black__placeholder" type="email" required placeholder="Email Address" />
                 </label>
                 <button class="subscribe-form-black__btn--black" type="submit">
@@ -604,7 +951,7 @@
                 </button>
               </form>
             </ul>
-          </div>
+          </div> -->
         </div>
       </div>
 
@@ -822,6 +1169,59 @@
         document.getElementById("sidebar").classList.remove("open");
       });
   </script>
+ <script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  const tabs = document.querySelector('.tabs');
+  const tabsBtn = document.querySelectorAll('.tabs__btn');
+  const tabsContent = document.querySelectorAll('.tabs__content');
+
+  if (tabs) {
+    tabs.addEventListener('click', (e) => {
+      if (e.target.classList.contains('tabs__btn')) {
+        const tabsPath = e.target.dataset.tabsPath;
+        tabsBtn.forEach(el => { el.classList.remove('tabs__btn--active') });
+        document.querySelector(`[data-tabs-path="${tabsPath}"]`).classList.add('tabs__btn--active');
+        tabsHandler(tabsPath);
+      }
+
+      if (e.target.classList.contains('tabs__arrow--prev')) {
+        let activeBtn = document.querySelector('.tabs__btn--active');
+        let activeParent = activeBtn.closest('.tabs__item');
+        let previousParent = activeParent.previousElementSibling;
+
+        if (previousParent) {
+          let prevActive = previousParent.querySelector('.tabs__btn')
+          tabsBtn.forEach(el => { el.classList.remove('tabs__btn--active') });
+          prevActive.classList.add('tabs__btn--active');
+
+          let path = prevActive.dataset.tabsPath;
+          tabsHandler(path);
+        }
+      }
+
+      if (e.target.classList.contains('tabs__arrow--next')) {
+        let activeBtn = document.querySelector('.tabs__btn--active');
+        let activeParent = activeBtn.closest('.tabs__item');
+        let nextParent = activeParent.nextElementSibling;
+
+        if (nextParent) {
+          let nextActive = nextParent.querySelector('.tabs__btn');
+          tabsBtn.forEach(el => { el.classList.remove('tabs__btn--active') });
+          nextActive.classList.add('tabs__btn--active');
+
+          let path = nextActive.dataset.tabsPath;
+          tabsHandler(path);
+        }
+      }
+    });
+  }
+
+  const tabsHandler = (path) => {
+    tabsContent.forEach(el => { el.classList.remove('tabs__content--active') });
+    document.querySelector(`[data-tabs-target="${path}"]`).classList.add('tabs__content--active');
+  };
+});
+ </script>
 </body>
 
 </html>

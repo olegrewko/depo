@@ -17,7 +17,77 @@
 
 <body>
   <div class="wrapper">
+<header class="header">
+      <div class="header__top bg-white">
+        <div class="container">
+          <div class="header__top-inner bg-white">
+            <a class="logo" href="#body">
+              <h3 class="logo__title">Bowers&Wilkins</h3>
+            </a>
+            <a class="tel" href="#">
+              <h3 class="logo__title">8-999-852-58-21</h3>
+            </a>
+            <nav class="menu header__nav">
+              <button class="menu__btn">
+                <img src="img/menu-btn.svg" alt="" />
+              </button>
+              <ul class="menu__list">
 
+                <li class="menu__list-item dropdown">
+                  <a class="menu__list-link dropbtn " onclick="myFunction()">Speakers</a>
+
+
+                  <div class="dropdown-content" id="myDropdown">
+                    <a href="#heat">Loudspeakers</a>
+                    <a href="">Sound Bars</a>
+                    <a href="">Home Theater</a>
+                    <a href="./blog.html">blog</a>
+                  </div>
+                </li>
+
+                <li class="menu__list-item dropdown">
+                  <a class="dropbtn" onclick="myFunctionHeadphones()">Headphones</a>
+
+
+                  <div class="dropdown-content" id="myHeadphones">
+                    <a href="#headphones">Headphones</a>
+                    <a href="">Earbuds</a>
+
+                  </div>
+                </li>
+                <li class="menu__list-item dropdown">
+                  <a class="dropbtn" onclick="myFunctionWireless()">Wireless speakers</a>
+
+
+                  <div class="dropdown-content" id="myWireless">
+                    <a href="#zeppelin">Zeppelin</a>
+                    <a href="#duo">Formation DUO</a>
+                    <a href="#monitors">Loudspeakers shelf</a>
+
+                  </div>
+                </li>
+                <li class="menu__list-item dropdown">
+                  <a class="dropbtn" onclick="myFunctionFind()">Find Store</a>
+                  <div class="dropdown-content" id="myFind">
+                    <a href="#stores">Stores</a>
+                    <!-- <a href="">Cart</a> -->
+
+                  </div>
+
+                </li>
+                <li class="menu__list-item dropdown">
+                  <a class="dropbtn">Cart</a>
+
+                </li>
+
+
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+
+    </header>
 
     <div class="main">
       <div class="container1400">
@@ -79,27 +149,6 @@
           border-radius: 8px;
         }
 
-        /* .breadcrumbs a:hover {
-          color: #334155;
-          background: #f8fafc;
-          transform: translateY(-1px);
-        } */
-
-        /* .breadcrumbs a::after {
-          content: '';
-          position: absolute;
-          bottom: -2px;
-          left: 12px;
-          right: 12px;
-          height: 2px;
-           background: #3b82f6;
-          transform: scaleX(0);
-          transition: transform 0.3s ease;
-        } */
-
-        /* .breadcrumbs a:hover::after {
-          transform: scaleX(1);
-        } */
 
         .breadcrumbs li:last-child a {
           color: #0f172a;
@@ -1877,7 +1926,303 @@
       </div>
     </footer> -->
     </div>
+    <style>
+/* Стили для формы подписки */
+.subscribe-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 300px;
+}
 
+.subscribe-form-input {
+    width: 100%;
+    height: 45px;
+    padding: 0 15px;
+    border: 2px solid rgba(27, 26, 26, 0.9);
+    border-radius: 3px;
+    background: transparent;
+    color: rgb(21, 21, 21);
+    font-family: 'Jost', sans-serif;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.subscribe-form-input::placeholder {
+    color: rgba(42, 42, 42, 0.7);
+}
+
+.subscribe-form-input:focus {
+    outline: none;
+    border-color: white;
+    background: rgba(255,255,255,0.1);
+}
+
+.subscribe-form-btn {
+    width: 100%;
+    height: 45px;
+    background: white;
+    color: #34495e;
+    border: 2px solid rgb(10, 10, 10);
+    border-radius: 3px;
+    font-family: 'Jost', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.subscribe-form-btn:hover {
+    background: black;
+    color: rgb(197, 11, 27);
+}
+    </style>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__inner">
+          <div class="footer-widget">
+            <ul class="list-unstyled">
+              <li>
+                <p class="black">Shop</p>
+              </li>
+
+              <li><a class="grey" href="#pro">Speakers</a></li>
+              <li><a class="grey" href="#pro">Headphones</a></li>
+              <li><a class="grey" href="#pro">Wireless Headphones</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-widget">
+            <ul class="list-unstyled">
+              <li>
+                <p class="black">About</p>
+              </li>
+              <li><a class="grey" href="#home">Our stories</a></li>
+              <li><a class="grey" href="#first">Blog</a></li>
+              <li><a class="grey" href="#third">Careers</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-widget">
+            <ul class="list-unstyled">
+              <li>
+                <p class="black">Support</p>
+              </li>
+              <li><a class="grey" href="#home">Contact Us</a></li>
+              <li><a class="grey" href="#first">Find a Retailer</a></li>
+              <li><a class="grey" href="#third">Product Registration</a></li>
+              <li><a class="grey" href="#six">Product Support</a></li>
+              <li><a class="grey" href="#seven">Product Archive</a></li>
+            </ul>
+          </div>
+<div class="footer-widget-subscribe">
+                <ul class="list-unstyled">
+                    <li>
+                        <p class="black">Our Newsletter</p>
+                    </li>
+                    <form action="" class="footer__form">
+                        <div class="subscribe-form-group">
+                            <input class="subscribe-form-input" type="email" required placeholder="Email Address">
+                            <button class="subscribe-form-btn" type="submit">Subscribe</button>
+                        </div>
+                    </form>
+                </ul>
+            </div>
+
+          <!-- <div class="footer-widget-subscribe">
+            <ul class="list-unstyled">
+              <li>
+                <p class="white">Our Newsletter</p>
+              </li>
+              <form action="" class="footer__form subscribe-form-black">
+                <label for="" class="subscribe-form-black__field--product">
+                  <input class="subscribe-form-black__placeholder" type="email" required placeholder="Email Address" />
+                </label>
+                <button class="subscribe-form-black__btn--black" type="submit">
+                  Subscribe
+                </button>
+              </form>
+            </ul>
+          </div> -->
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <div class="container">
+          <div class="footer__bottom-wrap">
+            <div class="footer__navigation">
+              <a class="logo" href="#body">
+                <h3 class="black">Bowers&Wilkins</h3>
+              </a>
+            </div>
+            <div class="social">
+              <div class="container">
+                <div class="social-inner">
+                  <div class="" title="В контакте">
+                    <div class="roll">
+                      <img class="regular" src="./img/icons/vk45gray.png" /><a
+                        href="http://vk.com/share.php?url=[URL]&title=[TITLE]&description=[DESC]&image=[IMAGE]&noparse=true"><img
+                          class="rollover" src="./img/icons/vk45.png" /></a>
+                    </div>
+                  </div>
+
+                  <div class="" title="В контакте">
+                    <div class="roll">
+                      <img class="regular" src="./img/icons/vk50gray.png" /><a
+                        href="http://vk.com/share.php?url=[URL]&title=[TITLE]&description=[DESC]&image=[IMAGE]&noparse=true"><img
+                          class="rollover" src="./img/icons/vk50.png" /></a>
+                    </div>
+                  </div>
+
+                  <div class="" title="Фэйсбук">
+                    <div class="roll">
+                      <img class="regular" src="./img/icons/fb45gray.png" /><a
+                        href="https://www.facebook.com/sharer/sharer.php?u=[URL]"><img class="rollover"
+                          src="./img/icons/fb45.png" /></a>
+                    </div>
+                  </div>
+
+                  <div class="" title="Одноклассники">
+                    <div class="roll">
+                      <img class="regular" src="./img/icons/o46gray.png" /><a href="http://ok.ru"><img class="rollover"
+                          src="./img/icons/o46.png" /></a>
+                    </div>
+                  </div>
+
+                  <div class="" title="Инстаграмм">
+                    <div class="roll">
+                      <img class="regular" src="./img/icons/i45gray.png" /><a href="https://www.instagram.com/"><img
+                          class="rollover" src="./img/icons/i45.png" /></a>
+                    </div>
+                  </div>
+
+                  <div class="" title="Твиттер">
+                    <div class="roll">
+                      <img class="regular" src="./img/icons/twittergray.png" /><a
+                        href="https://twitter.com/share?url=[URL]&text=[TITLE]"><img class="rollover"
+                          src="./img/icons/twitter.png" /></a>
+                    </div>
+                  </div>
+
+                  <div class="" title="Реддит">
+                    <div class="roll">
+                      <img class="regular" src="./img/icons/re50gray.png" /><a href="https://www.reddit.com"><img
+                          class="rollover" src="./img/icons/re50.png" /></a>
+                    </div>
+                  </div>
+
+                  <div class="" title="Рутуб">
+                    <div class="roll">
+                      <img class="regular" src="./img/icons/rutube45grey.png" /><a
+                        href="https://rutube.ru/search/?query=olegrewko"><img class="rollover"
+                          src="./img/icons/rutube45.png" /></a>
+                    </div>
+                  </div>
+                  <div class="" title="Гитхаб">
+                    <div class="roll">
+                      <img class="regular" src="./img/icons/ghbl45gray.png" /><a
+                        href="https://github.com/olegrewko/olegrewko.github.io"><img class="rollover"
+                          src="./img/icons/ghbl45.png" /></a>
+                    </div>
+                  </div>
+
+                  <div class="" title="Ютуб">
+                    <div class="roll">
+                      <img class="regular" src="./img/icons/youtube45gray01.png" /><a
+                        href="https://www.youtube.com/channel/UCU-sIbAKpKDuuheQClfKspA"><img class="rollover"
+                          src="./img/icons/youtubemaroon.png" /></a>
+                    </div>
+                  </div>
+
+                  <div class="" title="tagged">
+                    <div class="roll">
+                      <img class="regular" src="./img/icons/taggedgray.png" /><a href="https://secure.tagged.com/"><img
+                          class="rollover" src="./img/icons/tagged.png" /></a>
+                    </div>
+                  </div>
+
+                  <div class="" title="flikr">
+                    <div class="roll">
+                      <img class="regular" src="./img/icons/flikrgray.png" /><a href="https://www.flickr.com"><img
+                          class="rollover" src="./img/icons/flikr.png" /></a>
+                    </div>
+                  </div>
+
+                  <div class="" title="pinterest">
+                    <div class="roll">
+                      <img class="regular" src="./img/icons/pinterest.png" /><a href="https://ru.pinterest.com/"><img
+                          class="rollover" src="./img/icons/pinterest002.png" /></a>
+                    </div>
+                  </div>
+
+                  <div class="" title="meetme">
+                    <div class="roll">
+                      <img class="regular" src="./img/icons/meetmegray.png" /><a
+                        href="http://seoslim.ru/gg/socialnaya-set-meetme.html"><img class="rollover"
+                          src="./img/icons/meetme.png" /></a>
+                    </div>
+                  </div>
+
+                  <div class="" title="meetup">
+                    <div class="roll">
+                      <img class="regular" src="./img/icons/meetupgray.png" /><a
+                        href="http://seoslim.ru/gg/socialnaya-set-meetup-com.html"><img class="rollover"
+                          src="./img/icons/meetup.png" /></a>
+                    </div>
+                  </div>
+
+                  <div class="" title="myspace">
+                    <div class="roll">
+                      <img class="regular" src="./img/icons/myspacegray.png" /><a href="https://www.myspace.com"><img
+                          class="rollover" src="./img/icons/myspace.png" /></a>
+                    </div>
+                  </div>
+
+                  <div class="" title="periscope">
+                    <div class="roll">
+                      <img class="regular" src="./img/icons/periscope001.png" /><a href="https://www.periscope.tv/"><img
+                          class="rollover" src="./img/icons/periscopegreen.png" /></a>
+                    </div>
+                  </div>
+
+                  <div class="" title="tumblr">
+                    <div class="roll">
+                      <img class="regular" src="./img/icons/tumblrgray.png" /><a href="https://www.tumblr.com"><img
+                          class="rollover" src="./img/icons/tumblr.png" /></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="tiny-footer">
+            <p class="tiny-grey">
+              © All Rights Reserved 2020 | Bowers&Wilkins
+            </p>
+            <ul class="tiny-card">
+              <li class="tiny-card__item">
+                <a href="#" class="tiny-card__link">
+                  <img src="./img/icons/paypal.png" alt="" />
+                </a>
+              </li>
+              <li class="tiny-card__item">
+                <a href="#" class="tiny-card__link">
+                  <img src="./img/icons/master.png" alt="" />
+                </a>
+              </li>
+              <li class="tiny-card__item">
+                <a href="#" class="tiny-card__link">
+                  <img src="./img/icons/visa.png" alt="" />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./js/jquery.js"></script>
     <script src="./js/jquery341.min.js"></script>
