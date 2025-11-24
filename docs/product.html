@@ -40,25 +40,14 @@
       transition: background-color 0.3s ease-in-out;
     }
 
-    .btn:hover {
+    /* .btn:hover {
       background-color: #6078f1;
       transition: background-color 0.3s ease-in-out;
-    }
+    } */
 
     .btn:disabled {
       opacity: 0.4;
       pointer-events: none;
-    }
-
-    body {
-      background-color: #fafafa;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0;
-      font-weight: 400;
-      overflow-anchor: none;
     }
 
     .tabs {
@@ -67,18 +56,30 @@
 
     .tabs__list {
       list-style-type: none;
-      padding: 0;
-      margin: 0;
+      padding: 5px;
+      margin: 5px;
       display: flex;
       align-items: center;
     }
 
-    .tabs__item:not(:last-child) {
-      margin-right: 10px;
-    }
+@media (max-width: 768px) {
+          .tabs__list {
+            flex-direction: column;
+            justify-content: start;
+            align-items: start;
+
+
+            margin-bottom: 10px;
+            padding: 5px;
+            margin: 5px;
+            border-bottom: 1px solid #eaeaea;
+          }
+        }
+
+
 
     .tabs__btn {
-      padding: 15px 62px;
+      padding: 15px 72px;
       border: none;
       background-color: var(--color-accent);
       color: #fff;
@@ -96,12 +97,12 @@
 
     .tabs__btn:hover {
       background-color: #fff;
-      color: var(--color-accent);
+      color: var(--text-color);
     }
 
     .tabs__btn--active {
       background-color: #fff;
-      color: var(--color-accent);
+      color: var(--text-color);
       transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
       pointer-events: none;
     }
@@ -183,7 +184,9 @@
       justify-content: center;
       cursor: pointer;
       transition: background-color 0.3s ease-in-out;
+
     }
+
 
     .tabs__arrow svg {
       pointer-events: none;
@@ -206,6 +209,17 @@
     .tabs__arrow--prev {
       left: -54px;
     }
+
+      @media (max-width: 700px) {
+             .tabs__arrow--next
+             {
+               right: 100px;
+          }
+             .tabs__arrow--prev
+             {
+               left: 230px;
+          }
+      }
   </style>
   <!-- tabs-styles -->
       <style>
@@ -442,7 +456,7 @@
     </header>
     <main class="main">
       <div class="container1400">
-        <div class="row">
+        <div class="row ml-10">
           <div class="col-12">
             <nav class="breadcrumbs">
               <ul>
@@ -467,7 +481,7 @@
               <img src="img/white701.png" alt="img/white701.png" />
             </div>
           </div>
-          <div class="col-lg-7 col-sm-12">
+          <div class="col-lg-7 col-sm-12 ml-10">
             <h3 class="text-left">Bowers&Wilkins 702 S2</h3>
 
             <h5>
@@ -516,10 +530,9 @@
         </div>
       </div>
 
-      <!-- tabs02 -->
-
+      <!-- tabs -->
       <div class="container">
-  <div class="tabs" style="height: 400px; margin-top: 200px;">
+  <div class="tabs" style="height: 400px; margin-top: 100px;">
     <ul class="tabs__list">
       <li class="tabs__item"><button class="tabs__btn tabs__btn--active" data-tabs-path="main">Описание</button></li>
       <li class="tabs__item"><button class="tabs__btn" data-tabs-path="archive">Характеристики</button></li>
@@ -723,8 +736,7 @@
     </button>
   </div>
       </div>
-
-      <!-- tabs02 end-->
+      <!-- tabs end-->
       <div class="container">
         <h2 class="menu__title">Наличие в магазинах</h2>
         <div class="shop-grid">

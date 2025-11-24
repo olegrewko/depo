@@ -11,9 +11,7 @@
   <title>bw</title>
   <link rel="icon" href="img/favicon.ico">
   <link rel="icon" href="/favicon.ico">
-  <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> -->
 
-  <!-- <link rel="stylesheet" href="./css/style.css" /> -->
 <!-- Preload критических ресурсов -->
 <link rel="preload" href="css/style.css" as="style">
 <link rel="preload" href="js/main.js" as="script">
@@ -1091,10 +1089,10 @@ li {
 }
 
 .menu__title {
-  font-family: 'Jost';
+  font-family: 'Rubik';
   font-style: normal;
   font-weight: 700;
-  font-size: 34px;
+  font-size: 24px;
   color: #101c10;
   margin-top: 100px;
   margin-bottom: 100px;
@@ -1255,7 +1253,7 @@ li {
 
 .bg-grey {
   /* background-color: rgba(96, 212, 212, 0.16); */
-  background: #34495e;
+  background: var(--gray-color);
 }
 
 .ml-100 {
@@ -1276,7 +1274,7 @@ li {
 }
 
 .about__cell {
-  max-width: 500px;
+  max-width: 700px;
   width: 100%;
   margin: 0px;
   padding: 0;
@@ -1379,7 +1377,7 @@ li {
 }
 
 .search {
-  max-width: 900px;
+  max-width: 1400px;
   width: 100%;
   margin: 0 auto;
 
@@ -1387,7 +1385,7 @@ li {
 }
 
 .cell-900--flex {
-  max-width: 900px;
+  max-width: 1400px;
   width: 100%;
   margin: 0 auto;
   display: flex;
@@ -1412,21 +1410,21 @@ li {
   color: black;
   font-weight: 800;
   font-size: 14px;
-  border: 0px solid #ffc107;
+  border: 0px solid #fad973;
   border-radius: 2px;
-  background-color: #ffc107;
-  margin-bottom: 3px;
+  background-color: #fad35d;
+  margin-bottom: 5px;
 }
 
 .ffc107:hover {
 
-  height: 40px;
+  /* height: 40px; */
   color: black;
   /* border: 0px solid black; */
   background-color: white;
   transition: all 0.3s;
   cursor: pointer;
-  margin-bottom: 3px;
+  /* margin-bottom: 3px; */
 }
 
 .grid-products__btn {
@@ -1443,7 +1441,20 @@ li {
   margin-bottom: 3px;
   background-color: transparent;
 }
+.grid-products__btn-810:hover {
+  color: white;
 
+  background-color: black;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.grid-products__btn-270:hover {
+  color: white;
+
+  background-color: black;
+  transition: all 0.3s;
+  cursor: pointer;
+}
 .grid-products__btn:hover {
 
   height: 40px;
@@ -1710,7 +1721,7 @@ li+li {
 }
 
 .form textarea {
-  min-height: 140px;
+  min-height: 100px;
   resize: none;
 }
 
@@ -1836,13 +1847,13 @@ form {
 .footer__form {
   margin-top: 20px;
   margin-bottom: 10px;
-  max-width: 450px;
+  max-width: 600px;
   width: 100%;
 
 }
 
 .footer-widget-subscribe {
-  max-width: 350px;
+  max-width: 600px;
   width: 100%;
 }
 
@@ -2081,14 +2092,14 @@ display: flex;
   font-family: 'Jost';
   font-style: normal;
   font-weight: 700;
-  font-size: 34px;
+  font-size: 24px;
   line-height: 1.5;
   color: #101c10;
 }
 
 .text-center-wh {
   text-align: center;
-  font-family: 'Jost';
+  font-family: 'Rubik';
   font-style: normal;
   font-weight: 700;
   font-size: 24px;
@@ -2393,7 +2404,7 @@ display: flex;
 
   .about,
   .expertise {
-    padding: 50px 0;
+    padding: 0px 0;
   }
 
   .expertise__title {
@@ -2665,7 +2676,7 @@ display: flex;
 }
 
 .dummy08 {
-  min-height: 100px;
+  min-height: 50px;
 
 }
 
@@ -3014,15 +3025,33 @@ display: flex;
   max-width: 1400px;
   width: 100%;
 }
+    /* Адаптивность для планшетов */
+                  @media (max-width: 768px) {
+                    .grid-3 {
+                      display: grid;
+                      gap: 5px;
+                      margin: 5px;
+                      grid-template-columns: 1fr;
+                    }
+                  }
 
 .grid-5 {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 5px;
+
   max-width: 1400px;
   width: 100%;
 }
-
+    /* Адаптивность для планшетов */
+                  @media (max-width: 768px) {
+                    .grid-5 {
+                      display: grid;
+                      gap: 5px;
+                      margin: 5px;
+                      grid-template-columns: 1fr;
+                    }
+                  }
 .mt-50 {
   margin-top: 50px;
 }
@@ -3302,11 +3331,12 @@ display: flex;
     }
 
     .vertical-text {
+      font-family: 'Rubik';
       writing-mode: vertical-rl;
       /* Вертикальное написание */
       text-orientation: mixed;
       font-size: 24px;
-      font-weight: bold;
+      font-weight: 500;
       letter-spacing: 3px;
       color: #333;
       text-transform: uppercase;
@@ -3506,19 +3536,7 @@ display: flex;
               </div>
             </div>
 
-            <!-- <div class="col-lg-3 col-sm-6">
-              <div class="item fas">
-                <p>
-                  <i class="fa-solid fa-user-graduate"></i>
-                </p>
-                <p>
 
-                  Результат позволяет вам слышать музыку и фильмы с
-                  поразительной точностью и реалистичностью оригинальной
-                  записи, без добавления и убавления чего-либо.
-                </p>
-              </div>
-            </div> -->
           </div>
         </div>
       </section>
@@ -3526,16 +3544,16 @@ display: flex;
       <div class="container">
 
         <section class="about mb-100" id="about">
-          <div class="container">
-            <div class="about__inner">
+          <div class="container1400">
+            <div class="about__inner cadetblue">
 
               <div class="about__cell">
                 <img src="img/john.jpg" alt="img/john.jpg">
               </div>
 
-              <div class="about__cell ">
+              <div class="about__cell cadetblue">
                 <div class="about__ca">
-                  <p>
+                  <p class="white">
                     The story of Bowers&Wilkins start wih5h one <br>
                     man - John Bowers. His drive and passion are <br>
                     written into the DNA of the company he <br>
@@ -3544,11 +3562,11 @@ display: flex;
                 </div>
               </div>
             </div>
-            <div class="about__inner">
-              <div class="about__cell">
+            <div class="about__inner cadetblue">
+              <div class="about__cell cadetblue">
 
-                <div class="about__cb">
-                  <p>
+                <div class="about__cb ">
+                  <p class="white">
                     The story of Bowers&Wilkins start wih5h one <br>
                     man - John Bowers. His drive and passion are <br>
                     written into the DNA of the company he <br>
@@ -3576,20 +3594,69 @@ display: flex;
   align-items: flex-start;
   flex-wrap: wrap;
 }
-.ffc107 {
-  width: 900px;
-  height: 40px;
-  color: black;
-  font-weight: 800;
+.ffc107-1400 {
+  text-align: center;
+  max-width: 1370px;
+  width: 100%;
+  height: 60px;
+  font-family: 'Rubik';
+  font-weight: 400;
   font-size: 14px;
-  border: 0px solid #ffc107;
-  border-radius: 2px;
-  background-color: #ffc107;
+  border: 4px solid #e6ae05;
+  border-radius: 5px;
+  background-color: #e6ae05;
+  margin-bottom: 5px;
+
+  margin: 10px;
+}
+.ffc107 {
+  /* max-width: 1000px; */
+  width: 100%;
+  height: 100px;
+    color: black;
+  font-family: 'Rubik';
+  font-weight: 700;
+  font-size: 20px;
+  border: 4px solid #d29f05;
+  border-radius: 6px;
+  background-color: #d29f05;
   margin-bottom: 3px;
+}
+.grid-products__btn-810 {
+ text-align: center;
+  max-width: 810px;
+  width: 100%;
+  height: 100px;
+margin: 5px;
+  color: black;
+ font-family: 'Rubik';
+  font-weight: 700;
+  font-size: 20px;
+  border: 4px solid black;
+  border-radius: 6px;
+
+  margin-bottom: 5px;
+  background-color: transparent;
+}
+.grid-products__btn-270 {
+ text-align: center;
+  max-width: 270px;
+  width: 100%;
+ height: 100px;
+margin: 5px;
+  color: black;
+  font-family: 'Rubik';
+  font-weight: 800;
+  font-size: 20px;
+  border: 4px solid black;
+  border-radius: 6px;
+
+  margin-bottom: 5px;
+  background-color: transparent;
 }
 .grid-products__btn {
   text-align: left;
-  max-width: 900px;
+  max-width: 1000px;
   width: 100%;
   height: 40px;
   color: black;
@@ -3602,464 +3669,273 @@ display: flex;
   background-color: transparent;
 }
 </style>
-        <div class="container">
-          <div class="cell-900--flex">
+        <div class="container1400 text-center">
+<div class="container1400  d-flex">
+<a href="./category.html" style="width: 1370px;">
+              <button class="ffc107">Каталог всей продукции Bowers & Wilkins</button>
+            </a>
+</div>
+<div class="container1400 d-flex">
+<button class="grid-products__btn-270">Home Audio</button>
+            <button class="grid-products__btn-270">Mini Theater</button>
+            <button class="grid-products__btn-810">Wireless Speakers</button>
+</div>
+<div class="container1400 d-flex">
+<button class="grid-products__btn-810">New Zeppelin</button>
+            <button class="grid-products__btn-270">Car Audio</button>
+            <button class="grid-products__btn-270">Formation DUO</button>
+</div>
+<div class="container1400 d-flex">
+<button class="grid-products__btn-270">Headphones</button>
+            <button class="grid-products__btn-810">Integrated solutions</button>
+            <button class="grid-products__btn-270">Compact Monitors</button>
+</div>
+<div class="container1400 d-flex">
+<button class="grid-products__btn-810">Shelf Monitors</button>
+            <button class="grid-products__btn-270">Soundbars</button>
+            <button class="grid-products__btn-270">Subwoofers</button>
+</div>
+          <!-- <div class="container text-center">
             <a href="./category.html">
               <button class="ffc107">Каталог всей продукции Bowers & Wilkins</button>
             </a>
             <button class="grid-products__btn">Home Audio</button>
-
             <button class="grid-products__btn">Mini Theater</button>
             <button class="grid-products__btn">Wireless Speakers</button>
+
             <button class="grid-products__btn">New Zeppelin</button>
-
-
             <button class="grid-products__btn">Car Audio</button>
-
             <button class="grid-products__btn">Formation DUO</button>
 
             <button class="grid-products__btn">Headphones</button>
             <button class="grid-products__btn">Compact Monitors</button>
-
-
             <button class="grid-products__btn">Integrated solutions</button>
+
             <button class="grid-products__btn">Soundbars</button>
             <button class="grid-products__btn">Subwoofers</button>
             <button class="grid-products__btn">Shelf Monitors</button>
 
 
+          </div> -->
           </div>
-          <section class="search page-section">
-            <div class="container">
-              <div class="search__inner">
-                <div class="search__tabs tabs-wrapper">
-                  <div class="mobile__overflow">
-                    <a class="search__tabs-item search__tabs-item--active" href="#tab-1">Поиск по артикулу</a>
-                    <a class="search__tabs-item" href="#tab-2">Поиск по марке модели</a>
-                    <a class="search__tabs-item" href="#tab-3">Поиск по названию модели</a>
-                  </div>
-                  <div class="search__content">
-                    <div id="tab-1" class="search__content-item search__content-item--active">
-                      <form action="" class="search__content-form">
-                        <input type="text" class="search__content-input" placeholder="Введите номер" />
-                        <button class="search__content-btn" type="submit">
+<!-- tabs-styles -->
+<style>
+    :root {
+        --color-dark: #4d4d4d;
+        --color-light: #808080;
+        --color-accent: #4f6b88;
+    }
 
-                          Искать
-                        </button>
-                      </form>
-                    </div>
-                    <div id="tab-2" class="search__content-item">
-                      <form action="" class="search__content-form">
-                        <input type="text" class="search__content-input" placeholder="Введите марку" />
-                        <button class="search__content-btn" type="submit">
-                          Искать
-                        </button>
-                      </form>
-                    </div>
-                    <div id="tab-3" class="search__content-item">
-                      <form action="" class="search__content-form">
-                        <input type="text" class="search__content-input" placeholder="Введите название товара" />
-                        <button class="search__content-btn" type="submit">
-                          Искать
-                        </button>
-                      </form>
-                    </div>
-                  </div>
-                </div>
+    .search__content { padding: 30px; }
+    .search__content-item { display: none; animation: fadeIn 0.4s; }
+    .search__content-item--active { display: block; }
 
-                <style>
-                  /* Базовые стили */
-                  .search__content-input {
-                    max-width: 900px;
-                    width: 100%;
-                    height: 40px;
-                    padding: 5px 10px;
-                    margin-bottom: 5px;
-                    background: #F0F0F4;
-                    border-radius: 3px;
+    .search__content-form {
+        display: flex;
+        gap: 12px;
+        max-width: 900px;
+        width: 100%;
+        margin: 0 auto;
+    }
 
-                    font-style: normal;
-                    font-weight: 500;
-                    font-size: 16px;
-                    line-height: 19px;
+    .search__content-input {
+        flex: 1;
+        max-width: 900px;
+        width: 100%;
+        padding: 14px 18px;
+        border: 2px solid #e9ecef;
+        border-radius: 10px;
+        font-size: 16px;
+        transition: border-color 0.3s;
+    }
 
-                    color: #656464;
-                    border: none;
-                  }
+    .search__content-input:focus {
+        outline: none;
+        border-color: #007bff;
+        box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+    }
 
-                  .search__content-input::placeholder {
-                    width: 900px;
-                    height: 40px;
-                    padding: 5px 10px;
-                    background: #F0F0F4;
-                    font-style: normal;
-                    font-weight: 400;
-                    font-size: 16px;
-                    line-height: 19px;
-                    color: #646464;
-                  }
+    .search__content-input::placeholder { color: #adb5bd; }
 
-                  .search__tabs {
-                    max-width: 800px;
-                    margin: 0 auto;
-                    background: #fff;
-                    border-radius: 16px;
-                    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-                    overflow: hidden;
-                    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-                  }
 
-                  /* Контейнер для табов */
-                  .mobile__overflow {
-                    display: flex;
-                    background: #f8f9fa;
-                    border-bottom: 1px solid #e9ecef;
-                    position: relative;
-                    overflow-x: auto;
-                    scrollbar-width: none;
-                    /* Firefox */
-                    -ms-overflow-style: none;
-                    /* IE и Edge */
-                  }
 
-                  .mobile__overflow::-webkit-scrollbar {
-                    display: none;
-                    /* Chrome, Safari, Opera */
-                  }
+    .btn {
+        border: none;
+        padding: 14px 0;
+        border-radius: 4px;
+        width: 100%;
+        color: #fff;
+        background-color: var(--color-accent);
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+   .btn:hover {
+        border: none;
+        padding: 14px 0;
+        border-radius: 4px;
+        width: 100%;
+        color: #fff;
+        background-color: var(--text-color);
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
 
-                  /* Элементы табов */
-                  .search__tabs-item {
-                    flex: 1;
-                    min-width: 140px;
-                    padding: 16px 20px;
-                    text-align: center;
-                    text-decoration: none;
-                    color: #6c757d;
-                    font-weight: 500;
-                    font-size: 14px;
-                    border: none;
-                    background: none;
-                    cursor: pointer;
-                    transition: all 0.3s ease;
-                    position: relative;
-                    white-space: nowrap;
-                    border-bottom: 3px solid transparent;
-                  }
+    .btn:disabled {
+        opacity: 0.4;
+        pointer-events: none;
+    }
 
-                  .search__tabs-item:hover {
-                    color: #495057;
-                    background: rgba(0, 0, 0, 0.02);
-                  }
+    .tabs__list {
+      max-width: 900px;
+      width: 100%;
+        list-style: none;
+        padding: 0;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    @media (max-width: 768px) {
+.tabs__list {
+display: flex;
+flex-direction: column;
+}
 
-                  .search__tabs-item--active {
-                    color: #34495e;
-                    border-bottom-color: #34495e;
-                    background: #fff;
-                  }
+    }
 
-                  .search__tabs-item--active::after {
-                    content: '';
-                    position: absolute;
-                    bottom: -1px;
-                    left: 0;
-                    right: 0;
-                    height: 3px;
-                    background: #34495e;
-                  }
+    .tabs__item:not(:last-child) { margin-right: 5px; }
 
-                  /* Контент табов */
-                  .search__content {
-                    padding: 30px;
-                  }
+    .tabs__btn {
+      max-width: 400px;
+      width: 100%;
+      margin-bottom: 5px;
+        padding: 15px 50px;
+        border: none;
+        background-color: var(--color-accent);
+        color: #fff;
+        cursor: pointer;
+        border-radius: 4px;
+        font-weight: 600;
+        font-size: 12px;
+        text-align: center;
+        transition: background-color 0.3s, color 0.3s;
+    }
 
-                  .search__content-item {
-                    display: none;
-                    animation: fadeIn 0.4s ease-in-out;
-                  }
+    .tabs__btn:hover {
+        background-color: #fff;
+        color: var(--color-accent);
+    }
 
-                  .search__content-item--active {
-                    display: block;
-                  }
+    .tabs__btn--active {
+        background-color: #fff;
+        color: var(--color-accent);
+        pointer-events: none;
+    }
 
-                  @keyframes fadeIn {
-                    from {
-                      opacity: 0;
-                      transform: translateY(10px);
-                    }
+    .tabs__content { display: none; }
+    .tabs__content--active { display: block; }
 
-                    to {
-                      opacity: 1;
-                      transform: translateY(0);
-                    }
-                  }
+    .content {
+        padding: 20px 0px;
+        max-width: 900px;
+        width: 100%;
+        margin: 0 auto;
+    }
 
-                  /* Форма поиска */
-                  .search__content-form {
-                    display: flex;
-                    gap: 12px;
-                    max-width: 500px;
-                    margin: 0 auto;
-                  }
+    .content__title {
+        margin: 0 0 20px;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 700;
+        font-size: 24px;
+        color: var(--color-dark);
+    }
 
-                  .search__content-input {
-                    flex: 1;
-                    padding: 14px 18px;
-                    border: 2px solid #e9ecef;
-                    border-radius: 10px;
-                    font-size: 16px;
-                    transition: all 0.3s ease;
-                    /* background: #fff; */
-                  }
+    .content__descr {
+        margin: 0 0 59px;
+        font-weight: 400;
+        font-size: 14px;
+        color: var(--color-dark);
+    }
 
-                  .search__content-input:focus {
-                    outline: none;
-                    border-color: #007bff;
-                    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
-                  }
+    .content__list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+    }
 
-                  .search__content-input::placeholder {
-                    color: #adb5bd;
-                  }
+    .content__link {
+        padding: 14px;
+        width: 200px;
+        height: 120px;
+        border-radius: 4px;
+        background-color: #ebecf3;
+    }
 
-                  /* .search__content-btn {
-                    padding: 14px 28px;
-                    background: linear(135deg, #007bff, #0056b3);
-                    color: white;
-                    border: none;
-                    border-radius: 10px;
-                    font-size: 16px;
-                    font-weight: 600;
-                    cursor: pointer;
-                    transition: all 0.3s ease;
-                    text-transform: uppercase;
-                    letter-spacing: 0.5px;
-                    min-width: 120px;
-                  } */
-                  /* .search__content-btn {
-                    max-width: 900px;
-                    width: 100%;
-                    min-width: 120px;
-                    height: 40px;
-                    padding: 14px 28px; */
-                  .search__content-btn {
-                    max-width: 900px;
-                    width: 100%;
-                    height: 50px;
-                    padding: 17px 40px;
-                    background: #34495e;
-                    border-radius: 3px;
-                    font-style: normal;
-                    font-weight: 700;
-                    font-size: 10px;
-                    letter-spacing: 0.12em;
-                    font-weight: 600;
-                    cursor: pointer;
-                    transition: all 0.3s ease;
-                    color: #FFFFFF;
-                    border: none;
-                  }
+    .content__text {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 500;
+        font-size: 14px;
+        color: #a2a6c0;
+    }
+</style>
+<!-- tabs-styles -->
 
-                  /* background: #34495e;
-                    border-radius: 3px;
-                    font-style: normal;
-                    font-weight: 700;
-                    font-size: 10px;
-                    letter-spacing: 0.12em;
-                    /* text-transform: uppercase; */
-                  /* color: #FFFFFF;
-                    border: none;
-                    cursor: pointer;
-                    transition: all 0.3s ease;
-                  } */
-
-                  .search__content-btn:hover {
-                    background: black;
-                    transition: all 0.4s;
-                  }
-
-                  /* .search__content-input {
-                    max-width: 900px;
-                    width: 100%;
-                    height: 40px;
-                    padding: 5px 10px;
-                    margin-bottom: 5px;
-                    background: #F0F0F4;
-                    border-radius: 3px;
-
-                    font-style: normal;
-                    font-weight: 500;
-                    font-size: 16px;
-                    line-height: 19px;
-
-                    color: #656464;
-                    border: none;
-                  }
-
-                  .search__content-input::placeholder {
-                    width: 900px;
-                    height: 40px;
-                    padding: 5px 10px;
-                    background: #F0F0F4;
-                    font-style: normal;
-                    font-weight: 400;
-                    font-size: 16px;
-                    line-height: 19px;
-                    color: #646464;
-                  } */
-
-                  /* .search__content-btn:hover {
-                    background: linear(135deg, #0056b3, #004085);
-                    transform: translateY(-1px);
-                    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
-                  } */
-
-                  .search__content-btn:active {
-                    transform: translateY(0);
-                  }
-
-                  /* Адаптивность для планшетов */
-                  @media (max-width: 768px) {
-                    .search__tabs {
-                      margin: 0 15px;
-                      border-radius: 12px;
-                    }
-
-                    .search__content {
-                      padding: 24px 20px;
-                    }
-
-                    .search__content-form {
-                      flex-direction: column;
-                      gap: 16px;
-                    }
-
-                    .search__content-btn {
-                      width: 100%;
-                      padding: 16px;
-                    }
-
-                    .search__tabs-item {
-                      padding: 14px 16px;
-                      font-size: 13px;
-                      min-width: 120px;
-                    }
-                  }
-
-                  /* Адаптивность для мобильных */
-                  @media (max-width: 480px) {
-                    .search__tabs {
-                      margin: 0 10px;
-                      border-radius: 10px;
-                    }
-
-                    .search__content {
-                      padding: 20px 16px;
-                    }
-
-                    .mobile__overflow {
-                      border-radius: 10px 10px 0 0;
-                    }
-
-                    .search__tabs-item {
-                      padding: 12px 14px;
-                      font-size: 12px;
-                      min-width: 110px;
-                    }
-
-                    .search__content-input {
-                      padding: 12px 16px;
-                      font-size: 14px;
-                    }
-
-                    .search__content-btn {
-                      padding: 14px;
-                      font-size: 14px;
-                    }
-                  }
-
-                  /* Темная тема (опционально) */
-                  @media (prefers-color-scheme: dark) {
-                    .search__tabs {
-                      background: #2d3748;
-                      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-                    }
-
-                    .mobile__overflow {
-                      background: #4a5568;
-                      border-bottom-color: #718096;
-                    }
-
-                    .search__tabs-item {
-                      color: #cbd5e0;
-                    }
-
-                    .search__tabs-item:hover {
-                      color: #e2e8f0;
-                      background: rgba(255, 255, 255, 0.05);
-                    }
-
-                    .search__tabs-item--active {
-                      color: #63b3ed;
-                      background: #2d3748;
-                      border-bottom-color: #63b3ed;
-                    }
-
-                    .search__content-input {
-                      /* background: #4a5568; */
-                      border-color: #718096;
-                      color: #e2e8f0;
-                    }
-
-                    .search__content-input::placeholder {
-                      color: #a0aec0;
-                    }
-
-                    .search__content-input:focus {
-                      border-color: #63b3ed;
-                      box-shadow: 0 0 0 3px rgba(99, 179, 237, 0.1);
-                    }
-                  }
-                </style>
-
-                <script>
-                  // JavaScript для переключения табов
-                  document.addEventListener('DOMContentLoaded', function () {
-                    const tabItems = document.querySelectorAll('.search__tabs-item');
-                    const contentItems = document.querySelectorAll('.search__content-item');
-
-                    tabItems.forEach(tab => {
-                      tab.addEventListener('click', function (e) {
-                        e.preventDefault();
-
-                        // Убираем активный класс у всех табов
-                        tabItems.forEach(item => {
-                          item.classList.remove('search__tabs-item--active');
-                        });
-
-                        // Добавляем активный класс текущему табу
-                        this.classList.add('search__tabs-item--active');
-
-                        // Скрываем все контент-блоки
-                        contentItems.forEach(content => {
-                          content.classList.remove('search__content-item--active');
-                        });
-
-                        // Показываем соответствующий контент-блок
-                        const targetId = this.getAttribute('href');
-                        const targetContent = document.querySelector(targetId);
-                        if (targetContent) {
-                          targetContent.classList.add('search__content-item--active');
-                        }
-                      });
-                    });
-                  });
-                </script>
-
-              </div>
+<!-- tabs -->
+<div class="search">
+    <div class="container">
+        <div class="tabs" style="height: 300px; margin-top: 100px;">
+            <ul class="tabs__list">
+                <li class="tabs__item"><button class="tabs__btn tabs__btn--active" data-tabs-path="main">Поиск по артикулу</button></li>
+                <li class="tabs__item"><button class="tabs__btn" data-tabs-path="archive">Поиск по марке модели</button></li>
+                <li class="tabs__item"><button class="tabs__btn" data-tabs-path="settings">Поиск по названию модели</button></li>
+            </ul>
+            <div class="content">
+            <div class="tabs__content tabs__content--active" data-tabs-target="main">
+                <form action="" class="search__content-form">
+                    <input type="text" class="search__content-input" placeholder="Введите артикул" />
+                    <button class="btn" type="submit">Искать</button>
+                </form>
             </div>
-          </section>
+            <div class="tabs__content" data-tabs-target="archive">
+                <form action="" class="search__content-form">
+                    <input type="text" class="search__content-input" placeholder="Введите марку модели" />
+                    <button class="btn" type="submit">Искать</button>
+                </form>
+            </div>
+            <div class="tabs__content" data-tabs-target="settings">
+                <form action="" class="search__content-form">
+                    <input type="text" class="search__content-input" placeholder="Введите название модели" />
+                    <button class="btn" type="submit">Искать</button>
+                </form>
+            </div>
+</div>
         </div>
-<!--Каталог+ Поиск -->
+    </div>
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', () => {
+            const tabs = document.querySelector('.tabs');
+            const tabsBtn = document.querySelectorAll('.tabs__btn');
+            const tabsContent = document.querySelectorAll('.tabs__content');
+
+            tabs.addEventListener('click', (e) => {
+                if (e.target.classList.contains('tabs__btn')) {
+                    const tabsPath = e.target.dataset.tabsPath;
+                    tabsBtn.forEach(el => el.classList.remove('tabs__btn--active'));
+                    e.target.classList.add('tabs__btn--active');
+                    tabsContent.forEach(el => el.classList.remove('tabs__content--active'));
+                    document.querySelector(`[data-tabs-target="${tabsPath}"]`).classList.add('tabs__content--active');
+                }
+            });
+        });
+    </script>
+</div>
+<!-- tabs end -->
+
+        </div>
+<!-- Поиск -->
       <div class="loudspeakers mt-50" id="heat">
         <div class="about__inner cadetblue">
           <div class="about__cell ">
@@ -4299,13 +4175,7 @@ display: flex;
               <h1 class="ab black">Серия 800 Diamond</h1>
               <img class="#" src="img/s801.png">
             </div>
-
-            <!-- <p class="white">
-              Превосходные, бескомпромиссные и бесподобные.
-              Самые известные студии звукозаписи в мире выбирают акустические системы Bowers & Wilkins Серии 800
-              Diamond
-              только по той причине, что они представляют собой вершину звукового превосходства.
-            </p> -->
+<h1 class="text-center-wh mt-50">Серия 800 Diamond</h1>
             <div class="cell-800-df">
               <img src="img/pe1.jpg" alt="img/pe1.jpg">
 
@@ -4327,7 +4197,7 @@ display: flex;
             </div>
             </div>
 <div class="dummy08">
-<h1 class="text-center-wh mt-100">Серия 800 Diamond</h1>
+<!-- <h1 class="text-center-wh mt-100">Серия 800 Diamond</h1> -->
                 <h1 class="text-center-wh ">The Highest Form of Sound</h1>
               </div>
 
@@ -4390,7 +4260,7 @@ display: flex;
         </div>
       </div>
 
-      <h4 class="text-center">Технические характеристики Formation DUO</h4>
+      <h5 class="text-center">Технические характеристики Formation DUO</h5>
       <div class="container1400">
         <div class="specs-table">
           <!-- Первая колонка -->
@@ -4515,16 +4385,23 @@ display: flex;
       </div>
 
       <style>
+        .d-flex {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 5px;
+        }
         .container1400 {
           max-width: 1400px;
           margin: 0 auto;
-          padding: 20px;
+
+          padding: 0px;
         }
 
         .container {
           max-width: 1200px;
           margin: 0 auto;
-          padding: 20px;
+          padding: 10px;
         }
 
         .specs-table {
@@ -4580,17 +4457,13 @@ display: flex;
           font-size: 14px;
         }
 
-        /* Адаптивность */
-        @media (max-width: 768px) {
-          .specs-table {
-            flex-direction: column;
-          }
+  @media (max-width: 768px) {
 
           .table-row {
             flex-direction: column;
             border-bottom: 1px solid #eaeaea;
           }
-
+        }
           .header-cell {
             min-width: auto;
             border-right: none;
@@ -4647,90 +4520,6 @@ display: flex;
         }
       </style>
 
-
-      <!-- <div class="container1400 grid-5">
-
-        <div class="card ">
-          <h5>Модель</h5>
-          <p>Formation Duo</p>
-          <h5>Описание</h5>
-          <p>Высококачественные беспроводные акустические системы</p>
-          <h5>Функции</h5>
-          <p>Технология Apple AirPlay 2®
-            Spotify® Connect
-            Roon Ready
-            Встроенный Bluetooth
-            Dolby Digital
-            Цифровая обработка сигналов (DSP)
-            Цифровой усилитель
-            Динамическая эквализация - Dynamic EQ</p>
-        </div>
-        <div class="card">
-          <h5>Динамики</h5>
-          <p>1 x 25 мм (1 in) твитер с карбоновым куполом
-
-            1 x 165 мм (6.5 in) НЧ/СЧ-драйвер
-            с диффузором Continuum</p>
-
-          <h5>Диапазон воспроизводимых частот</h5>
-          <p>25 Гц – 33 кГц</p>
-          <h5>Встроенная мощность усилителя</h5>
-          <p>
-            2 x 125 Вт
-          </p>
-
-        </div>
-        <div class="card">
-          <h5>Соединения</h5>
-          <p>Сеть (RJ45 Ethernet или WiFi)
-            USB – только для сервиса
-            Bluetooth
-            Bluetooth® v4.1, Class 2
-            AptX HD
-            AAC
-            SBC</p>
-          <h5>Размеры</h5>
-          <p>Высота: 395мм (15.5 in)
-            Ширина: 197мм (7.8 in)
-            Глубина: 305мм (12 in)
-            Вес: 10.6 кг (23.4lb)</p>
-          <h5>Потребление</h5>
-          <p>Менее 6 Вт (в режиме Sleep)</p>
-        </div>
-        <div class="card">
-          <h5>Динамики</h5>
-          <p>1 x 25 мм (1 in) твитер с карбоновым куполом
-
-            1 x 165 мм (6.5 in) НЧ/СЧ-драйвер
-            с диффузором Continuum</p>
-
-          <h5>Диапазон воспроизводимых частот</h5>
-          <p>25 Гц – 33 кГц</p>
-          <h5>Встроенная мощность усилителя</h5>
-          <p>
-            2 x 125 Вт
-          </p>
-
-        </div>
-        <div class="card">
-          <h5>Сопротивление</h5>
-          <p>Сеть (RJ45 Ethernet или WiFi)
-            USB – только для сервиса
-            Bluetooth
-            Bluetooth® v4.1, Class 2
-            AptX HD
-            AAC
-            SBC</p>
-          <h5>Размеры</h5>
-          <p>Высота: 395мм (15.5 in)
-            Ширина: 197мм (7.8 in)
-            Глубина: 305мм (12 in)
-            Вес: 10.6 кг (23.4lb)</p>
-          <h5>Потребление</h5>
-          <p>Менее 6 Вт (в режиме Sleep)</p>
-        </div>
-      </div> -->
-
       <!-- Endjoy -->
       <div class="container-narrow">
 
@@ -4739,7 +4528,7 @@ display: flex;
           <div class="about__cell">
 
             <div class="about__ca">
-              <h2 class="text-center">Enjoy Beautiful<br> Sound Outdoors</h2>
+              <h2 class="text-left">Enjoy Beautiful<br> Sound Outdoors</h2>
             </div>
           </div>
 
@@ -5718,245 +5507,11 @@ display: flex;
   }
 }
 </style>
-  <!-- <footer class="footer cadetblue">
-    <div class="container1400">
-      <div class="footer__inner">
-        <div class="footer-widget">
-          <ul class="list-unstyled">
-            <li>
-              <p class="white">Catalog</p>
-            </li>
 
-            <li><a class="grey" href="#pro">Speakers</a></li>
-            <li><a class="grey" href="#pro">Headphones</a></li>
-            <li><a class="grey" href="#pro">Wireless Headphones</a></li>
-
-
-          </ul>
-        </div>
-
-        <div class="footer-widget">
-          <ul class="list-unstyled">
-            <li>
-              <p class="white">About</p>
-            </li>
-            <li><a class=" grey" href="#home">Our stories</a></li>
-            <li><a class=" grey" href="#first">Blog</a></li>
-            <li><a class=" grey" href="#third">Careers</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-widget">
-          <ul class="list-unstyled">
-            <li>
-              <p class="white">Support</p>
-            </li>
-            <li><a class=" grey" href="#home">Contact Us</a></li>
-            <li><a class=" grey" href="#first">Find a Retailer</a></li>
-            <li><a class=" grey" href="#third">Product Registration</a></li>
-            <li><a class=" grey" href="#six">Product Support</a></li>
-            <li><a class=" grey" href="#seven">Product Archive</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-widget-subscribe">
-          <ul class="list-unstyled">
-            <li>
-              <p class="white ml-10">Our Newsletter</p>
-            </li>
-            <form action="" class="footer__form subscribe-form-black ml-10">
-
-              <label for="" class="subscribe-form-black__field">
-                <input class=" subscribe-form-black__placeholder" type="email" required placeholder="Email Address">
-              </label>
-              <button class="subscribe-form-black__btn" type="submit">Subscribe</button>
-            </form>
-
-          </ul>
-        </div>
-      </div>
-
-
-    </div>
-
-    <div class="footer__bottom">
-      <div class="container1400">
-        <div class="footer__bottom-wrap">
-          <div class="footer__navigation">
-            <a class="logo" href="#body">
-              <h3 class="white__title">Bowers&Wilkins</h3>
-            </a>
-          </div>
-          <div class="social">
-            <div class="container ">
-              <div class="social-inner">
-
-                <div class="" title="В контакте">
-                  <div class="roll">
-                    <img class="regular" src="./img/icons/vk45gray.png" /><a
-                      href="http://vk.com/share.php?url=[URL]&title=[TITLE]&description=[DESC]&image=[IMAGE]&noparse=true"><img
-                        class="rollover" src="./img/icons/vk45.png" /></a>
-                  </div>
-                </div>
-
-                <div class="" title="В контакте">
-                  <div class="roll">
-                    <img class="regular" src="./img/icons/vk50gray.png" /><a
-                      href="http://vk.com/share.php?url=[URL]&title=[TITLE]&description=[DESC]&image=[IMAGE]&noparse=true"><img
-                        class="rollover" src="./img/icons/vk50.png" /></a>
-                  </div>
-                </div>
-
-                <div class="" title="Фэйсбук">
-                  <div class="roll">
-                    <img class="regular" src="./img/icons/fb45gray.png" /><a
-                      href="https://www.facebook.com/sharer/sharer.php?u=[URL]"><img class="rollover"
-                        src="./img/icons/fb45.png" /></a>
-                  </div>
-                </div>
-
-                <div class="" title="Одноклассники">
-                  <div class="roll">
-                    <img class="regular" src="./img/icons/o46gray.png" /><a href="http://ok.ru"><img class="rollover"
-                        src="./img/icons/o46.png" /></a>
-                  </div>
-                </div>
-
-                <div class="" title="Инстаграмм">
-                  <div class="roll">
-                    <img class="regular" src="./img/icons/i45gray.png" /><a href="https://www.instagram.com/"><img
-                        class="rollover" src="./img/icons/i45.png" /></a>
-                  </div>
-                </div>
-
-                <div class="" title="Твиттер">
-                  <div class="roll">
-                    <img class="regular" src="./img/icons/twittergray.png" /><a
-                      href="https://twitter.com/share?url=[URL]&text=[TITLE]"><img class="rollover"
-                        src="./img/icons/twitter.png" /></a>
-                  </div>
-                </div>
-
-                <div class="" title="Реддит">
-                  <div class="roll">
-                    <img class="regular" src="./img/icons/re50gray.png" /><a href="https://www.reddit.com"><img
-                        class="rollover" src="./img/icons/re50.png" /></a>
-                  </div>
-                </div>
-
-                <div class="" title="Рутуб">
-                  <div class="roll">
-                    <img class="regular" src="./img/icons/rutube45grey.png" /><a
-                      href="https://rutube.ru/search/?query=olegrewko"><img class="rollover"
-                        src="./img/icons/rutube45.png" /></a>
-                  </div>
-                </div>
-                <div class="" title="Гитхаб">
-                  <div class="roll">
-                    <img class="regular" src="./img/icons/ghbl45gray.png" /><a
-                      href="https://github.com/olegrewko/olegrewko.github.io"><img class="rollover"
-                        src="./img/icons/ghbl45.png" /></a>
-                  </div>
-                </div>
-
-                <div class="" title="Ютуб">
-                  <div class="roll">
-                    <img class="regular" src="./img/icons/youtube45gray01.png" /><a
-                      href="https://www.youtube.com/channel/UCU-sIbAKpKDuuheQClfKspA"><img class="rollover"
-                        src="./img/icons/youtubemaroon.png" /></a>
-                  </div>
-                </div>
-
-                <div class="" title="tagged">
-                  <div class="roll">
-                    <img class="regular" src="./img/icons/taggedgray.png" /><a href="https://secure.tagged.com/"><img
-                        class="rollover" src="./img/icons/tagged.png" /></a>
-                  </div>
-                </div>
-
-                <div class="" title="flikr">
-                  <div class="roll">
-                    <img class="regular" src="./img/icons/flikrgray.png" /><a href="https://www.flickr.com"><img
-                        class="rollover" src="./img/icons/flikr.png" /></a>
-                  </div>
-                </div>
-
-                <div class="" title="pinterest">
-                  <div class="roll">
-                    <img class="regular" src="./img/icons/pinterest.png" /><a href="https://ru.pinterest.com/"><img
-                        class="rollover" src="./img/icons/pinterest002.png" /></a>
-                  </div>
-                </div>
-
-                <div class="" title="meetme">
-                  <div class="roll">
-                    <img class="regular" src="./img/icons/meetmegray.png" /><a
-                      href="http://seoslim.ru/gg/socialnaya-set-meetme.html"><img class="rollover"
-                        src="./img/icons/meetme.png" /></a>
-                  </div>
-                </div>
-
-                <div class="" title="meetup">
-                  <div class="roll">
-                    <img class="regular" src="./img/icons/meetupgray.png" /><a
-                      href="http://seoslim.ru/gg/socialnaya-set-meetup-com.html"><img class="rollover"
-                        src="./img/icons/meetup.png" /></a>
-                  </div>
-                </div>
-
-                <div class="" title="myspace">
-                  <div class="roll">
-                    <img class="regular" src="./img/icons/myspacegray.png" /><a href="https://www.myspace.com"><img
-                        class="rollover" src="./img/icons/myspace.png" /></a>
-                  </div>
-                </div>
-
-                <div class="" title="periscope">
-                  <div class="roll">
-                    <img class="regular" src="./img/icons/periscope001.png" /><a href="https://www.periscope.tv/"><img
-                        class="rollover" src="./img/icons/periscopegreen.png" /></a>
-                  </div>
-                </div>
-
-
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="container1400">
-        <div class="tiny-footer">
-          <p class="tiny-grey">
-            © All Rights Reserved 2020 | Bowers&Wilkins
-          </p>
-          <ul class="tiny-card">
-            <li class="tiny-card__item">
-              <a href="#" class="tiny-card__link">
-                <img src="./img/icons/paypal.png" alt="">
-              </a>
-            </li>
-            <li class="tiny-card__item">
-              <a href="#" class="tiny-card__link">
-                <img src="./img/icons/master.png" alt="">
-              </a>
-            </li>
-            <li class="tiny-card__item">
-              <a href="#" class="tiny-card__link">
-                <img src="./img/icons/visa.png" alt="">
-              </a>
-            </li>
-
-          </ul>
-        </div>
-      </div>
-    </div>
-
-  </footer> -->
-  <!-- Стили для футера -->
   <style>
 /* Уменьшение высоты футера */
 .footer {
-    padding: 10px 0 20px;
+    padding: 10px 0 10px;
 }
 
 .footer__inner {
@@ -5970,10 +5525,12 @@ display: flex;
     display: flex;
     flex-direction: column;
     gap: 10px;
-    max-width: 300px;
+    max-width: 600px;
+width: 100%;
 }
 
 .subscribe-form-input {
+max-width: 600px;
     width: 100%;
     height: 45px;
     padding: 0 15px;
@@ -6069,7 +5626,7 @@ display: flex;
 /* ********************* */
 .footer__inner {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 1fr 1fr 1fr 500px;
     gap: 30px;
     align-items: start;
 }
