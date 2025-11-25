@@ -3147,6 +3147,9 @@ display: flex;
   max-width: 800px;
   width: 100%;
 }
+.desc {
+margin-top: 50px;
+}
 .grid-2 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
