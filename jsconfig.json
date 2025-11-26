@@ -12,7 +12,9 @@
     }
   },
   "include": [
-    "**/*"
+    "**/*",
+    "docs/js/jquery1111.min.js",
+    "docs/js/fotorama464.min.js"
   ],
   "exclude": [
     "node_modules",
