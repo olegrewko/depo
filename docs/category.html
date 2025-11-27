@@ -4,11 +4,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <link href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.2/fotorama.css" rel="stylesheet" />
   <script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.2/fotorama.js"></script>
   <link rel="stylesheet" href="./owlcarousel/owl.carousel.min.css" />
-  <link rel="stylesheet" href="./owlcarousel/owl.theme.default.min.css" />
+  <link rel="stylesheet" href="./owlcarousel/owl.theme.default.min.css" /> -->
   <title>b&w/category</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
   <link rel="stylesheet" href="./css/style.css" />
@@ -38,7 +38,7 @@
     left: 0;
     right: 30%;
     top: 62.36px;
-    background: rgba(96, 212, 212, 0.4);
+    background: rgba(96, 212, 212, 0.7);
      display: flex;
     flex-direction: column;
     margin-left: 10px;
@@ -2308,10 +2308,10 @@
   </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./js/jquery.js"></script>
-    <script src="./js/jquery341.min.js"></script>
+    <!-- <script src="./js/jquery341.min.js"></script>
     <script src="./js/slick.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script src="./owlcarousel/owl.carousel.min.js"></script>
+    <script src="./owlcarousel/owl.carousel.min.js"></script> -->
     <script src="./js/main.js"></script>
     <script type="text/javascript">
       $(document).ready(function () {
@@ -2349,7 +2349,9 @@
       // Get the element with id="defaultOpen" and click on it
       document.getElementById("defaultOpen").click();
     </script>
+    <!-- Выпадающее меню -->
     <script type="text/javascript">
+    $(function () {
 function myFunction() {
 
         document.getElementById("menu-toggle")
@@ -2364,35 +2366,45 @@ function myFunction() {
           document.getElementById("sidebar").classList.remove("open");
         });
       }
-    //      function myFunction() {
-    //     document.getElementById("myDropdown").classList.toggle("show");
+         function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
 
-    // }
-    //      function myFunctionHeadphones() {
-    //     document.getElementById("myHeadphones").classList.toggle("show");
-    // }
-    //      function myFunctionWireless() {
-    //     document.getElementById("myWireless").classList.toggle("show");
-    // }
-    //      function myFunctionFind() {
-    //     document.getElementById("myFind").classList.toggle("show");
-    // }
+    }
+         function myFunctionHeadphones() {
+        document.getElementById("myHeadphones").classList.toggle("show");
+    }
+         function myFunctionWireless() {
+        document.getElementById("myWireless").classList.toggle("show");
+    }
+         function myFunctionFind() {
+        document.getElementById("myFind").classList.toggle("show");
+    }
 
 
-    //   window.onclick = function(event) {
-    //     if (!event.target.matches('.dropbtn')) {
+      window.onclick = function(event) {
+        if (!event.target.matches('.dropbtn')) {
 
-    //     var dropdowns = document.getElementsByClassName("dropdown-content");
-    //     var i;
-    //     for (i = 0; i < dropdowns.length; i++) {
-    //       var openDropdown = dropdowns[i];
-    //       if (openDropdown.classList.contains('show')) {
-    //         openDropdown.classList.remove('show');
-    //       }
-    //     }
-    //   }
-    // }
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+});
     </script>
+<!-- Выпадающее меню menu__btn -->
+    <script>
+$(function () {
+  $('.menu__btn, .menu a').on('click', function name() {
+    $('.menu__list').toggleClass('menu__list--active');
+  });
+});
+    </script>
+<!-- Выпадающее меню menu__btn -->
 </body>
 
 </html>

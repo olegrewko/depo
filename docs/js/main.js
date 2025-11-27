@@ -42,10 +42,9 @@ $(function () {
   $('.menu__btn, .menu a').on('click', function name() {
     $('.menu__list').toggleClass('menu__list--active');
 
-
   });
 
- 
+
  $(".radio input").on("click", function (e) {
    console.clear();
    console.log(this.checked); // всегда true;
@@ -53,12 +52,12 @@ $(function () {
 
    setTimeout(() => $(this).prop("checked", !this.checked).trigger("change"));
  });
- 
+
 });
 
          function myFunction() {
         document.getElementById("myDropdown").classList.toggle("show");
-        
+
     }
          function myFunctionHeadphones() {
         document.getElementById("myHeadphones").classList.toggle("show");
@@ -69,7 +68,7 @@ $(function () {
          function myFunctionFind() {
         document.getElementById("myFind").classList.toggle("show");
     }
-      
+
 
       window.onclick = function(event) {
         if (!event.target.matches('.dropbtn')) {
@@ -84,8 +83,8 @@ $(function () {
         }
       }
     }
-    
- $stepper: document.querySelector('.stepper');    
+
+ $stepper: document.querySelector('.stepper');
  if (vars.$stepper) {
 
   const $stepperInput = vars.$stepper.querySelector('.stepper__input'),
@@ -140,3 +139,8 @@ $(function () {
   });
 
  }
+$(function () {
+  $('.menu__btn, .menu a').on('click', function name() {
+    $('.menu__list').toggleClass('menu__list--active');
+  });
+});
