@@ -1023,7 +1023,7 @@ li {
 }
 
 .header {
-  min-height: 40px;
+  min-height: 60px;
   width: 100%;
 }
 
@@ -3034,6 +3034,8 @@ display: flex;
                       gap: 5px;
                       margin: 5px;
                       grid-template-columns: 1fr;
+max-width: 768px;
+  width: 100%;
                     }
                   }
 
@@ -3354,6 +3356,164 @@ display: flex;
     }
   </style>
   <!-- Вертикальный текст -->
+<style>
+@media(max-width: 768px) {
+  .about__ca {
+    margin-top: 50px;
+  }
+
+  .about__cb {
+    margin-bottom: 50px;
+  }
+
+  .container-wrap {
+    margin-left: 50px;
+  }
+
+  .about__inner,
+  .cell {
+    display: block;
+
+  }
+
+  .menu__list {
+
+    position: absolute;
+    left: 0;
+    right: 30%;
+    top: 62.36px;
+    background: rgba(96, 212, 212, 0.7);
+     display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    text-align: left;
+    transform: translateY(-300%);
+    transition: all .5s;
+
+  }
+
+  .menu__list.menu__list--active {
+    transform: translateY(0);
+    transition: all .5s;
+
+  }
+
+  ul.menu__list {
+    padding: 0px 0;
+  }
+
+  .menu__list-item {
+    position: relative;
+    display: inline-block;
+    padding: 30px 5px;
+  }
+
+  .menu__list-item+.menu__list-item {
+    margin-left: 0;
+  }
+
+  .menu__list-link {
+    display: block;
+    padding: 10px 0;
+  }
+
+  .header__title {
+    font-size: 54px;
+    line-height: 48px;
+
+  }
+
+  .header__subtitle {
+    font-size: 12px;
+    line-height: 12px;
+  }
+
+  .menu__btn {
+    display: block;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    margin-top: 15px;
+    margin-bottom: 16px;
+    ;
+  }
+
+  .expertise__items {
+    display: block;
+  }
+
+  .portfolio__item-link {
+
+    font-size: 8px;
+    line-height: 8px;
+  }
+
+  .portfolio__content {
+    column-count: 2;
+    column-gap: 12px;
+  }
+
+  .pricing {
+    background-color: #F6F8FA;
+    padding: 40px 10px;
+  }
+
+  .pricing__item {
+    max-width: 400px;
+    margin: 5px;
+  }
+
+  .pricing__item .pricing__item-num {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 40px;
+    line-height: 45px;
+  }
+
+  .pricing__item li {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 10px;
+    line-height: 12px;
+  }
+
+  .pricing__item-num sup {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 10px;
+    line-height: 14px;
+
+  }
+
+  ul.footer__social {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 100%;
+    margin: 0 auto;
+    margin-bottom: 65px;
+  }
+
+  .footer__social-list {
+    max-width: 33.33%;
+    margin-bottom: 25px;
+  }
+
+  .video-container {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+}
+</style>
 </head>
 
 <body id="body">
@@ -4173,11 +4333,9 @@ flex-direction: column;
         <!--  -->
         <div class="slider-blog">
           <div class="cell-800--black">
-            <div class="relat">
-              <h1 class="ab black">Серия 800 Diamond</h1>
 
               <img class="#" src="img/s801.png">
-            </div>
+
 <h1 class="text-center-wh mt-50">Серия 800 Diamond</h1>
 <h1 class="text-center-wh">Studio Sound Comes Home </h1>
             <div class="cell-800-df">
@@ -5144,9 +5302,9 @@ flex-direction: column;
       <div class="loudspeakers" id="headphones">
         <div class="container1400">
           <h3 class="menu__title">Headphones</h3>
-          <!-- <div class="container1400">
 
-          </div> -->
+
+
 
 
           <div class="grid-3">
@@ -5299,15 +5457,7 @@ flex-direction: column;
         </div>
       </section>
       </div>
-      </div>
-</div>
-      </div>
-       </div>
 
-      </div>
-    </div>
-
-  </div>
       <!-- stores -->
        <section class="stores" id="stores">
         <div class="container-fluid bg-black">
