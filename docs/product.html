@@ -433,7 +433,27 @@
           </div>
         </div>
       </div>
-
+<style>
+  .modal {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .modal-dialog {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  .close {
+    cursor: pointer;
+  }
+</style>
       <!-- tabs -->
       <div class="container">
   <div class="tabs" style="height: 400px; margin-top: 100px;">
@@ -444,6 +464,7 @@
 <li class="tabs__item"><button class="tabs__btn" data-tabs-path="cart">Корзина</button></li>
       <li class="tabs__item"><button class="tabs__btn" data-tabs-path="payment">Оплата</button></li>
     </ul>
+    <!--tabs__content  -->
     <div class="tabs__content tabs__content--active" data-tabs-target="main">
       <div class="content">
                 <p>
@@ -487,15 +508,15 @@
                     </p>
       </div>
     </div>
-    <div class="tabs__content" data-tabs-target="settings">
+    <!-- <div class="tabs__content" data-tabs-target="cart">
       <div class="content">
                 <!-- Button trigger modal -->
-                <button type="button" class="tabs__btn  mb-3" data-bs-toggle="modal" data-bs-target="#reviewModal">
+                <!-- <button type="button" class="tabs__btn  mb-3" data-bs-toggle="modal" data-bs-target="#reviewModal">
                   Write review
-                </button>
+                </button> -->
 
                 <!-- Modal -->
-                <div class="modal fade" id="reviewModal" tabindex="-1" aria-labelledby="reviewModalLabel"
+                <!-- <div class="modal fade" id="reviewModal" tabindex="-1" aria-labelledby="reviewModalLabel"
                   aria-hidden="true">
                   <div class="modal-dialog modal-dialog-centered modal-lg">
                     <div class="modal-content">
@@ -550,9 +571,9 @@
                       </form>
                     </div>
                   </div>
-                </div>
+                </div> -->
 
-                <div class="card product-review mb-3">
+                <!-- <div class="card product-review mb-3">
                   <div class="card-body">
                     <div class="product-review-header">
                       <h5 class="card-title">John Doe</h5>
@@ -579,29 +600,73 @@
                   </div>
                 </div>
       </div>
-    </div>
-    <div class="tabs__content" data-tabs-target="cart">
-      <div class="content">
-        <h2 class="content__title">Добро пожаловать!2</h2>
-        <p class="content__descr">Здесь находятся все ваши активные заказы.</p>
-        <ul class="content__list">
-          <li class="content__item">
-            <a href="#" class="content__link" style="background-image: url('./img/1.png');">
-              <span class="content__text">Занятия йогой</span>
-            </a>
-          </li>
-          <li class="content__item">
-            <a href="#" class="content__link" style="background-image: url('./img/1.png');">
-              <span class="content__text">Кардио</span>
-            </a>
-          </li>
-          <li class="content__item">
-            <a href="#" class="content__link" style="background-image: url('./img/1.png');">
-              <span class="content__text">Силовые тренировки</span>
-            </a>
-          </li>
-        </ul>
+    </div>  -->
+    <div class="tabs__content" data-tabs-target="settings">
+    <div class="content">
+    <!-- Button trigger modal -->
+    <button type="button" class="tabs__btn mb-3" id="openModalButton">
+      Write review
+    </button>
+
+    <!-- Modal -->
+    <div id="reviewModal" class="modal" style="display: none;">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5">
+              Write review
+            </h1>
+            <button type="button" class="close" id="closeModalButton">&times;</button>
+          </div>
+
+          <form id="reviewForm">
+            <div class="modal-body">
+              <div class="mb-3">
+                <label for="emailInput" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="emailInput" placeholder="name@example.com" required />
+              </div>
+              <div class="mb-3">
+                <label for="reviewTextarea" class="form-label">Review</label>
+                <textarea class="form-control" id="reviewTextarea" rows="3" required></textarea>
+              </div>
+
+              <div class="mb-3">
+                <p>Rate the product:</p>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="rate" id="rate1" value="1" required />
+                  <label class="form-check-label" for="rate1">1</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="rate" id="rate2" value="2" required />
+                  <label class="form-check-label" for="rate2">2</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="rate" id="rate3" value="3" required />
+                  <label class="form-check-label" for="rate3">3</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="rate" id="rate4" value="4" required />
+                  <label class="form-check-label" for="rate4">4</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="rate" id="rate5" value="5" required />
+                  <label class="form-check-label" for="rate5">5</label>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="submit" class="btn btn-warning">
+                Send review
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
+    </div>
+   <div id="reviewsContainer">
+      <!-- Отзывы будут добавлены сюда -->
+    </div>
+   </div>
     </div>
     <div class="tabs__content" data-tabs-target="payment">
       <div class="content">
@@ -638,9 +703,52 @@
           d="M20.5303 6.53033C20.8232 6.23744 20.8232 5.76256 20.5303 5.46967L15.7574 0.696699C15.4645 0.403806 14.9896 0.403806 14.6967 0.696699C14.4038 0.989592 14.4038 1.46447 14.6967 1.75736L18.9393 6L14.6967 10.2426C14.4038 10.5355 14.4038 11.0104 14.6967 11.3033C14.9896 11.5962 15.4645 11.5962 15.7574 11.3033L20.5303 6.53033ZM0 6.75H20V5.25H0V6.75Z" />
       </svg>
     </button>
-  </div>
+    </div>
       </div>
       <!-- tabs end-->
+<script>
+  document.getElementById('openModalButton').addEventListener('click', function() {
+    document.getElementById('reviewModal').style.display = 'flex';
+  });
+
+  document.getElementById('closeModalButton').addEventListener('click', function() {
+    document.getElementById('reviewModal').style.display = 'none';
+  });
+
+  document.getElementById('reviewForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Предотвращаем отправку формы
+
+    const email = document.getElementById('emailInput').value;
+    const reviewText = document.getElementById('reviewTextarea').value;
+    const rating = document.querySelector('input[name="rate"]:checked').value;
+
+    // Создаем отзыв
+    const reviewContainer = document.createElement('div');
+    reviewContainer.classList.add('card', 'product-review', 'mb-3');
+
+    reviewContainer.innerHTML = `
+      <div class="card-body">
+        <div class="product-review-header">
+          <h5 class="card-title">${email}</h5>
+          <span class="review-date">${new Date().toLocaleDateString()}</span>
+        </div>
+
+        <div class="product-rating mb-3">
+          ${'⭐'.repeat(rating)}${'☆'.repeat(5 - rating)}
+        </div>
+
+        <div class="card-text">
+          <p>${reviewText}</p>
+        </div>
+      </div>
+    `;
+
+    document.getElementById('reviewsContainer').appendChild(reviewContainer);
+    document.getElementById('reviewForm').reset();
+    document.getElementById('reviewModal').style.display = 'none';
+  });
+</script>
+
       <div class="container">
         <h2 class="menu__title">Наличие в магазинах</h2>
         <div class="shop-grid">
