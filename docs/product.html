@@ -7,23 +7,35 @@
 
 
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-  <!-- <link href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.2/fotorama.css" rel="stylesheet" /> -->
-  <!-- <script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.2/fotorama.js"></script> -->
+
   <script src="./js/jquery.js"></script>
   <link rel="stylesheet" href="./css/fotorama464.min.css" />
   <script src="./js/fotorama464.min.js"></script>
-  <!-- <link rel="preload" href="./js/fotorama464.js" as="script"> -->
-  <!-- <link rel="stylesheet" href="./owlcarousel/owl.carousel.min.css" /> -->
-  <!-- <link rel="stylesheet" href="./owlcarousel/owl.theme.default.min.css" /> -->
+
   <title>b&w/Product</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
   <link rel="stylesheet" href="./css/style.css" />
-  <!-- tabs-styles -->
+
   <style>
     :root {
       --color-dark: #4d4d4d;
       --color-light: #808080;
       --color-accent: #4f6b88;
+           --color-space: #011932;
+      --color-charcoal: #1a1a1a;
+      --color-steel: #2d4059;
+      --color-silver: #e0e0e0;
+      --color-smoke: #f5f5f5;
+      --color-vapor: #ffffff;
+      --color-maroon: #8b0000;
+      --color-gold: #d4af37;
+      --color-cyan: #60d4d4;
+      --color-border: rgba(0, 0, 0, 0.08);
+      --shadow-subtle: 0 2px 12px rgba(0, 0, 0, 0.04);
+      --shadow-elevated: 0 8px 32px rgba(0, 0, 0, 0.08);
+      --radius-sm: 4px;
+      --radius-md: 8px;
+      --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     a {
@@ -46,10 +58,7 @@
       transition: background-color 0.3s ease-in-out;
     }
 
-    /* .btn:hover {
-      background-color: #6078f1;
-      transition: background-color 0.3s ease-in-out;
-    } */
+
 
     .btn:disabled {
       opacity: 0.4;
@@ -198,7 +207,7 @@
     .tabs__arrow {
       position: absolute;
       top: 800px;
-      /* transform: translateY(-50%); */
+
       width: 60px;
       height: 60px;
       padding: 0;
@@ -246,7 +255,7 @@
       }
     }
   </style>
-  <!-- tabs-styles -->
+
   <style>
     .breadcrumbs {
       padding: 24px 0;
@@ -430,28 +439,33 @@
 
               Выбор расцветки
               <label class="radio option">
-                <input class="real-radio-black" type="radio" id="black" name="cat" value="black" />
+                <input class="real-radio-black" type="radio" id="black" name="color" value="black" />
                 <span class="custom-radio-black"></span>
                 <span class="custom-radio-text">black</span>
               </label>
               <label class="radio option">
-                <input class="real-radio-white" type="radio" id="white" name="cat" value="white" />
+                <input class="real-radio-white" type="radio" id="white" name="color" value="white" />
                 <span class="custom-radio-white"></span>
                 <span class="custom-radio-text">white</span>
               </label>
               <label class="radio option">
-                <input class="real-radio-brown" type="radio" id="brown" name="cat" value="brown" />
+                <input class="real-radio-brown" type="radio" id="brown" name="color" value="brown" />
                 <span class="custom-radio-brown"></span>
                 <span class="custom-radio-text">brown</span>
               </label>
             </p>
 
             <p>Стоимость: 905 000 р</p>
-
-            <button class="card-info__btn--towishlist">Add to cart</button>
+            <div class="d-flex gap-2 mt-4">
+            <button class="card-info__btn--tocart" onclick="addToCart()">Add to cart</button>
+            <button class="card-info__btn--tocart" onclick="showCart()">
+              View Cart
+            </button>
+            </div>
           </div>
         </div>
-      </div>
+
+
       <style>
         .modal {
           background-color: rgba(0, 0, 0, 0.5);
@@ -475,7 +489,7 @@
           cursor: pointer;
         }
       </style>
-      <!-- tabs -->
+
       <div class="container">
         <div class="tabs" style="height: 850px; margin-top: 100px;">
           <ul class="tabs__list">
@@ -486,7 +500,7 @@
             <li class="tabs__item"><button class="tabs__btn" data-tabs-path="cart">Корзина</button></li>
             <li class="tabs__item"><button class="tabs__btn" data-tabs-path="payment">Магазины</button></li>
           </ul>
-          <!--tabs__content  -->
+
           <div class="tabs__content tabs__content--active" data-tabs-target="main">
             <div class="content">
               <p>
@@ -532,12 +546,12 @@
           </div>
           <div class="tabs__content" data-tabs-target="settings">
             <div class="content">
-              <!-- Button trigger modal -->
+
               <button type="button" class="tabs__btn-orange mb-3" id="openModalButton">
                 Write review
               </button>
 
-              <!-- Modal -->
+
               <div id="reviewModal" class="modal" style="display: none;">
                 <div class="modal-dialog modal-dialog-centered modal-lg">
                   <div class="modal-content">
@@ -595,7 +609,7 @@
               </div>
 
               <div id="reviewsContainer">
-                <!-- Отзывы будут добавлены сюда -->
+
               </div>
             </div>
           </div>
@@ -681,10 +695,286 @@
               document.getElementById('reviewModal').style.display = 'none';
             });
           </script>
-          <!-- </div> -->
+
           <div class="tabs__content" data-tabs-target="cart">
 
+                        <div class="cart-container">
+                          <div class="cart-header">
+                            <h2 class="cart-title">Your Cart</h2>
+                            <span id="cart-total" class="fs-5 fw-semibold">0 ₽</span>
+                          </div>
+
+                          <div id="cart-items" class="cart-items">
+                            <!-- Cart items will be added here -->
+                            <div class="empty-cart">
+                              <svg fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                  d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z" />
+                              </svg>
+                              <h5>Your cart is empty</h5>
+                              <p>Add items to get started</p>
+                            </div>
+                          </div>
+
+                          <div id="cart-summary" class="cart-summary" style="display: none;">
+                            <div class="summary-row">
+                              <span class="summary-label">Subtotal</span>
+                              <span id="subtotal" class="summary-value">0 ₽</span>
+                            </div>
+                            <div class="summary-row">
+                              <span class="summary-label">Shipping</span>
+                              <span class="summary-value">Free</span>
+                            </div>
+                            <div class="summary-row">
+                              <span class="summary-label">Total</span>
+                              <span id="total" class="summary-value">0 ₽</span>
+                            </div>
+
+                            <button class="checkout-btn" onclick="checkout()">
+                              <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                  d="M18 6h-2c0-2.21-1.79-4-4-4S8 3.79 8 6H6c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-6-2c1.1 0 2 .9 2 2h-4c0-1.1.9-2 2-2zm6 16H6V8h2v2c0 .55.45 1 1 1s1-.45 1-1V8h4v2c0 .55.45 1 1 1s1-.45 1-1V8h2v12z" />
+                              </svg>
+                              Proceed to Checkout
+                            </button>
+                          </div>
+                        </div>
+
           </div>
+              <script>
+                // ===== CART FUNCTIONALITY =====
+                let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+                function updateCartCount() {
+                  const count = cart.reduce((total, item) => total + item.quantity, 0);
+                  document.getElementById('cart-count').textContent = count;
+                }
+
+                function addToCart() {
+                  const color = document.querySelector('input[name="color"]:checked').value;
+                  const product = {
+                    id: '702-s2',
+                    name: 'Bowers&Wilkins 702 S2',
+                    color: color,
+                    price: 905000,
+                    quantity: 1,
+                    image: 'img/212.970.png'
+                  };
+
+                  const existingItem = cart.find(item => item.id === product.id && item.color === color);
+                  if (existingItem) {
+                    existingItem.quantity++;
+                  } else {
+                    cart.push(product);
+                  }
+
+                  localStorage.setItem('cart', JSON.stringify(cart));
+                  updateCartCount();
+                  updateCartDisplay();
+
+                  // Show notification
+                  showNotification('Product added to cart');
+                }
+
+                function updateCartDisplay() {
+                  const container = document.getElementById('cart-items');
+                  const summary = document.getElementById('cart-summary');
+
+                  if (cart.length === 0) {
+                    container.innerHTML = `
+                            <div class="empty-cart">
+                              <svg fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/>
+                              </svg>
+                              <h5>Your cart is empty</h5>
+                              <p>Add items to get started</p>
+                            </div>
+                          `;
+                    summary.style.display = 'none';
+                    return;
+                  }
+
+                  let subtotal = 0;
+                  container.innerHTML = cart.map((item, index) => {
+                    const itemTotal = item.price * item.quantity;
+                    subtotal += itemTotal;
+
+                    return `
+                            <div class="cart-item">
+                              <img src="${item.image}" alt="${item.name}" class="cart-item-image">
+                              <div class="cart-item-details">
+                                <h6 class="cart-item-name">${item.name}</h6>
+                                <div class="cart-item-meta">
+                                  <span>Color: ${item.color}</span>
+                                  <span>Price: ${item.price.toLocaleString()} ₽</span>
+                                </div>
+                                <div class="cart-item-controls">
+                                  <button class="quantity-btn" onclick="updateQuantity(${index}, ${item.quantity - 1})">-</button>
+                                  <input type="number" class="quantity-input" value="${item.quantity}" min="1"
+                                         onchange="updateQuantity(${index}, this.value)">
+                                  <button class="quantity-btn" onclick="updateQuantity(${index}, ${item.quantity + 1})">+</button>
+                                  <button class="remove-btn" onclick="removeFromCart(${index})">
+                                    <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                                      <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                                    </svg>
+                                  </button>
+                                </div>
+                              </div>
+                              <div class="cart-item-price">
+                                ${itemTotal.toLocaleString()} ₽
+                              </div>
+                            </div>
+                          `;
+                  }).join('');
+
+                  document.getElementById('subtotal').textContent = subtotal.toLocaleString() + ' ₽';
+                  document.getElementById('total').textContent = subtotal.toLocaleString() + ' ₽';
+                  document.getElementById('cart-total').textContent = subtotal.toLocaleString() + ' ₽';
+                  summary.style.display = 'block';
+                }
+
+                function updateQuantity(index, newQuantity) {
+                  if (newQuantity < 1) {
+                    removeFromCart(index);
+                    return;
+                  }
+
+                  cart[index].quantity = parseInt(newQuantity);
+                  localStorage.setItem('cart', JSON.stringify(cart));
+                  updateCartCount();
+                  updateCartDisplay();
+                }
+
+                function removeFromCart(index) {
+                  cart.splice(index, 1);
+                  localStorage.setItem('cart', JSON.stringify(cart));
+                  updateCartCount();
+                  updateCartDisplay();
+                }
+
+                function checkout() {
+                  if (cart.length === 0) {
+                    showNotification('Cart is empty');
+                    return;
+                  }
+                  showNotification('Proceeding to checkout...');
+                  // In a real app, redirect to checkout page
+                }
+
+                function openCart() {
+                  // Switch to cart tab
+                  document.querySelector('[data-tabs-path="cart"]').click();
+                  updateCartDisplay();
+                }
+
+                function showCart() {
+                  document.querySelector('[data-tabs-path="cart"]').click();
+                  updateCartDisplay();
+                }
+
+                function showNotification(message) {
+                  // Create notification element
+                  const notification = document.createElement('div');
+                  notification.className = 'position-fixed top-0 end-0 m-4 p-3 bg-space text-white rounded shadow';
+                  notification.style.zIndex = '1060';
+                  notification.textContent = message;
+
+                  document.body.appendChild(notification);
+
+                  setTimeout(() => {
+                    notification.remove();
+                  }, 3000);
+                }
+
+                // ===== TABS FUNCTIONALITY =====
+                document.addEventListener('DOMContentLoaded', () => {
+                  const tabs = document.querySelector('.tabs');
+                  const tabsBtn = document.querySelectorAll('.tabs__btn');
+                  const tabsContent = document.querySelectorAll('.tabs__content');
+
+                  if (tabs) {
+                    tabs.addEventListener('click', (e) => {
+                      if (e.target.classList.contains('tabs__btn')) {
+                        const tabsPath = e.target.dataset.tabsPath;
+                        tabsBtn.forEach(el => el.classList.remove('tabs__btn--active'));
+                        e.target.classList.add('tabs__btn--active');
+                        tabsContent.forEach(el => el.classList.remove('tabs__content--active'));
+                        document.querySelector(`[data-tabs-target="${tabsPath}"]`).classList.add('tabs__content--active');
+
+                        // If switching to cart tab, update display
+                        if (tabsPath === 'cart') {
+                          updateCartDisplay();
+                        }
+                      }
+                    });
+                  }
+                });
+
+                // ===== REVIEWS FUNCTIONALITY =====
+                let currentRating = 0;
+
+                function setRating(rating) {
+                  currentRating = rating;
+                  document.getElementById('rating').value = rating;
+
+                  // Update button states
+                  const buttons = document.querySelectorAll('#reviewForm .btn-outline-warning');
+                  buttons.forEach((btn, index) => {
+                    if (index < rating) {
+                      btn.classList.remove('btn-outline-warning');
+                      btn.classList.add('btn-warning');
+                    } else {
+                      btn.classList.remove('btn-warning');
+                      btn.classList.add('btn-outline-warning');
+                    }
+                  });
+                }
+
+                document.getElementById('reviewForm').addEventListener('submit', function (e) {
+                  e.preventDefault();
+
+                  const email = this.querySelector('input[type="email"]').value;
+                  const review = this.querySelector('textarea').value;
+                  const rating = currentRating;
+
+                  if (rating === 0) {
+                    alert('Please select a rating');
+                    return;
+                  }
+
+                  const reviewElement = document.createElement('div');
+                  reviewElement.className = 'product-review';
+                  reviewElement.innerHTML = `
+                          <div class="card-body">
+                            <div class="product-review-header">
+                              <h6 class="card-title mb-0">${email}</h6>
+                              <span class="review-date">${new Date().toLocaleDateString()}</span>
+                            </div>
+                            <div class="product-rating mb-2">
+                              ${'★'.repeat(rating)}${'☆'.repeat(5 - rating)}
+                            </div>
+                            <p class="card-text">${review}</p>
+                          </div>
+                        `;
+
+                  document.getElementById('reviewsContainer').prepend(reviewElement);
+
+                  // Reset form
+                  this.reset();
+                  currentRating = 0;
+                  setRating(0);
+
+                  // Close modal
+                  const modal = bootstrap.Modal.getInstance(document.getElementById('reviewModal'));
+                  modal.hide();
+
+                  showNotification('Review submitted successfully');
+                });
+
+                // Initialize
+                updateCartCount();
+                setRating(0);
+              </script>
           <div class="tabs__content" data-tabs-target="payment">
             <div class="content">
               <div class="container1400">
@@ -797,82 +1087,217 @@
               </section>
             </div>
           </div>
-          <!-- <button class="tabs__arrow tabs__arrow--prev" aria-label="Назад">
-      <svg width="21" height="12" viewBox="0 0 21 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path
-          d="M0.46967 6.53033C0.176777 6.23744 0.176777 5.76256 0.46967 5.46967L5.24264 0.696699C5.53553 0.403806 6.01041 0.403806 6.3033 0.696699C6.59619 0.989592 6.59619 1.46447 6.3033 1.75736L2.06066 6L6.3033 10.2426C6.59619 10.5355 6.59619 11.0104 6.3033 11.3033C6.01041 11.5962 5.53553 11.5962 5.24264 11.3033L0.46967 6.53033ZM21 6.75H1V5.25H21V6.75Z" />
-      </svg>
-    </button>
-    <button class="tabs__arrow tabs__arrow--next" aria-label="Вперед">
-      <svg width="21" height="12" viewBox="0 0 21 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path
-          d="M20.5303 6.53033C20.8232 6.23744 20.8232 5.76256 20.5303 5.46967L15.7574 0.696699C15.4645 0.403806 14.9896 0.403806 14.6967 0.696699C14.4038 0.989592 14.4038 1.46447 14.6967 1.75736L18.9393 6L14.6967 10.2426C14.4038 10.5355 14.4038 11.0104 14.6967 11.3033C14.9896 11.5962 15.4645 11.5962 15.7574 11.3033L20.5303 6.53033ZM0 6.75H20V5.25H0V6.75Z" />
-      </svg>
-    </button> -->
-        </div>
-      </div>
-      <!-- tabs end-->
-      <script>
-        document.getElementById('openModalButton').addEventListener('click', function () {
-          document.getElementById('reviewModal').style.display = 'flex';
-        });
 
-        document.getElementById('closeModalButton').addEventListener('click', function () {
-          document.getElementById('reviewModal').style.display = 'none';
-        });
-
-        document.getElementById('reviewForm').addEventListener('submit', function (event) {
-          event.preventDefault(); // Предотвращаем отправку формы
-
-          const email = document.getElementById('emailInput').value;
-          const reviewText = document.getElementById('reviewTextarea').value;
-          const rating = document.querySelector('input[name="rate"]:checked').value;
-
-          // Создаем отзыв
-          const reviewContainer = document.createElement('div');
-          reviewContainer.classList.add('card', 'product-review', 'mb-3');
-
-          reviewContainer.innerHTML = `
-      <div class="card-body">
-        <div class="product-review-header">
-          <h5 class="card-title">${email}</h5>
-          <span class="review-date">${new Date().toLocaleDateString()}</span>
-        </div>
-
-        <div class="product-rating mb-3">
-          ${'⭐'.repeat(rating)}${'☆'.repeat(5 - rating)}
-        </div>
-
-        <div class="card-text">
-          <p>${reviewText}</p>
-        </div>
-      </div>
-    `;
-
-          document.getElementById('reviewsContainer').appendChild(reviewContainer);
-          document.getElementById('reviewForm').reset();
-          document.getElementById('reviewModal').style.display = 'none';
-        });
-      </script>
-
-
-      <!-- <section class="stores" id="stores">
-        <div class="container">
-          <h3 class="menu__title">Посмотреть на карте</h3>
-        </div>
-        <section class="container-fluid socialmap">
-          <div id="map" class="text-center">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2669.822174089799!2d37.61030017050038!3d55.757739672412825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a454f72f4ff%3A0x923352d5be7df67b!2z0KLQstC10YDRgdC60LDRjyDRg9C7LiwgNSwg0JzQvtGB0LrQstCwLCDQoNC-0YHRgdC40Y8sIDEyNTAwOQ!5e0!3m2!1sru!2sua!4v1596189839076!5m2!1sru!2sua"
-              width="100%" height="400" frameborder="0" style="border: 0" allowfullscreen="" aria-hidden="false"
-              tabindex="0">
-            </iframe>
-          </div>
-        </section>
-      </section> -->
     </main>
-    <!-- Стили для футера -->
+    <!-- Стили для футера и корзины CART-->
     <style>
+          /* ===== MINIMALIST CART SECTION ===== */
+    .cart-container {
+      padding: 2rem;
+      background: var(--color-vapor);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-subtle);
+    }
+
+    .cart-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .cart-title {
+      font-family: 'Jost', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--color-space);
+      margin: 0;
+    }
+
+    .cart-items {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .cart-item {
+      display: grid;
+      grid-template-columns: 80px 1fr auto;
+      gap: 1rem;
+      padding: 1rem;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-sm);
+      transition: var(--transition);
+    }
+
+    .cart-item:hover {
+      border-color: var(--color-silver);
+      box-shadow: var(--shadow-subtle);
+    }
+
+    .cart-item-image {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: var(--radius-sm);
+    }
+
+    .cart-item-details {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .cart-item-name {
+      font-weight: 500;
+      color: var(--color-space);
+      margin: 0;
+      margin-bottom: 0.5rem;
+    }
+
+    .cart-item-meta {
+      font-size: 0.875rem;
+      color: var(--color-steel);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .cart-item-price {
+      font-weight: 600;
+      color: var(--color-space);
+      min-width: 120px;
+      text-align: right;
+    }
+
+    .cart-item-controls {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .quantity-btn {
+      width: 32px;
+      height: 32px;
+      border: 1px solid var(--color-border);
+      background: var(--color-vapor);
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: var(--transition);
+      font-size: 1rem;
+    }
+
+    .quantity-btn:hover {
+      background: var(--color-smoke);
+      border-color: var(--color-silver);
+    }
+
+    .quantity-input {
+      width: 48px;
+      height: 32px;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-sm);
+      text-align: center;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.875rem;
+    }
+
+    .remove-btn {
+      width: 32px;
+      height: 32px;
+      border: 1px solid var(--color-border);
+      background: var(--color-vapor);
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: var(--transition);
+      color: var(--color-steel);
+    }
+
+    .remove-btn:hover {
+      background: #fee;
+      border-color: #f99;
+      color: #c00;
+    }
+
+    .cart-summary {
+      background: var(--color-smoke);
+      border-radius: var(--radius-sm);
+      padding: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .summary-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .summary-row:last-child {
+      border-bottom: none;
+      font-weight: 600;
+      font-size: 1.125rem;
+      padding-top: 1rem;
+      margin-top: 0.5rem;
+      border-top: 2px solid var(--color-border);
+    }
+
+    .summary-label {
+      color: var(--color-steel);
+    }
+
+    .summary-value {
+      color: var(--color-space);
+      font-weight: 500;
+    }
+
+    .checkout-btn {
+      width: 100%;
+      padding: 1rem;
+      background: var(--color-space);
+      color: var(--color-vapor);
+      border: none;
+      border-radius: var(--radius-sm);
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: var(--transition);
+      margin-top: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+
+    .checkout-btn:hover {
+      background: var(--color-steel);
+      transform: translateY(-1px);
+      box-shadow: var(--shadow-subtle);
+    }
+
+    .empty-cart {
+      text-align: center;
+      padding: 3rem 1rem;
+      color: var(--color-steel);
+    }
+
+    .empty-cart svg {
+      width: 64px;
+      height: 64px;
+      margin-bottom: 1rem;
+      color: var(--color-silver);
+    }
       .social {
         padding: 20px 0;
         /* background: linear-gradient(135deg, rgba(96, 212, 212, 0.3) 0%, rgba(96, 212, 212, 0.8) 100%); */
@@ -1263,13 +1688,18 @@
     </footer>
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="./js/jquery.js"></script>
   <script src="./js/jquery341.min.js"></script>
   <script src="./js/slick.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
   <script src="./owlcarousel/owl.carousel.min.js"></script>
-  <script src="./js/main.js"></script>
+  <script src="./js/main.js"></script> -->
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/fotorama464.min.js"></script>
+    <script src="./js/main.js"></script>
+
   <script type="text/javascript">
     $(document).ready(function () {
       var defaults = {
@@ -1362,6 +1792,7 @@
     });
   </script>
   <!-- Выпадающее меню menu__btn -->
+
 </body>
 
 </html>

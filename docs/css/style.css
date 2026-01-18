@@ -3167,7 +3167,7 @@ display: flex;
 @media(max-width: 768px) {
 .grid-2 {
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: 1fr;
   gap: 5px;
   max-width: 700px;
   width: 100%;
@@ -3207,4 +3207,5 @@ display: flex;
   height: auto;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
 }
