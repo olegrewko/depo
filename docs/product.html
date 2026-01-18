@@ -814,135 +814,64 @@
                     cart.push(product);
                   }
 
-                  localStorage.setItem('cart', JSON.stringify(cart));
-                  updateCartCount();
-                  updateCartDisplay();
+                //   localStorage.setItem('cart', JSON.stringify(cart));
+                //   updateCartCount();
+                //   updateCartDisplay();
 
-                  // Show notification
-                  showNotification('Product added to cart');
+                //   // Show notification
+                //   showNotification('Product added to cart');
+                // }
+
+
+
+
+                    localStorage.setItem('cart', JSON.stringify(cart));
+                    updateCartCount();
+                    // updateCartDisplay();
+                      // ВАЖНО: Проверяем, активна ли вкладка корзины
+                          const isCartTabActive = document.querySelector('[data-tabs-path="cart"]').classList.contains('tabs__btn--active');
+
+                          if (isCartTabActive) {
+                            // Если вкладка корзины активна, обновляем ее содержимое
+                          //   updateCartDisplay();
+                          // }
+                          // Если вкладка не активна, обновляем только счетчик
+                          // DOM для вкладки корзины не перерисовывается до ее открытия
+
+                          // showNotification('Product added to cart');
                 }
 
-                // function updateCartDisplay() {
-                //   const container = document.getElementById('cart-items');
-                //   const summary = document.getElementById('cart-summary');
+                        function removeFromCart(index) {
+                          cart.splice(index, 1);
+                          localStorage.setItem('cart', JSON.stringify(cart));
+                          updateCartCount();
 
-                //   if (cart.length === 0) {
-                //     container.innerHTML = `
-                //             <div class="empty-cart">
-                //               <svg fill="currentColor" viewBox="0 0 24 24">
-                //                 <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/>
-                //               </svg>
-                //               <h5>Your cart is empty</h5>
-                //               <p>Add items to get started</p>
-                //             </div>
-                //           `;
-                //     summary.style.display = 'none';
-                //     return;
-                //   }
+                          // Проверяем активность вкладки корзины
+                          const isCartTabActive = document.querySelector('[data-tabs-path="cart"]').classList.contains('tabs__btn--active');
 
-                //   let subtotal = 0;
-                //   container.innerHTML = cart.map((item, index) => {
-                //     const itemTotal = item.price * item.quantity;
-                //     subtotal += itemTotal;
+                          if (isCartTabActive) {
+                            updateCartDisplay();
+                          }
+                        }
 
-                //     return `
-                //             <div class="cart-item">
-                //               <img src="${item.image}" alt="${item.name}" class="cart-item-image">
-                //               <div class="cart-item-details">
-                //                 <h6 class="cart-item-name">${item.name}</h6>
-                //                 <div class="cart-item-meta">
-                //                   <span>Color: ${item.color}</span>
-                //                   <span>Price: ${item.price.toLocaleString()} ₽</span>
-                //                 </div>
-                //                 <div class="cart-item-controls">
-                //                   <button class="quantity-btn" onclick="updateQuantity(${index}, ${item.quantity - 1})">-</button>
-                //                   <input type="number" class="quantity-input" value="${item.quantity}" min="1"
-                //                          onchange="updateQuantity(${index}, this.value)">
-                //                   <button class="quantity-btn" onclick="updateQuantity(${index}, ${item.quantity + 1})">+</button>
-                //                   <button class="remove-btn" onclick="removeFromCart(${index})">
-                //                     <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
-                //                       <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
-                //                     </svg>
-                //                   </button>
-                //                 </div>
-                //               </div>
-                //               <div class="cart-item-price">
-                //                 ${itemTotal.toLocaleString()} ₽
-                //               </div>
-                //             </div>
-                //           `;
-                //   }).join('');
+                    // ВАЖНОЕ ИСПРАВЛЕНИЕ: Принудительное обновление
+                    setTimeout(() => {
+                      updateCartDisplay();
+                    }, 0);
 
-                //   document.getElementById('subtotal').textContent = subtotal.toLocaleString() + ' ₽';
-                //   document.getElementById('total').textContent = subtotal.toLocaleString() + ' ₽';
-                //   document.getElementById('cart-total').textContent = subtotal.toLocaleString() + ' ₽';
-                //   summary.style.display = 'block';
-                // }
-    //             function updateCartDisplay() {
-    //                 const container = document.getElementById('cart-items');
-    //                 const summary = document.getElementById('cart-summary');
-    //                 const clearBtn = document.getElementById('clear-cart-btn');
+                    showNotification('Product added to cart');
+                  }
 
-    //                 if (cart.length === 0) {
-    //                   container.innerHTML = `
-    //   <div class="empty-cart">
-    //     <svg fill="currentColor" viewBox="0 0 24 24">
-    //       <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/>
-    //     </svg>
-    //     <h5>Your cart is empty</h5>
-    //     <p>Add items to get started</p>
-    //   </div>
-    // `;
-    //                   summary.style.display = 'none';
-    //                   if (clearBtn) clearBtn.style.display = 'none';
-    //                   return;
-    //                 }
+                  function removeFromCart(index) {
+                    cart.splice(index, 1);
+                    localStorage.setItem('cart', JSON.stringify(cart));
+                    updateCartCount();
 
-    //                 let subtotal = 0;
-    //                 container.innerHTML = cart.map((item, index) => {
-    //                   const itemTotal = item.price * item.quantity;
-    //                   subtotal += itemTotal;
-
-    //                   return `
-    //   <div class="cart-item">
-    //     <img src="${item.image}" alt="${item.name}" class="cart-item-image">
-    //     <div class="cart-item-details">
-    //       <h6 class="cart-item-name">${item.name}</h6>
-    //       <div class="cart-item-meta">
-    //         <span>Color: ${item.color}</span>
-    //         <span>Price: ${item.price.toLocaleString()} ₽</span>
-    //       </div>
-    //       <div class="cart-item-controls">
-    //         <button class="quantity-btn" onclick="updateQuantity(${index}, ${item.quantity - 1})">-</button>
-    //         <input type="number" class="quantity-input" value="${item.quantity}" min="1"
-    //                onchange="updateQuantity(${index}, this.value)">
-    //         <button class="quantity-btn" onclick="updateQuantity(${index}, ${item.quantity + 1})">+</button>
-    //         <button class="remove-btn" onclick="removeFromCart(${index})" title="Remove item">
-    //           <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
-    //             <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
-    //           </svg>
-    //         </button>
-    //       </div>
-    //     </div>
-    //     <div class="cart-item-price">
-    //       ${itemTotal.toLocaleString()} ₽
-    //     </div>
-    //   </div>
-    // `;
-    //                 }).join('');
-
-    //                 // Обновляем текст с количеством товаров
-    //                 document.getElementById('cart-count-text').textContent = `${cart.length} item${cart.length !== 1 ? 's' : ''}`;
-
-    //                 // Обновляем суммы
-    //                 document.getElementById('subtotal').textContent = subtotal.toLocaleString() + ' ₽';
-    //                 document.getElementById('total').textContent = subtotal.toLocaleString() + ' ₽';
-    //                 document.getElementById('cart-total').textContent = subtotal.toLocaleString() + ' ₽';
-
-    //                 // Показываем элементы
-    //                 summary.style.display = 'block';
-    //                 if (clearBtn) clearBtn.style.display = 'inline-flex';
-    //               }
+                    // ВАЖНОЕ ИСПРАВЛЕНИЕ: Принудительное обновление
+                    setTimeout(() => {
+                      updateCartDisplay();
+                    }, 0);
+                  }
 
     function updateCartDisplay() {
         const container = document.getElementById('cart-items');
@@ -1072,41 +1001,7 @@
                   updateCartDisplay();
                 }
                 // Добавьте эту функцию после removeFromCart()
-  // function clearCart() {
-  //   if (cart.length === 0) {
-  //     showNotification('Cart is already empty');
-  //     return;
-  //   }
 
-  //   // Вариант 1: Быстрая очистка
-  //   const itemCount = cart.length;
-  //   const totalAmount = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
-
-  //   if (confirm(`Clear all ${itemCount} item${itemCount !== 1 ? 's' : ''} (${totalAmount.toLocaleString()} ₽) from cart?`)) {
-  //     // Очищаем массив
-  //     cart = [];
-
-  //     // Очищаем localStorage
-  //     localStorage.setItem('cart', JSON.stringify(cart));
-
-  //     // Обновляем счетчик в хедере
-  //     updateCartCount();
-
-  //     // Обновляем отображение корзины
-  //     updateCartDisplay();
-
-  //     // Сбрасываем все суммы
-  //     document.getElementById('cart-total').textContent = '0 ₽';
-  //     document.getElementById('subtotal').textContent = '0 ₽';
-  //     document.getElementById('total').textContent = '0 ₽';
-
-  //     // Скрываем кнопку очистки если есть
-  //     const clearBtn = document.getElementById('clear-cart-btn');
-  //     if (clearBtn) clearBtn.style.display = 'none';
-
-  //     showNotification('Cart cleared successfully');
-  //   }
-  // }
 
       // Вариант 2: Более красивое уведомление с анимацией
 
@@ -1140,119 +1035,7 @@
           showNotification('Cart cleared successfully');
         }, cartItems.length * 100 + 300);
       }
-      // Или более полная версия с анимацией:
-  //       function clearCart() {
-  //         if (cart.length === 0) {
-  //           showNotification('Cart is already empty');
-  //           return;
-  //         }
 
-  //         // Сохраняем данные для сообщения
-  //         const itemCount = cart.length;
-  //         const totalAmount = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
-
-  //         // Создаем модальное окно подтверждения
-  //         const modalHTML = `
-  //   <div class="modal" tabindex="-1" style="display: block; background: rgba(0,0,0,0.5);">
-  //     <div class="modal-dialog modal-dialog-centered">
-  //       <div class="modal-content">
-  //         <div class="modal-header">
-  //           <h5 class="modal-title">Clear Shopping Cart</h5>
-  //           <button type="button" class="btn-close" onclick="closeModal(this)"></button>
-  //         </div>
-  //         <div class="modal-body">
-  //           <div class="text-center mb-3">
-  //             <svg width="48" height="48" fill="#dc3545" viewBox="0 0 24 24">
-  //               <path d="M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm5 13.59L15.59 17 12 13.41 8.41 17 7 15.59 10.59 12 7 8.41 8.41 7 12 10.59 15.59 7 17 8.41 13.41 12 17 15.59z"/>
-  //             </svg>
-  //           </div>
-  //           <p class="text-center">Are you sure you want to remove all items from your cart?</p>
-  //           <div class="alert alert-warning text-center">
-  //             <strong>${itemCount} item${itemCount !== 1 ? 's' : ''}</strong> • ${totalAmount.toLocaleString()} ₽
-  //           </div>
-  //         </div>
-  //         <div class="modal-footer justify-content-center">
-  //           <button type="button" class="btn btn-outline-secondary" onclick="closeModal(this)">Cancel</button>
-  //           <button type="button" class="btn btn-danger" onclick="confirmClearCart()">Clear All Items</button>
-  //         </div>
-  //       </div>
-  //     </div>
-  //   </div>
-  // `;
-
-  //         const modal = document.createElement('div');
-  //         modal.innerHTML = modalHTML;
-  //         modal.id = 'clearCartModal';
-  //         document.body.appendChild(modal);
-
-  //         // Предотвращаем прокрутку страницы
-  //         document.body.style.overflow = 'hidden';
-
-  //         // Глобальная функция для закрытия модального окна
-  //         window.closeModal = function (btn) {
-  //           const modal = document.getElementById('clearCartModal');
-  //           if (modal) {
-  //             modal.remove();
-  //             document.body.style.overflow = '';
-  //           }
-  //         };
-
-  //         // Глобальная функция для подтверждения очистки
-  //         window.confirmClearCart = function () {
-  //           // Анимация удаления элементов
-  //           const cartItems = document.querySelectorAll('.cart-item');
-
-  //           if (cartItems.length > 0) {
-  //             // Анимированное удаление
-  //             cartItems.forEach((item, index) => {
-  //               setTimeout(() => {
-  //                 item.style.transition = 'all 0.3s ease';
-  //                 item.style.opacity = '0';
-  //                 item.style.transform = 'translateX(-100px)';
-  //                 item.style.maxHeight = '0';
-  //                 item.style.padding = '0';
-  //                 item.style.margin = '0';
-  //                 item.style.border = 'none';
-
-  //                 setTimeout(() => {
-  //                   if (item.parentNode) {
-  //                     item.remove();
-  //                   }
-  //                 }, 300);
-  //               }, index * 100);
-  //             });
-  //           }
-
-  //           // Очищаем данные
-  //           setTimeout(() => {
-  //             cart = [];
-  //             localStorage.setItem('cart', JSON.stringify(cart));
-
-  //             // Обновляем интерфейс
-  //             updateCartCount();
-  //             updateCartDisplay();
-
-  //             // Сбрасываем все суммы
-  //             document.getElementById('cart-total').textContent = '0 ₽';
-  //             document.getElementById('subtotal').textContent = '0 ₽';
-  //             document.getElementById('total').textContent = '0 ₽';
-
-  //             // Скрываем summary блок
-  //             const summary = document.getElementById('cart-summary');
-  //             if (summary) summary.style.display = 'none';
-
-  //             // Скрываем кнопку очистки
-  //             const clearBtn = document.getElementById('clear-cart-btn');
-  //             if (clearBtn) clearBtn.style.display = 'none';
-
-  //             // Показываем уведомление
-  //             showNotification('✓ Cart cleared successfully');
-
-  //             // Закрываем модальное окно
-  //             closeModal();
-  //           }, cartItems.length * 100 + 500);
-  //         };
-  //       }
                 function checkout() {
                   if (cart.length === 0) {
                     showNotification('Cart is empty');
