@@ -439,7 +439,7 @@
 
               Выбор расцветки
               <label class="radio option">
-                <input class="real-radio-black" type="radio" id="black" name="color" value="black" />
+                <input class="real-radio-black" type="radio" id="black" name="color" value="black" checked />
                 <span class="custom-radio-black"></span>
                 <span class="custom-radio-text">black</span>
               </label>
@@ -456,12 +456,14 @@
             </p>
 
             <p>Стоимость: 905 000 р</p>
+
             <div class="d-flex gap-2 mt-4">
-             <button class="card-info__btn--tocart" onclick="addToCart()">Add to cart</button>
-             <button class="card-info__btn--tocart" onclick="showCart()">
-              View Cart
-             </button>
+              <button class="card-info__btn--tocart" onclick="addToCart()">Add to Cart</button>
+              <button class="card-info__btn--tocart" onclick="showCart()">View Cart</button>
             </div>
+          <!-- <button class="card-info__btn--towishlist" onclick="addToCart(); setTimeout(() => showCart(), 300);">
+            Add to Cart & View
+          </button> -->
           </div>
         </div>
 
@@ -731,28 +733,7 @@
                             </div>
                           </div>
 
-                          <!-- <div id="cart-summary" class="cart-summary" style="display: none;">
-                            <div class="summary-row">
-                              <span class="summary-label">Subtotal</span>
-                              <span id="subtotal" class="summary-value">0 ₽</span>
-                            </div>
-                            <div class="summary-row">
-                              <span class="summary-label">Shipping</span>
-                              <span class="summary-value">Free</span>
-                            </div>
-                            <div class="summary-row">
-                              <span class="summary-label">Total</span>
-                              <span id="total" class="summary-value">0 ₽</span>
-                            </div>
 
-                            <button class="checkout-btn" onclick="checkout()">
-                              <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-                                <path
-                                  d="M18 6h-2c0-2.21-1.79-4-4-4S8 3.79 8 6H6c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-6-2c1.1 0 2 .9 2 2h-4c0-1.1.9-2 2-2zm6 16H6V8h2v2c0 .55.45 1 1 1s1-.45 1-1V8h4v2c0 .55.45 1 1 1s1-.45 1-1V8h2v12z" />
-                              </svg>
-                              Proceed to Checkout
-                            </button>
-                          </div> -->
                           <div id="cart-summary" class="cart-summary" style="display: none;">
                             <div class="summary-row">
                               <span class="summary-label">Subtotal</span>
@@ -791,13 +772,24 @@
                 // ===== CART FUNCTIONALITY =====
                 let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
+                // Функция для обновления всей корзины
+                  function updateCart() {
+                    updateCartCount();
+                    updateCartDisplay();
+                    updateCartSummary();
+                    saveCart();
+                  }
+
                 function updateCartCount() {
                   const count = cart.reduce((total, item) => total + item.quantity, 0);
                   document.getElementById('cart-count').textContent = count;
                 }
 
                 function addToCart() {
-                  const color = document.querySelector('input[name="color"]:checked').value;
+                  const colorRadio = document.querySelector('input[name="color"]:checked');
+                  const color = colorRadio ? colorRadio.value : 'black'; // Если нет checked, используем black
+                  // const color = document.querySelector('input[name="color"]:checked').value;
+
                   const product = {
                     id: '702-s2',
                     name: 'Bowers&Wilkins 702 S2',
@@ -814,32 +806,27 @@
                     cart.push(product);
                   }
 
-                //   localStorage.setItem('cart', JSON.stringify(cart));
-                //   updateCartCount();
-                //   updateCartDisplay();
 
-                //   // Show notification
-                //   showNotification('Product added to cart');
-                // }
 
 
 
 
                     localStorage.setItem('cart', JSON.stringify(cart));
                     updateCartCount();
-                    // updateCartDisplay();
+                    updateCartDisplay();
                       // ВАЖНО: Проверяем, активна ли вкладка корзины
                           const isCartTabActive = document.querySelector('[data-tabs-path="cart"]').classList.contains('tabs__btn--active');
 
                           if (isCartTabActive) {
                             // Если вкладка корзины активна, обновляем ее содержимое
                             updateCartDisplay();
-                          // }
+                          }
                           // Если вкладка не активна, обновляем только счетчик
                           // DOM для вкладки корзины не перерисовывается до ее открытия
 
                           showNotification('Product added to cart');
                 }
+
 
                         function removeFromCart(index) {
                           cart.splice(index, 1);
@@ -854,24 +841,7 @@
                           }
                         }
 
-                    // ВАЖНОЕ ИСПРАВЛЕНИЕ: Принудительное обновление
-                    setTimeout(() => {
-                      updateCartDisplay();
-                    }, 0);
 
-                    showNotification('Product added to cart');
-                  }
-
-                  function removeFromCart(index) {
-                    cart.splice(index, 1);
-                    localStorage.setItem('cart', JSON.stringify(cart));
-                    updateCartCount();
-
-                    // ВАЖНОЕ ИСПРАВЛЕНИЕ: Принудительное обновление
-                    setTimeout(() => {
-                      updateCartDisplay();
-                    }, 0);
-                  }
 
     function updateCartDisplay() {
         const container = document.getElementById('cart-items');
@@ -1055,7 +1025,15 @@
                   document.querySelector('[data-tabs-path="cart"]').click();
                   updateCartDisplay();
                 }
+  // function unifiedButtonHandler() {
+  //   // 1. Добавляем товар в корзину
+  //   addToCart();
 
+  //   // 2. Через небольшую задержку показываем корзину
+  //   setTimeout(() => {
+  //     showCart();
+  //   }, 300); // 300ms задержка для лучшего UX
+  // }
                 function showNotification(message) {
                   // Create notification element
                   const notification = document.createElement('div');
@@ -1158,6 +1136,59 @@
                 // Initialize
                 updateCartCount();
                 setRating(0);
+
+                // Улучшенный обработчик вкладок
+                  // function setupTabs() {
+                  //   const tabs = document.querySelector('.tabs');
+                  //   const tabsBtn = document.querySelectorAll('.tabs__btn');
+                  //   const tabsContent = document.querySelectorAll('.tabs__content');
+
+                  //   if (!tabs) return;
+
+                  //   // Функция для переключения вкладки
+                  //   function switchTab(tabName) {
+                  //     // Убираем активный класс у всех кнопок
+                  //     tabsBtn.forEach(btn => btn.classList.remove('tabs__btn--active'));
+
+                  //     // Добавляем активный класс выбранной кнопке
+                  //     const targetBtn = document.querySelector(`[data-tabs-path="${tabName}"]`);
+                  //     if (targetBtn) {
+                  //       targetBtn.classList.add('tabs__btn--active');
+                  //     }
+
+                  //     // Скрываем все вкладки
+                  //     tabsContent.forEach(content => {
+                  //       content.classList.remove('tabs__content--active');
+                  //     });
+
+                  //     // Показываем выбранную вкладку
+                  //     const targetContent = document.querySelector(`[data-tabs-target="${tabName}"]`);
+                  //     if (targetContent) {
+                  //       targetContent.classList.add('tabs__content--active');
+
+                  //       // Если это вкладка корзины, обновляем ее содержимое
+                  //       if (tabName === 'cart') {
+                  //         setTimeout(() => {
+                  //           updateCartDisplay();
+                  //         }, 10);
+                  //       }
+                  //     }
+                  //   }
+
+                  //   // Обработчик клика на кнопки вкладок
+                  //   tabs.addEventListener('click', (e) => {
+                  //     if (e.target.classList.contains('tabs__btn')) {
+                  //       const tabsPath = e.target.dataset.tabsPath;
+                  //       switchTab(tabsPath);
+                  //     }
+                  //   });
+
+                  //   // Делаем функцию доступной глобально
+                  //   window.switchTab = switchTab;
+                  // }
+
+                  // // Вызываем при загрузке
+                  // document.addEventListener('DOMContentLoaded', setupTabs);
               </script>
           <div class="tabs__content" data-tabs-target="payment">
             <div class="content">
