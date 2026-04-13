@@ -1425,7 +1425,7 @@ font-family: 'Rubik';
 }
 
 .ml-100 {
-  margin-left: -100px;
+  margin-left: -50px;
   /* padding-left: -200px; */
 }
 
@@ -1438,7 +1438,7 @@ font-family: 'Rubik';
 }
 
 .about__cell {
-  max-width: 500px;
+  max-width: 700px;
   width: 100%;
   margin: 0px;
   padding: 0;
@@ -1448,7 +1448,8 @@ font-family: 'Rubik';
 }
 
 .about__ca {
-  max-width: 300px;
+  max-width: 700px;
+  width: 100%;
   min-height: 200px;
   margin: 5px;
   display: flex;
@@ -3128,6 +3129,12 @@ display: flex;
 }
 
 /* blog */
+.container900 {
+  margin-top: 50px;
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+}
 .container {
   max-width: 1400px;
   width: 100%;
