@@ -1686,6 +1686,8 @@ font-family: 'Rubik';
   justify-content: flex-start;
   align-items: center;
   padding: 10px 5px;
+  gap: 5px;
+
 }
 
 .social-inner img {
@@ -1749,7 +1751,7 @@ font-family: 'Rubik';
 
   background-color: black;
   padding: 0px 0;
-  /* margin-top: -10px; */
+  margin-top: 70px;
 
 }
 
