@@ -1426,7 +1426,7 @@ font-family: 'Rubik';
 }
 
 .ml-100 {
-  margin-left: -50px;
+  margin-left: 100px;
   /* padding-left: -200px; */
 }
 
@@ -2249,9 +2249,9 @@ display: flex;
   font-family: 'Jost';
   font-style: normal;
   font-weight: 700;
-  font-size: 34px;
+  font-size: 14px;
   line-height: 1.5;
-  color: #101c10;
+  color: white;
 }
 
 .text-center-wh {
@@ -2259,7 +2259,7 @@ display: flex;
   font-family: 'Jost';
   font-style: normal;
   font-weight: 700;
-  font-size: 34px;
+  font-size: 18px;
   line-height: 1.5;
   color: #fff;
 }
