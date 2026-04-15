@@ -4,17 +4,11 @@
    ========================================================================== */
 
 
-/**
- * 1. Correct the line height in all browsers.
- * 2. Prevent adjustments of font size after orientation changes in iOS.
-.footer {
-  background: #34495e;
-  color: white;
-  text-align: center;
-  padding: 1.5rem 0;
-  margin-top: 2rem;
+.advantage-title {
+  font-weight: 700;
+    font-size: 15px;
+
 }
- */
     .product-card {
         /* Делаем все карточки одинаковой высоты */
 
@@ -1618,8 +1612,8 @@ font-family: 'Rubik';
   flex-direction: column;
   font-family: 'Jost';
   font-style: normal;
-  font-weight: 800;
-  font-size: 16px;
+  font-weight: 700;
+  font-size: 15px;
   border: 0px solid var(--gray-color);
   transition: all .3s;
   cursor: pointer;
