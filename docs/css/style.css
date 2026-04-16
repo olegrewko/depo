@@ -1169,10 +1169,10 @@ li {
   padding: 5px;
 }
 
-.header {
-  min-height: 60px;
+/* .header {
+  height: 60px;
   width: 100%;
-}
+} */
 
 .header__top {
   position: fixed;
@@ -1228,7 +1228,7 @@ li {
   font-family: 'Jost';
   font-style: normal;
   font-weight: 900;
-  font-size: 18px;
+  font-size: 12px;
   color: black;
 }
 .logo__title {
@@ -2711,7 +2711,7 @@ display: flex;
   .menu__list-item {
     position: relative;
     display: inline-block;
-    padding: 30px 5px;
+    padding: 40px 5px;
   }
 
   .menu__list-item+.menu__list-item {
