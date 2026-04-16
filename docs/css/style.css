@@ -1424,12 +1424,12 @@ font-family: 'Rubik';
 }
 
 .about__cell {
-  max-width: 700px;
+  max-width: 800px;
   width: 100%;
   margin: 0px;
   padding: 0;
   display: flex;
-  justify-content: center;
+  justify-content: right;
   align-items: center;
 }
 
