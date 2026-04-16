@@ -1233,7 +1233,7 @@ li {
   font-family: 'Jost';
   font-style: normal;
   font-weight: 700;
-  font-size: 12px;
+  font-size: 10px;
   color: black;
 }
 .white__title {
@@ -1280,12 +1280,12 @@ font-family: 'Rubik';
 .dropbtn {
 
   display: block;
-  padding: 10px 0px;
+  padding: 2px 0px;
   font-family: 'Jost';
   font-style: normal;
   font-weight: 700;
-  font-size: 12px;
-  line-height: 14px;
+  font-size: 10px;
+  line-height: 4px;
 
   color: black;
   cursor: pointer;
@@ -2647,7 +2647,7 @@ display: flex;
   .menu__list-item {
     position: relative;
     display: inline-block;
-    padding: 40px 5px;
+    padding: 20px 5px;
   }
 
   .menu__list-item+.menu__list-item {
@@ -2656,7 +2656,7 @@ display: flex;
 
   .menu__list-link {
     display: block;
-    padding: 10px 0;
+    padding: 4px 0;
   }
 
   .header__title {
@@ -2808,7 +2808,9 @@ display: flex;
 .ml-10 {
   margin-left: 10px;
 }
-
+.ml-40 {
+  margin-left: 40px;
+}
 .shop-grid {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
