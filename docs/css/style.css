@@ -3,7 +3,9 @@
 /* Document
    ========================================================================== */
 
-
+.black {
+  color: #000;
+}
 .advantage-title {
   font-weight: 700;
     font-size: 15px;
@@ -1061,14 +1063,10 @@ li {
   transition: all .4s;
 }
 
-.black {
-  font-family: 'Rubik';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 14px;
+/* .black {
+
   color: #101c10;
-}
+} */
 
 .pantony {
   color: #134169;
