@@ -7,8 +7,8 @@
   color: #000;
 }
 .advantage-title {
-  font-weight: 700;
-    font-size: 15px;
+  font-weight: 500;
+    font-size: 12px;
 
 }
     .product-card {
@@ -1182,7 +1182,7 @@ li {
   top: 0;
 
   /* background: #34495e;  */
-  /* background-color: #fff; */
+background-color: transparent;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   z-index: 1;
 }
@@ -1193,7 +1193,7 @@ li {
   justify-content: space-between;
   align-items: center;
 
-  /* background-color: #fff; */
+  background-color: transparent;
 
 
 }
@@ -1591,14 +1591,14 @@ font-family: 'Rubik';
   max-width: 350px;
   width: 100%;
   padding: 5px;
-  margin: 5px 10px;
+  margin: 5px 5px;
   background-color: transparent;
   display: flex;
   flex-direction: column;
   font-family: 'Jost';
   font-style: normal;
-  font-weight: 700;
-  font-size: 15px;
+  font-weight: 500;
+  font-size: 12px;
   border: 0px solid var(--gray-color);
   transition: all .3s;
   cursor: pointer;
@@ -3138,7 +3138,9 @@ display: flex;
 
 
 }
-
+.h140 {
+  height: 180px;
+}
 .mb-10 {
   margin-bottom: 10px;
 }
