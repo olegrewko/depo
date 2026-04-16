@@ -399,7 +399,7 @@
   --light-grey-color: #eee;
   --color-tundora: darkslategray;
   --color-violet: #544f9d;
-  --color-violet-rgba: rgba(84, 79, 157, 0.2);
+  --color-violet-rgba: rgba(84, 79, 157, 0.4);
 }
 
 @font-face {
@@ -1627,10 +1627,14 @@ font-family: 'Rubik';
   margin-bottom: 5px;
 }
 
-.offer-hit {
-  background-color: rgba(96, 212, 212, 0.36);
-  z-index: 100;
-}
+
+
+  .offer-hit {
+      background-color: var(--color-violet-rgba);
+      z-index: 100;
+    }
+
+
 
 .offer-new {
   background-color: var(--accent-color);
