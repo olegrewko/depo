@@ -1590,8 +1590,8 @@ font-family: 'Rubik';
   position: relative;
   max-width: 350px;
   width: 100%;
-  padding: 5px;
-  margin: 5px 5px;
+  padding: 2px;
+  margin: 2px 2px;
   background-color: transparent;
   display: flex;
   flex-direction: column;
@@ -1604,9 +1604,9 @@ font-family: 'Rubik';
   cursor: pointer;
 }
 
-.card:hover {
+/* .card:hover {
   box-shadow: 0 5px 10px -5px rgba(221, 163, 221, 0.75);
-}
+} */
 
 .product-card-offer {
   color: #fff;
@@ -1629,10 +1629,10 @@ font-family: 'Rubik';
 
 
 
-  .offer-hit {
+  /* .offer-hit {
       background-color: var(--color-violet-rgba);
       z-index: 100;
-    }
+    } */
 
 
 
@@ -2617,7 +2617,7 @@ display: flex;
   .about__inner,
   .cell {
     display: block;
-
+    z-index: -1;
   }
 
   .menu__list {
