@@ -2,7 +2,9 @@
 
 /* Document
    ========================================================================== */
-
+.menu__title-white {
+  color: white;
+}
 .black {
   color: #000;
 }
@@ -1431,6 +1433,7 @@ font-family: 'Rubik';
   display: flex;
   justify-content: right;
   align-items: center;
+  
 }
 
 .about__ca {
@@ -2617,7 +2620,7 @@ display: flex;
   .about__inner,
   .cell {
     display: block;
-    z-index: -1;
+
   }
 
   .menu__list {
