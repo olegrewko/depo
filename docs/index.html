@@ -5705,410 +5705,215 @@ document.addEventListener('DOMContentLoaded', () => {
 }
 </style>
         <!--Уголовные  -->
-  <style>
-    /* * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+<div style="display: flex; justify-content: center; align-items: center; width: 100%; background: transparent; padding: 40px 20px;">
 
-    body {
-      background: #0a0a0a;
-      font-family: 'Segoe UI', Arial, sans-serif;
-      padding: 40px;
-    } */
+  <div style="width: 100%; max-width: 1400px;">
 
-    /* Сетка 5 колонок × 20 рядов */
-    .grid-5x20 {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      grid-auto-rows: minmax(100px, auto);
-      gap: 4px;
-      background-color: transparent;
-      max-width: 1600px;
-      margin: 0 auto;
-    }
-
-    /* Базовая ячейка */
-    .cell {
-      background-color: #0a0a0a;
-      border: 1px solid #2a2a2a;
-      overflow: hidden;
-      position: relative;
-      transition: all 0.2s ease;
-    }
-
-    .cell:hover {
-      border-color: #444;
-    }
-
-    /* Стили для фото */
-    .cell img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-
-    /* Стили для текста */
-    .text-content {
-      padding: 20px;
-      color: white;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    .text-content h3 {
-      font-size: 18px;
-      margin-bottom: 10px;
-      color: white;
-    }
-
-    .text-content p {
-      font-size: 13px;
-      line-height: 1.4;
-      color: #ccc;
-    }
-
-    .text-content .number {
-      font-size: 24px;
-      font-weight: bold;
-      color: #2c3e50;
-      margin-bottom: 10px;
-    }
-
-    /* Классы для объединения ячеек */
-    .span-2-cols { grid-column: span 2; }
-    .span-3-cols { grid-column: span 3; }
-    .span-4-cols { grid-column: span 4; }
-    .span-5-cols { grid-column: span 5; }
-
-    .span-2-rows { grid-row: span 2; }
-    .span-3-rows { grid-row: span 3; }
-    .span-4-rows { grid-row: span 4; }
-    .span-5-rows { grid-row: span 5; }
-
-    /* Заголовок над сеткой */
-    .grid-header {
-      text-align: center;
-      margin-bottom: 30px;
-      color: white;
-    }
-
-    .grid-header h1 {
-      font-size: 28px;
-      font-weight: 300;
-      letter-spacing: 2px;
-    }
-
-    .grid-header p {
-      color: #888;
-      margin-top: 10px;
-    }
-  </style>
-
-
-<div class="grid-header">
-  <h1>СЕТКА 5×20</h1>
-  <p>5 колонок × 20 рядов | Объединяй ячейки для фото и текста</p>
-</div>
-
-<div class="grid-5x20">
-
-  <!--
-    ============================================
-    РЯД 1
-    ============================================
-  -->
-  <!-- Ячейка 1,1: Заголовок на 2 колонки -->
-  <div class="cell span-2-cols">
-    <div class="text-content">
-      <div class="number">01</div>
-      <h3>Уголовные преступления</h3>
-      <p>Профессиональная защита на всех этапах</p>
+    <div style="text-align: center; margin-bottom: 20px; color: white;">
+      <h3 style="font-size: 18px; margin-bottom: 8px; color: black; text-align: center;">Уголовные преступления</h3>
+      <p style="font-size: 13px; line-height: 1.4; color: black; text-align: center;">Профессиональная защита на всех этапах
+        уголовного процесса</p>
     </div>
-  </div>
 
-  <!-- Ячейка 1,2: Фото на 2 колонки -->
-  <div class="cell span-2-cols">
-    <img src="https://placehold.co/600x400/1a1a2e/white?text=Law+Office" alt="Фото">
-  </div>
+    <div style="display: grid; grid-template-columns: repeat(5, 1fr); grid-auto-rows: minmax(120px, auto); gap: 4px; background-color: #1a1a1a; width: 100%; margin: 0 auto;">
 
-  <!-- Ячейка 1,3: Текст -->
-  <div class="cell">
-    <div class="text-content">
-      <div class="number">02</div>
-      <p>С 2014 года</p>
-    </div>
-  </div>
+      <!-- ========================================= -->
+      <!-- РЯД 1                                      -->
+      <!-- ========================================= -->
+      <div style="grid-column: span 5; background-color: #0a0a0a; border: 0px solid #2a2a2a; overflow: hidden; min-height: 120px;">
+        <!-- <div style="padding: 20px; color: white; height: 100%; text-align: center;"> -->
+          <img src="img/slider/jcat400.jpg" alt="img/slider/bp790.jpg"
+            style="width: 100%; height: 100%; object-fit: cover; display: block; min-height: 300px;">
+        <!-- </div> -->
+      </div>
 
-  <!--
-    ============================================
-    РЯД 2
-    ============================================
-  -->
-  <!-- Ячейка 2,1: Фото -->
-  <div class="cell">
-    <img src="https://placehold.co/400x300/1a1a2e/white?text=Court" alt="Фото">
-  </div>
+      <!-- ========================================= -->
+      <!-- РЯД 2                                      -->
+      <!-- ========================================= -->
+      <div style="grid-column: span 2; background-color: #0a0a0a; border: 1px solid #2a2a2a; overflow: hidden; min-height: 120px;">
+        <img src="img/slider/post1.jpg" alt="img/slider/post1.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+      </div>
 
-  <!-- Ячейка 2,2: Текст -->
-  <div class="cell">
-    <div class="text-content">
-      <p>Индивидуальный подход к каждому клиенту</p>
-    </div>
-  </div>
+      <div style="background-color: #0a0a0a; border: 1px solid #2a2a2a; overflow: hidden; min-height: 120px;">
+        <div style="padding: 20px; color: white; height: 100%; text-align: center;">
+          <div style="font-size: 13px; font-weight: bold; color: #2c3e50; margin-bottom: 8px; text-align: center;">С 2014 года на рынке</div>
+          <p style="font-size: 13px; line-height: 1.4; color: #2c3e50; text-align: left;">
+            depo-500 — это команда опытных адвокатов, удостоенная множества наград.
+            Когда на кону ваша свобода или карьера, вы можете положиться на нашу команду, которая уже более 10 лет ведет сложные
+            дела и добивается для вас наилучшего исхода. Наши адвокаты вели более 90 дел и судебных процессов.
 
-  <!-- Ячейка 2,3: Фото -->
-  <div class="cell">
-    <img src="https://placehold.co/400x300/1a1a2e/white?text=Lawyer" alt="Фото">
-  </div>
+            Мы начнем работу над вашим делом с того, что выслушаем вас, узнаем вашу историю и цели. Мы понимаем, что это может быть
+            одним из самых стрессовых периодов в жизни. Мы будем рядом с вами, будем бороться на вашей стороне, предлагать решения и
+            проверенные стратегии, основанные на опыте и нацеленные на вашу защиту.
 
-  <!-- Ячейка 2,4: Текст на 2 колонки -->
-  <div class="cell span-2-cols">
-    <div class="text-content">
-      <h3>Опасное вождение</h3>
-      <p>Защита от обвинений в опасном вождении и уклонении от полиции</p>
-    </div>
-  </div>
+            Если вы хотите добиться наилучшего результата, позвоните нам. Наши юристы — эксперты в области взаимодействия с правовой
+            системой для достижения ваших целей. Мы предлагаем бесплатную консультацию, чтобы обсудить ваше дело, ваши права и то,
+            как мы можем вам помочь.
 
-  <!--
-    ============================================
-    РЯД 3
-    ============================================
-  -->
-  <!-- Ячейка 3,1: Фото на 2 колонки и 2 ряда -->
-  <div class="cell span-2-cols span-2-rows">
-    <img src="https://placehold.co/800x600/1a1a2e/white?text=Justice" alt="Фото">
-  </div>
-
-  <!-- Ячейка 3,2: Текст -->
-  <div class="cell">
-    <div class="text-content">
-      <div class="number">03</div>
-      <h3>Наркотики</h3>
-      <p>Защита по делам о наркотиках</p>
-    </div>
-  </div>
-
-  <!-- Ячейка 3,3: Фото -->
-  <div class="cell">
-    <img src="https://placehold.co/400x300/1a1a2e/white?text=Drugs" alt="Фото">
-  </div>
-
-  <!-- Ячейка 3,4: Текст -->
-  <div class="cell">
-    <div class="text-content">
-      <p>Бегство от полиции</p>
-    </div>
-  </div>
-
-  <!--
-    ============================================
-    РЯД 4
-    ============================================
-  -->
-  <!-- Ячейка 4,1: Текст (под большой фото) -->
-  <div class="cell">
-    <div class="text-content">
-      <p>Опыт с 2014 года</p>
-    </div>
-  </div>
-
-  <!-- Ячейка 4,2: Текст на 2 колонки -->
-  <div class="cell span-2-cols">
-    <div class="text-content">
-      <h3>Сексуальные преступления</h3>
-      <p>Защита репутации и прав</p>
-    </div>
-  </div>
-
-  <!-- Ячейка 4,3: Фото -->
-  <div class="cell">
-    <img src="https://placehold.co/400x300/1a1a2e/white?text=Defense" alt="Фото">
-  </div>
-
-  <!--
-    ============================================
-    РЯД 5
-    ============================================
-  -->
-  <!-- Ячейка 5,1: Текст -->
-  <div class="cell">
-    <div class="text-content">
-      <div class="number">04</div>
-      <p>Банкротство</p>
-    </div>
-  </div>
-
-  <!-- Ячейка 5,2: Фото на 3 колонки -->
-  <div class="cell span-3-cols">
-    <img src="https://placehold.co/1200x300/1a1a2e/white?text=Legal+Team" alt="Фото">
-  </div>
-
-  <!-- Ячейка 5,3: Текст -->
-  <div class="cell">
-    <div class="text-content">
-      <p>Консультация 24/7</p>
-    </div>
-  </div>
-
-  <!--
-    ============================================
-    РЯД 6
-    ============================================
-  -->
-  <!-- Ячейка 6,1: Фото -->
-  <div class="cell">
-    <img src="https://placehold.co/400x300/1a1a2e/white?text=Consultation" alt="Фото">
-  </div>
-
-  <!-- Ячейка 6,2: Текст на 4 колонки -->
-  <div class="cell span-4-cols">
-    <div class="text-content">
-      <h3>Помощь на всех этапах уголовного процесса</h3>
-      <p>От освобождения под залог до представления интересов в суде</p>
-    </div>
-  </div>
-
-  <!--
-    ============================================
-    РЯД 7-20 (заполняем остальные ряды для демонстрации)
-    ============================================
-  -->
-  <!-- Ряд 7 -->
-  <div class="cell"><div class="text-content"><p>Клиенты по всему Онтарио</p></div></div>
-  <div class="cell span-2-cols"><img src="https://placehold.co/800x300/1a1a2e/white?text=Toronto" alt="Фото"></div>
-  <div class="cell"><div class="text-content"><div class="number">05</div><p>Регион Дарем</p></div></div>
-  <div class="cell"><div class="text-content"><p>Большой Торонто</p></div></div>
-
-  <!-- Ряд 8 -->
-  <div class="cell span-2-cols"><div class="text-content"><h3>Индивидуальный подход</h3><p>100% внимание каждому клиенту</p></div></div>
-  <div class="cell"><img src="https://placehold.co/400x300/1a1a2e/white?text=Approach" alt="Фото"></div>
-  <div class="cell"><div class="text-content"><p>Переговоры с обвинением</p></div></div>
-  <div class="cell"><div class="text-content"><p>Судебное разбирательство</p></div></div>
-
-  <!-- Ряд 9 -->
-  <div class="cell"><img src="https://placehold.co/400x300/1a1a2e/white?text=Evidence" alt="Фото"></div>
-  <div class="cell span-3-cols"><div class="text-content"><h3>Бесплатная консультация</h3><p>Конфиденциально. Круглосуточно.</p></div></div>
-  <div class="cell"><div class="text-content"><p>Защита прав</p></div></div>
-
-  <!-- Ряд 10 -->
-  <div class="cell span-5-cols"><div class="text-content"><h3 style="font-size: 24px;">⚖️ Barrison & Manitius</h3><p>Ваша защита — наша главная цель</p></div></div>
-
-  <!-- Ряд 11 -->
-  <div class="cell"><div class="text-content"><p>Онтарио</p></div></div>
-  <div class="cell"><div class="text-content"><p>Ошава</p></div></div>
-  <div class="cell span-2-cols"><img src="https://placehold.co/800x300/1a1a2e/white?text=Ontario" alt="Фото"></div>
-  <div class="cell"><div class="text-content"><p>Дарем</p></div></div>
-
-  <!-- Ряд 12 -->
-  <div class="cell span-2-cols"><img src="https://placehold.co/800x300/1a1a2e/white?text=Law+Firm" alt="Фото"></div>
-  <div class="cell"><div class="text-content"><div class="number">06</div><p>Лет опыта</p></div></div>
-  <div class="cell span-2-cols"><div class="text-content"><h3>Убийство первой степени</h3><p>Серьезная защита для серьезных дел</p></div></div>
-
-  <!-- Ряд 13 -->
-  <div class="cell"><div class="text-content"><p>Несовершеннолетние</p></div></div>
-  <div class="cell"><div class="text-content"><p>Профессионалы</p></div></div>
-  <div class="cell"><div class="text-content"><p>С судимостями</p></div></div>
-  <div class="cell"><div class="text-content"><p>Психическое здоровье</p></div></div>
-  <div class="cell"><div class="text-content"><p>Все слои общества</p></div></div>
-
-  <!-- Ряд 14 -->
-  <div class="cell span-3-cols"><img src="https://placehold.co/1200x300/1a1a2e/white?text=Justice+Scale" alt="Фото"></div>
-  <div class="cell span-2-cols"><div class="text-content"><h3>Результат</h3><p>Лучший исход для каждого клиента</p></div></div>
-
-  <!-- Ряд 15 -->
-  <div class="cell"><div class="text-content"><p>ДТП</p></div></div>
-  <div class="cell"><div class="text-content"><p>Наркотики</p></div></div>
-  <div class="cell"><div class="text-content"><p>Насилие</p></div></div>
-  <div class="cell"><div class="text-content"><p>Мошенничество</p></div></div>
-  <div class="cell"><div class="text-content"><p>Убийство</p></div></div>
-
-  <!-- Ряд 16 -->
-  <div class="cell span-5-cols"><div class="text-content"><p style="text-align: center;">© 2024 Barrison & Manitius | Все права защищены</p></div></div>
-
-  <!-- Ряд 17 (пустые для заполнения) -->
-  <div class="cell"><div class="text-content"><p></p></div></div>
-  <div class="cell"><div class="text-content"><p></p></div></div>
-  <div class="cell"><div class="text-content"><p></p></div></div>
-  <div class="cell"><div class="text-content"><p></p></div></div>
-  <div class="cell"><div class="text-content"><p></p></div></div>
-
-  <!-- Ряд 18 -->
-  <div class="cell span-2-cols"><img src="https://placehold.co/800x300/1a1a2e/white?text=Contact+Us" alt="Фото"></div>
-  <div class="cell span-3-cols"><div class="text-content"><h3>Свяжитесь с нами</h3><p>+7 (999) 852-58-21 | olegrewko@gmail.com</p></div></div>
-
-  <!-- Ряд 19 -->
-  <div class="cell span-5-cols"><div class="text-content"><p style="text-align: center;">Экстренная помощь 24/7</p></div></div>
-
-  <!-- Ряд 20 -->
-  <div class="cell"><div class="text-content"><p>01</p></div></div>
-  <div class="cell"><div class="text-content"><p>02</p></div></div>
-  <div class="cell"><div class="text-content"><p>03</p></div></div>
-  <div class="cell"><div class="text-content"><p>04</p></div></div>
-  <div class="cell"><div class="text-content"><p>05</p></div></div>
-
-</div>
-
+          </p>
         </div>
       </div>
-      <!-- Duo -->
-      <!-- <div class="loudspeakers" id="duo"></div> -->
-      <!-- <div class="container1400">
-        <div class="container1400 about__inner">
 
-          <div class="cell-800">
+      <div style="background-color: #0a0a0a; border: 1px solid #2a2a2a; overflow: hidden; min-height: 120px;">
+        <img src="img/slider/m200.jpg" alt="img/slider/m200.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+      </div>
 
-
-            <img src="img/slider/bp790.jpg" alt="img/kw02.jpg.jpg">
-          </div>
-
-          <div class="septic__left">
-
-
-
-
-
-            <p class="ml-40">
-                              Опасное вождение — это явное отклонение от общепринятых норм вождения. Это означает, что водитель ведет себя опасно, не
-                              считаясь с другими участниками дорожного движения, и является правонарушением, предусмотренным Уголовным кодексом.
-                              Обвинение в опасном вождении — это гораздо более серьезное правонарушение, за которое предусмотрено более суровое
-                              наказание, чем за неосторожное вождение, которое является правонарушением, предусмотренным Законом о дорожном движении.
-                              Признание виновным в опасном вождении может привести к судимости и автоматическому лишению водительских прав на один
-                              год. В зависимости от обстоятельств вашего дела вам может грозить тюремное заключение и/или штраф, особенно если речь
-                              идет о причинении телесных повреждений или смерти.
-
-                              Адвокаты из depo-500 разрабатывают стратегическую линию защиты от обвинений в опасном вождении и часто
-                              добиваются переквалификации обвинения в неосторожное вождение, что является гораздо менее серьезным правонарушением. В
-                              отличие от опасного вождения, неосторожное вождение не является уголовным преступлением и не влечет за собой судимость.
-                              Оно также не приводит к автоматическому лишению водительских прав. Наши адвокаты имеют большой опыт работы с делами,
-                              связанными с опасным вождением и другими правонарушениями на дороге, и могут помочь вам добиться наилучшего результата.
-
-                              Опытные юристы защищают обвиняемых в побеге от полиции
-                              Бегство от сотрудника полиции является серьезным правонарушением, предусмотренным Уголовным кодексом. Если вы не
-                              остановитесь по требованию сотрудника полиции в течение разумного времени или будете убегать от полиции, если вас
-                              преследуют, вас могут обвинить в бегстве от полиции. Если вас признают виновным, это будет означать, что у вас есть
-                              судимость, и вам может грозить штраф или даже тюремное заключение.
-
-                              Адвокаты из depo-500 имеют многолетний опыт ведения дел по обвинениям в опасном вождении и уклонении от
-                              полиции. При встрече мы оценим ваше дело и вместе с вами разработаем оптимальную линию защиты. Наши адвокаты
-                              предоставляют квалифицированную и опытную защиту по уголовным делам клиентам, которым предъявлены обвинения в опасном
-                              вождении.
-              </p>
-
-
-
-
-
-          </div>
-
-
-
+      <div style="background-color: #0a0a0a; border: 1px solid #2a2a2a; overflow: hidden; min-height: 120px;">
+        <div style="padding: 20px; color: white; height: 100%; text-align: center;">
+          <p style="font-size: 13px; line-height: 1.4; color: #ccc; text-align: left;">
+            Независимо от тяжести обвинения, не стоит пытаться разобраться с уголовными делами самостоятельно. Из-за серьезных
+            последствий, к которым может привести обвинительный приговор по делу о нападении, всегда разумно обратиться за помощью к
+            адвокату, имеющему опыт защиты по таким делам. Наши адвокаты встретятся с вами лично, чтобы изучить все обстоятельства
+            вашего дела. Мы оценим вашу ситуацию и подскажем возможные варианты защиты. Мы не боимся решительно отстаивать ваши
+            права в суде и сделаем все возможное, чтобы добиться для вас наилучшего исхода с учетом обстоятельств вашего дела.
+          </p>
         </div>
-      </div> -->
+      </div>
+
+      <!-- ========================================= -->
+      <!-- РЯД 3                                      -->
+      <!-- ========================================= -->
+      <div style="background-color: #0a0a0a; border: 1px solid #2a2a2a; overflow: hidden; min-height: 120px;">
+        <div style="padding: 20px; color: white; height: 100%; text-align: center;">
+          <p style="font-size: 13px; line-height: 1.4; color: #ccc; text-align: center;">Коллективный опыт</p>
+        </div>
+      </div>
+
+      <div style="grid-column: span 2; background-color: #0a0a0a; border: 1px solid #2a2a2a; overflow: hidden; min-height: 120px;">
+        <img src="https://placehold.co/800x400/1a1a2e/white?text=Legal+Team" alt="Команда юристов" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+      </div>
+
+      <div style="grid-column: span 2; background-color: #0a0a0a; border: 1px solid #2a2a2a; overflow: hidden; min-height: 120px;">
+        <div style="padding: 20px; color: white; height: 100%; text-align: center;">
+          <h3 style="font-size: 18px; margin-bottom: 8px; color: white; text-align: center;">Опасное вождение</h3>
+          <p style="font-size: 13px; line-height: 1.4; color: #ccc; text-align: center;">Защита от обвинений и переквалификация</p>
+        </div>
+      </div>
+
+      <!-- ========================================= -->
+      <!-- РЯД 4                                      -->
+      <!-- ========================================= -->
+      <div style="grid-column: span 3; grid-row: span 2; background-color: #0a0a0a; border: 1px solid #2a2a2a; overflow: hidden; min-height: 120px;">
+        <img src="https://placehold.co/1200x600/1a1a2e/white?text=Justice" alt="Правосудие" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+      </div>
+
+      <div style="background-color: #0a0a0a; border: 1px solid #2a2a2a; overflow: hidden; min-height: 120px;">
+        <div style="padding: 20px; color: white; height: 100%; text-align: center;">
+          <div style="font-size: 28px; font-weight: bold; color: #2c3e50; margin-bottom: 8px; text-align: center;">03</div>
+          <h3 style="font-size: 18px; margin-bottom: 8px; color: white; text-align: center;">Наркотики</h3>
+          <p style="font-size: 13px; line-height: 1.4; color: #ccc; text-align: center;">Защита по делам о наркотиках</p>
+        </div>
+      </div>
+
+      <div style="background-color: #0a0a0a; border: 1px solid #2a2a2a; overflow: hidden; min-height: 120px;">
+        <div style="padding: 20px; color: white; height: 100%; text-align: center;">
+          <p style="font-size: 13px; line-height: 1.4; color: #ccc; text-align: center;">Бегство от полиции</p>
+        </div>
+      </div>
+
+      <!-- ========================================= -->
+      <!-- РЯД 5                                      -->
+      <!-- ========================================= -->
+      <div style="background-color: #0a0a0a; border: 1px solid #2a2a2a; overflow: hidden; min-height: 120px;">
+        <div style="padding: 20px; color: white; height: 100%; text-align: center;">
+          <p style="font-size: 13px; line-height: 1.4; color: #ccc; text-align: center;">Убийство первой степени</p>
+        </div>
+      </div>
+
+      <div style="background-color: #0a0a0a; border: 1px solid #2a2a2a; overflow: hidden; min-height: 120px;">
+        <div style="padding: 20px; color: white; height: 100%; text-align: center;">
+          <p style="font-size: 13px; line-height: 1.4; color: #ccc; text-align: center;">Сексуальные преступления</p>
+        </div>
+      </div>
+
+      <!-- ========================================= -->
+      <!-- РЯД 6                                      -->
+      <!-- ========================================= -->
+      <div style="grid-column: span 5; background-color: #0a0a0a; border: 1px solid #2a2a2a; overflow: hidden; min-height: 120px;">
+        <div style="padding: 20px; color: white; height: 100%; text-align: center;">
+          <div style="font-size: 28px; font-weight: bold; color: #2c3e50; margin-bottom: 8px; text-align: center;">04</div>
+          <h3 style="font-size: 18px; margin-bottom: 8px; color: white; text-align: center;">Банкротство и автокредиты</h3>
+          <p style="font-size: 13px; line-height: 1.4; color: #ccc; text-align: center;">Списание долга с сохранением права собственности на авто</p>
+        </div>
+      </div>
+
+      <!-- ========================================= -->
+      <!-- РЯД 7                                      -->
+      <!-- ========================================= -->
+      <div style="background-color: #0a0a0a; border: 1px solid #2a2a2a; overflow: hidden; min-height: 120px;">
+        <img src="https://placehold.co/400x300/1a1a2e/white?text=Bankruptcy" alt="Банкротство" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+      </div>
+
+      <div style="grid-column: span 2; background-color: #0a0a0a; border: 1px solid #2a2a2a; overflow: hidden; min-height: 120px;">
+        <div style="padding: 20px; color: white; height: 100%; text-align: center;">
+          <h3 style="font-size: 18px; margin-bottom: 8px; color: white; text-align: center;">Индивидуальный подход</h3>
+          <p style="font-size: 13px; line-height: 1.4; color: #ccc; text-align: center;">Несовершеннолетние | Профессионалы | Лица с судимостями</p>
+        </div>
+      </div>
+
+      <div style="background-color: #0a0a0a; border: 1px solid #2a2a2a; overflow: hidden; min-height: 120px;">
+        <img src="https://placehold.co/400x300/1a1a2e/white?text=Consultation" alt="Консультация" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+      </div>
+
+      <div style="background-color: #0a0a0a; border: 1px solid #2a2a2a; overflow: hidden; min-height: 120px;">
+        <div style="padding: 20px; color: white; height: 100%; text-align: center;">
+          <p style="font-size: 13px; line-height: 1.4; color: #ccc; text-align: center;">24/7 поддержка</p>
+        </div>
+      </div>
+
+      <!-- ========================================= -->
+      <!-- РЯД 8                                      -->
+      <!-- ========================================= -->
+      <div style="grid-column: span 2; background-color: #0a0a0a; border: 1px solid #2a2a2a; overflow: hidden; min-height: 120px;">
+        <div style="padding: 20px; color: white; height: 100%; text-align: center;">
+          <div style="font-size: 28px; font-weight: bold; color: #2c3e50; margin-bottom: 8px; text-align: center;">05</div>
+          <h3 style="font-size: 18px; margin-bottom: 8px; color: white; text-align: center;">Регион Дарем</h3>
+          <p style="font-size: 13px; line-height: 1.4; color: #ccc; text-align: center;">Большой Торонто | Ошава | Онтарио</p>
+        </div>
+      </div>
+
+      <div style="grid-column: span 2; background-color: #0a0a0a; border: 1px solid #2a2a2a; overflow: hidden; min-height: 120px;">
+        <img src="https://placehold.co/800x400/1a1a2e/white?text=Toronto" alt="Торонто" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+      </div>
+
+      <div style="background-color: #0a0a0a; border: 1px solid #2a2a2a; overflow: hidden; min-height: 120px;">
+        <div style="padding: 20px; color: white; height: 100%; text-align: center;">
+          <p style="font-size: 13px; line-height: 1.4; color: #ccc; text-align: center;">Прилегающие районы</p>
+        </div>
+      </div>
+
+      <!-- ========================================= -->
+      <!-- РЯД 9                                      -->
+      <!-- ========================================= -->
+      <div style="grid-column: span 3; background-color: #0a0a0a; border: 1px solid #2a2a2a; overflow: hidden; min-height: 120px;">
+        <img src="https://placehold.co/1200x400/1a1a2e/white?text=Defense+Strategy" alt="Стратегия защиты" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+      </div>
+
+      <div style="grid-column: span 2; background-color: #0a0a0a; border: 1px solid #2a2a2a; overflow: hidden; min-height: 120px;">
+        <div style="padding: 20px; color: white; height: 100%; text-align: center;">
+          <h3 style="font-size: 18px; margin-bottom: 8px; color: white; text-align: center;">Бесплатная консультация</h3>
+          <p style="font-size: 13px; line-height: 1.4; color: #ccc; text-align: center;">Конфиденциально | Круглосуточно</p>
+        </div>
+      </div>
+
+      <!-- ========================================= -->
+      <!-- РЯД 10                                     -->
+      <!-- ========================================= -->
+      <div style="grid-column: span 5; background-color: #0a0a0a; border: 1px solid #2a2a2a; overflow: hidden; min-height: 120px;">
+        <div style="padding: 20px; color: white; height: 100%; text-align: center;">
+          <p style="font-size: 13px; line-height: 1.4; color: #ccc; text-align: center;">⚖️ Barrison & Manitius | +7 (999) 852-58-21 | olegrewko@gmail.com</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+
+<!--Уголовные  -->
 <div class="container1400" style="max-width: 1400px; margin: 0 auto; padding: 20px;">
   <div style="display: flex; flex-wrap: wrap; gap: 40px; background: white; border-radius: 32px; overflow: hidden; box-shadow: 0 20px 50px rgba(0,0,0,0.08); align-items: center;">
 
