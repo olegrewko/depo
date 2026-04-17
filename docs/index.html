@@ -5705,6 +5705,20 @@ document.addEventListener('DOMContentLoaded', () => {
 }
 </style>
         <!--Уголовные  -->
+        <!-- АДАПТАЦИЯ: на экранах меньше 768px всё в одну колонку -->
+<style>
+  @media (max-width: 768px) {
+    div[style*="display: grid"] {
+      display: flex !important;
+      flex-direction: column !important;
+    }
+
+    div[style*="grid-column: span"] {
+      grid-column: auto !important;
+      grid-row: auto !important;
+    }
+  }
+</style>
 <div style="display: flex; justify-content: center; align-items: center; width: 100%; background: transparent; padding: 40px 20px;">
 
   <div style="width: 100%; max-width: 1400px;">
@@ -5736,8 +5750,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
       <div style="background-color: #0a0a0a; border: 1px solid #2a2a2a; overflow: hidden; min-height: 120px;">
         <div style="padding: 20px; color: white; height: 100%; text-align: center;">
-          <div style="font-size: 13px; font-weight: bold; color: #2c3e50; margin-bottom: 8px; text-align: center;">С 2014 года на рынке</div>
-          <p style="font-size: 13px; line-height: 1.4; color: #2c3e50; text-align: left;">
+          <div style="font-size: 13px; font-weight: bold; color: #587da1; margin-bottom: 8px; text-align: center;">С 2014 года на рынке</div>
+          <p style="font-size: 13px; line-height: 1.4; color: #5a7fa3; text-align: left;">
             depo-500 — это команда опытных адвокатов, удостоенная множества наград.
             Когда на кону ваша свобода или карьера, вы можете положиться на нашу команду, которая уже более 10 лет ведет сложные
             дела и добивается для вас наилучшего исхода. Наши адвокаты вели более 90 дел и судебных процессов.
@@ -5780,21 +5794,19 @@ document.addEventListener('DOMContentLoaded', () => {
       </div>
 
       <div style="grid-column: span 2; background-color: #0a0a0a; border: 1px solid #2a2a2a; overflow: hidden; min-height: 120px;">
-        <img src="https://placehold.co/800x400/1a1a2e/white?text=Legal+Team" alt="Команда юристов" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+        <img src="img/slider/speed.jpg" alt="img/slider/speed.jpg"
+          style="width: 100%; height: 100%; object-fit: cover; display: block;">
       </div>
 
       <div style="grid-column: span 2; background-color: #0a0a0a; border: 1px solid #2a2a2a; overflow: hidden; min-height: 120px;">
-        <div style="padding: 20px; color: white; height: 100%; text-align: center;">
-          <h3 style="font-size: 18px; margin-bottom: 8px; color: white; text-align: center;">Опасное вождение</h3>
-          <p style="font-size: 13px; line-height: 1.4; color: #ccc; text-align: center;">Защита от обвинений и переквалификация</p>
-        </div>
+       <img src="img/slider/blogpost.jpg" alt="img/slider/w800.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block;">
       </div>
 
       <!-- ========================================= -->
       <!-- РЯД 4                                      -->
       <!-- ========================================= -->
       <div style="grid-column: span 3; grid-row: span 2; background-color: #0a0a0a; border: 1px solid #2a2a2a; overflow: hidden; min-height: 120px;">
-        <img src="https://placehold.co/1200x600/1a1a2e/white?text=Justice" alt="Правосудие" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+        <img src="img/slider/matt.jpg" alt="img/slider/w800.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block;">
       </div>
 
       <div style="background-color: #0a0a0a; border: 1px solid #2a2a2a; overflow: hidden; min-height: 120px;">
@@ -5830,11 +5842,8 @@ document.addEventListener('DOMContentLoaded', () => {
       <!-- РЯД 6                                      -->
       <!-- ========================================= -->
       <div style="grid-column: span 5; background-color: #0a0a0a; border: 1px solid #2a2a2a; overflow: hidden; min-height: 120px;">
-        <div style="padding: 20px; color: white; height: 100%; text-align: center;">
-          <div style="font-size: 28px; font-weight: bold; color: #2c3e50; margin-bottom: 8px; text-align: center;">04</div>
-          <h3 style="font-size: 18px; margin-bottom: 8px; color: white; text-align: center;">Банкротство и автокредиты</h3>
-          <p style="font-size: 13px; line-height: 1.4; color: #ccc; text-align: center;">Списание долга с сохранением права собственности на авто</p>
-        </div>
+        <img src="img/slider/invest.jpg" alt="img/slider/invest.jpg"
+          style="width: 100%; height: 100%; object-fit: cover; display: block;">
       </div>
 
       <!-- ========================================= -->
@@ -5865,20 +5874,21 @@ document.addEventListener('DOMContentLoaded', () => {
       <!-- РЯД 8                                      -->
       <!-- ========================================= -->
       <div style="grid-column: span 2; background-color: #0a0a0a; border: 1px solid #2a2a2a; overflow: hidden; min-height: 120px;">
-        <div style="padding: 20px; color: white; height: 100%; text-align: center;">
-          <div style="font-size: 28px; font-weight: bold; color: #2c3e50; margin-bottom: 8px; text-align: center;">05</div>
-          <h3 style="font-size: 18px; margin-bottom: 8px; color: white; text-align: center;">Регион Дарем</h3>
-          <p style="font-size: 13px; line-height: 1.4; color: #ccc; text-align: center;">Большой Торонто | Ошава | Онтарио</p>
-        </div>
+        <img src="img/slider/police.jpg" alt="img/slider/police.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block;">
       </div>
 
       <div style="grid-column: span 2; background-color: #0a0a0a; border: 1px solid #2a2a2a; overflow: hidden; min-height: 120px;">
-        <img src="https://placehold.co/800x400/1a1a2e/white?text=Toronto" alt="Торонто" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+        <img src="img/slider/police-min.jpg" alt="img/slider/police-min.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block;">
       </div>
 
       <div style="background-color: #0a0a0a; border: 1px solid #2a2a2a; overflow: hidden; min-height: 120px;">
         <div style="padding: 20px; color: white; height: 100%; text-align: center;">
-          <p style="font-size: 13px; line-height: 1.4; color: #ccc; text-align: center;">Прилегающие районы</p>
+          <p style="font-size: 13px; line-height: 1.4; color: #ccc; text-align: left;">
+            Бегство от сотрудника полиции является серьезным правонарушением, предусмотренным Уголовным кодексом. Если вы не
+            остановитесь по требованию сотрудника полиции в течение разумного времени или будете убегать от полиции, если вас
+            преследуют, вас могут обвинить в бегстве от полиции. Если вас признают виновным, это будет означать, что у вас есть
+            судимость, и вам может грозить штраф или даже тюремное заключение.
+          </p>
         </div>
       </div>
 
@@ -5900,9 +5910,8 @@ document.addEventListener('DOMContentLoaded', () => {
       <!-- РЯД 10                                     -->
       <!-- ========================================= -->
       <div style="grid-column: span 5; background-color: #0a0a0a; border: 1px solid #2a2a2a; overflow: hidden; min-height: 120px;">
-        <div style="padding: 20px; color: white; height: 100%; text-align: center;">
-          <p style="font-size: 13px; line-height: 1.4; color: #ccc; text-align: center;">⚖️ Barrison & Manitius | +7 (999) 852-58-21 | olegrewko@gmail.com</p>
-        </div>
+        <img src="img/slider/michel.jpg" alt="img/slider/michel.jpg"
+          style="width: 100%; height: 100%; object-fit: cover; display: block;">
       </div>
 
     </div>
