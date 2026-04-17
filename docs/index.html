@@ -4108,6 +4108,61 @@ max-width: 768px;
   }
 } */
  </style>
+   <style>
+    /* Базовые стили */
+    .about__inner {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .about__inner + .about__inner {
+      margin-top: 30px;
+    }
+
+    .about__cell {
+      flex: 1;
+    }
+
+    .about__cell img {
+      width: 100%;
+      border-radius: 8px;
+      display: block;
+    }
+
+    .text-block {
+      background-color: #2c3e50;
+      padding: 30px;
+      border-radius: 8px;
+    }
+
+    .text-block p {
+      color: white;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* АДАПТИВ: при ширине 650px и меньше */
+    @media (max-width: 650px) {
+      .about__inner {
+        flex-direction: column;
+      }
+
+      /* Для второго блока: меняем порядок, чтобы фото было после текста */
+      .about__inner:last-child {
+        flex-direction: column;
+      }
+
+      /* Если нужно, чтобы фото было строго после текста в обоих блоках */
+      .about__inner .about__cell:first-child {
+        order: 1;
+      }
+
+      .about__inner .about__cell:last-child {
+        order: 2;
+      }
+    }
+  </style>
 </head>
 
 <body id="body">
@@ -4174,67 +4229,70 @@ max-width: 768px;
       <div class="slider-blog">
         <div class="slider-blog__inner">
           <div class="slider-blog__item">
-            <img class="slider-blog__img" src="img/slider/g800.jpg" alt="img/logo3.png" />
+            <img class="slider-blog__img" src="img/slider/girl-in-alley.jpg" alt="img/girl-in-alley.png" />
           </div>
           <div class="slider-blog__item">
-            <img class="slider-blog__img" src="img/slider/ms.jpg" alt="img/na02.jpg" />
+            <img class="slider-blog__img" src="img/slider/sexual.jpg" alt="img/slider/sexual.jpg" />
           </div>
           <div class="slider-blog__item">
-            <img class="slider-blog__img" src="img/slider/street.jpg" alt="img/na02.jpg" />
+            <img class="slider-blog__img" src="img/slider/street.jpg" alt="img/slider/street.jpg" />
           </div>
           <div class="slider-blog__item">
-            <img class="slider-blog__img" src="img/slider/w800.jpg" alt="img/na.png" />
+            <img class="slider-blog__img" src="img/slider/warehouse850.jpg" alt="img/slider/warehouse850.jpg" />
           </div>
           <div class="slider-blog__item">
-            <img class="slider-blog__img" src="img/slider/mariela800.jpg" alt="img/na02.jpg" />
+            <img class="slider-blog__img" src="img/slider/mariela850.jpg" alt="img/slider/mariela800.jpg" />
           </div>
           <div class="slider-blog__item">
-            <img class="slider-blog__img" src="img/slider/a800.jpg" alt="img/na02.jpg" />
+            <img class="slider-blog__img" src="img/slider/a800.jpg" alt="img/slider/a800.jpg" />
           </div>
            <div class="slider-blog__item">
-            <img class="slider-blog__img" src="img/slider/al1800.jpg" alt="img/na02.jpg" />
+            <img class="slider-blog__img" src="img/slider/al1800.jpg" alt="img/slider/al1800.jpg" />
           </div>
             <div class="slider-blog__item">
-              <img class="slider-blog__img" src="img/slider/a1800.jpg" alt="img/na02.jpg" />
+              <img class="slider-blog__img" src="img/slider/a1800.jpg" alt="img/slider/a1800.jpg" />
             </div>
           <div class="slider-blog__item">
-            <img class="slider-blog__img" src="img/slider/michel.jpg" alt="img/na02.jpg" />
+            <img class="slider-blog__img" src="img/slider/michel850.jpg" alt="img/slider/michel850.jpg" />
           </div>
           <div class="slider-blog__item">
-            <img class="slider-blog__img" src="img/slider/lac.jpg" alt="img/na02.jpg" />
+            <img class="slider-blog__img" src="img/slider/lacie850.jpg" alt="img/slider/lacie850.jpg" />
           </div>
           <div class="slider-blog__item">
-            <img class="slider-blog__img" src="img/slider/c8.jpg" alt="img/na02.jpg" />
+            <img class="slider-blog__img" src="img/slider/c8.jpg" alt="img/slider/c8.jpg" />
           </div>
           <div class="slider-blog__item">
-            <img class="slider-blog__img" src="img/slider/tt.jpg" alt="img/na02.jpg" />
+            <img class="slider-blog__img" src="img/slider/tt.jpg" alt="img/slider/tt.jpg" />
+          </div>
+          <div class="slider-blog__item">
+            <img class="slider-blog__img" src="img/slider/mirror850.jpg" alt="img/slider/mirror850.jpg" />
           </div>
            <div class="slider-blog__item">
-            <img class="slider-blog__img" src="img/slider/ma.jpg" alt="img/ma.jpg" />
+            <img class="slider-blog__img" src="img/slider/ma.jpg" alt="img/slider/ma.jpg" />
           </div>
           <div class="slider-blog__item">
-            <img class="slider-blog__img" src="img/slider/pex.jpg" alt="img/na02.jpg" />
+            <img class="slider-blog__img" src="img/slider/pex.jpg" alt="img/slider/pex.jpg" />
           </div>
            <div class="slider-blog__item">
-            <img class="slider-blog__img" src="img/slider/prison800.jpg" alt="img/prison800.jpg" />
+            <img class="slider-blog__img" src="img/slider/prison850.jpg" alt="img/prison850.jpg" />
           </div>
           <div class="slider-blog__item">
-            <img class="slider-blog__img" src="img/slider/brett.jpg" alt="img/brett.jpg" />
+            <img class="slider-blog__img" src="img/slider/brett.jpg" alt="img/slider/brett.jpg" />
           </div>
           <div class="slider-blog__item">
-            <img class="slider-blog__img" src="img/slider/clock.jpg" alt="img/na02.jpg" />
+            <img class="slider-blog__img" src="img/slider/clock.jpg" alt="img/slider/clock.jpg" />
           </div>
           <div class="slider-blog__item">
-            <img class="slider-blog__img" src="img/slider/timon.jpg" alt="img/timon.jpg" />
+            <img class="slider-blog__img" src="img/slider/timon.jpg" alt="img/slider/timon.jpg" />
           </div>
           <div class="slider-blog__item">
             <img class="slider-blog__img" src="img/slider/l4.jpg" alt="img/l4.jpg" />
           </div>
           <div class="slider-blog__item">
-            <img class="slider-blog__img" src="img/slider/hotel.jpg" alt="img/na02.jpg" />
+            <img class="slider-blog__img" src="img/slider/hotel.jpg" alt="img/slider/hotel.jpg" />
           </div>
            <div class="slider-blog__item">
-            <img class="slider-blog__img" src="img/slider/manish.jpg" alt="img/na02.jpg" />
+            <img class="slider-blog__img" src="img/slider/manish.jpg" alt="img/slider/manish.jpg" />
           </div>
 
         </div>
@@ -4246,7 +4304,7 @@ max-width: 768px;
           <div class="grid-5">
             <div class="col-lg-3 col-sm-6">
               <p>
-              <p class="title-6r">001</p>
+              <p class="title-6r">0001</p>
               </p>
               <h3 class="advantage-title">Банкротные дела</h3>
               <div class="#">
@@ -4279,7 +4337,7 @@ max-width: 768px;
             <div class="col-lg-3 col-sm-6">
               <div class="item fas">
                 <p>
-                <p class="title-6r">002</p>
+                <p class="title-6r">0002</p>
                 </p>
                 <h3 class="advantage-title">Уголовные дела</h3>
                 <p class="bt-2">
@@ -4313,7 +4371,7 @@ max-width: 768px;
             <div class="col-lg-3 col-sm-6">
               <div class="item fas">
                 <p>
-                <p class="title-6r">003</p>
+                <p class="title-6r">0003</p>
                 </p>
                 <h3 class="advantage-title">Проблемные активы</h3>
                 <p class="bt-2">
@@ -4344,7 +4402,7 @@ max-width: 768px;
             <div class="col-lg-3 col-sm-6">
               <div class="item fas">
                 <p>
-                <p class="title-6r">004</p>
+                <p class="title-6r">0004</p>
                 </p>
                 <h3 class="advantage-title">Сопровождение сделок</h3>
                 <p class="bt-2">
@@ -4398,10 +4456,10 @@ max-width: 768px;
             <div class="col-lg-3 col-sm-6">
               <div class="item fas">
                 <p class="title-6r">
-                  <span class="ellipse-maroon">0005</span>
+                  <span class="ellipse-maroon">00005</span>
                 </p>
                 <h3 class="advantage-title">Вернуть недвижимость</h3>
-                <p class="bt-2 maroon">
+                <p class="bt-2 darkslategray">
                   Основное направление нашей деятельности.
                   Это проекты, направленные на то, чтобы выиграть конкретное дело в суде. Работаем в арбитраже, коммерческом арбитраже (в
                   том числе МКАС), судах общей юрисдикции и третейских судах. Работаем в судах по всей стране. Специализируемся на
@@ -4468,50 +4526,50 @@ Our story is being written right now — through your victories.
         </div>
 
       </section>
-      <div class="container">
+      <div class="container ">
+<section class="about mb-100" id="about">
+  <div class="container1400">
+    <div class="container1400" style="max-width: 1400px; margin: 0 auto; padding: 20px;">
 
-        <section class="about mb-100" id="about">
-          <div class="container1400">
-            <div class="about__inner">
-
-              <div class="about__cell">
-                <img src="img/slider/bg900.png" alt="img/slider/bg900.png">
-
-              </div>
-
-              <div class="about__cell">
-                <div class="about__ca">
-                  <p class="black">
-              Всё началось не с офиса и не с планов. История depo-500 началась с одного человека — Владимира Бауэрса. Он вложил в
-              компанию не только деньги и время, а кое-что поважнее: свою целеустремлённость и настоящую страсть к делу.
-
-              Эти качества стали ДНК depo-500. Они передаются как семейная ценность — от основателя к каждому сотруднику. Прошло более
-              20 лет, но дух не изменился. Мы всё так же горим своим делом, не сдаёмся перед трудностями и верим, что честная работа
-              всегда побеждает. depo-500 — это не просто бренд. Это характер одного человека, который стал характером целой команды.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="about__inner">
-              <div class="about__cell">
-
-                <div class="about__cb ">
-                  <p class="black">
-                    Знакомтесь с нашим главным персонажем это Джессика самая последняя разработка ИИ в сфере юриспруденции поколение Nexus-9.
-                    Этот сайт также создан с помощью Джессики, а посвящается Седе Оганесовне моей учительнице по прикладной математике.
-
-                  </p>
-
-                </div>
-              </div>
-
-              <div class="about__cell">
-                <img src="img/slider/j900.png" alt="img/slider/j900.png">
-
-              </div>
-            </div>
+      <!-- Первый блок: текст слева, картинка справа -->
+      <div class="about__inner">
+        <div class="about__cell">
+          <div class="text-block">
+            <p>
+              Всё началось не с офиса и не с планов. История depo-500 началась с одного человека — Владимира Бауэрса. Он
+              вложил в компанию не только деньги и время, а кое-что поважнее: свою целеустремлённость и настоящую страсть к делу.
+              <br><br>
+              Эти качества стали ДНК depo-500. Они передаются как семейная ценность — от основателя к каждому сотруднику.
+              Прошло более 20 лет, но дух не изменился. Мы всё так же горим своим делом, не сдаёмся перед трудностями и верим, что
+              честная работа всегда побеждает. depo-500 — это не просто бренд. Это характер одного человека, который стал характером
+              целой команды.
+            </p>
           </div>
-        </section>
+        </div>
+        <div class="about__cell">
+          <img src="img/slider/bg900.png" alt="img/slider/bg900.png">
+        </div>
+      </div>
+
+      <!-- Второй блок: картинка слева, текст справа -->
+      <div class="about__inner">
+        <div class="about__cell">
+          <img src="img/slider/j900.png" alt="img/slider/j900.png">
+        </div>
+        <div class="about__cell">
+          <div class="text-block">
+            <p>
+              Знакомьтесь с нашим главным персонажем — это Джессика, самая последняя разработка ИИ в сфере юриспруденции,
+              поколение Nexus-9. Этот сайт также создан с помощью Джессики, а посвящается Седе Оганесовне, моей учительнице
+              по прикладной математике.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
       </div>
 <!--Каталог+ Поиск -->
 <style>
@@ -4626,147 +4684,78 @@ We listen first. We learn your story and your goals. We stay by your side, fight
 Call us for the best result. Our legal experts know how to navigate the system to achieve your goals. Free consultation available.
                     </p>
         </div>
-        <div class="container1400">
+       <div class="container1400" style="margin: 0 auto; padding: 20px;">
+  <div class="grid-5" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
 
-          <div class="grid-5">
-            <div class="col-lg-3 col-sm-6">
-              <div class="card">
-              <p>
-              <p class="title-6r">01</p>
-              </p>
-              <!-- <div class="h140 mb-10">
-              <h3 class="advantage-title">Банкротные дела</h3>
-              <h3 class="advantage-title">Автокредиты</h3>
-              <h3 class="advantage-title">Вождение с нарушениями</h3>
-
-              </div> -->
-                            <img src="img/team/t2.jpg" alt="img/team/t2.jpg" />
-<div class="offer-hit">
-                            <p class="black">
-                              Бахром Файзуллоев | Адвокат
-                            </p>
-                            <p class="black">
-                               89539690586
-                            </p>
-                            <p class="black">
-                               olegrewko@gmail.com
-                            </p>
-</div>
-                          </div>
-            </div>
-
-            <div class="col-lg-3 col-sm-6">
-              <div class="card">
-                <p>
-                <p class="title-6r">02</p>
-                </p>
-<!-- <div class="h140 mb-10">
-              <h3 class="advantage-title">Уголовные дела</h3>
-              <h3 class="advantage-title">Торговля людьми</h3>
-              <h3 class="advantage-title">Наркотики оружие</h3>
-
-</div> -->
-              <img src="img/team/t2.jpg" alt="img/team/t2.jpg" />
-              <div class="offer-hit">
-              <p class="black">
-                Олег Ревко | Помощник юриста
-              </p>
-                <p class="black">
-                89998525821
-              </p>
-                <p class="black">
-                 olegrewko@gmail.com
-                </p>
-            </div>
-              </div>
-              </div>
-
-            <div class="col-lg-3 col-sm-6">
-              <div class="card">
-                <p>
-                <p class="title-6r">03</p>
-                </p>
-<!-- <div class="h140  mb-10">
-                <h3 class="advantage-title">Бытовое насилие</h3>
-                <h3 class="advantage-title">Трудовые споры</h3>
-                <h3 class="advantage-title">Здравоохранение</h3>
-
-</div> -->
-                <!-- <div class="card"> -->
-                  <img src="img/team/t3.jpg" alt="img/team/t3.jpg" />
-<div class="offer-hit">
-                      <p class="black mt-20">
-                        Виктор Витенко | Адвокат
-                      </p>
-                      <p class="black">
-                        89998525821
-                      </p>
-                      <p class="black">
-                        olegrewko@gmail.com
-                      </p>
-                </div>
-              </div>
-</div>
-
-            <div class="col-lg-3 col-sm-6">
-              <div class="card">
-                <p>
-                <p class="title-6r">04</p>
-                </p>
-                <!-- <div class="h140 mb-10">
-                <h3 class="advantage-title">Завещания</h3>
-                <h3 class="advantage-title">Наследство</h3>
-                <h3 class="advantage-title">ЖКХ задолженности</h3>
-
-                </div> -->
-                  <img src="img/team/as.jpg" alt="img/team/as.jpg" />
-<div class="offer-hit">
-                    <p class="black">
-                      Олег Ревко | Адвокат
-                    </p>
-                    <p class="black">
-                      89998525821
-                    </p>
-                    <p class="black">
-                      olegrewko@gmail.com
-                    </p>
-                </div>
-              </div>
-</div>
-
-            <div class="col-lg-3 col-sm-6">
-              <div class="card">
-                <p>
-                <p class="title-6r">05</p>
-                </p>
-                <!-- <div class="h140  mb-10">
-                <h3 class="advantage-title">Возврат недвижимости</h3>
-                <h3 class="advantage-title">Бытовое насилие</h3>
-                <h3 class="advantage-title">Опасное вождение</h3>
-
-                </div> -->
-                <!-- <div class="card"> -->
-                  <img src="img/team/as.jpg" alt="img/team/t1.jpg" />
-<div class="offer-hit">
-                      <p class="black">
-                        Олег Ревко | Адвокат
-                      </p>
-                      <p class="black">
-                        89998525821
-                      </p>
-                      <p class="black">
-                        olegrewko@gmail.com
-                      </p>
-                </div>
-              </div>
-</div>
-
-
-          </div>
+    <!-- Карточка 01 -->
+    <div class="col-lg-3 col-sm-6">
+      <div class="card" style="background-color: #011a35; border-radius: 4px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.2); transition: transform 0.3s ease; height: 100%;">
+        <div style="padding: 20px 20px 0 20px;">
+          <p class="title-6r" style="color: white; font-size: 48px; font-weight: bold; margin: 0 0 10px 0;">01</p>
         </div>
+        <img src="img/team/t2.jpg" alt="img/team/t2.jpg" style="width: 100%; height: auto; display: block;">
+        <div style="padding: 20px;">
+          <p style="color: white; margin: 0 0 8px 0; font-size: 16px; font-weight: 500;">Бахром Файзуллоев | Адвокат</p>
+          <p style="color: white; margin: 0 0 8px 0; font-size: 14px; opacity: 0.8;">89539690586</p>
+          <p style="color: white; margin: 0; font-size: 14px; opacity: 0.8;">olegrewko@gmail.com</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Карточка 02 -->
+    <div class="col-lg-3 col-sm-6">
+      <div class="card" style="background-color: #011325; border-radius: 4px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.2); transition: transform 0.3s ease; height: 100%;">
+        <div style="padding: 20px 20px 0 20px;">
+          <p class="title-6r" style="color: white; font-size: 48px; font-weight: bold; margin: 0 0 10px 0;">02</p>
+        </div>
+        <img src="img/team/t2.jpg" alt="img/team/t2.jpg" style="width: 100%; height: auto; display: block;">
+        <div style="padding: 20px;">
+          <p style="color: white; margin: 0 0 8px 0; font-size: 16px; font-weight: 500;">Олег Ревко | Помощник юриста</p>
+          <p style="color: white; margin: 0 0 8px 0; font-size: 14px; opacity: 0.8;">89998525821</p>
+          <p style="color: white; margin: 0; font-size: 14px; opacity: 0.8;">olegrewko@gmail.com</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Карточка 03 -->
+
+<div class="col-lg-3 col-sm-6">
+  <div class="card"
+    style="background-color: #024137; border-radius: 4px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.2); transition: transform 0.3s ease; height: 100%;">
+    <div style="padding: 20px 20px 0 20px;">
+      <p class="title-6r" style="color: white; font-size: 48px; font-weight: bold; margin: 0 0 10px 0;">03</p>
+    </div>
+    <img src="img/team/t3.jpg" alt="img/team/t3.jpg" style="width: 100%; height: auto; display: block;">
+    <div style="padding: 20px;">
+      <p style="color: white; margin: 0 0 8px 0; font-size: 16px; font-weight: 500;">Виктор Витенко | Адвокат</p>
+      <p style="color: white; margin: 0 0 8px 0; font-size: 14px; opacity: 0.9;">89998525821</p>
+      <p style="color: white; margin: 0; font-size: 14px; opacity: 0.9;">olegrewko@gmail.com</p>
+    </div>
+  </div>
+</div>
+    <!-- Карточка 04 -->
+    <div class="col-lg-3 col-sm-6">
+      <div class="card" style="background-color: #01172e; border-radius: 4px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.2); transition: transform 0.3s ease; height: 100%;">
+        <div style="padding: 20px 20px 0 20px;">
+          <p class="title-6r" style="color: white; font-size: 48px; font-weight: bold; margin: 0 0 10px 0;">04</p>
+        </div>
+        <img src="img/team/as.jpg" alt="img/team/as.jpg" style="width: 100%; height: auto; display: block;">
+        <div style="padding: 20px;">
+          <p style="color: white; margin: 0 0 8px 0; font-size: 16px; font-weight: 500;">Олег Ревко | Адвокат</p>
+          <p style="color: white; margin: 0 0 8px 0; font-size: 14px; opacity: 0.8;">89998525821</p>
+          <p style="color: white; margin: 0; font-size: 14px; opacity: 0.8;">olegrewko@gmail.com</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Карточка 05 -->
+
+
+  </div>
+</div>
       </section>
-<!-- </div> -->
-<div class="loudspeakers mt-50" id="property">
+<!-- Недвижимость -->
+<!-- <div class="loudspeakers mt-50" id="property">
   <div class="about__inner cadetblue">
     <div class="about__cell ">
       <div class="about__ca">
@@ -4797,7 +4786,93 @@ Call us for the best result. Our legal experts know how to navigate the system t
 
 
 
+      </div> -->
+      <!-- Недвижимость002 -->
+<style>
+  /* Принудительно делаем весь текст внутри about__inner белым */
+.about__inner * {
+  color: white !important;
+}
+
+/* Но ссылки и кнопки, если есть, не трогаем */
+.about__inner a:not(.special) {
+  color: white !important;
+}
+  @media (max-width: 768px) {
+    .about__inner {
+      flex-direction: column !important;
+      text-align: center;
+      padding: 30px 20px !important;
+    }
+
+    .menu__title-white {
+      font-size: 24px !important;
+      text-align: center;
+    }
+
+    .about__cell {
+      width: 100%;
+    }
+
+    .about__cell img {
+      max-width: 200px !important;
+    }
+  }
+</style>
+
+<div class="loudspeakers mt-50" id="property">
+  <div class="container1400"
+    style="display: flex; gap: 30px; align-items: center; background-color: #2c3e50; border-radius: 20px; padding: 40px; flex-wrap: wrap;">
+
+    <div style="flex: 1; min-width: 200px;">
+      <div style="background-color: #2c3e50;">
+        <div
+          style="color: white !important; font-size: 20px; font-weight: bold; line-height: 1.3; margin: 0; font-family: Jost, sans-serif;">
+          Перерегистрация<br> права собственности<br> на исходного владельца
+        </div>
       </div>
+    </div>
+
+    <div style="flex: 1; min-width: 350px; text-align: center;">
+      <img src="img/f0012.png" alt="img/f0012.png"
+        style="width: 100%; max-width: 450px; height: auto; display: block; margin: 0 auto; border-radius: 4px;">
+    </div>
+
+    <div style="flex: 2; min-width: 280px;">
+      <div style="background-color: #2c3e50;">
+        <div
+          style="color: white !important; line-height: 1.6; margin: 0; font-size: 14px; font-family: Jost, sans-serif;">
+          <strong style="color: white !important; font-size: 14px;">Признание сделки недействительной (оспоримая или
+            ничтожная сделка)</strong><br><br>
+          Этот путь используется, когда договор был, но он незаконен с самого начала. Основания (вы должны это доказать
+          в суде):
+          Сделка совершена под влиянием заблуждения (продавец думал, что подписывает договор аренды или дарения).
+          Сделка совершена под угрозой, насилием, обманом (ст. 179 ГК РФ).
+          Продавец был недееспособен или не понимал своих действий (нужна посмертная психолого-психиатрическая
+          экспертиза).
+          Сделка мнимая или притворная (например, продажа для вида, чтобы не отдавать долги).
+          <br><br>
+          <strong style="color: white !important;">Результат:</strong> Суд возвращает всё в исходное состояние
+          (реституция).
+          Право собственности аннулируется у покупателя и регистрируется на продавца.
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<style>
+  /* Дополнительная защита от внешних стилей */
+  .loudspeakers * {
+    color: white !important;
+  }
+
+  .loudspeakers div {
+    background-color: #2c3e50;
+  }
+</style>
+
     </div>
   </div>
   <!-- </div>
@@ -5317,47 +5392,75 @@ document.addEventListener('DOMContentLoaded', () => {
 <!-- tabs -->
 
 
+<div class="loudspeakers mt-50" id="b">
+  <div class="container1400"
+   style="display: flex; gap: 30px; align-items: center; background-color: #2c3e50; border-radius: 20px; padding: 40px; flex-wrap: wrap;">
 
-<!-- Поиск -->
-      <div class="loudspeakers mt-50" id="b">
-        <div class="about__inner cadetblue">
-          <!-- <div class="container1400"> -->
-          <div class="about__cell ">
-            <div class="about__ca">
-              <p class="menu__title-white">Списание долга по автокредиту с сохранением права собственности на авто.</p>
-            </div>
-          </div>
-
-          <div class="about__cell">
-            <img src="img/slider/jeu2000.jpg" alt="img/slider/jeu2000.jpg" />
-          </div>
-          <div class="ml-40">
-            <div class="about__cell">
-              <div class="about__ca ml-10">
-                <p class="white ml-40">
-                  Реально аннулировать кредит и оставить машину можно только через:<br>
-
-                  Банкротство физического лица с исключением автомобиля из конкурсной массы (если машина — единственное средство заработка
-                  или стоит дешевле 100-200 т.р.).<br>
-
-                  Отзыв лицензии у банка (долг продается коллекторам или списывается, но договор залога часто «теряется» — это лазейка).<br>
-
-                  Признание договора залога недействительным (через суд, если банк нарушил условия).<br>
-
-                  Истечение срока исковой давности (3 года после последнего платежа, но машина всё еще в залоге).<br>
-                </p>
-              </div>
-            </div>
-
-          </div>
-          </div>
+    <!-- Левый блок с заголовком -->
+    <div style="flex: 1; min-width: 250px;">
+      <div style="background-color: #2c3e50;">
+        <div style="color: white !important; font-size: 20px; font-weight: bold; line-height: 1.3; margin: 0; font-family: Jost, sans-serif;">
+          Списание долга по автокредиту с сохранением права собственности на авто.
         </div>
-        <!-- <div class="cell-800 "> -->
+      </div>
+    </div>
 
-          <div class="container1400">
+    <!-- Центральный блок с картинкой -->
+    <div style="flex: 1; min-width: 300px; text-align: center;">
+      <img src="img/slider/bp790.jpg" alt="img/slider/bp790.jpg" style="width: 100%; max-width: 500px; height: auto; display: block; margin: 0 auto; border-radius: 4px;">
+    </div>
+
+    <!-- Правый блок с текстом -->
+    <div style="flex: 2; min-width: 280px;">
+      <div style="background-color: #2c3e50;">
+        <div style="color: white !important; line-height: 1.6; margin: 0; font-size: 14px; font-family: Jost, sans-serif;">
+          <strong style="color: white !important; font-size: 18px;">Реально аннулировать кредит и оставить машину можно только через:</strong><br><br>
+          • Банкротство физического лица с исключением автомобиля из конкурсной массы (если машина — единственное средство заработка или стоит дешевле 100-200 т.р.).<br><br>
+          • Отзыв лицензии у банка (долг продается коллекторам или списывается, но договор залога часто «теряется» — это лазейка).<br><br>
+          • Признание договора залога недействительным (через суд, если банк нарушил условия).<br><br>
+          • Истечение срока исковой давности (3 года после последнего платежа, но машина всё еще в залоге).
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<style>
+  /* Адаптив для мобильных устройств */
+  @media (max-width: 768px) {
+    #b > div {
+      flex-direction: column !important;
+      text-align: center;
+      padding: 30px 20px !important;
+    }
+
+    #b > div > div:first-child div div {
+      font-size: 24px !important;
+      text-align: center;
+    }
+
+    #b > div > div:last-child {
+      text-align: left;
+    }
+  }
+
+  /* Защита от внешних стилей */
+  #b * {
+    color: white !important;
+  }
+  #b div {
+    background-color: #2c3e50;
+  }
+</style>
+
+
+<!-- Опасное вождение -->
+
+          <!-- <div class="container1400">
             <div class="about__inner">
             <div class="about__cell">
-<!-- <h2>Опасное вождение</h2> -->
+
               <div class="about__ca">
                 <h2 class="text-center">Опасное вождение</h2>
 
@@ -5475,14 +5578,139 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 </div>
 
-              </div>
-        <!--  -->
+              </div> -->
+<div class="container1400" style="max-width: 1400px; margin: 0 auto; padding: 20px;">
+
+  <!-- Блок 1: Опасное вождение -->
+  <div style="background-color: white; border-radius: 24px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.08); margin-bottom: 50px;">
+    <div style="display: flex; flex-wrap: wrap; gap: 0;">
+
+      <!-- Левая часть с картинкой -->
+      <div style="flex: 1.2; min-width: 280px;">
+        <img src="img/slider/clay.jpg" alt="img/slider/clay.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+      </div>
+
+      <!-- Правая часть с текстом -->
+      <div style="flex: 2; min-width: 300px; padding: 40px;">
+        <h2 style="color: #1a1a1a; font-size: 16px; font-weight: bold; margin-top: 0; margin-bottom: 25px; border-left: 2px solid #2c3e50; padding-left: 20px;">
+          Опасное вождение
+        </h2>
+        <div style="color: #333; line-height: 1.7; font-size: 14px;">
+          <p style="margin-bottom: 20px;"><strong style="color: #2c3e50;">Опасное вождение</strong> — это явное отклонение от общепринятых норм вождения. Это означает, что водитель ведет себя опасно, не считаясь с другими участниками дорожного движения, и является правонарушением, предусмотренным Уголовным кодексом.</p>
+
+          <p style="margin-bottom: 20px;">Обвинение в опасном вождении — это гораздо более серьезное правонарушение, за которое предусмотрено более суровое наказание, чем за неосторожное вождение, которое является правонарушением, предусмотренным Законом о дорожном движении. Признание виновным в опасном вождении может привести к судимости и автоматическому лишению водительских прав на один год.</p>
+
+          <p style="margin-bottom: 20px;">В зависимости от обстоятельств вашего дела вам может грозить тюремное заключение и/или штраф, особенно если речь идет о причинении телесных повреждений или смерти.</p>
+
+          <p style="margin-bottom: 20px;"><strong style="color: #2c3e50;">Адвокаты из depo-500</strong> разрабатывают стратегическую линию защиты от обвинений в опасном вождении и часто добиваются переквалификации обвинения в неосторожное вождение, что является гораздо менее серьезным правонарушением.</p>
+
+          <p style="margin-bottom: 20px;">В отличие от опасного вождения, неосторожное вождение не является уголовным преступлением и не влечет за собой судимость. Оно также не приводит к автоматическому лишению водительских прав. Наши адвокаты имеют большой опыт работы с делами, связанными с опасным вождением и другими правонарушениями на дороге, и могут помочь вам добиться наилучшего результата.</p>
+
+          <p style="margin-bottom: 20px;"><strong style="color: #2c3e50;">Опытные юристы защищают обвиняемых в побеге от полиции</strong><br>Бегство от сотрудника полиции является серьезным правонарушением, предусмотренным Уголовным кодексом. Если вы не остановитесь по требованию сотрудника полиции в течение разумного времени или будете убегать от полиции, если вас преследуют, вас могут обвинить в бегстве от полиции.</p>
+
+          <p>Адвокаты из Barrison & Manitius имеют многолетний опыт ведения дел по обвинениям в опасном вождении и уклонении от полиции. При встрече мы оценим ваше дело и вместе с вами разработаем оптимальную линию защиты.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Блок 2: Сексуальные преступления -->
+  <div style="background-color: white; border-radius: 24px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.08); margin-bottom: 50px;">
+    <div style="display: flex; flex-wrap: wrap; gap: 0; flex-direction: row-reverse;">
+
+      <!-- Правая часть с картинкой -->
+      <div style="flex: 1.2; min-width: 280px;">
+        <img src="img/slider/charles.jpg" alt="img/slider/charles.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+      </div>
+
+      <!-- Левая часть с текстом -->
+      <div style="flex: 2; min-width: 300px; padding: 40px;">
+        <h2 style="color: #1a1a1a; font-size: 20px; font-weight: bold; margin-top: 0; margin-bottom: 25px; border-left: 2px solid #2c3e50; padding-left: 20px;">
+          Сексуальные преступления
+        </h2>
+        <div style="color: #333; line-height: 1.7; font-size: 14px;">
+          <p style="margin-bottom: 20px;"><strong style="color: #2c3e50;">Сексуальные домогательства</strong> — одно из самых тяжких преступлений, которое влечет за собой серьезные социальные последствия.</p>
+
+          <p style="margin-bottom: 20px;">Осуждение за сексуальное преступление часто приводит к судимости, обязательной регистрации в различных реестрах лиц, совершивших преступления на сексуальной почве, и длительному тюремному заключению.</p>
+
+          <p style="margin-bottom: 20px;">Мы обеспечиваем столь же серьезную защиту по уголовным делам, направленную на защиту не только прав и свобод наших клиентов, но и их репутации.</p>
+
+          <div style="background-color: #f5f5f5; padding: 20px; border-radius: 12px; margin-top: 30px;">
+            <p style="margin: 0; color: #2c3e50; font-style: italic;">«Защита репутации — так же важна, как и защита свободы»</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Блок 3: Преступления связанные с наркотиками -->
+  <div style="background-color: white; border-radius: 24px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.08);">
+
+    <!-- Заголовок над блоком -->
+    <div style="text-align: center; padding: 40px 20px 20px 20px;">
+      <h2 style="color: #1a1a1a; font-size: 20px; font-weight: bold; margin: 0; display: inline-block; border-bottom: 2px solid #2c3e50; padding-bottom: 10px;">
+        Преступления, связанные с наркотиками | Drugs
+      </h2>
+    </div>
+
+    <div style="display: flex; flex-wrap: wrap; gap: 0; padding: 20px 40px 40px 40px;">
+
+      <!-- Левая часть с картинкой -->
+      <div style="flex: 1; min-width: 250px; padding-right: 30px;">
+        <img src="img/slider/m200.jpg" alt="img/slider/m200.jpg" style="width: 100%; border-radius: 16px; box-shadow: 0 10px 20px rgba(0,0,0,0.1); display: block;">
+      </div>
+
+      <!-- Правая часть с текстом -->
+      <div style="flex: 1.5; min-width: 280px;">
+        <div style="color: #333; line-height: 1.7; font-size: 14px;">
+          <p style="margin-bottom: 20px;"><strong style="color: #2c3e50; font-size: 14px;">Наказания за преступления, связанные с наркотиками, могут быть очень суровыми.</strong></p>
+
+          <p style="margin-bottom: 20px;">Длительные тюремные сроки — обычное дело. Даже за, казалось бы, незначительные преступления, связанные с наркотиками, можно получить серьезное наказание, а в случае повторного или последующего осуждения ситуация только усугубится.</p>
+
+          <p style="margin-bottom: 20px;">Многие также не знают, что судимость за преступления, связанные с наркотиками, может иметь иммиграционные последствия.</p>
+
+          <div style="background-color: #2c3e50; padding: 25px; border-radius: 12px; margin-top: 20px;">
+            <p style="color: white; margin: 0; font-size: 15px; line-height: 1.6;">
+              <strong style="color: white;">Мы предоставляем квалифицированную юридическую помощь</strong> по уголовным делам, связанным с любыми обвинениями, связанными с наркотиками. Из нашего офиса в Москве мы представляем интересы клиентов по всему региону. Наша цель — свести к минимуму ущерб, который обвинения в преступлениях, связанных с наркотиками, могут нанести жизни наших клиентов.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<style>
+  /* Адаптив для мобильных */
+  @media (max-width: 768px) {
+  .container1400 > div {
+    margin-bottom: 30px;
+  }
+
+  .container1400 > div > div {
+    flex-direction: column !important;
+  }
+
+  .container1400 > div > div > div {
+    padding: 30px !important;
+  }
+
+  h2 {
+    font-size: 26px !important;
+  }
+}
+</style>
+        <!--Уголовные  -->
         <div class="slider-blog mt-50">
           <div class="cell-800--black">
-            <!-- <h3 class="text-center-wh mt-20">Уголовные преступления</h3> -->
+
               <img class="mt-50" src="img/slider/jcat400.jpg">
 
-<!-- <h3 class="text-center-wh mt-20">Уголовные преступления</h3> -->
+
 <p class=" white mt-50">С 2014 года наша фирма предоставляет квалифицированные услуги и индивидуальный подход клиентам, обвиняемым в самых
 разных уголовных преступлениях. Коллективный опыт наших юристов охватывает весь спектр уголовных дел — от нарушений
 правил дорожного движения до обвинений в убийстве первой степени. Мы можем помочь вам на любом этапе уголовного процесса
@@ -5499,7 +5727,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="cell-900-df">
               <img src="img/slider/police.jpg" alt="img/pe1.jpg">
 
-              <!-- <div class="#"> -->
+
               <p class="white mt-50" >
 Если вы или кто-то из ваших знакомых оказались вовлечены в уголовный процесс, знания и практический опыт вашего адвоката
 имеют первостепенное значение для достижения наилучшего результата. В Barrison & Manitius мы предоставляем
@@ -5509,19 +5737,180 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
             </div>
 <div class="dummy08">
-<!-- <h1 class="text-center-wh mt-100">Серия 800 Diamond</h1> -->
-                <!-- <h1 class="text-center-wh ">The Highest Form of Sound</h1> -->
+
+
               </div>
 
 
           </div>
+          <!-- Criminl002 -->
+<div class="slider-blog mt-50">
+  <div style="max-width: 1400px; margin: 0 auto; padding: 20px;">
 
+    <!-- Главный заголовок -->
+    <div style="text-align: center; margin-bottom: 50px;">
+      <h1 style="color: #1a1a1a; font-size: 48px; font-weight: bold; margin: 0; letter-spacing: -0.5px;">
+        Уголовные преступления
+      </h1>
+      <div style="width: 80px; height: 4px; background: linear-gradient(90deg, #2c3e50, #5a7a9a); margin: 20px auto; border-radius: 2px;"></div>
+      <p style="color: #666; font-size: 18px; max-width: 700px; margin: 0 auto;">Профессиональная защита на всех этапах уголовного процесса</p>
+    </div>
+
+    <!-- Первый блок: текст + картинка в стиле "hero" -->
+    <div style="display: flex; flex-wrap: wrap; gap: 40px; background: white; border-radius: 32px; overflow: hidden; box-shadow: 0 20px 50px rgba(0,0,0,0.08); margin-bottom: 50px;">
+
+      <div style="flex: 1; min-width: 280px; padding: 40px;">
+        <div style="display: inline-block; background: #2c3e50; color: white; padding: 5px 15px; border-radius: 30px; font-size: 14px; font-weight: bold; margin-bottom: 20px;">
+          С 2014 года
+        </div>
+        <h2 style="color: #1a1a1a; font-size: 32px; font-weight: bold; margin: 0 0 20px 0; line-height: 1.3;">
+          Квалифицированные услуги и индивидуальный подход
+        </h2>
+        <p style="color: #444; line-height: 1.7; margin-bottom: 20px; font-size: 16px;">
+          Наша фирма предоставляет квалифицированные услуги и индивидуальный подход клиентам, обвиняемым в самых разных уголовных преступлениях.
+        </p>
+        <p style="color: #444; line-height: 1.7; margin-bottom: 20px;">
+          Коллективный опыт наших юристов охватывает весь спектр уголовных дел — от нарушений правил дорожного движения до обвинений в убийстве первой степени.
+        </p>
+        <div style="background: #f8f9fa; padding: 20px; border-radius: 16px; border-left: 4px solid #2c3e50;">
+          <p style="color: #333; margin: 0; font-style: italic;">
+            «Мы можем помочь вам на любом этапе уголовного процесса — от слушаний по вопросу об освобождении под залог до представления интересов в суде»
+          </p>
+        </div>
+      </div>
+
+      <div style="flex: 1; min-width: 280px;">
+        <img src="img/slider/jcat400.jpg" alt="img/slider/jcat400.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+      </div>
+
+    </div>
+
+    <!-- Второй блок: Индивидуальный подход с карточками статистики -->
+    <div style="background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%); border-radius: 32px; padding: 50px 40px; margin-bottom: 50px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+
+      <div style="text-align: center; max-width: 800px; margin: 0 auto 40px auto;">
+        <h2 style="color: #1a1a1a; font-size: 28px; font-weight: bold; margin-bottom: 20px;">
+          Индивидуальный подход к каждому клиенту
+        </h2>
+        <p style="color: #555; line-height: 1.7; font-size: 16px;">
+          Среди наших клиентов есть представители всех слоев общества: несовершеннолетние правонарушители, профессионалы,
+          лица с судимостями и те, у кого могут быть проблемы с психическим здоровьем.
+        </p>
+      </div>
+
+      <div style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: center;">
+        <div style="background: white; padding: 30px 25px; border-radius: 20px; text-align: center; flex: 1; min-width: 180px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+          <div style="background: #2c3e50; width: 60px; height: 60px; border-radius: 60px; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px auto;">
+            <span style="color: white; font-size: 24px; font-weight: bold;">1</span>
+          </div>
+          <div style="font-size: 28px; font-weight: bold; color: #2c3e50;">500+</div>
+          <div style="color: #666; font-size: 14px;">Успешных дел</div>
+        </div>
+        <div style="background: white; padding: 30px 25px; border-radius: 20px; text-align: center; flex: 1; min-width: 180px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+          <div style="background: #2c3e50; width: 60px; height: 60px; border-radius: 60px; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px auto;">
+            <span style="color: white; font-size: 24px; font-weight: bold;">2</span>
+          </div>
+          <div style="font-size: 28px; font-weight: bold; color: #2c3e50;">11 лет</div>
+          <div style="color: #666; font-size: 14px;">На рынке</div>
+        </div>
+        <div style="background: white; padding: 30px 25px; border-radius: 20px; text-align: center; flex: 1; min-width: 180px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+          <div style="background: #2c3e50; width: 60px; height: 60px; border-radius: 60px; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px auto;">
+            <span style="color: white; font-size: 24px; font-weight: bold;">3</span>
+          </div>
+          <div style="font-size: 28px; font-weight: bold; color: #2c3e50;">100%</div>
+          <div style="color: #666; font-size: 14px;">Индивидуальный подход</div>
+        </div>
+      </div>
+
+      <p style="color: #444; line-height: 1.7; margin-top: 40px; text-align: center; max-width: 800px; margin-left: auto; margin-right: auto;">
+        Учитывая ваши уникальные потребности, мы выбираем наиболее подходящий способ решения проблемы в каждом конкретном случае,
+        будь то переговоры с обвинением или более формальное судебное разбирательство.
+      </p>
+
+    </div>
+
+    <!-- Третий блок: Два столбца с картинкой и текстом -->
+    <div style="display: flex; flex-wrap: wrap; gap: 40px; background: white; border-radius: 32px; overflow: hidden; box-shadow: 0 20px 50px rgba(0,0,0,0.08); margin-bottom: 50px;">
+
+      <div style="flex: 1; min-width: 280px;">
+        <img src="img/slider/police.jpg" alt="img/slider/police.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+      </div>
+
+      <div style="flex: 1; min-width: 280px; padding: 40px;">
+        <div style="background: #2c3e50; width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+          <span style="color: white; font-size: 24px;">⚖️</span>
+        </div>
+        <h2 style="color: #1a1a1a; font-size: 28px; font-weight: bold; margin: 0 0 20px 0;">
+          Защита прав и будущего
+        </h2>
+        <p style="color: #444; line-height: 1.7; margin-bottom: 20px;">
+          Если вы или кто-то из ваших знакомых оказались вовлечены в уголовный процесс, знания и практический опыт вашего адвоката
+          имеют первостепенное значение для достижения наилучшего результата.
+        </p>
+        <p style="color: #444; line-height: 1.7;">
+          В Barrison & Manitius мы предоставляем квалифицированную защиту по уголовным делам, направленную на защиту прав и будущего
+          наших клиентов. Из нашего офиса в Ошаве мы обслуживаем клиентов по всему Онтарио в регионе Дарем, Большом Торонто и прилегающих районах.
+        </p>
+
+        <div style="display: flex; gap: 15px; margin-top: 30px; flex-wrap: wrap;">
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <div style="background: #e8f0f7; width: 32px; height: 32px; border-radius: 32px; display: flex; align-items: center; justify-content: center;">✓</div>
+            <span style="color: #333;">Регион Дарем</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <div style="background: #e8f0f7; width: 32px; height: 32px; border-radius: 32px; display: flex; align-items: center; justify-content: center;">✓</div>
+            <span style="color: #333;">Большой Торонто</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <div style="background: #e8f0f7; width: 32px; height: 32px; border-radius: 32px; display: flex; align-items: center; justify-content: center;">✓</div>
+            <span style="color: #333;">Прилегающие районы</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Нижний блок с цитатой -->
+    <div style="background: linear-gradient(135deg, #2c3e50 0%, #1a2a3a 100%); border-radius: 32px; padding: 50px 40px; text-align: center; color: white;">
+      <div style="font-size: 60px; margin-bottom: 20px;">⚖️</div>
+      <h3 style="color: white; font-size: 24px; font-weight: bold; margin-bottom: 20px; max-width: 700px; margin-left: auto; margin-right: auto;">
+        Ваша защита — наша главная цель
+      </h3>
+      <p style="color: rgba(255,255,255,0.85); font-size: 16px; max-width: 600px; margin: 0 auto;">
+        Бесплатная консультация • Конфиденциально • 24/7
+      </p>
+    </div>
+
+  </div>
+</div>
+
+<style>
+  /* Адаптив */
+  @media (max-width: 768px) {
+  .slider-blog > div {
+    padding: 15px !important;
+  }
+
+  h1 {
+    font-size: 32px !important;
+  }
+
+  .slider-blog > div > div {
+    border-radius: 24px !important;
+  }
+
+  .slider-blog > div > div > div {
+    padding: 25px !important;
+  }
+}
+</style>
 
         </div>
       </div>
       <!-- Duo -->
-      <div class="loudspeakers" id="duo"></div>
-      <div class="container1400">
+      <!-- <div class="loudspeakers" id="duo"></div> -->
+      <!-- <div class="container1400">
         <div class="container1400 about__inner">
 
           <div class="cell-800">
@@ -5572,8 +5961,90 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
         </div>
+      </div> -->
+<div class="container1400" style="max-width: 1400px; margin: 0 auto; padding: 20px;">
+  <div style="display: flex; flex-wrap: wrap; gap: 40px; background: white; border-radius: 32px; overflow: hidden; box-shadow: 0 20px 50px rgba(0,0,0,0.08); align-items: center;">
+
+    <!-- Левая часть с картинкой -->
+    <div style="flex: 1; min-width: 280px;">
+      <img src="img/slider/jeu.jpg" alt="img/slider/bp790.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block; min-height: 300px;">
+    </div>
+
+    <!-- Правая часть с текстом -->
+    <div style="flex: 1.5; min-width: 300px; padding: 40px 40px 40px 0;">
+
+      <h2 style="color: #1a1a1a; font-size: 18px; font-weight: bold; margin: 0 0 10px 0; border-left: 4px solid #2c3e50; padding-left: 20px;">
+        Опасное вождение
+      </h2>
+
+      <div style="color: #333; line-height: 1.2; font-size: 10px; max-height: 500px; overflow-y: auto; padding-right: 10px;">
+
+        <p style="margin-bottom: 20px;"><strong style="color: #2c3e50;">Опасное вождение</strong> — это явное отклонение от общепринятых норм вождения. Это означает, что водитель ведет себя опасно, не считаясь с другими участниками дорожного движения, и является правонарушением, предусмотренным Уголовным кодексом.</p>
+
+        <p style="margin-bottom: 20px;">Обвинение в опасном вождении — это гораздо более серьезное правонарушение, за которое предусмотрено более суровое наказание, чем за неосторожное вождение, которое является правонарушением, предусмотренным Законом о дорожном движении. Признание виновным в опасном вождении может привести к судимости и автоматическому лишению водительских прав на один год.</p>
+
+        <p style="margin-bottom: 20px;">В зависимости от обстоятельств вашего дела вам может грозить тюремное заключение и/или штраф, особенно если речь идет о причинении телесных повреждений или смерти.</p>
+
+        <div style="background: #f5f7fa; padding: 20px; border-radius: 16px; margin: 20px 0;">
+          <p style="margin: 0; font-style: italic; color: #2c3e50;">
+            <strong>Адвокаты из depo-500</strong> разрабатывают стратегическую линию защиты от обвинений в опасном вождении и часто добиваются переквалификации обвинения в неосторожное вождение, что является гораздо менее серьезным правонарушением.
+          </p>
+        </div>
+
+        <p style="margin-bottom: 20px;">В отличие от опасного вождения, неосторожное вождение не является уголовным преступлением и не влечет за собой судимость. Оно также не приводит к автоматическому лишению водительских прав. Наши адвокаты имеют большой опыт работы с делами, связанными с опасным вождением и другими правонарушениями на дороге, и могут помочь вам добиться наилучшего результата.</p>
+
+        <h3 style="color: #1a1a1a; font-size: 18px; margin: 25px 0 15px 0;">Опытные юристы защищают обвиняемых в побеге от полиции</h3>
+
+        <p style="margin-bottom: 20px;">Бегство от сотрудника полиции является серьезным правонарушением, предусмотренным Уголовным кодексом. Если вы не остановитесь по требованию сотрудника полиции в течение разумного времени или будете убегать от полиции, если вас преследуют, вас могут обвинить в бегстве от полиции. Если вас признают виновным, это будет означать, что у вас есть судимость, и вам может грозить штраф или даже тюремное заключение.</p>
+
+        <div style="background: #2c3e50; padding: 25px; border-radius: 16px; margin-top: 20px;">
+          <p style="color: white; margin: 0; line-height: 1.7;">
+            <strong style="color: white;">Адвокаты из depo-500</strong> имеют многолетний опыт ведения дел по обвинениям в опасном вождении и уклонении от полиции. При встрече мы оценим ваше дело и вместе с вами разработаем оптимальную линию защиты. Наши адвокаты предоставляют квалифицированную и опытную защиту по уголовным делам клиентам, которым предъявлены обвинения в опасном вождении.
+          </p>
+        </div>
+
       </div>
 
+    </div>
+
+  </div>
+</div>
+
+<style>
+  /* Адаптив */
+  @media (max-width: 768px) {
+  .container1400 > div {
+    flex-direction: column !important;
+  }
+
+  .container1400 > div > div:last-child {
+    padding: 30px !important;
+  }
+
+  h2 {
+    font-size: 26px !important;
+  }
+
+  h3 {
+    font-size: 20px !important;
+  }
+}
+
+/* Красивая полоса прокрутки для текста */
+.container1400 > div > div:last-child div::-webkit-scrollbar {
+  width: 5px;
+}
+
+.container1400 > div > div:last-child div::-webkit-scrollbar-track {
+  background: #e0e0e0;
+  border-radius: 10px;
+}
+
+.container1400 > div > div:last-child div::-webkit-scrollbar-thumb {
+  background: #2c3e50;
+  border-radius: 10px;
+}
+</style>
       <!-- <p class="text-center mt-100 mb-100">Дополнительные услуги в области уголовного права</p> -->
       <div class="container1400 d-flex">
         <a href="./category.html"  style="width: 1400px;">
@@ -6107,6 +6578,7 @@ document.addEventListener('DOMContentLoaded', () => {
               <div class="contact-grid-w100__content text-left">
                 <h2 class="depo-title">depo-500</h2>
                 <h5>Юридическое онлайн бюро</h5>
+                <h5>Ваша защита — наша главная цель</h5>
                 <div class="dummy08"></div>
                 <h3 class="text-left">Опишите Вашу проблему</h3>
                 <h3 class="text-left">

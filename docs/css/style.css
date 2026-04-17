@@ -2,12 +2,26 @@
 
 /* Document
    ========================================================================== */
+/* Принудительно делаем весь текст внутри about__inner белым */
+.about__inner * {
+  color: white !important;
+}
+
+/* Но ссылки и кнопки, если есть, не трогаем */
+.about__inner a:not(.special) {
+  color: white !important;
+}
+ .container-fluid {
+   width: 100%;
+   margin: 0;
+   padding: 0;
+ }
 .menu__title-white {
   color: white;
 }
-.black {
+/* .black {
   color: #000;
-}
+} */
 .advantage-title {
   font-weight: 500;
     font-size: 12px;
@@ -401,7 +415,7 @@
   --light-grey-color: #eee;
   --color-tundora: darkslategray;
   --color-violet: #544f9d;
-  --color-violet-rgba: rgba(84, 79, 157, 0.4);
+  --color-violet-rgba: rgba(84, 79, 157, 0.2);
 }
 
 @font-face {
@@ -1032,10 +1046,10 @@ li {
   color: black;
 }
 
-.white {
+/* .white {
   color: white;
 
-}
+} */
 
 .mt-50 {
   margin-top: 50px;
@@ -1096,7 +1110,7 @@ li {
 .bg-black {
   background-color: black;
   min-height: auto;
-  /* color: white; */
+  color: white;
 }
 
 .bg-grey {
@@ -1433,7 +1447,7 @@ font-family: 'Rubik';
   display: flex;
   justify-content: right;
   align-items: center;
-  
+
 }
 
 .about__ca {
