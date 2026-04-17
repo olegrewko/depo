@@ -893,7 +893,7 @@ li {
 }
 
 .mt-200 {
-  margin-top: 200px;
+  margin-top: -200px;
 }
 
 .bt-2 {
@@ -4727,7 +4727,7 @@ Call us for the best result. Our legal experts know how to navigate the system t
     </div>
     <img src="img/team/t3.jpg" alt="img/team/t3.jpg" style="width: 100%; height: auto; display: block;">
     <div style="padding: 20px;">
-      <p style="color: white; margin: 0 0 8px 0; font-size: 16px; font-weight: 500;">Виктор Витенко | Адвокат</p>
+      <p style="color: white; margin: 0 0 8px 0; font-size: 16px; font-weight: 500;">Виктория Витенко | Адвокат</p>
       <p style="color: white; margin: 0 0 8px 0; font-size: 14px; opacity: 0.9;">89998525821</p>
       <p style="color: white; margin: 0; font-size: 14px; opacity: 0.9;">olegrewko@gmail.com</p>
     </div>
@@ -5705,206 +5705,353 @@ document.addEventListener('DOMContentLoaded', () => {
 }
 </style>
         <!--Уголовные  -->
-        <div class="slider-blog mt-50">
-          <div class="cell-800--black">
+  <style>
+    /* * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-              <img class="mt-50" src="img/slider/jcat400.jpg">
+    body {
+      background: #0a0a0a;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      padding: 40px;
+    } */
+
+    /* Сетка 5 колонок × 20 рядов */
+    .grid-5x20 {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-auto-rows: minmax(100px, auto);
+      gap: 4px;
+      background-color: transparent;
+      max-width: 1600px;
+      margin: 0 auto;
+    }
+
+    /* Базовая ячейка */
+    .cell {
+      background-color: #0a0a0a;
+      border: 1px solid #2a2a2a;
+      overflow: hidden;
+      position: relative;
+      transition: all 0.2s ease;
+    }
+
+    .cell:hover {
+      border-color: #444;
+    }
+
+    /* Стили для фото */
+    .cell img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* Стили для текста */
+    .text-content {
+      padding: 20px;
+      color: white;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .text-content h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+      color: white;
+    }
+
+    .text-content p {
+      font-size: 13px;
+      line-height: 1.4;
+      color: #ccc;
+    }
+
+    .text-content .number {
+      font-size: 24px;
+      font-weight: bold;
+      color: #2c3e50;
+      margin-bottom: 10px;
+    }
+
+    /* Классы для объединения ячеек */
+    .span-2-cols { grid-column: span 2; }
+    .span-3-cols { grid-column: span 3; }
+    .span-4-cols { grid-column: span 4; }
+    .span-5-cols { grid-column: span 5; }
+
+    .span-2-rows { grid-row: span 2; }
+    .span-3-rows { grid-row: span 3; }
+    .span-4-rows { grid-row: span 4; }
+    .span-5-rows { grid-row: span 5; }
+
+    /* Заголовок над сеткой */
+    .grid-header {
+      text-align: center;
+      margin-bottom: 30px;
+      color: white;
+    }
+
+    .grid-header h1 {
+      font-size: 28px;
+      font-weight: 300;
+      letter-spacing: 2px;
+    }
+
+    .grid-header p {
+      color: #888;
+      margin-top: 10px;
+    }
+  </style>
 
 
-<p class=" white mt-50">С 2014 года наша фирма предоставляет квалифицированные услуги и индивидуальный подход клиентам, обвиняемым в самых
-разных уголовных преступлениях. Коллективный опыт наших юристов охватывает весь спектр уголовных дел — от нарушений
-правил дорожного движения до обвинений в убийстве первой степени. Мы можем помочь вам на любом этапе уголовного процесса
-— от слушаний по вопросу об освобождении под залог до представления интересов в суде и вынесения окончательного решения.
- </p>
-<p class=" white">
-  Несмотря на то, что с годами наша практика расширялась, мы по-прежнему уделяем особое внимание индивидуальному подходу к
-  каждому клиенту. Среди наших клиентов есть представители всех слоев общества: несовершеннолетние правонарушители,
-  профессионалы, лица с судимостями и те, у кого могут быть проблемы с психическим здоровьем. Учитывая ваши уникальные
-  потребности, мы выбираем наиболее подходящий способ решения проблемы в каждом конкретном случае, будь то переговоры с
-  обвинением или более формальное судебное разбирательство.
-</p>
-<h3 class="text-center-wh mt-100 mb-100">Уголовные преступления</h3>
-            <div class="cell-900-df">
-              <img src="img/slider/police.jpg" alt="img/pe1.jpg">
-
-
-              <p class="white mt-50" >
-Если вы или кто-то из ваших знакомых оказались вовлечены в уголовный процесс, знания и практический опыт вашего адвоката
-имеют первостепенное значение для достижения наилучшего результата. В Barrison & Manitius мы предоставляем
-квалифицированную защиту по уголовным делам, направленную на защиту прав и будущего наших клиентов. Из нашего офиса в
-Ошаве мы обслуживаем клиентов по всему Онтарио в регионе Дарем, Большом Торонто и прилегающих районах.
-              </p>
-            </div>
-            </div>
-<div class="dummy08">
-
-
-              </div>
-
-
-          </div>
-          <!-- Criminl002 -->
-<div class="slider-blog mt-50">
-  <div style="max-width: 1400px; margin: 0 auto; padding: 20px;">
-
-    <!-- Главный заголовок -->
-    <div style="text-align: center; margin-bottom: 50px;">
-      <h1 style="color: #1a1a1a; font-size: 48px; font-weight: bold; margin: 0; letter-spacing: -0.5px;">
-        Уголовные преступления
-      </h1>
-      <div style="width: 80px; height: 4px; background: linear-gradient(90deg, #2c3e50, #5a7a9a); margin: 20px auto; border-radius: 2px;"></div>
-      <p style="color: #666; font-size: 18px; max-width: 700px; margin: 0 auto;">Профессиональная защита на всех этапах уголовного процесса</p>
-    </div>
-
-    <!-- Первый блок: текст + картинка в стиле "hero" -->
-    <div style="display: flex; flex-wrap: wrap; gap: 40px; background: white; border-radius: 32px; overflow: hidden; box-shadow: 0 20px 50px rgba(0,0,0,0.08); margin-bottom: 50px;">
-
-      <div style="flex: 1; min-width: 280px; padding: 40px;">
-        <div style="display: inline-block; background: #2c3e50; color: white; padding: 5px 15px; border-radius: 30px; font-size: 14px; font-weight: bold; margin-bottom: 20px;">
-          С 2014 года
-        </div>
-        <h2 style="color: #1a1a1a; font-size: 32px; font-weight: bold; margin: 0 0 20px 0; line-height: 1.3;">
-          Квалифицированные услуги и индивидуальный подход
-        </h2>
-        <p style="color: #444; line-height: 1.7; margin-bottom: 20px; font-size: 16px;">
-          Наша фирма предоставляет квалифицированные услуги и индивидуальный подход клиентам, обвиняемым в самых разных уголовных преступлениях.
-        </p>
-        <p style="color: #444; line-height: 1.7; margin-bottom: 20px;">
-          Коллективный опыт наших юристов охватывает весь спектр уголовных дел — от нарушений правил дорожного движения до обвинений в убийстве первой степени.
-        </p>
-        <div style="background: #f8f9fa; padding: 20px; border-radius: 16px; border-left: 4px solid #2c3e50;">
-          <p style="color: #333; margin: 0; font-style: italic;">
-            «Мы можем помочь вам на любом этапе уголовного процесса — от слушаний по вопросу об освобождении под залог до представления интересов в суде»
-          </p>
-        </div>
-      </div>
-
-      <div style="flex: 1; min-width: 280px;">
-        <img src="img/slider/jcat400.jpg" alt="img/slider/jcat400.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block;">
-      </div>
-
-    </div>
-
-    <!-- Второй блок: Индивидуальный подход с карточками статистики -->
-    <div style="background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%); border-radius: 32px; padding: 50px 40px; margin-bottom: 50px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
-
-      <div style="text-align: center; max-width: 800px; margin: 0 auto 40px auto;">
-        <h2 style="color: #1a1a1a; font-size: 28px; font-weight: bold; margin-bottom: 20px;">
-          Индивидуальный подход к каждому клиенту
-        </h2>
-        <p style="color: #555; line-height: 1.7; font-size: 16px;">
-          Среди наших клиентов есть представители всех слоев общества: несовершеннолетние правонарушители, профессионалы,
-          лица с судимостями и те, у кого могут быть проблемы с психическим здоровьем.
-        </p>
-      </div>
-
-      <div style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: center;">
-        <div style="background: white; padding: 30px 25px; border-radius: 20px; text-align: center; flex: 1; min-width: 180px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
-          <div style="background: #2c3e50; width: 60px; height: 60px; border-radius: 60px; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px auto;">
-            <span style="color: white; font-size: 24px; font-weight: bold;">1</span>
-          </div>
-          <div style="font-size: 28px; font-weight: bold; color: #2c3e50;">500+</div>
-          <div style="color: #666; font-size: 14px;">Успешных дел</div>
-        </div>
-        <div style="background: white; padding: 30px 25px; border-radius: 20px; text-align: center; flex: 1; min-width: 180px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
-          <div style="background: #2c3e50; width: 60px; height: 60px; border-radius: 60px; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px auto;">
-            <span style="color: white; font-size: 24px; font-weight: bold;">2</span>
-          </div>
-          <div style="font-size: 28px; font-weight: bold; color: #2c3e50;">11 лет</div>
-          <div style="color: #666; font-size: 14px;">На рынке</div>
-        </div>
-        <div style="background: white; padding: 30px 25px; border-radius: 20px; text-align: center; flex: 1; min-width: 180px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
-          <div style="background: #2c3e50; width: 60px; height: 60px; border-radius: 60px; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px auto;">
-            <span style="color: white; font-size: 24px; font-weight: bold;">3</span>
-          </div>
-          <div style="font-size: 28px; font-weight: bold; color: #2c3e50;">100%</div>
-          <div style="color: #666; font-size: 14px;">Индивидуальный подход</div>
-        </div>
-      </div>
-
-      <p style="color: #444; line-height: 1.7; margin-top: 40px; text-align: center; max-width: 800px; margin-left: auto; margin-right: auto;">
-        Учитывая ваши уникальные потребности, мы выбираем наиболее подходящий способ решения проблемы в каждом конкретном случае,
-        будь то переговоры с обвинением или более формальное судебное разбирательство.
-      </p>
-
-    </div>
-
-    <!-- Третий блок: Два столбца с картинкой и текстом -->
-    <div style="display: flex; flex-wrap: wrap; gap: 40px; background: white; border-radius: 32px; overflow: hidden; box-shadow: 0 20px 50px rgba(0,0,0,0.08); margin-bottom: 50px;">
-
-      <div style="flex: 1; min-width: 280px;">
-        <img src="img/slider/police.jpg" alt="img/slider/police.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block;">
-      </div>
-
-      <div style="flex: 1; min-width: 280px; padding: 40px;">
-        <div style="background: #2c3e50; width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
-          <span style="color: white; font-size: 24px;">⚖️</span>
-        </div>
-        <h2 style="color: #1a1a1a; font-size: 28px; font-weight: bold; margin: 0 0 20px 0;">
-          Защита прав и будущего
-        </h2>
-        <p style="color: #444; line-height: 1.7; margin-bottom: 20px;">
-          Если вы или кто-то из ваших знакомых оказались вовлечены в уголовный процесс, знания и практический опыт вашего адвоката
-          имеют первостепенное значение для достижения наилучшего результата.
-        </p>
-        <p style="color: #444; line-height: 1.7;">
-          В Barrison & Manitius мы предоставляем квалифицированную защиту по уголовным делам, направленную на защиту прав и будущего
-          наших клиентов. Из нашего офиса в Ошаве мы обслуживаем клиентов по всему Онтарио в регионе Дарем, Большом Торонто и прилегающих районах.
-        </p>
-
-        <div style="display: flex; gap: 15px; margin-top: 30px; flex-wrap: wrap;">
-          <div style="display: flex; align-items: center; gap: 10px;">
-            <div style="background: #e8f0f7; width: 32px; height: 32px; border-radius: 32px; display: flex; align-items: center; justify-content: center;">✓</div>
-            <span style="color: #333;">Регион Дарем</span>
-          </div>
-          <div style="display: flex; align-items: center; gap: 10px;">
-            <div style="background: #e8f0f7; width: 32px; height: 32px; border-radius: 32px; display: flex; align-items: center; justify-content: center;">✓</div>
-            <span style="color: #333;">Большой Торонто</span>
-          </div>
-          <div style="display: flex; align-items: center; gap: 10px;">
-            <div style="background: #e8f0f7; width: 32px; height: 32px; border-radius: 32px; display: flex; align-items: center; justify-content: center;">✓</div>
-            <span style="color: #333;">Прилегающие районы</span>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-
-    <!-- Нижний блок с цитатой -->
-    <div style="background: linear-gradient(135deg, #2c3e50 0%, #1a2a3a 100%); border-radius: 32px; padding: 50px 40px; text-align: center; color: white;">
-      <div style="font-size: 60px; margin-bottom: 20px;">⚖️</div>
-      <h3 style="color: white; font-size: 24px; font-weight: bold; margin-bottom: 20px; max-width: 700px; margin-left: auto; margin-right: auto;">
-        Ваша защита — наша главная цель
-      </h3>
-      <p style="color: rgba(255,255,255,0.85); font-size: 16px; max-width: 600px; margin: 0 auto;">
-        Бесплатная консультация • Конфиденциально • 24/7
-      </p>
-    </div>
-
-  </div>
+<div class="grid-header">
+  <h1>СЕТКА 5×20</h1>
+  <p>5 колонок × 20 рядов | Объединяй ячейки для фото и текста</p>
 </div>
 
-<style>
-  /* Адаптив */
-  @media (max-width: 768px) {
-  .slider-blog > div {
-    padding: 15px !important;
-  }
+<div class="grid-5x20">
 
-  h1 {
-    font-size: 32px !important;
-  }
+  <!--
+    ============================================
+    РЯД 1
+    ============================================
+  -->
+  <!-- Ячейка 1,1: Заголовок на 2 колонки -->
+  <div class="cell span-2-cols">
+    <div class="text-content">
+      <div class="number">01</div>
+      <h3>Уголовные преступления</h3>
+      <p>Профессиональная защита на всех этапах</p>
+    </div>
+  </div>
 
-  .slider-blog > div > div {
-    border-radius: 24px !important;
-  }
+  <!-- Ячейка 1,2: Фото на 2 колонки -->
+  <div class="cell span-2-cols">
+    <img src="https://placehold.co/600x400/1a1a2e/white?text=Law+Office" alt="Фото">
+  </div>
 
-  .slider-blog > div > div > div {
-    padding: 25px !important;
-  }
-}
-</style>
+  <!-- Ячейка 1,3: Текст -->
+  <div class="cell">
+    <div class="text-content">
+      <div class="number">02</div>
+      <p>С 2014 года</p>
+    </div>
+  </div>
+
+  <!--
+    ============================================
+    РЯД 2
+    ============================================
+  -->
+  <!-- Ячейка 2,1: Фото -->
+  <div class="cell">
+    <img src="https://placehold.co/400x300/1a1a2e/white?text=Court" alt="Фото">
+  </div>
+
+  <!-- Ячейка 2,2: Текст -->
+  <div class="cell">
+    <div class="text-content">
+      <p>Индивидуальный подход к каждому клиенту</p>
+    </div>
+  </div>
+
+  <!-- Ячейка 2,3: Фото -->
+  <div class="cell">
+    <img src="https://placehold.co/400x300/1a1a2e/white?text=Lawyer" alt="Фото">
+  </div>
+
+  <!-- Ячейка 2,4: Текст на 2 колонки -->
+  <div class="cell span-2-cols">
+    <div class="text-content">
+      <h3>Опасное вождение</h3>
+      <p>Защита от обвинений в опасном вождении и уклонении от полиции</p>
+    </div>
+  </div>
+
+  <!--
+    ============================================
+    РЯД 3
+    ============================================
+  -->
+  <!-- Ячейка 3,1: Фото на 2 колонки и 2 ряда -->
+  <div class="cell span-2-cols span-2-rows">
+    <img src="https://placehold.co/800x600/1a1a2e/white?text=Justice" alt="Фото">
+  </div>
+
+  <!-- Ячейка 3,2: Текст -->
+  <div class="cell">
+    <div class="text-content">
+      <div class="number">03</div>
+      <h3>Наркотики</h3>
+      <p>Защита по делам о наркотиках</p>
+    </div>
+  </div>
+
+  <!-- Ячейка 3,3: Фото -->
+  <div class="cell">
+    <img src="https://placehold.co/400x300/1a1a2e/white?text=Drugs" alt="Фото">
+  </div>
+
+  <!-- Ячейка 3,4: Текст -->
+  <div class="cell">
+    <div class="text-content">
+      <p>Бегство от полиции</p>
+    </div>
+  </div>
+
+  <!--
+    ============================================
+    РЯД 4
+    ============================================
+  -->
+  <!-- Ячейка 4,1: Текст (под большой фото) -->
+  <div class="cell">
+    <div class="text-content">
+      <p>Опыт с 2014 года</p>
+    </div>
+  </div>
+
+  <!-- Ячейка 4,2: Текст на 2 колонки -->
+  <div class="cell span-2-cols">
+    <div class="text-content">
+      <h3>Сексуальные преступления</h3>
+      <p>Защита репутации и прав</p>
+    </div>
+  </div>
+
+  <!-- Ячейка 4,3: Фото -->
+  <div class="cell">
+    <img src="https://placehold.co/400x300/1a1a2e/white?text=Defense" alt="Фото">
+  </div>
+
+  <!--
+    ============================================
+    РЯД 5
+    ============================================
+  -->
+  <!-- Ячейка 5,1: Текст -->
+  <div class="cell">
+    <div class="text-content">
+      <div class="number">04</div>
+      <p>Банкротство</p>
+    </div>
+  </div>
+
+  <!-- Ячейка 5,2: Фото на 3 колонки -->
+  <div class="cell span-3-cols">
+    <img src="https://placehold.co/1200x300/1a1a2e/white?text=Legal+Team" alt="Фото">
+  </div>
+
+  <!-- Ячейка 5,3: Текст -->
+  <div class="cell">
+    <div class="text-content">
+      <p>Консультация 24/7</p>
+    </div>
+  </div>
+
+  <!--
+    ============================================
+    РЯД 6
+    ============================================
+  -->
+  <!-- Ячейка 6,1: Фото -->
+  <div class="cell">
+    <img src="https://placehold.co/400x300/1a1a2e/white?text=Consultation" alt="Фото">
+  </div>
+
+  <!-- Ячейка 6,2: Текст на 4 колонки -->
+  <div class="cell span-4-cols">
+    <div class="text-content">
+      <h3>Помощь на всех этапах уголовного процесса</h3>
+      <p>От освобождения под залог до представления интересов в суде</p>
+    </div>
+  </div>
+
+  <!--
+    ============================================
+    РЯД 7-20 (заполняем остальные ряды для демонстрации)
+    ============================================
+  -->
+  <!-- Ряд 7 -->
+  <div class="cell"><div class="text-content"><p>Клиенты по всему Онтарио</p></div></div>
+  <div class="cell span-2-cols"><img src="https://placehold.co/800x300/1a1a2e/white?text=Toronto" alt="Фото"></div>
+  <div class="cell"><div class="text-content"><div class="number">05</div><p>Регион Дарем</p></div></div>
+  <div class="cell"><div class="text-content"><p>Большой Торонто</p></div></div>
+
+  <!-- Ряд 8 -->
+  <div class="cell span-2-cols"><div class="text-content"><h3>Индивидуальный подход</h3><p>100% внимание каждому клиенту</p></div></div>
+  <div class="cell"><img src="https://placehold.co/400x300/1a1a2e/white?text=Approach" alt="Фото"></div>
+  <div class="cell"><div class="text-content"><p>Переговоры с обвинением</p></div></div>
+  <div class="cell"><div class="text-content"><p>Судебное разбирательство</p></div></div>
+
+  <!-- Ряд 9 -->
+  <div class="cell"><img src="https://placehold.co/400x300/1a1a2e/white?text=Evidence" alt="Фото"></div>
+  <div class="cell span-3-cols"><div class="text-content"><h3>Бесплатная консультация</h3><p>Конфиденциально. Круглосуточно.</p></div></div>
+  <div class="cell"><div class="text-content"><p>Защита прав</p></div></div>
+
+  <!-- Ряд 10 -->
+  <div class="cell span-5-cols"><div class="text-content"><h3 style="font-size: 24px;">⚖️ Barrison & Manitius</h3><p>Ваша защита — наша главная цель</p></div></div>
+
+  <!-- Ряд 11 -->
+  <div class="cell"><div class="text-content"><p>Онтарио</p></div></div>
+  <div class="cell"><div class="text-content"><p>Ошава</p></div></div>
+  <div class="cell span-2-cols"><img src="https://placehold.co/800x300/1a1a2e/white?text=Ontario" alt="Фото"></div>
+  <div class="cell"><div class="text-content"><p>Дарем</p></div></div>
+
+  <!-- Ряд 12 -->
+  <div class="cell span-2-cols"><img src="https://placehold.co/800x300/1a1a2e/white?text=Law+Firm" alt="Фото"></div>
+  <div class="cell"><div class="text-content"><div class="number">06</div><p>Лет опыта</p></div></div>
+  <div class="cell span-2-cols"><div class="text-content"><h3>Убийство первой степени</h3><p>Серьезная защита для серьезных дел</p></div></div>
+
+  <!-- Ряд 13 -->
+  <div class="cell"><div class="text-content"><p>Несовершеннолетние</p></div></div>
+  <div class="cell"><div class="text-content"><p>Профессионалы</p></div></div>
+  <div class="cell"><div class="text-content"><p>С судимостями</p></div></div>
+  <div class="cell"><div class="text-content"><p>Психическое здоровье</p></div></div>
+  <div class="cell"><div class="text-content"><p>Все слои общества</p></div></div>
+
+  <!-- Ряд 14 -->
+  <div class="cell span-3-cols"><img src="https://placehold.co/1200x300/1a1a2e/white?text=Justice+Scale" alt="Фото"></div>
+  <div class="cell span-2-cols"><div class="text-content"><h3>Результат</h3><p>Лучший исход для каждого клиента</p></div></div>
+
+  <!-- Ряд 15 -->
+  <div class="cell"><div class="text-content"><p>ДТП</p></div></div>
+  <div class="cell"><div class="text-content"><p>Наркотики</p></div></div>
+  <div class="cell"><div class="text-content"><p>Насилие</p></div></div>
+  <div class="cell"><div class="text-content"><p>Мошенничество</p></div></div>
+  <div class="cell"><div class="text-content"><p>Убийство</p></div></div>
+
+  <!-- Ряд 16 -->
+  <div class="cell span-5-cols"><div class="text-content"><p style="text-align: center;">© 2024 Barrison & Manitius | Все права защищены</p></div></div>
+
+  <!-- Ряд 17 (пустые для заполнения) -->
+  <div class="cell"><div class="text-content"><p></p></div></div>
+  <div class="cell"><div class="text-content"><p></p></div></div>
+  <div class="cell"><div class="text-content"><p></p></div></div>
+  <div class="cell"><div class="text-content"><p></p></div></div>
+  <div class="cell"><div class="text-content"><p></p></div></div>
+
+  <!-- Ряд 18 -->
+  <div class="cell span-2-cols"><img src="https://placehold.co/800x300/1a1a2e/white?text=Contact+Us" alt="Фото"></div>
+  <div class="cell span-3-cols"><div class="text-content"><h3>Свяжитесь с нами</h3><p>+7 (999) 852-58-21 | olegrewko@gmail.com</p></div></div>
+
+  <!-- Ряд 19 -->
+  <div class="cell span-5-cols"><div class="text-content"><p style="text-align: center;">Экстренная помощь 24/7</p></div></div>
+
+  <!-- Ряд 20 -->
+  <div class="cell"><div class="text-content"><p>01</p></div></div>
+  <div class="cell"><div class="text-content"><p>02</p></div></div>
+  <div class="cell"><div class="text-content"><p>03</p></div></div>
+  <div class="cell"><div class="text-content"><p>04</p></div></div>
+  <div class="cell"><div class="text-content"><p>05</p></div></div>
+
+</div>
 
         </div>
       </div>
