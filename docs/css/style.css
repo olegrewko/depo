@@ -1060,7 +1060,7 @@ li {
 }
 
 .mt-200 {
-  margin-top: 200px;
+  margin-top: -200px;
 }
 
 .bt-2 {
@@ -1590,7 +1590,7 @@ font-family: 'Rubik';
   border-radius: 2px;
   padding-left: 10px;
   margin-bottom: 3px;
-  background-color: transparent;
+  background-color: #8b3a5e;
 }
 
 .grid-products__btn:hover {
