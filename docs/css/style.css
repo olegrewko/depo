@@ -2183,30 +2183,30 @@ display: flex;
   cursor: pointer;
 }
 
-.social {
+/* .social {
   margin-top: 20px;
   display: flex;
   justify-content: start;
   align-items: flex-start;
   border-left: 0px solid #eee;
-}
+} */
 
-.social__item {
+/* .social__item {
 
   &:not(:last-child) {
     margin-right: 30px;
   }
 
-}
+} */
 
-.social__link {
+/* .social__link {
   display: block;
   width: 16px;
   height: 16px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-}
+} */
 
 
 .tiny-footer {
