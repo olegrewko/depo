@@ -1298,12 +1298,12 @@ font-family: 'Rubik';
 .dropbtn {
 
   display: block;
-  padding: 2px 0px;
+  padding: 0px 0px;
   font-family: 'Jost';
   font-style: normal;
   font-weight: 700;
   font-size: 10px;
-  line-height: 4px;
+  line-height: 0px;
 
   color: black;
   cursor: pointer;
@@ -1748,21 +1748,68 @@ font-family: 'Rubik';
   z-index: 0;
 }
 
+/*  */
 .slider-blog {
-    max-width: 1800px;
-      width: 100%;
-      height: 800px;
+  max-width: 1800px;
+  width: 100%;
+  height: auto;
+  /* меняем с 850px на auto */
+  min-height: 400px;
   background-color: black;
   padding: 0px 0;
-  margin-top: 70px;
-  /* padding-top: 70px; */
-
+  margin-top: 80px;
 }
+
+/* На мобильных увеличиваем отступ */
+@media (max-width: 768px) {
+  .slider-blog {
+    margin-top: 70px;
+  }
+}
+
+@media (max-width: 550px) {
+  .slider-blog {
+    margin-top: 110px;
+  }
+}
+
+@media (max-width: 400px) {
+  .slider-blog {
+    margin-top: 130px;
+  }
+}
+
+/* Также исправляем высоту изображений на мобильных */
+@media (max-width: 768px) {
+
+  .slider-blog,
+  .slider-blog__item,
+  .slider-blog__img {
+    height: auto !important;
+    min-height: 300px;
+  }
+
+  .slider-blog__img {
+    object-fit: cover;
+    height: 400px !important;
+  }
+}
+/*  */
+/* .slider-blog {
+    max-width: 1800px;
+      width: 100%;
+      height: 850px;
+  background-color: black;
+  padding: 0px 0;
+  margin-top: 80px;
+
+
+} */
 
 .slider-blog__item {
   max-width: 1800px;
   width: 100%;
-    height: 800px;
+    min-height: 850px;
   padding: 0;
 
   margin: 0 auto;
@@ -1771,20 +1818,20 @@ font-family: 'Rubik';
 
 .video__item {
   max-width: 1800px;
-  height: 700px;
+  min-height: 850px;
   width: 100%;
 }
 
 .slider-blog__img {
   max-width: 1800px;
   width: 100%;
-  height: 800px;
+  min-height: 850px;
   /* margin-top: 70px; */
   margin: 0 auto;
 }
 
 .head-blog__img {
-  max-width: 1200px;
+  max-width: 1800px;
   width: 100%;
   margin: 0 auto;
 }
