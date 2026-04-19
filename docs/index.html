@@ -10,8 +10,8 @@
 <meta property="og:description" content="Experience exceptional sound quality with our premium audio products">
   <title>depo-500</title>
 
-<link rel="preload" href="css/style.css" as="style">
-<link rel="preload" href="js/main.js" as="script">
+<!-- <link rel="preload" href="css/style.css" as="style"> -->
+<!-- <link rel="preload" href="js/main.js" as="script"> -->
 
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -4138,12 +4138,11 @@ max-width: 768px;
             <a class="logo" href="#body">
               <span class="dropbtn">depo-500</span>
 
-              <!-- <p class="logo__title">8-910-453-40-12</p>
-              <p class="logo__title">8-999-852-58-21</p> -->
+
             </a>
-            <!-- <span class="tel" href="#"> -->
-              <span class="menu__list-link dropbtn">8-910-453-40-12 | 8-999-852-58-21</span>
-              <!-- <span class="menu__list-link dropbtn">8-999-852-58-21</span> -->
+
+              <!-- <span class="menu__list-link dropbtn">8-910-453-40-12 | 8-999-852-58-21</span> -->
+
 
             </span>
             <nav class="menu header__nav">
@@ -4153,13 +4152,17 @@ max-width: 768px;
               <ul class="menu__list">
 
 
-<!--
                 <li class="menu__list-item">
-                  <a href="#team" class="menu__list-link dropbtn" onclick="myFunctionHeadphones()">О нас</a>
+                  <a href="#services" class="menu__list-link dropbtn" onclick="myFunctionHeadphones()">Услуги</a>
 
-                </li> -->
+                </li>
+
                 <li class="menu__list-item">
-                  <a href="#team02" class="dropbtn" onclick="myFunctionWireless()">Команда</a>
+                  <a href="#about" class="menu__list-link dropbtn" onclick="myFunctionHeadphones()">About</a>
+
+                </li>
+                <li class="menu__list-item">
+                  <a href="#team" class="dropbtn" onclick="myFunctionWireless()">Команда</a>
 
 
                 </li>
@@ -4240,6 +4243,9 @@ max-width: 768px;
           <div class="slider-blog__item">
             <img class="slider-blog__img" src="img/slider/brett.jpg" alt="img/slider/brett.jpg" />
           </div>
+           <div class="slider-blog__item">
+            <img class="slider-blog__img" src="img/slider/br.jpg" alt="img/slider/br.jpg" />
+          </div>
           <div class="slider-blog__item">
             <img class="slider-blog__img" src="img/slider/clock.jpg" alt="img/slider/clock.jpg" />
           </div>
@@ -4258,9 +4264,9 @@ max-width: 768px;
 
         </div>
       </div>
-      <span class="dropbtn ml-10">Юридический сайт</span>
-      <span class="dropbtn ml-10">8-910-453-40-12 Владимир</span>
-      <span class="dropbtn ml-10">8-999-852-58-21 Олег</span>
+      <h3 class=" ml-10">Юридический сайт</h3>
+      <h3 class=" ml-10">8-910-453-40-12 Владимир</h3>
+      <h3 class=" ml-10">8-999-852-58-21 Олег</h3>
       <section class="advantages mt-50">
 
         <div class="container1400">
@@ -4327,9 +4333,7 @@ max-width: 768px;
                 </p>
                 <p class="bt-2">
                   Взаимодействуем со всеми участниками процесса</p>
-                <p class="bt-2">
-                Боремся за клиента до конца и настроены добиться успеха даже на последней стадии рассмотрения дела
-                </p>
+
               </div>
             </div>
 
@@ -4402,15 +4406,15 @@ max-width: 768px;
 .ellipse-maroon::before {
   content: '';
   position: absolute;
-  top: -3px;   /* Смещаем вверх */
+  top: -2px;   /* Смещаем вверх */
   left: -10px; /* Смещаем влево */
-  right: -30px; /* Растягиваем вправо */
-  bottom: -3px; /* Смещаем вниз */
+  right: -20px; /* Растягиваем вправо */
+  bottom: -2px; /* Смещаем вниз */
 
   /* Рисуем эллипс */
-  border: 4px solid maroon;
-  border-radius: 50% / 20% 60% 60% 20%; /* Неправильная форма */
-  transform: rotate(0deg); /* Легкий наклон */
+  border: 2px solid maroon;
+  border-radius: 50% / 30% 70% 70% 30%; /* Неправильная форма */
+  transform: rotate(1deg); /* Легкий наклон */
 
   /* Для небрежности делаем края неровными через фильтр (опционально) */
   /* filter: url(#rough) drop-shadow(0 0 0 maroon); или просто оставить как есть */
@@ -4432,6 +4436,11 @@ max-width: 768px;
 
 
                 </p>
+                <h3 class="advantage-title">Что делаем</h3>
+                <p class="bt-2">
+                  Боремся за клиента до конца и настроены добиться успеха даже на последней стадии рассмотрения дела
+                </p>
+
               </div>
             </div>
 
@@ -4467,7 +4476,7 @@ max-width: 768px;
         </div>
       </div>
       </section>
-      <section class="team  mt-50" id="team">
+      <section class="team  mt-50" id="about">
         <div class="container1400">
           <h2 class="text-left ml-10">О нас | Our story</h2>
           <p class="text-left ml-10">
@@ -4625,7 +4634,7 @@ margin: 5px;
 </style>
 
 
-      <section class="team  mt-50" id="team02">
+      <section class="team  mt-50" id="team">
         <div class="container1400">
           <h2 class="text-left ml-10">Наша команда | Our team</h2>
           <p class="text-left ml-10">
@@ -6286,6 +6295,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 <input class="contacts__submit" type="submit" value="Отправить | Send" />
               </form>
+
+
             </div>
 </section>
 
@@ -6450,152 +6461,9 @@ max-width: 600px;
   </style>
  <!-- Стили для футера -->
 
-    <!-- <title>Бесконечная лента картинок</title> -->
-    <style>
-        /* * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        } */
-
-        /* body {
-            font-family: Arial, sans-serif;
-            background: #f0f0f0;
-            padding: 0px;
-        } */
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        /* .marquee-container {
-            position: relative;
-            height: 300px;
-            overflow: hidden;
-            background: transparent;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            padding-bottom: 10px;
-            margin-bottom: -140px;
-        } */
-
-        /* .marquee-track {
-            display: flex;
-            height: 100%;
-            position: absolute;
-            left: 0;
-            top: 0;
-            bottom: 0;
-            animation: marquee 30s linear infinite;
-        } */
-
-        /* .marquee-track:hover {
-            animation-play-state: paused;
-            padding-bottom: 10px;
-        } */
-
-        /* .marquee-item {
-            height: 300px;
-            flex-shrink: 0;
-            margin-right: 5px;
-            border-radius: 5px;
-            overflow: hidden;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            cursor: pointer;
-        } */
-
-        /* .marquee-item:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-        } */
-
-        .marquee-item img {
-            height: 100%;
-            width: auto;
-            object-fit: cover;
-            display: block;
-        }
-
-        /* .marquee-item span {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
-            color: white;
-            padding: 10px 10px 10px;
-            font-size: 14px;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            text-align: center;
-        } */
-
-        /* .marquee-item:hover span {
-            opacity: 1;
-        } */
-
-        @keyframes marquee {
-            0% {
-                transform: translateX(0);
-            }
-            100% {
-                transform: translateX(-50%);
-            }
-        }
-
-        .controls {
-            text-align: center;
-            margin-top: 0px;
-        }
-
-        .controls button {
-            background: #007bff;
-            color: white;
-            border: none;
-            padding: 0px 20px;
-            margin: 0 5px;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background 0.3s ease;
-        }
-
-        .controls button:hover {
-            background: #0056b3;
-        }
-
-        .controls button:disabled {
-            background: #6c757d;
-            cursor: not-allowed;
-        }
-
-        h1 {
-            text-align: center;
-            margin-bottom: 0px;
-            color: #333;
-        }
-    </style>
-
-    <!-- <div class="container-fluid"> -->
 
 
-        <!-- <div class="marquee-container">
-            <div class="marquee-track" id="marqueeTrack">
 
-            </div>
-        </div> -->
-
-        <!-- <div class="controls">
-            <button onclick="pauseMarquee()">Пауза</button>
-            <button onclick="playMarquee()">Воспроизвести</button>
-            <button onclick="changeSpeed(0.5)">Медленнее</button>
-            <button onclick="changeSpeed(2)">Быстрее</button>
-        </div> -->
-<!-- </div> -->
-<!-- </section> -->
-<!--200  -->
-
-<!--200  -->
 
     </div>
 <!-- Стили для футера -->
@@ -6790,131 +6658,7 @@ max-width: 600px;
       </div>
     </div>
   </div>
-  <!-- Стили для footer__bottom -->
-   <style>
-    /* Social Icons Styles */
-.social {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
-}
 
-.social-inner {
-  display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.social-icon {
-  transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-.social-icon:hover {
-  transform: translateY(-3px);
-}
-
-.social-icon a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.1);
-  transition: background 0.3s ease, box-shadow 0.3s ease;
-  text-decoration: none;
-}
-
-.social-icon a:hover {
-  background: rgba(255, 255, 255, 0.2);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
-.icon {
-  width: 20px;
-  height: 20px;
-  fill: white;
-  transition: fill 0.3s ease;
-}
-
-.social-icon a:hover .icon {
-  fill: #ff6b6b; /* или любой другой цвет при ховере — можно заменить */
-}
-
-/* Контейнер */
-.container1400 {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-/* Tiny footer (нижняя часть) */
-.tiny-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 20px;
-  padding: 5px 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  margin-top: 20px;
-}
-
-.tiny-grey {
-  color: rgba(255, 255, 255, 0.6);
-  font-size: 14px;
-  margin: 0;
-}
-
-.tiny-card {
-  display: flex;
-  gap: 15px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.tiny-card__item {
-  list-style: none;
-}
-
-.tiny-card__link {
-  display: block;
-  transition: opacity 0.3s ease;
-}
-
-.tiny-card__link:hover {
-  opacity: 0.7;
-}
-
-.tiny-card__link img {
-  height: 24px;
-  width: auto;
-}
-
-/* Адаптив для мобильных */
-@media (max-width: 768px) {
-  .tiny-footer {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .social-icon a {
-    width: 36px;
-    height: 36px;
-  }
-
-  .icon {
-    width: 18px;
-    height: 18px;
-  }
-
-  .social-inner {
-    gap: 10px;
-  }
-}
-   </style>
   <div class="footer__bottom">
     <div class="container1400">
 
@@ -7015,14 +6759,190 @@ max-width: 600px;
       </div>
     </div>
   </div>
+  <!-- Стили для footer__bottom -->
+  <style>
+
+    .social {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .social-inner {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .social-icon {
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .social-icon:hover {
+      transform: translateY(-3px);
+    }
+
+    .social-icon a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.1);
+      transition: background 0.3s ease, box-shadow 0.3s ease;
+      text-decoration: none;
+    }
+
+    .social-icon a:hover {
+      background: rgba(255, 255, 255, 0.2);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .icon {
+      width: 20px;
+      height: 20px;
+      fill: white;
+      transition: fill 0.3s ease;
+    }
+
+    .social-icon a:hover .icon {
+      fill: #ff6b6b;
+
+    }
 
 
+    .container1400 {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
 
+
+    .tiny-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 5px 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      margin-top: 20px;
+    }
+
+    .tiny-grey {
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 14px;
+      margin: 0;
+    }
+
+    .tiny-card {
+      display: flex;
+      gap: 15px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .tiny-card__item {
+      list-style: none;
+    }
+
+    .tiny-card__link {
+      display: block;
+      transition: opacity 0.3s ease;
+    }
+
+    .tiny-card__link:hover {
+      opacity: 0.7;
+    }
+
+    .tiny-card__link img {
+      height: 24px;
+      width: auto;
+    }
+
+
+    @media (max-width: 768px) {
+      .tiny-footer {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .social-icon a {
+        width: 36px;
+        height: 36px;
+      }
+
+      .icon {
+        width: 18px;
+        height: 18px;
+      }
+
+      .social-inner {
+        gap: 10px;
+      }
+    }
+  </style>
+<style>
+  /* Social Icons Styles - ИСПРАВЛЕННАЯ ВЕРСИЯ */
+.footer .social {
+display: flex;
+justify-content: center;
+margin-bottom: 20px;
+}
+
+.footer .social-inner {
+display: flex;
+gap: 15px;
+flex-wrap: wrap;
+justify-content: center;
+}
+
+.footer .social-icon {
+transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.footer .social-icon:hover {
+transform: translateY(-5px);
+}
+
+.footer .social-icon a {
+display: flex;
+align-items: center;
+justify-content: center;
+width: 40px;
+height: 40px;
+border-radius: 50%;
+background: rgba(255, 255, 255, 0.1);
+transition: all 0.3s ease;
+text-decoration: none;
+pointer-events: auto;
+}
+
+.footer .social-icon a:hover {
+background: rgba(255, 255, 255, 0.3) !important;
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+transform: scale(1.1);
+}
+
+.footer .icon {
+width: 20px;
+height: 20px;
+fill: white;
+transition: fill 0.3s ease;
+}
+
+.footer .social-icon a:hover .icon {
+fill: #ff6b6b !important;
+}
+</style>
 </footer>
 
 
 
-  <!-- </div> -->
+
 
 
 
@@ -7226,7 +7146,53 @@ $(function () {
     }
   });
 </script>
+<!-- Подключение EmailJS -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
+<script type="text/javascript">
+  (function() {
+    // Инициализация EmailJS (зарегистрируйтесь бесплатно на emailjs.com)
+    emailjs.init("ВАШ_PUBLIC_KEY"); // Замените на ваш ключ
+  })();
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const contactForm = document.querySelector('.contacts__form');
+
+    if (contactForm) {
+      contactForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        // Показываем сообщение о загрузке
+        const submitBtn = contactForm.querySelector('.contacts__submit');
+        const originalText = submitBtn.value;
+        submitBtn.value = 'Отправка...';
+        submitBtn.disabled = true;
+
+        // Собираем данные формы
+        const templateParams = {
+          from_name: contactForm.querySelector('input[name="firstname"]').value,
+          from_email: contactForm.querySelector('input[name="firstemail"]').value,
+          message: contactForm.querySelector('textarea[name="subject"]').value,
+          to_email: 'olegrewko@gmail.com'
+        };
+
+        // Отправка через EmailJS
+        emailjs.send('service_depo500', 'template_contact', templateParams)
+          .then(function(response) {
+            alert('Спасибо! Ваше сообщение отправлено. Мы свяжемся с вами в ближайшее время.');
+            contactForm.reset();
+          }, function(error) {
+            alert('Произошла ошибка. Пожалуйста, позвоните нам: 8-910-453-40-12');
+            console.error('Ошибка:', error);
+          })
+          .finally(function() {
+            submitBtn.value = originalText;
+            submitBtn.disabled = false;
+          });
+      });
+    }
+  });
+</script>
 </body>
 
 </html>
