@@ -1590,9 +1590,23 @@ font-family: 'Rubik';
   border-radius: 2px;
   padding-left: 10px;
   margin-bottom: 3px;
-  background-color: #8b3a5e;
+  background-color: transparent;
 }
-
+.grid-products__b {
+  text-align: center;
+  max-width: 900px;
+  width: 100%;
+  height: 40px;
+  color: maroon;
+  font-weight: 700;
+  font-size: 14px;
+  border: 0px solid black;
+  border-top-right-radius: 10px;
+  border-radius: 2px;
+  padding-left: 10px;
+  margin-bottom: 3px;
+  background-color: transparent;
+}
 .grid-products__btn:hover {
 
   height: 40px;
@@ -2096,7 +2110,28 @@ form {
   background-color: transparent;
 
 }
+.subscribe-form-black__b {
 
+  margin-top: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 220px;
+  width: 100%;
+  height: 20px;
+  border-radius: 3px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 13px;
+  border: 1px solid #fff;
+  padding: 5px 10px;
+  color: #FFFFFF;
+  cursor: pointer;
+  transition: all 0.4s;
+  background-color: transparent;
+
+}
 .subscribe-form-black__btn--black {
 
   margin-top: 5px;
