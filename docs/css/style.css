@@ -1305,7 +1305,7 @@ font-family: 'Rubik';
   font-size: 10px;
   line-height: 0px;
 
-  color: black;
+  /* color: black; */
   cursor: pointer;
   transition: all .4s;
 }
@@ -3230,17 +3230,7 @@ display: flex;
   margin-top: 50px;
 }
 
-.title-6r {
-  font-family: 'Rubik';
-  font-style: normal;
-  font-weight: 900;
-  /* font-size: 50px; */
-  line-height: 50px;
-  /* font-size: 2.0rem; */
-  color: #101c10;
 
-
-}
 .h140 {
   height: 180px;
 }
