@@ -5957,7 +5957,7 @@ document.addEventListener('DOMContentLoaded', () => {
               </div>
             </div>
 
-            <div class="table-row">
+            <!-- <div class="table-row">
               <div class="table-cell header-cell cell-900--flex">
                 <h5>Сексуальные преступления с участием детей</h5>
                 <img src="img/slider/kat.jpg" alt="img/slider/kat.jpg">
@@ -5970,18 +5970,13 @@ document.addEventListener('DOMContentLoaded', () => {
                   заключение. Ваша репутация в обществе может быть разрушена, а семья — разорвана. Вас также могут обязать держаться
                   подальше от мест, где могут собираться дети младше 16 лет, таких как общественные парки и школьные площадки.
 
-                  Сексуальное посягательство — это смежное правонарушение, которое заключается в сексуальных действиях в отношении лица,
-                  не достигшего 16 лет. Важно отметить, что раньше возраст согласия составлял 14 лет, но в 2008 году его повысили до 16
-                  лет.
 
-                  Принуждение к сексуальным прикосновениям предполагает предложение лицу, не достигшему 16 лет, совершить любое
-                  прикосновение сексуального характера, как прямое, так и косвенное. Для предъявления этого обвинения не обязательно,
-                  чтобы прикосновение было физическим. За это преступление предусмотрено обязательное минимальное наказание в виде лишения
-                  свободы сроком на 1 год, максимальное — до 10 лет.
+
+
 
                 </p>
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
@@ -6126,6 +6121,36 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 <style>
+.text-grid-w100 {
+              border: 0px solid var(--color-space);
+
+  border-radius: var(--border-radius);
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr  1fr;
+      grid-template-rows: 100px;
+      column-gap: 0px;
+      align-items: center;
+      margin-left: 0px;
+      margin-top: 0px;
+      margin-bottom: 0px;
+
+      @media screen and (max-width: 600px) {
+        grid-template-columns:  1fr;
+        column-gap: 0px;
+         margin-top: 0px;
+      margin-bottom: 0px;
+      }
+
+    }
+.text-grid-w100__content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center ;
+
+
+      }
 .contact-grid-w100 {
               border: 3px solid var(--color-space);
 
@@ -6133,7 +6158,7 @@ document.addEventListener('DOMContentLoaded', () => {
       width: 100%;
       display: grid;
       grid-template-columns: 1fr  1fr;
-      grid-template-rows: 500px;
+      grid-template-rows: 300px;
       column-gap: 10px;
       align-items: center;
       margin-left: 5px;
@@ -6151,7 +6176,7 @@ document.addEventListener('DOMContentLoaded', () => {
         flex-direction: column;
         justify-content: center;
         align-items: center ;
-        /* padding-left: 50px; */
+
 
       }
 
@@ -6307,8 +6332,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
 </style>
 <section class="stores mt-50" id="contact">
-   <h2 class="title-6r text-center">contact us</h2>
-            <div class="container1400 contact-grid-w100">
+<div class="container1400 text-grid-w100 mb-10">
+   <h2 class="title-6r text-center text-grid-w100__content">contact us</h2>
+  <h2 class="title-6r text-center" style="background-color: #000; color: white; height: 100px; width: 100%; margin-bottom: 10px;">contact us</h2>
+</div>
+
+            <div class="container1400 contact-grid-w100 mt-100">
 
               <div class="contact-grid-w100__content text-left">
                 <h2 class="depo-title">depo-500</h2>
