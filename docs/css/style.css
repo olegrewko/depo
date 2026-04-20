@@ -1157,6 +1157,16 @@ li {
   background-color: #ccc;
 
 } */
+.container1800 {
+  max-width: 1800px;
+  width: 100%;
+  padding: 0 0px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000;
+}
 
 .container1400 {
   max-width: 1400px;
@@ -2904,7 +2914,7 @@ display: flex;
 
 .dummy08 {
   min-height: 100px;
-
+  background: #fff;
 }
 
 
