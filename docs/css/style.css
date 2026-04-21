@@ -2492,9 +2492,7 @@ display: flex;
 
 }
 
-.mb-5 {
-  margin-bottom: 5px;
-}
+
 
 .real-radio-black:checked+.custom-radio-black::before {
   display: inline-block;
