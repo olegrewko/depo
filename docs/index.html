@@ -1417,10 +1417,17 @@ z-index: 10;
   margin-bottom: 3px;
   background-color: transparent;
 }
-.grid-products__btn-810:hover {
+.grid-products__btn-810 {
   color: white;
 
-  background-color: black;
+  background-color: var(--color-space);
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.grid-products__btn-810:hover {
+  color: black;
+
+  background-color: white;
   transition: all 0.3s;
   cursor: pointer;
 }
@@ -3560,6 +3567,15 @@ max-width: 768px;
   --color-maroon: #8b0000;
   --color-gold: #e6ae05;
   --color-cyan: #60d4d4;
+  --color-paper: #f5f5f5;
+--color-mist: #e0e0e0;
+--color-stone: #bdbdbd;
+--color-ash: #9e9e9e;
+--color-graphite: #616161;
+--color-iron: #424242;
+--color-onyx: #212121;
+--color-midnight: #1a1a2e;
+--color-space: #011932;
   --color-cyan-light: rgba(96, 212, 212, 0.15);
   --font-primary: 'Jost', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-accent: 'Rubik', 'Courier New', monospace;
@@ -4079,6 +4095,75 @@ max-width: 768px;
 } */
  </style>
    <style>
+    .cell-900--flex {
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.ffc107-1400 {
+  text-align: center;
+  max-width: 1370px;
+  width: 100%;
+  height: 60px;
+  font-family: 'Rubik';
+  font-weight: 400;
+  font-size: 14px;
+  border: 4px solid #e6ae05;
+  border-radius: 5px;
+  background-color: #e6ae05;
+  margin-bottom: 5px;
+
+  margin: 10px;
+}
+.ffc107 {
+
+  width: 100%;
+  height: 100px;
+    color: black;
+  font-family: 'Rubik';
+  font-weight: 700;
+  font-size: 20px;
+  border: 4px solid #d29f05;
+  border-radius: 6px;
+  background-color: #d29f05;
+  margin-bottom: 3px;
+}
+
+.grid-products__btn-270 {
+ text-align: center;
+  max-width: 270px;
+  width: 100%;
+ height: 100px;
+margin: 5px;
+  color: black;
+  font-family: 'Rubik';
+  font-weight: 800;
+  font-size: 20px;
+  border: 4px solid black;
+  border-radius: 6px;
+
+  margin-bottom: 5px;
+  background-color: transparent;
+}
+.grid-products__btn {
+  text-align: left;
+  max-width: 1000px;
+  width: 100%;
+  height: 40px;
+  color: black;
+  font-weight: 700;
+  font-size: 14px;
+  border: 2px solid black;
+  border-radius: 2px;
+  padding-left: 10px;
+  margin-bottom: 3px;
+  background-color: transparent;
+}
     /* Базовые стили */
     .about__inner {
       display: flex;
@@ -4269,9 +4354,9 @@ max-width: 768px;
 
         </div>
       </div>
-      <h3 class=" ml-10">Юридический сайт</h3>
-      <h3 class=" ml-10">8-910-453-40-12 Владимир</h3>
-      <h3 class=" ml-10">8-999-852-58-21 Олег</h3>
+      <h5 class=" ml-10">Юридический сайт</h5>
+      <h5 class=" ml-10">8-910-453-40-12 Владимир</h5>
+      <h5 class=" ml-10">8-999-852-58-21 Олег</h5>
       <section class="advantages mt-50">
 
         <div class="container1400">
@@ -4285,26 +4370,26 @@ max-width: 768px;
               <h3 class="advantage-title">Банкротные дела</h3>
               <div class="#">
 
-                <p class="bt-2">
-                 Это самые комплексные и сложные судебные проекты. Задача должника — пройти процедуру банкротства как можно быстрее и с минимумом потерь. Задача кредитора — получить конкурентное преимущество перед другими кредиторами и взыскать задолженность частично или полностью. Мы можем выступать на стороне и тех, и других.</p>
+                <h5 class="bt-2">
+                 Это самые комплексные и сложные судебные проекты. Задача должника — пройти процедуру банкротства как можно быстрее и с минимумом потерь. Задача кредитора — получить конкурентное преимущество перед другими кредиторами и взыскать задолженность частично или полностью. Мы можем выступать на стороне и тех, и других.</h5>
 
 <h3 class="advantage-title">Что делаем</h3>
 
-<p class="bt-2">
+<h5 class="bt-2">
 Формируем стратегию проекта от первого до последнего шага
 </p>
-<p class="bt-2">
+<h5 class="bt-2">
 Если представляем кредитора — ищем активы должников, оспариваем подозрительные сделки и контролируем торги
 </p>
-<p class="bt-2">
+<h5 class="bt-2">
 Если представляем должника — отбиваем требования кредиторов и комфортно реализуем банкротную процедуру
 </p>
-<p class="bt-2">
+<h5 class="bt-2">
 Взаимодействуем со всеми участниками процесса</p>
-<p class="bt-2">
+<h5 class="bt-2">
 Выстраиваем единую линию поведения с другими контрагентами даже в случае, когда изначально у нас разнонаправленные интересы
 </p>
-<p class="bt-2">
+<h5 class="bt-2">
 Участвуем во всех судебных разбирательствах
                 </p>
               </div>
@@ -4316,7 +4401,7 @@ max-width: 768px;
                 <p class="title-6r">0002</p>
                 </p>
                 <h3 class="advantage-title">Уголовные дела</h3>
-                <p class="bt-2">
+                <h5 class="bt-2">
                 В последнее время в корпоративных войнах и крупных спорах все чаще присутствует уголовное направление. В отличие от
                 многих адвокатов, специализирующихся на арбитраже, мы не боимся браться и за уголовные дела.
 
@@ -4327,16 +4412,16 @@ max-width: 768px;
                 </p>
                 <h3 class="advantage-title">Что делаем</h3>
 
-                <p class="bt-2">
+                <h5 class="bt-2">
                   Работаем с доказательствами, со свидетелями, с судом
                 </p>
-                <p class="bt-2">
+                <h5 class="bt-2">
                 Участвуем в следственных мероприятиях и судебных заседаниях
                 </p>
-                <p class="bt-2">
+                <h5 class="bt-2">
                   Нивелируем давление следствия и стараемся получить меру пресечения, не связанную с лишением свободы
                 </p>
-                <p class="bt-2">
+                <h5 class="bt-2">
                   Взаимодействуем со всеми участниками процесса</p>
 
               </div>
@@ -4348,7 +4433,7 @@ max-width: 768px;
                 <p class="title-6r">0003</p>
                 </p>
                 <h3 class="advantage-title">Проблемные активы</h3>
-                <p class="bt-2">
+                <h5 class="bt-2">
                   Кредиторы получают актив должника в счет непогашенной задолженности. Однако актив может быть неподконтрольным,
                   убыточным, на него могут претендовать другие бенефициары — и тогда актив становится для клиента не выгодым, а проблемым.
                   Наша задача — очистить актив от требований третьих лиц и подготовить его к продаже так, чтобы это было выгодно клиенту.
@@ -4356,18 +4441,18 @@ max-width: 768px;
                 </p>
                   <h3 class="advantage-title">Что делаем</h3>
 
-                  <p class="bt-2">
+                  <h5 class="bt-2">
                     Устанавливаем контроль над активом
                   </p>
-                  <p class="bt-2">
+                  <h5 class="bt-2">
                     Проводим полный правовой аудит, чтобы выявить все риски и оценить возможность успешной борьбы за актив
                   </p>
-                  <p class="bt-2">
+                  <h5 class="bt-2">
                     При необходимости проводим финансовый аудит
                   </p>
-                  <p class="bt-2">
+                  <h5 class="bt-2">
                     Взаимодействуем со всеми участниками процесса</p>
-                  <p class="bt-2">
+                  <h5 class="bt-2">
                     Вырабатываем стратегию очистки актива от притязаний бывшего менеджмента, бенефициаров и других кредиторов
                   </p>
               </div>
@@ -4379,25 +4464,25 @@ max-width: 768px;
                 <p class="title-6r">0004</p>
                 </p>
                 <h3 class="advantage-title">Сопровождение сделок</h3>
-                <p class="bt-2">
+                <h5 class="bt-2">
                   Сопровождаем сделки любой сложности: приобретение и отчуждение активов и бизнеса, прав требования к должникам,
                   недвижимости. Наша задача — не просто добиться заключения сделки, а сделать так, чтобы в будущем не возникло споров и
                   проблем.
                 </p>
                 <h3 class="advantage-title">Что делаем</h3>
 
-                <p class="bt-2">
+                <h5 class="bt-2">
                   Оцениваем все возможные варианты развития ситуации
                 </p>
-                <p class="bt-2">
+                <h5 class="bt-2">
                   Выявляем риски и делаем все, чтобы вовремя их хеджировать
                 </p>
-                <p class="bt-2">
+                <h5 class="bt-2">
                   Проверяем возможности другой стороны и третьих лиц оспорить сделку
                 </p>
-                <p class="bt-2">
+                <h5 class="bt-2">
                   Взаимодействуем со всеми участниками процесса</p>
-                <p class="bt-2">
+                <h5 class="bt-2">
                   Боремся за клиента до конца и настроены добиться успеха даже на последней стадии рассмотрения дела
                 </p>
               </div>
@@ -4433,18 +4518,18 @@ max-width: 768px;
                   <span class="ellipse-maroon">00005</span>
                 </p>
                 <h3 class="advantage-title">Вернуть недвижимость</h3>
-                <p class="bt-2 darkslategray">
+                <h5 class="bt-2">
                   Основное направление нашей деятельности.
                   Это проекты, направленные на то, чтобы выиграть конкретное дело в суде. Работаем в арбитраже, коммерческом арбитраже (в
                   том числе МКАС), судах общей юрисдикции и третейских судах. Работаем в судах по всей стране. Специализируемся на
                   проектах высокой сложности. Беремся за проекты, где все уже проиграно до нас.
 
 
-                </p>
+                </h5>
                 <h3 class="advantage-title">Что делаем</h3>
-                <p class="bt-2">
+                <h5 class="bt-2">
                   Боремся за клиента до конца и настроены добиться успеха даже на последней стадии рассмотрения дела
-                </p>
+                </h5>
 
               </div>
             </div>
@@ -4513,7 +4598,7 @@ max-width: 768px;
                 </div>
                 <div class="dummy08"></div>
 <div class="container1400">
-          <p class="text-left ml-10">
+          <h5 class="text-left ml-10">
             Мы не обещаем луну с неба. Мы просто умеем работать быстрее и качественнее других.
 
             Каждый в команде — прошедший проверку профи с реальным опытом.
@@ -4521,8 +4606,8 @@ max-width: 768px;
             Никакой воды: только гарантия результата и четкое соблюдение сроков.
 
             Наша история пишется здесь и сейчас — вашими победами.
-          </p>
-                    <p class="text-left ml-10">
+          </h5>
+                    <h5 class="text-left ml-10">
 We don't promise the moon. We just work faster and better than the rest.
 
 Every team member is a qualified expert with proven track records.
@@ -4530,7 +4615,7 @@ Every team member is a qualified expert with proven track records.
 No fluff: just a solid guarantee and strict deadlines.
 
 Our story is being written right now — through your victories.
-                    </p>
+                    </h5>
         </div>
 
       </section>
@@ -4581,7 +4666,7 @@ Our story is being written right now — through your victories.
       </div>
 <!--Каталог+ Поиск -->
 <style>
-.cell-900--flex {
+/* .cell-900--flex {
   max-width: 900px;
   width: 100%;
   margin: 0 auto;
@@ -4607,7 +4692,7 @@ Our story is being written right now — through your victories.
   margin: 10px;
 }
 .ffc107 {
-  /* max-width: 1000px; */
+
   width: 100%;
   height: 100px;
     color: black;
@@ -4619,23 +4704,7 @@ Our story is being written right now — through your victories.
   background-color: #d29f05;
   margin-bottom: 3px;
 }
-/* .grid-products__btn-810 {
- text-align: center;
-  max-width: 900px;
-  width: 100%;
-  height: 40px;
-margin: 5px;
-  color: white;
- font-family: 'Rubik';
-  font-weight: 700;
-  font-size: 20px;
-  border: 4px solid black;
-  border-radius: 6px;
 
-  margin-bottom: 5px;
-  background-color: black;
-
-} */
 .grid-products__btn-270 {
  text-align: center;
   max-width: 270px;
@@ -4665,7 +4734,7 @@ margin: 5px;
   padding-left: 10px;
   margin-bottom: 3px;
   background-color: transparent;
-}
+} */
 </style>
 
 
@@ -4679,7 +4748,7 @@ margin: 5px;
 
           <!-- <h2 class="title-6r text-left ml-10">наша команда | our team</h2> -->
           <div class="container1400 mt-100">
-          <p class="text-left ml-10">
+          <h5 class="text-left ml-10">
             depo-500 — это команда опытных адвокатов, удостоенная множества наград.
             Когда на кону ваша свобода или карьера, вы можете положиться на нашу команду, которая уже более 100 лет ведет сложные
             дела и добивается для вас наилучшего исхода. Наши адвокаты вели более 9000 дел и судебных процессов.
@@ -4691,14 +4760,14 @@ margin: 5px;
             Если вы хотите добиться наилучшего результата, позвоните нам. Наши юристы — эксперты в области взаимодействия с правовой
             системой для достижения ваших целей. Мы предлагаем бесплатную консультацию, чтобы обсудить ваше дело, ваши права и то,
             как мы можем вам помочь.
-          </p>
-                    <p class="text-left ml-10">
+          </h5>
+                    <h5 class="text-left ml-10">
                       depo-500 — award-winning attorneys. When your freedom or career is on the line, trust a team with over 100 years of combined experience and 9,000+ cases won.
 
 We listen first. We learn your story and your goals. We stay by your side, fight for you, and deliver proven strategies focused on your defense.
 
 Call us for the best result. Our legal experts know how to navigate the system to achieve your goals. Free consultation available.
-                    </p>
+                    </h5>
         </div>
 
 <!--  -->
@@ -5610,7 +5679,10 @@ document.addEventListener('DOMContentLoaded', () => {
             вашего дела. Мы оценим вашу ситуацию и подскажем возможные варианты защиты. Мы не боимся решительно отстаивать ваши
             права в суде и сделаем все возможное, чтобы добиться для вас наилучшего исхода с учетом обстоятельств вашего дела.
           </p>
+        <!-- <img src="img/slider/gavel.jpg" alt="img/slider/gavel.jpg"
+          style="width: 100%; height: 100%; object-fit: cover; display: block;"> -->
         </div>
+
       </div>
 
       <!-- ========================================= -->
@@ -6593,7 +6665,7 @@ max-width: 600px;
 <style>
   /* Уменьшение высоты футера */
   .footer {
-    padding: 50px 0 10px;
+    padding: 100px 0 10px;
   }
 
   .footer__inner {
@@ -6733,30 +6805,30 @@ max-width: 600px;
       <div class="footer-widget">
         <ul class="list-unstyled">
           <li>
-            <p class="white">depo-500</p>
+            <h5 class="white">depo-500</h5>
 
           </li>
-          <li><a class="grey" href="#pro">Услуги</a></li>
-          <li><a class="grey" href="#pro">Банкротство</a></li>
-          <li><a class="grey" href="#pro">Автокредит</a></li>
+          <li><a class="white" href="#pro">Услуги</a></li>
+          <li><a class="white" href="#pro">Банкротство</a></li>
+          <li><a class="white" href="#pro">Автокредит</a></li>
         </ul>
       </div>
 
       <div class="footer-widget">
         <ul class="list-unstyled">
           <li>
-            <p class="white">about us</p>
+            <h5 class="white">about us</h5>
           </li>
-          <li><a class="grey" href="#home"><h4>Our stories</h4></a></li>
-          <li><a class="grey" href="#first">Blog</a></li>
-          <li><a class="grey" href="#third">Careers</a></li>
+          <li><a class="white" href="#home">Our stories</a></li>
+          <li><a class="white" href="#first">Blog</a></li>
+          <li><a class="white" href="#third">Careers</a></li>
         </ul>
       </div>
 
       <div class="footer-widget">
         <ul class="list-unstyled">
           <li>
-            <p class="white">contact us</p>
+            <h5 class="white">contact us</h5>
           </li>
           <li><h4 class="white">8-910-453-40-12</h4></li>
           <li><h4 class="white">olegrewko@gmail.com</h4></li>
@@ -6860,9 +6932,9 @@ max-width: 600px;
     <div class="container1400">
       <div class="tiny-footer">
         <p class="tiny-grey">
-          © All Rights Reserved 2020 | depo-500
+          © All Rights Reserved 2020
         </p>
-        <ul class="tiny-card">
+        <!-- <ul class="tiny-card">
           <li class="tiny-card__item">
             <a href="#" class="tiny-card__link">
               <img src="./img/icons/paypal.png" alt="PayPal">
@@ -6878,7 +6950,7 @@ max-width: 600px;
               <img src="./img/icons/visa.png" alt="Visa">
             </a>
           </li>
-        </ul>
+        </ul> -->
       </div>
     </div>
   </div>
