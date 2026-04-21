@@ -1411,7 +1411,7 @@ z-index: 10;
   color: black;
   font-weight: 700;
   font-size: 14px;
-  border: 2px solid black;
+  border: 2px solid var(--color-onyx);
   border-radius: 2px;
   padding-left: 10px;
   margin-bottom: 3px;
@@ -1420,7 +1420,7 @@ z-index: 10;
 .grid-products__btn-810 {
   color: white;
 
-  background-color: var(--color-space);
+  background-color: var(--color-onyx);
   transition: all 0.3s;
   cursor: pointer;
 }
@@ -2067,8 +2067,35 @@ display: flex;
   border: none;
   text-indent: 100%;
   background: url('./img/up.png') no-repeat 0px 0px;
-
+  box-shadow: 0 0 1px 1px rgba(255, 255, 255, 0.9);
 }
+
+/* #toTop {
+  display: none;
+  text-decoration: none;
+  position: fixed;
+  bottom: 25px;
+  right: 10px;
+  overflow: hidden;
+  width: 52px;
+  height: 52px;
+  border: none;
+  text-indent: 100%;
+  background: url('../img/up.png') no-repeat center center;
+  background-size: contain;
+  z-index: 3000;
+
+
+  box-shadow: 0 0 1px 1px rgba(255, 255, 255, 0.9);
+
+
+  filter: drop-shadow(0 0 1px rgba(0, 0, 0, 0.1));
+}
+
+#toTop:hover {
+  box-shadow: 0 0 1px 1px rgba(255, 255, 255, 1);
+  transform: scale(1.05);
+} */
 
 .text-center {
   text-align: center;
@@ -3574,8 +3601,7 @@ max-width: 768px;
 --color-graphite: #616161;
 --color-iron: #424242;
 --color-onyx: #212121;
---color-midnight: #1a1a2e;
---color-space: #011932;
+
   --color-cyan-light: rgba(96, 212, 212, 0.15);
   --font-primary: 'Jost', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-accent: 'Rubik', 'Courier New', monospace;
@@ -3815,18 +3841,18 @@ max-width: 768px;
   color: white;
   font-weight: 700;
   font-size: 14px;
-  border: 2px solid black;
+  border: 2px solid var(--color-onyx);
   border-radius: 2px;
   padding-left: 10px;
   margin-bottom: 3px;
-  background-color: black;
+  background-color: var(--color-onyx);
   cursor: pointer;
 }
 
 .grid-products__btn-270:hover,
 .grid-products__btn-810:hover {
   background-color: transparent;
-  color: black;
+  color: var(--color-onyx);
 }
 
 /* ===== ENHANCED NAVIGATION ===== */
@@ -4540,8 +4566,8 @@ margin: 5px;
       </section>
       <section id="services" class="services mt-100">
        <div class="container1800 text-grid-w100 mb-10">
-   <h2 class="title-6r text-center text-grid-w100__content">our services</h2>
-  <h2 class="text-center text-grid-w100__content" style="background-color: #000; color: white; height: 100px; width: 100%; margin-bottom: 0px;">Наши услуги</h2>
+   <h2 class="title-6r text-right text-grid-w100__content">our services</h2>
+  <h2 class="text-left text-grid-w100__content" style="background-color: var(--color-iron); color: white; height: 100px; width: 100%; margin-bottom: 0px;">Наши услуги</h2>
 </div>
 <div class="dummy08"></div>
         <!-- <div class="container1400 text-center">
@@ -4628,15 +4654,15 @@ Our story is being written right now — through your victories.
       <div class="about__inner">
         <div class="about__cell">
           <div class="text-block">
-            <p>
+            <h5>
               Всё началось не с офиса и не с планов. История depo-500 началась с одного человека — Владимира Бауэрса. Он
               вложил в компанию не только деньги и время, а кое-что поважнее: свою целеустремлённость и настоящую страсть к делу.
-              <br><br>
+              <br>
               Эти качества стали ДНК depo-500. Они передаются как семейная ценность — от основателя к каждому сотруднику.
               Прошло более 20 лет, но дух не изменился. Мы всё так же горим своим делом, не сдаёмся перед трудностями и верим, что
               честная работа всегда побеждает. depo-500 — это не просто бренд. Это характер одного человека, который стал характером
               целой команды.
-            </p>
+            </h5>
           </div>
         </div>
         <div class="about__cell">
@@ -4651,11 +4677,11 @@ Our story is being written right now — through your victories.
         </div>
         <div class="about__cell">
           <div class="text-block">
-            <p>
+            <h5>
               Знакомьтесь с нашим главным персонажем — это Джессика, самая последняя разработка ИИ в сфере юриспруденции,
               поколение Nexus-9. Этот сайт также создан с помощью Джессики, а посвящается Седе Оганесовне, моей учительнице
               по прикладной математике.
-            </p>
+            </h5>
           </div>
         </div>
       </div>
@@ -4750,8 +4776,8 @@ margin: 5px;
           <div class="container1400 mt-100">
           <h5 class="text-left ml-10">
             depo-500 — это команда опытных адвокатов, удостоенная множества наград.
-            Когда на кону ваша свобода или карьера, вы можете положиться на нашу команду, которая уже более 100 лет ведет сложные
-            дела и добивается для вас наилучшего исхода. Наши адвокаты вели более 9000 дел и судебных процессов.
+            Когда на кону ваша свобода или карьера, вы можете положиться на нашу команду, которая уже более 10 лет ведет сложные
+            дела и добивается для вас наилучшего исхода. Наши адвокаты вели более 90 дел и судебных процессов.
 
             Мы начнем работу над вашим делом с того, что выслушаем вас, узнаем вашу историю и цели. Мы понимаем, что это может быть
             одним из самых стрессовых периодов в жизни. Мы будем рядом с вами, будем бороться на вашей стороне, предлагать решения и
@@ -4762,7 +4788,7 @@ margin: 5px;
             как мы можем вам помочь.
           </h5>
                     <h5 class="text-left ml-10">
-                      depo-500 — award-winning attorneys. When your freedom or career is on the line, trust a team with over 100 years of combined experience and 9,000+ cases won.
+                      depo-500 — award-winning attorneys. When your freedom or career is on the line, trust a team with over 10 years of combined experience and 9,0+ cases won.
 
 We listen first. We learn your story and your goals. We stay by your side, fight for you, and deliver proven strategies focused on your defense.
 
@@ -5503,12 +5529,12 @@ document.addEventListener('DOMContentLoaded', () => {
     <h2 class=" title-6r text-left ml-10 ">автокредит | auto loan</h2>
   </div> -->
   <div class="container1400 mt-100"
-   style="display: flex; gap: 20px; align-items: center; background-color: #2c3e50; border-radius: 4px; padding: 40px; flex-wrap: wrap;">
+   style="display: flex; gap: 20px; align-items: center; background-color: var(--color-graphite); border-radius: 4px; padding: 40px; flex-wrap: wrap;">
 
     <!-- Левый блок с заголовком -->
     <div style="flex: 1; min-width: 250px;">
-      <div style="background-color: #2c3e50;">
-        <div  style="text-align: left; color: white; font-size: 20px;   font-weight: bold; line-height: 1.3; margin: 0; font-family: Jost, sans-serif;">
+      <div style="background-color: var(--color-graphite);">
+        <div  style="text-align: left; color: white; font-size: 20px;   font-weight: bold; line-height: 1.3; margin: 0; font-family: Jost, sans-serif; background-color: var(--color-graphite);">
           Списание долга по автокредиту с сохранением права собственности на авто.
         </div>
       </div>
@@ -5521,9 +5547,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     <!-- Правый блок с текстом -->
     <div style="flex: 2; min-width: 280px;">
-      <div style="background-color: #2c3e50;">
-        <div style="color: white !important; line-height: 1.6; margin: 0; font-size: 14px; font-family: Jost, sans-serif;">
-          <strong style="color: white !important; font-size: 18px;">Реально аннулировать кредит и оставить машину можно только через:</strong><br><br>
+      <div style="background-color: var(--color-graphite);">
+        <div style="color: white !important; line-height: 1.6; margin: 0; font-size: 14px; font-family: Jost, sans-serif; background-color: var(--color-graphite);">
+          <h5 style="color: white !important; font-size: 18px;">Реально аннулировать кредит и оставить машину можно только через:</h5><br><br>
           • Банкротство физического лица с исключением автомобиля из конкурсной массы (если машина — единственное средство заработка или стоит дешевле 100-200 т.р.).<br><br>
           • Отзыв лицензии у банка (долг продается коллекторам или списывается, но договор залога часто «теряется» — это лазейка).<br><br>
           • Признание договора залога недействительным (через суд, если банк нарушил условия).<br><br>
@@ -5607,7 +5633,7 @@ document.addEventListener('DOMContentLoaded', () => {
 </style>
       <section class="crime mt-50" id= "crime">
           <div class="container1800 text-grid-w100 mb-10">
-            <h2 class="title-6r text-center text-grid-w100__content">criminal</h2>
+            <h2 class="title-6r text-center text-grid-w100__content" style="color: #b81c1c">criminal</h2>
             <h5 class="text-center text-grid-w100__content"
               style="background-color: #000; color: white; height: 100px; width: 100%; margin-bottom: 0px;">
               Уголовные преступления
@@ -6277,7 +6303,8 @@ document.addEventListener('DOMContentLoaded', () => {
         flex-direction: column;
         justify-content: center;
         align-items: center ;
-  background-color: #000;
+  /* background-color: var(--color-space); */
+  background-color: var(--color-onyx);
     color: white;
 
       }
@@ -6294,7 +6321,7 @@ document.addEventListener('DOMContentLoaded', () => {
       margin-left: 5px;
       margin-top: 20px;
       margin-bottom: 20px;
-
+      background-color: #fff;
       @media screen and (max-width: 600px) {
         grid-template-columns:  1fr;
         column-gap: 0px;
