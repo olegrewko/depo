@@ -3064,9 +3064,16 @@ display: flex;
   font-size: 2.5rem;
   color: #101c10;
 
+}
+.title-12r {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 300;
+  line-height: 100px;
+  font-size: 10rem;
+  color: #101c10;
 
 }
-
 .mb-10 {
   margin-bottom: 10px;
 }
@@ -4576,7 +4583,7 @@ margin: 5px;
       <div  class="container1400 text-center mt-100">
         <div class="container900  d-flex">
           <a href="./category.html" style="width: 1000px;">
-            <button class="ffc107">Основные направления деятельности компании depo-500</button>
+            <button class="ffc107">Основные направления деятельности компании</button>
           </a>
         </div>
         <div class="container900">
@@ -4620,7 +4627,7 @@ margin: 5px;
                 <div class="container1800 text-grid-w100 mb-10">
                   <h2 class="title-6r text-center text-grid-w100__content">our story</h2>
                 <h2 class="text-center text-grid-w100__content"
-                  style="background-color: #000; color: white; height: 100px; width: 100%; margin-bottom: 0px;">О нас</h2>
+                  style="background-color: var(--color-dark); color: white; height: 100px; width: 100%; margin-bottom: 0px;">О нас</h2>
                 </div>
                 <div class="dummy08"></div>
 <div class="container1400">
@@ -4766,9 +4773,10 @@ margin: 5px;
 
       <section class="team  mt-50" id= "team">
                         <div class="container1800 text-grid-w100 mb-10">
-                          <h2 class="title-6r text-center text-grid-w100__content">our team</h2>
+                          <h2 class="title-6r text-center text-grid-w100__content"
+                          >our team</h2>
                           <h2 class="text-center text-grid-w100__content"
-                            style="background-color: #000; color: white; height: 100px; width: 100%; margin-bottom: 0px;">Команда</h2>
+                            style="background-color: #D0CFCF; color: white; height: 100px; width: 100%; margin-bottom: 0px;">Команда</h2>
                         </div>
                         <div class="dummy08"></div>
 
@@ -4803,14 +4811,17 @@ Call us for the best result. Our legal experts know how to navigate the system t
     <!-- Карточка 01 - Murder / убийство -->
     <div class="col-lg-3 col-sm-6">
       <div class="card"
-        style="background-color: #011a35; border-radius: 4px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.2); transition: transform 0.3s ease; height: 100%;">
-        <div style="padding: 0px 20px 0 20px;">
-          <p class="title-6r" style="color: white; font-size: 48px; font-weight: bold; margin: 0 0 10px 0;">01</p>
-        </div>
+        style="background-color: var(--color-steel); border-radius: 4px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.2); transition: transform 0.3s ease; height: 100%;">
+
         <img src="img/crime/dave.jpg" alt="Murder" style="width: 100%; height: auto; display: block;">
         <div style="padding: 5px;">
-          <p style="color: white; margin: 10px 0 10px 0; font-size: 16px; font-weight: 500;">Бахром Файзуллоев | Адвокат</p>
-          <p style="color: white; margin: 10px 0 10px 0; font-size: 14px; opacity: 0.8;">89539690586</p>
+          <p style="color: white; margin: 10px 0 10px 0; font-size: 16px; font-weight: 500;">Бахром Файзуллоев <br>
+             Адвокат<br>
+            Недвижимость</p>
+          <p style="color: white; margin: 10px 0 10px 0; font-size: 14px; opacity: 0.8;">89539690586<br>
+            olegrewko@gmail.com
+
+          </p>
 
         </div>
       </div>
@@ -4819,14 +4830,15 @@ Call us for the best result. Our legal experts know how to navigate the system t
     <!-- Карточка 02 - Theft / кража -->
     <div class="col-lg-3 col-sm-6">
       <div class="card"
-        style="background-color: #011325; border-radius: 4px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.2); transition: transform 0.3s ease; height: 100%;">
-        <div style="padding: 0px 20px 0 20px;">
-          <p class="title-6r" style="color: white; font-size: 48px; font-weight: bold; margin: 0 0 10px 0;">02</p>
-        </div>
-        <img src="img/crime/oleg.jpg" alt="Theft" style="width: 100%; height: auto; display: block;">
-       <div style="padding: 5px;">
-          <p style="color: white; margin: 10px 0 10px 0; font-size: 16px; font-weight: 500;">Олег Ревко | Помощник юриста</p>
-          <p style="color: white; margin: 10px 0 10px 0; font-size: 14px; opacity: 0.8;">89998525821</p>
+        style="background-color: var(--color-steel); border-radius: 4px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.2); transition: transform 0.3s ease; height: 100%;">
+
+        <img src="img/crime/val.jpg" alt="Burglary" style="width: 100%; height: auto; display: block;">
+        <div style="padding: 5px;">
+          <p style="color: white; margin: 10px 0 10px 0; font-size: 16px; font-weight: 500;">Виктория Витенко<br>
+            Адвокат<br>
+            Банкротство</p>
+          <p style="color: white; margin: 10px 0 10px 0; font-size: 14px; opacity: 1;">89998525821<br>
+            olegrewko@gmail.com</p>
 
         </div>
       </div>
@@ -4835,46 +4847,49 @@ Call us for the best result. Our legal experts know how to navigate the system t
     <!-- Карточка 03 - Fraud / мошенничество -->
     <div class="col-lg-3 col-sm-6">
       <div class="card"
-        style="background-color: #011d18; border-radius: 4px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.2); transition: transform 0.3s ease; height: 100%;">
-        <div style="padding: 0px 20px 0 20px;">
-          <p class="title-6r" style="color: white; font-size: 48px; font-weight: bold; margin: 0 0 10px 0;">03</p>
-        </div>
-        <img src="img/crime/t2.jpg" alt="Fraud" style="width: 100%; height: auto; display: block;">
-            <div style="padding: 5px;">
-      <p style="color: white; margin: 10px 0 10px 0; font-size: 16px; font-weight: 500;">Виктория Витенко | Адвокат</p>
-      <p style="color: white; margin: 10px 0 10px 0; font-size: 14px; opacity: 0.9;">89998525821</p>
+        style="background-color: var(--color-steel); border-radius: 4px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.2); transition: transform 0.3s ease; height: 100%;">
 
-    </div>
+        <img src="img/crime/val.jpg" alt="Burglary" style="width: 100%; height: auto; display: block;">
+        <div style="padding: 5px;">
+          <p style="color: white; margin: 10px 0 10px 0; font-size: 16px; font-weight: 500;">Виктория Витенко<br>
+            Адвокат<br>
+            Банкротство</p>
+          <p style="color: white; margin: 10px 0 10px 0; font-size: 14px; opacity: 1;">89998525821<br>
+            olegrewko@gmail.com</p>
+
+        </div>
       </div>
     </div>
 
     <!-- Карточка 04 - Assault / нападение -->
     <div class="col-lg-3 col-sm-6">
       <div class="card"
-        style="background-color: #01172e; border-radius: 4px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.2); transition: transform 0.3s ease; height: 100%;">
-        <div style="padding: 0px 20px 0 20px;">
-          <p class="title-6r" style="color: white; font-size: 48px; font-weight: bold; margin: 0 0 10px 0;">04</p>
-        </div>
-        <img src="img/crime/t1.jpg" alt="Assault" style="width: 100%; height: auto; display: block;">
-            <div style="padding: 5px;">
-              <p style="color: white; margin: 10px 0 10px 0; font-size: 16px; font-weight: 500;">Виктория Витенко | Адвокат</p>
-              <p style="color: white; margin: 10px 0 10px 0; font-size: 14px; opacity: 0.9;">89998525821</p>
+        style="background-color: var(--color-steel); border-radius: 4px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.2); transition: transform 0.3s ease; height: 100%;">
 
-            </div>
+        <img src="img/crime/val.jpg" alt="Burglary" style="width: 100%; height: auto; display: block;">
+        <div style="padding: 5px;">
+          <p style="color: white; margin: 10px 0 10px 0; font-size: 16px; font-weight: 500;">Виктория Витенко<br>
+            Адвокат<br>
+            Банкротство</p>
+          <p style="color: white; margin: 10px 0 10px 0; font-size: 14px; opacity: 1;">89998525821<br>
+            olegrewko@gmail.com</p>
+
+        </div>
       </div>
     </div>
 
     <!-- Карточка 05 - Burglary / ограбление (продублирована структура) -->
     <div class="col-lg-3 col-sm-6">
       <div class="card"
-        style="background-color: #001a2a; border-radius: 4px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.2); transition: transform 0.3s ease; height: 100%;">
-        <div style="padding: 0px 20px 0 20px;">
-          <p class="title-6r" style="color: white; font-size: 48px; font-weight: bold; margin: 0 0 10px 0;">05</p>
-        </div>
+        style="background-color: var(--color-steel); border-radius: 4px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.2); transition: transform 0.3s ease; height: 100%;">
+
         <img src="img/crime/val.jpg" alt="Burglary" style="width: 100%; height: auto; display: block;">
             <div style="padding: 5px;">
-              <p style="color: white; margin: 10px 0 10px 0; font-size: 16px; font-weight: 500;">Виктория Витенко | Адвокат</p>
-              <p style="color: white; margin: 10px 0 10px 0; font-size: 14px; opacity: 0.9;">89998525821</p>
+              <p style="color: white; margin: 10px 0 10px 0; font-size: 16px; font-weight: 500;">Виктория Витенко<br>
+                 Адвокат<br>
+                Банкротство</p>
+              <p style="color: white; margin: 10px 0 10px 0; font-size: 14px; opacity: 1;">89998525821<br>
+              olegrewko@gmail.com</p>
 
             </div>
       </div>
@@ -4946,9 +4961,10 @@ Call us for the best result. Our legal experts know how to navigate the system t
 
 <div class="loudspeakers mt-50" id="property">
                           <div class="container1800 text-grid-w100 mb-10">
-                            <h2 class="title-6r text-center text-grid-w100__content">property</h2>
+                            <h2 class="title-6r text-grid-w100__content"
+                            style="background-color: var(--red-color);">property</h2>
                                                 <h5 class="text-center text-grid-w100__content"
-                                                  style="background-color: #000; color: white; height: 100px; width: 100%; margin-bottom: 0px;">
+                                                  style="background-color: var(--red-color); color: white; height: 100px; width: 100%; margin-bottom: 0px;">
                                                   Вернуть недвижимость обратно
                                                 </h5>
                           </div>
@@ -4958,7 +4974,7 @@ Call us for the best result. Our legal experts know how to navigate the system t
     style="display: flex; gap: 10px; align-items: center; border-radius: 6px; padding: 20px; flex-wrap: wrap;">
 
     <div style="flex: 1; min-width: 200px;">
-      <div style="background-color: #2c3e50;">
+      <div style="background-color: var(--accent-color);">
         <div
           style="color: white !important; font-size: 20px; font-weight: bold; line-height: 1.3; margin: 0; font-family: Jost, sans-serif;">
           Перерегистрация<br> права собственности<br> на исходного владельца
@@ -4972,7 +4988,7 @@ Call us for the best result. Our legal experts know how to navigate the system t
     </div>
 
     <div style="flex: 2; min-width: 280px;">
-      <div style="background-color: #142a41;">
+      <div style="background-color: var(--color-accent);">
         <div
           style="color: white !important; line-height: 1.6; margin: 0; font-size: 14px; font-family: Jost, sans-serif;">
           <strong style="color: white !important; font-size: 14px;">Признание сделки недействительной (оспоримая или
@@ -5515,16 +5531,16 @@ document.addEventListener('DOMContentLoaded', () => {
 <!-- tabs -->
 
 
-<div class="loudspeakers mt-50" id="b">
-    <div class="container1800 text-grid-w100 mb-10">
-                          <h2 class="title-6r text-center text-grid-w100__content">autoloan</h2>
+<div class="loudspeakers mt-50" id="b" style="background-color: #E85D04;">
+  <div class="container1800 text-grid-w100 mb-10" >
+    <h2 style="background-color: #D4AF37;" class="title-6r text-center text-grid-w100__content">autoloan</h2>
 
                            <h5 class="text-center text-grid-w100__content"
-              style="background-color: #000; color: white; height: 100px; width: 100%; margin-bottom: 0px;">
+              style="background-color: #000; color: #D4AF37; height: 100px; width: 100%; margin-bottom: 0px;">
               Автокредит
             </h5>
                         </div>
-                        <div class="dummy08" style="background-color: #fff;"></div>
+                        <!-- <div class="dummy08" style="background-color: #E85D04;"></div> -->
   <!-- <div class="container1400">
     <h2 class=" title-6r text-left ml-10 ">автокредит | auto loan</h2>
   </div> -->
@@ -5627,24 +5643,24 @@ document.addEventListener('DOMContentLoaded', () => {
       grid-row: auto !important;
     }
   }
-  /* .ml-560 {
-    margin-left: 560px;
-  } */
+
 </style>
-      <section class="crime mt-50" id= "crime">
+      <section class="crime " id="crime">
           <div class="container1800 text-grid-w100 mb-10">
-            <h2 class="title-6r text-center text-grid-w100__content" style="color: #b81c1c">criminal</h2>
-            <h5 class="text-center text-grid-w100__content"
-              style="background-color: #000; color: white; height: 100px; width: 100%; margin-bottom: 0px;">
+            <h2 class="title-12r text-center text-grid-w100__content"
+             style="color: #6B0F1E; height: 400px;
+             border: 0px solid black; border-radius: 4px;">criminal</h2>
+            <h2 class="text-center text-grid-w100__content"
+               style="background-color: #fff;  color: #000; height: 400px; width: 100%; margin-top: 0px;">
               Уголовные преступления
-            </h5>
+            </h2>
           </div>
         <div class="container1400">
           <!-- <h2 class="text-left title-6r">уголовные преступления | criminal offenses</h2> -->
 
           <!-- <h5 class="text-center ml-10" style="font-size: 20px; line-height: 1.4; color: black; text-align: left;">Профессиональная защита на всех этапах
             уголовного процесса</h5> -->
-<div style="display: flex; justify-content: center; align-items: center; width: 100%; background: transparent ; padding: 60px 0px;">
+<div style="display: flex; justify-content: center; align-items: center; width: 100%; background: transparent ; padding: 0px 0px;">
 
 
 
@@ -5927,7 +5943,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 <!--Уголовные end  -->
 
-      <!-- <p class="text-center mt-100 mb-100">Дополнительные услуги в области уголовного права</p> -->
+ <section class="container1800">
       <div class="container1400 d-flex">
         <a href="./category.html"  style="width: 1400px;">
           <button class="ffc107">Дополнительные услуги в области уголовного права</button>
@@ -6104,7 +6120,7 @@ document.addEventListener('DOMContentLoaded', () => {
           </div>
         </div>
       </div>
-
+</section>
       <style>
         .mt-10 {
           margin-top: 10px;
@@ -6283,7 +6299,7 @@ document.addEventListener('DOMContentLoaded', () => {
       width: 100%;
       display: grid;
       grid-template-columns: 1fr  1fr;
-      grid-template-rows: 100px;
+      grid-template-rows: 400px;
       column-gap: 0px;
       align-items: center;
       margin-left: 0px;
@@ -6304,8 +6320,8 @@ document.addEventListener('DOMContentLoaded', () => {
         justify-content: center;
         align-items: center ;
   /* background-color: var(--color-space); */
-  background-color: var(--color-onyx);
-    color: white;
+  background-color: white;
+    color: var(--color-onyx);
 
       }
 .contact-grid-w100 {
@@ -6321,7 +6337,7 @@ document.addEventListener('DOMContentLoaded', () => {
       margin-left: 5px;
       margin-top: 20px;
       margin-bottom: 20px;
-      background-color: #fff;
+      background-color: white;
       @media screen and (max-width: 600px) {
         grid-template-columns:  1fr;
         column-gap: 0px;
@@ -6548,7 +6564,7 @@ document.addEventListener('DOMContentLoaded', () => {
   <style>
 /* Уменьшение высоты футера */
 .footer {
-    padding: 50px 0 10px;
+    padding: 100px 0 10px;
 }
 
 .footer__inner {
