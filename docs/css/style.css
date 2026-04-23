@@ -457,7 +457,17 @@
   font-display: swap;
   font-style: normal;
 }
+/* Для заголовков — гротески, геометричные BAUHAUS */
+.bauhaus-header {
+  font-family: 'Bebas Neue', 'Impact', 'Helvetica Neue', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
 
+/* Для текста статей — моноширинный (как печатная машинка) */
+.bauhaus-text {
+  font-family: 'Courier New', 'Fira Code', monospace;
+}
 html {
   scroll-behavior: smooth;
   line-height: 1.15;
@@ -1165,7 +1175,7 @@ li {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #000;
+  background-color: white;
 }
 
 .container1400 {
@@ -1437,7 +1447,7 @@ font-family: 'Rubik';
 
 .bg-grey {
   /* background-color: rgba(96, 212, 212, 0.16); */
-  background: #34495e;
+  background: var(--color-dark);
 }
 
 .ml-100 {
@@ -1459,7 +1469,7 @@ font-family: 'Rubik';
   margin: 0px;
   padding: 0;
   display: flex;
-  justify-content: right;
+  justify-content: center;
   align-items: center;
 
 }
@@ -1897,7 +1907,7 @@ li+li {
 }
 
 .team {
-  padding: 80px 0 30px;
+  padding: 20px 0 10px;
 }
 
 .connection {
@@ -2742,8 +2752,8 @@ display: flex;
     right: 30%;
     top: 62.36px;
     /* box-shadow: 0 0 2px rgba(0,0,0,0.5);  */
-    background: rgba(96, 212, 212, 0.34);
-    /* background-color: rgba(255,255,255,0.95); */
+    /* background: rgba(96, 212, 212, 0.34); */
+    background-color: rgba(96, 212, 212, 0.34);;
     /* border-top: 4px solid black;
   border-bottom: 4px solid black; */
     display: flex;
