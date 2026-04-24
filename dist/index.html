@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="wih5h=device-wih5h,initial-scale=1"><meta http-equiv="X-UA-Compatible" content="ie=edge"><meta name="description" content="Criminal Defence"><meta property="og:title" content="Criminal Defence"><meta property="og:description" content="Experience exceptional sound quality with our premium audio products"><title>depo-500</title><!-- <link rel="preload" href="css/style.css" as="style"> --><!-- <link rel="preload" href="js/main.js" as="script"> --><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script><script>window.dataLayer = window.dataLayer || [];
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="wih5h=device-wih5h,initial-scale=1"><meta http-equiv="X-UA-Compatible" content="ie=edge"><meta name="description" content="Criminal Defence"><meta property="og:title" content="Criminal Defence"><meta property="og:description" content="Experience exceptional sound quality with our premium audio products"><title>depo-500</title><link rel="preload" href="css/style.css" as="style"><!-- <link rel="preload" href="js/main.js" as="script"> --><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script><script>window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'GA_MEASUREMENT_ID');</script><script type="application/ld+json">{
@@ -190,6 +190,23 @@ if(k&&j[k]&&(e||j[k].data)||void 0!==d||"string"!=typeof b)return k||(k=i?a[h]=c
   --red-color: #ee6e73;
   --light-grey-color: #eee;
   --color-tundora: darkslategray;
+}
+:root {
+    /* База (черное/белое) */
+    --bauhaus-black: #000000;
+    --bauhaus-dark: #1A1A1A;
+    --bauhaus-white: #FFFFFF;
+    --bauhaus-gray: #B3B3B3;
+
+    /* Баухаус-криминал */
+    --crime-red: #E03C31;      /* Убийства, разбой */
+    --crime-yellow: #F4B41A;   /* В розыске, предупреждение */
+    --crime-orange: #F15A24;   /* Кражи, хулиганство */
+    --crime-blue: #005C9E;     /* УК, приговоры, закон */
+
+    /* Геометрические радиусы (баухаус - прямые углы или строгая геометрия) */
+    --border-radius-bauhaus: 0px;   /* Квадратно, жестко */
+    /* Или мягкий вариант: 4px */
 }
 
 @font-face {
@@ -809,7 +826,7 @@ li {
 }
 
 .mt-50 {
-  margin-top: -50px;
+  margin-top: 50px;
 }
 
 .mt-100 {
@@ -817,7 +834,7 @@ li {
 }
 
 .mt-200 {
-  margin-top: -200px;
+  margin-top: 200px;
 }
 
 .bt-2 {
@@ -1371,16 +1388,23 @@ z-index: 10;
   color: black;
   font-weight: 700;
   font-size: 14px;
-  border: 2px solid black;
+  border: 2px solid var(--color-onyx);
   border-radius: 2px;
   padding-left: 10px;
   margin-bottom: 3px;
   background-color: transparent;
 }
-.grid-products__btn-810:hover {
+.grid-products__btn-810 {
   color: white;
 
-  background-color: black;
+  background-color: var(--color-onyx);
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.grid-products__btn-810:hover {
+  color: black;
+
+  background-color: white;
   transition: all 0.3s;
   cursor: pointer;
 }
@@ -2020,8 +2044,35 @@ display: flex;
   border: none;
   text-indent: 100%;
   background: url('./img/up.png') no-repeat 0px 0px;
-
+  box-shadow: 0 0 1px 1px rgba(255, 255, 255, 0.9);
 }
+
+/* #toTop {
+  display: none;
+  text-decoration: none;
+  position: fixed;
+  bottom: 25px;
+  right: 10px;
+  overflow: hidden;
+  width: 52px;
+  height: 52px;
+  border: none;
+  text-indent: 100%;
+  background: url('../img/up.png') no-repeat center center;
+  background-size: contain;
+  z-index: 3000;
+
+
+  box-shadow: 0 0 1px 1px rgba(255, 255, 255, 0.9);
+
+
+  filter: drop-shadow(0 0 1px rgba(0, 0, 0, 0.1));
+}
+
+#toTop:hover {
+  box-shadow: 0 0 1px 1px rgba(255, 255, 255, 1);
+  transform: scale(1.05);
+} */
 
 .text-center {
   text-align: center;
@@ -2987,12 +3038,19 @@ display: flex;
   font-style: normal;
   font-weight: 400;
   line-height: 100px;
-  font-size: 3.0rem;
-  color: #101c10;
-
+  font-size: 40px;
+  color: var(--color-space);
 
 }
+.title-12r {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 300;
+  line-height: 100px;
+  font-size: 10rem;
+  color: var(--color-space);
 
+}
 .mb-10 {
   margin-bottom: 10px;
 }
@@ -3055,7 +3113,12 @@ max-width: 768px;
   height: auto;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}</style><!-- Стили для карточек --><style>* {
+}</style><!-- Стили для карточек --><style>.bt-3 {
+  border-top: 2px solid #262d26;;
+  padding-top: 15px;
+  padding-bottom: 25px;
+}
+    * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
@@ -3490,7 +3553,7 @@ max-width: 768px;
   }
 }</style><!-- deep-seek --><style>/* ===== RETRO-MINIMALISM CORE STYLES ===== */
 :root {
-  --color-space: #011932;
+  --color-space: #2F394D;
   --color-midnight: #1a1a2e;
   --color-steel: #2d4059;
   --color-silver: #e0e0e0;
@@ -3498,6 +3561,14 @@ max-width: 768px;
   --color-maroon: #8b0000;
   --color-gold: #e6ae05;
   --color-cyan: #60d4d4;
+  --color-paper: #f5f5f5;
+--color-mist: #e0e0e0;
+--color-stone: #bdbdbd;
+--color-ash: #9e9e9e;
+--color-graphite: #616161;
+--color-iron: #424242;
+--color-onyx: #212121;
+
   --color-cyan-light: rgba(96, 212, 212, 0.15);
   --font-primary: 'Jost', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-accent: 'Rubik', 'Courier New', monospace;
@@ -3737,18 +3808,18 @@ max-width: 768px;
   color: white;
   font-weight: 700;
   font-size: 14px;
-  border: 2px solid black;
+  border: 2px solid var(--color-onyx);
   border-radius: 2px;
   padding-left: 10px;
   margin-bottom: 3px;
-  background-color: black;
+  background-color: var(--color-onyx);
   cursor: pointer;
 }
 
 .grid-products__btn-270:hover,
 .grid-products__btn-810:hover {
   background-color: transparent;
-  color: black;
+  color: var(--color-onyx);
 }
 
 /* ===== ENHANCED NAVIGATION ===== */
@@ -4014,81 +4085,7 @@ max-width: 768px;
     width: 100%;
     margin-bottom: 10px;
   }
-} */</style><style>/* Базовые стили */
-    .about__inner {
-      display: flex;
-      gap: 20px;
-      align-items: center;
-    }
-
-    .about__inner + .about__inner {
-      margin-top: 30px;
-    }
-
-    .about__cell {
-      flex: 1;
-    }
-
-    .about__cell img {
-      width: 100%;
-      border-radius: 8px;
-      display: block;
-    }
-
-    .text-block {
-      background-color: #2c3e50;
-      padding: 30px;
-      border-radius: 8px;
-    }
-
-    .text-block p {
-      color: white;
-      line-height: 1.6;
-      margin: 0;
-    }
-
-    /* АДАПТИВ: при ширине 650px и меньше */
-    @media (max-width: 650px) {
-      .about__inner {
-        flex-direction: column;
-      }
-
-      /* Для второго блока: меняем порядок, чтобы фото было после текста */
-      .about__inner:last-child {
-        flex-direction: column;
-      }
-
-      /* Если нужно, чтобы фото было строго после текста в обоих блоках */
-      .about__inner .about__cell:first-child {
-        order: 1;
-      }
-
-      .about__inner .about__cell:last-child {
-        order: 2;
-      }
-    }</style></head><body id="body"><div class="wrapper"><header class="header"><div class="header__top bg-white"><div class="container"><div class="header__top-inner bg-white"><a class="logo" href="#body"><span class="dropbtn">depo-500</span></a><nav class="menu header__nav"><button class="menu__btn"><img src="img/menu-btn.svg" alt=""></button><ul class="menu__list"><li class="menu__list-item"><a href="#services" class="menu__list-link dropbtn" onclick="myFunctionHeadphones()">Услуги</a></li><li class="menu__list-item"><a href="#about" class="menu__list-link dropbtn" onclick="myFunctionHeadphones()">About</a></li><li class="menu__list-item"><a href="#team" class="dropbtn" onclick="myFunctionWireless()">Команда</a></li><li class="menu__list-item"><a href="#property" class="dropbtn" onclick="myFunctionFind()">Недвижимость</a></li><li class="menu__list-item"><a href="#b" class="dropbtn" onclick="myFunctionFind()">Банкротство</a></li><li class="menu__list-item"><a href="#crime" class="menu__list-link dropbtn" onclick="myFunction()">Criminal</a></li><li class="menu__list-item"><a href="#contact" class="dropbtn">Контакты</a></li></ul></nav></div></div></div></header><div class="main"><div class="slider-blog"><div class="slider-blog__inner"><div class="slider-blog__item"><img class="slider-blog__img" src="img/slider/girl-in-alley.jpg" alt="img/girl-in-alley.png"></div><div class="slider-blog__item"><img class="slider-blog__img" src="img/slider/sexual.jpg" alt="img/slider/sexual.jpg"></div><div class="slider-blog__item"><img class="slider-blog__img" src="img/slider/street.jpg" alt="img/slider/street.jpg"></div><div class="slider-blog__item"><img class="slider-blog__img" src="img/slider/warehouse850.jpg" alt="img/slider/warehouse850.jpg"></div><div class="slider-blog__item"><img class="slider-blog__img" src="img/slider/m.jpg" alt="img/slider/m.jpg"></div><div class="slider-blog__item"><img class="slider-blog__img" src="img/slider/a800.jpg" alt="img/slider/a800.jpg"></div><div class="slider-blog__item"><img class="slider-blog__img" src="img/slider/al1800.jpg" alt="img/slider/al1800.jpg"></div><div class="slider-blog__item"><img class="slider-blog__img" src="img/slider/a1800.jpg" alt="img/slider/a1800.jpg"></div><div class="slider-blog__item"><img class="slider-blog__img" src="img/slider/michel.jpg" alt="img/slider/michel.jpg"></div><div class="slider-blog__item"><img class="slider-blog__img" src="img/slider/lacie850.jpg" alt="img/slider/lacie850.jpg"></div><div class="slider-blog__item"><img class="slider-blog__img" src="img/slider/c8.jpg" alt="img/slider/c8.jpg"></div><div class="slider-blog__item"><img class="slider-blog__img" src="img/slider/tt.jpg" alt="img/slider/tt.jpg"></div><div class="slider-blog__item"><img class="slider-blog__img" src="img/slider/mirror850.jpg" alt="img/slider/mirror850.jpg"></div><div class="slider-blog__item"><img class="slider-blog__img" src="img/slider/ma.jpg" alt="img/slider/ma.jpg"></div><div class="slider-blog__item"><img class="slider-blog__img" src="img/slider/pex.jpg" alt="img/slider/pex.jpg"></div><div class="slider-blog__item"><img class="slider-blog__img" src="img/slider/prison850.jpg" alt="img/prison850.jpg"></div><div class="slider-blog__item"><img class="slider-blog__img" src="img/slider/br.jpg" alt="img/slider/br.jpg"></div><div class="slider-blog__item"><img class="slider-blog__img" src="img/slider/clock.jpg" alt="img/slider/clock.jpg"></div><div class="slider-blog__item"><img class="slider-blog__img" src="img/slider/tim.jpg" alt="img/slider/tim.jpg"></div><div class="slider-blog__item"><img class="slider-blog__img" src="img/slider/l4.jpg" alt="img/l4.jpg"></div><div class="slider-blog__item"><img class="slider-blog__img" src="img/slider/hotel.jpg" alt="img/slider/hotel.jpg"></div><div class="slider-blog__item"><img class="slider-blog__img" src="img/slider/manish.jpg" alt="img/slider/manish.jpg"></div></div></div><h3 class="ml-10">Юридический сайт</h3><h3 class="ml-10">8-910-453-40-12 Владимир</h3><h3 class="ml-10">8-999-852-58-21 Олег</h3><section class="advantages mt-50"><div class="container1400"><div class="grid-5"><div class="col-lg-3 col-sm-6"><div class="item fas"><p></p><p class="title-6r">0001</p><p></p><h3 class="advantage-title">Банкротные дела</h3><div class="#"><p class="bt-2">Это самые комплексные и сложные судебные проекты. Задача должника — пройти процедуру банкротства как можно быстрее и с минимумом потерь. Задача кредитора — получить конкурентное преимущество перед другими кредиторами и взыскать задолженность частично или полностью. Мы можем выступать на стороне и тех, и других.</p><h3 class="advantage-title">Что делаем</h3><p class="bt-2">Формируем стратегию проекта от первого до последнего шага</p><p class="bt-2">Если представляем кредитора — ищем активы должников, оспариваем подозрительные сделки и контролируем торги</p><p class="bt-2">Если представляем должника — отбиваем требования кредиторов и комфортно реализуем банкротную процедуру</p><p class="bt-2">Взаимодействуем со всеми участниками процесса</p><p class="bt-2">Выстраиваем единую линию поведения с другими контрагентами даже в случае, когда изначально у нас разнонаправленные интересы</p><p class="bt-2">Участвуем во всех судебных разбирательствах</p></div></div></div><div class="col-lg-3 col-sm-6"><div class="item fas"><p></p><p class="title-6r">0002</p><p></p><h3 class="advantage-title">Уголовные дела</h3><p class="bt-2">В последнее время в корпоративных войнах и крупных спорах все чаще присутствует уголовное направление. В отличие от многих адвокатов, специализирующихся на арбитраже, мы не боимся браться и за уголовные дела. Чаще всего уголовный адвокат считается успешным, если дело не было возбуждено. А арбитражный адвокат успешен, если он может выиграть дело в последнем заседании. При этом обычно он до самого конца не знает, выиграл он или проиграл. Как арбитражные адвокаты, мы привыкли бороться до самого конца — и применяем этот подход в том числе в уголовной практике. Наше преимущество — свежий, «незамыленный» взгляд и очень развитый инструментарий, наработанный в арбитражной практике.</p><h3 class="advantage-title">Что делаем</h3><p class="bt-2">Работаем с доказательствами, со свидетелями, с судом</p><p class="bt-2">Участвуем в следственных мероприятиях и судебных заседаниях</p><p class="bt-2">Нивелируем давление следствия и стараемся получить меру пресечения, не связанную с лишением свободы</p><p class="bt-2">Взаимодействуем со всеми участниками процесса</p></div></div><div class="col-lg-3 col-sm-6"><div class="item fas"><p></p><p class="title-6r">0003</p><p></p><h3 class="advantage-title">Проблемные активы</h3><p class="bt-2">Кредиторы получают актив должника в счет непогашенной задолженности. Однако актив может быть неподконтрольным, убыточным, на него могут претендовать другие бенефициары — и тогда актив становится для клиента не выгодым, а проблемым. Наша задача — очистить актив от требований третьих лиц и подготовить его к продаже так, чтобы это было выгодно клиенту.</p><h3 class="advantage-title">Что делаем</h3><p class="bt-2">Устанавливаем контроль над активом</p><p class="bt-2">Проводим полный правовой аудит, чтобы выявить все риски и оценить возможность успешной борьбы за актив</p><p class="bt-2">При необходимости проводим финансовый аудит</p><p class="bt-2">Взаимодействуем со всеми участниками процесса</p><p class="bt-2">Вырабатываем стратегию очистки актива от притязаний бывшего менеджмента, бенефициаров и других кредиторов</p></div></div><div class="col-lg-3 col-sm-6"><div class="item fas"><p></p><p class="title-6r">0004</p><p></p><h3 class="advantage-title">Сопровождение сделок</h3><p class="bt-2">Сопровождаем сделки любой сложности: приобретение и отчуждение активов и бизнеса, прав требования к должникам, недвижимости. Наша задача — не просто добиться заключения сделки, а сделать так, чтобы в будущем не возникло споров и проблем.</p><h3 class="advantage-title">Что делаем</h3><p class="bt-2">Оцениваем все возможные варианты развития ситуации</p><p class="bt-2">Выявляем риски и делаем все, чтобы вовремя их хеджировать</p><p class="bt-2">Проверяем возможности другой стороны и третьих лиц оспорить сделку</p><p class="bt-2">Взаимодействуем со всеми участниками процесса</p><p class="bt-2">Боремся за клиента до конца и настроены добиться успеха даже на последней стадии рассмотрения дела</p></div></div><style>.ellipse-maroon {
-  position: relative;
-  display: inline-block; /* Чтобы обводка была только вокруг цифры */
-}
-
-.ellipse-maroon::before {
-  content: '';
-  position: absolute;
-  top: -2px;   /* Смещаем вверх */
-  left: -10px; /* Смещаем влево */
-  right: -20px; /* Растягиваем вправо */
-  bottom: -2px; /* Смещаем вниз */
-
-  /* Рисуем эллипс */
-  border: 2px solid maroon;
-  border-radius: 50% / 30% 70% 70% 30%; /* Неправильная форма */
-  transform: rotate(1deg); /* Легкий наклон */
-
-  /* Для небрежности делаем края неровными через фильтр (опционально) */
-  /* filter: url(#rough) drop-shadow(0 0 0 maroon); или просто оставить как есть */
-
-  pointer-events: none; /* Чтобы не мешать кликам */
-}</style><div class="col-lg-3 col-sm-6"><div class="item fas"><p class="title-6r"><span class="ellipse-maroon">00005</span></p><h3 class="advantage-title">Вернуть недвижимость</h3><p class="bt-2 darkslategray">Основное направление нашей деятельности. Это проекты, направленные на то, чтобы выиграть конкретное дело в суде. Работаем в арбитраже, коммерческом арбитраже (в том числе МКАС), судах общей юрисдикции и третейских судах. Работаем в судах по всей стране. Специализируемся на проектах высокой сложности. Беремся за проекты, где все уже проиграно до нас.</p><h3 class="advantage-title">Что делаем</h3><p class="bt-2">Боремся за клиента до конца и настроены добиться успеха даже на последней стадии рассмотрения дела</p></div></div></div></div></section><section id="services" class="services"><div class="container1400 text-center mt-100"><div class="container900 d-flex"><a href="./category.html" style="width: 1000px;"><button class="ffc107">Основные направления деятельности компании depo-500</button></a></div><div class="container900"><button class="grid-products__btn">Восстановление прав на недвижимость</button> <button class="grid-products__btn">Банкротство</button> <button class="grid-products__btn">Наследство</button> <button class="grid-products__btn">Автокредиты</button> <button class="grid-products__btn">Проверка авто</button> <button class="grid-products__btn">Завещания</button> <button class="grid-products__btn">Списание ЖКХ задолженностей</button> <button class="grid-products__btn">Здравоохранение</button> <button class="grid-products__btn">Неправомерное увольнение</button> <button class="grid-products__btn">Трудовые споры</button> <button class="grid-products__btn">Апелляционная защита</button></div><div class="container900"><button class="grid-products__btn-810">Уголовные преступления | Criminal Offences</button> <button class="grid-products__btn-810">Опасное вождение | Driving Offences</button> <button class="grid-products__btn-810">Владение оружием | Weapons Offences</button> <button class="grid-products__btn-810">Преступления, связанные с наркотиками | Drug Offences</button> <button class="grid-products__btn-810">Непредумышленное убийство | Murder</button> <button class="grid-products__btn-810">Торговля людьми | Human Trafficking</button> <button class="grid-products__btn-810">Нападение | Assault</button> <button class="grid-products__btn-810">Мошенничество | Fraud Robbery</button> <button class="grid-products__btn-810">Сексуальные преступления | Sexual Offences</button></div></div></section><section class="team mt-50" id="about"><div class="container1400"><h2 class="title-6r text-left ml-10">o нас | our story</h2><p class="text-left ml-10 bt-2">Мы не обещаем луну с неба. Мы просто умеем работать быстрее и качественнее других. Каждый в команде — прошедший проверку профи с реальным опытом. Никакой воды: только гарантия результата и четкое соблюдение сроков. Наша история пишется здесь и сейчас — вашими победами.</p><p class="text-left ml-10">We don't promise the moon. We just work faster and better than the rest. Every team member is a qualified expert with proven track records. No fluff: just a solid guarantee and strict deadlines. Our story is being written right now — through your victories.</p></div></section><div class="container"><section class="about mb-100"><div class="container1400"><div class="container1400" style="max-width: 1400px; margin: 0 auto; padding: 5px;"><!-- Первый блок: текст слева, картинка справа --><div class="about__inner"><div class="about__cell"><div class="text-block"><p>Всё началось не с офиса и не с планов. История depo-500 началась с одного человека — Владимира Бауэрса. Он вложил в компанию не только деньги и время, а кое-что поважнее: свою целеустремлённость и настоящую страсть к делу.<br><br>Эти качества стали ДНК depo-500. Они передаются как семейная ценность — от основателя к каждому сотруднику. Прошло более 20 лет, но дух не изменился. Мы всё так же горим своим делом, не сдаёмся перед трудностями и верим, что честная работа всегда побеждает. depo-500 — это не просто бренд. Это характер одного человека, который стал характером целой команды.</p></div></div><div class="about__cell"><img src="img/crime/dave.jpg" alt="img/crime/dave.jpg"></div></div><!-- Второй блок: картинка слева, текст справа --><div class="about__inner"><div class="about__cell"><img src="img/slider/j900.png" alt="img/slider/j900.png"></div><div class="about__cell"><div class="text-block"><p>Знакомьтесь с нашим главным персонажем — это Джессика, самая последняя разработка ИИ в сфере юриспруденции, поколение Nexus-9. Этот сайт также создан с помощью Джессики, а посвящается Седе Оганесовне, моей учительнице по прикладной математике.</p></div></div></div></div></div></section></div><!--Каталог+ Поиск --><style>.cell-900--flex {
+} */</style><style>.cell-900--flex {
   max-width: 900px;
   width: 100%;
   margin: 0 auto;
@@ -4114,7 +4111,7 @@ max-width: 768px;
   margin: 10px;
 }
 .ffc107 {
-  /* max-width: 1000px; */
+
   width: 100%;
   height: 100px;
     color: black;
@@ -4126,23 +4123,7 @@ max-width: 768px;
   background-color: #d29f05;
   margin-bottom: 3px;
 }
-/* .grid-products__btn-810 {
- text-align: center;
-  max-width: 900px;
-  width: 100%;
-  height: 40px;
-margin: 5px;
-  color: white;
- font-family: 'Rubik';
-  font-weight: 700;
-  font-size: 20px;
-  border: 4px solid black;
-  border-radius: 6px;
 
-  margin-bottom: 5px;
-  background-color: black;
-
-} */
 .grid-products__btn-270 {
  text-align: center;
   max-width: 270px;
@@ -4172,7 +4153,117 @@ margin: 5px;
   padding-left: 10px;
   margin-bottom: 3px;
   background-color: transparent;
-}</style><section class="team mt-50" id="team"><div class="container1400"><h2 class="title-6r text-left ml-10">наша команда | our team</h2><p class="text-left ml-10">depo-500 — это команда опытных адвокатов, удостоенная множества наград. Когда на кону ваша свобода или карьера, вы можете положиться на нашу команду, которая уже более 100 лет ведет сложные дела и добивается для вас наилучшего исхода. Наши адвокаты вели более 9000 дел и судебных процессов. Мы начнем работу над вашим делом с того, что выслушаем вас, узнаем вашу историю и цели. Мы понимаем, что это может быть одним из самых стрессовых периодов в жизни. Мы будем рядом с вами, будем бороться на вашей стороне, предлагать решения и проверенные стратегии, основанные на опыте и нацеленные на вашу защиту. Если вы хотите добиться наилучшего результата, позвоните нам. Наши юристы — эксперты в области взаимодействия с правовой системой для достижения ваших целей. Мы предлагаем бесплатную консультацию, чтобы обсудить ваше дело, ваши права и то, как мы можем вам помочь.</p><p class="text-left ml-10">depo-500 — award-winning attorneys. When your freedom or career is on the line, trust a team with over 100 years of combined experience and 9,000+ cases won. We listen first. We learn your story and your goals. We stay by your side, fight for you, and deliver proven strategies focused on your defense. Call us for the best result. Our legal experts know how to navigate the system to achieve your goals. Free consultation available.</p></div><!--  --><div class="container1400" style="margin: 0 auto; padding: 5px;"><div class="grid-5" style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 30px;"><!-- Карточка 01 - Murder / убийство --><div class="col-lg-3 col-sm-6"><div class="card" style="background-color: #011a35; border-radius: 4px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.2); transition: transform 0.3s ease; height: 100%;"><div style="padding: 0px 20px 0 20px;"><p class="title-6r" style="color: white; font-size: 48px; font-weight: bold; margin: 0 0 10px 0;">01</p></div><img src="img/crime/dave.jpg" alt="Murder" style="width: 100%; height: auto; display: block;"><div style="padding: 5px;"><p style="color: white; margin: 10px 0 10px 0; font-size: 16px; font-weight: 500;">Бахром Файзуллоев | Адвокат</p><p style="color: white; margin: 10px 0 10px 0; font-size: 14px; opacity: 0.8;">89539690586</p></div></div></div><!-- Карточка 02 - Theft / кража --><div class="col-lg-3 col-sm-6"><div class="card" style="background-color: #011325; border-radius: 4px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.2); transition: transform 0.3s ease; height: 100%;"><div style="padding: 0px 20px 0 20px;"><p class="title-6r" style="color: white; font-size: 48px; font-weight: bold; margin: 0 0 10px 0;">02</p></div><img src="img/crime/oleg.jpg" alt="Theft" style="width: 100%; height: auto; display: block;"><div style="padding: 5px;"><p style="color: white; margin: 10px 0 10px 0; font-size: 16px; font-weight: 500;">Олег Ревко | Помощник юриста</p><p style="color: white; margin: 10px 0 10px 0; font-size: 14px; opacity: 0.8;">89998525821</p></div></div></div><!-- Карточка 03 - Fraud / мошенничество --><div class="col-lg-3 col-sm-6"><div class="card" style="background-color: #011d18; border-radius: 4px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.2); transition: transform 0.3s ease; height: 100%;"><div style="padding: 0px 20px 0 20px;"><p class="title-6r" style="color: white; font-size: 48px; font-weight: bold; margin: 0 0 10px 0;">03</p></div><img src="img/crime/t2.jpg" alt="Fraud" style="width: 100%; height: auto; display: block;"><div style="padding: 5px;"><p style="color: white; margin: 10px 0 10px 0; font-size: 16px; font-weight: 500;">Виктория Витенко | Адвокат</p><p style="color: white; margin: 10px 0 10px 0; font-size: 14px; opacity: 0.9;">89998525821</p></div></div></div><!-- Карточка 04 - Assault / нападение --><div class="col-lg-3 col-sm-6"><div class="card" style="background-color: #01172e; border-radius: 4px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.2); transition: transform 0.3s ease; height: 100%;"><div style="padding: 0px 20px 0 20px;"><p class="title-6r" style="color: white; font-size: 48px; font-weight: bold; margin: 0 0 10px 0;">04</p></div><img src="img/crime/t1.jpg" alt="Assault" style="width: 100%; height: auto; display: block;"><div style="padding: 5px;"><p style="color: white; margin: 10px 0 10px 0; font-size: 16px; font-weight: 500;">Виктория Витенко | Адвокат</p><p style="color: white; margin: 10px 0 10px 0; font-size: 14px; opacity: 0.9;">89998525821</p></div></div></div><!-- Карточка 05 - Burglary / ограбление (продублирована структура) --><div class="col-lg-3 col-sm-6"><div class="card" style="background-color: #001a2a; border-radius: 4px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.2); transition: transform 0.3s ease; height: 100%;"><div style="padding: 0px 20px 0 20px;"><p class="title-6r" style="color: white; font-size: 48px; font-weight: bold; margin: 0 0 10px 0;">05</p></div><img src="img/crime/val.jpg" alt="Burglary" style="width: 100%; height: auto; display: block;"><div style="padding: 5px;"><p style="color: white; margin: 10px 0 10px 0; font-size: 16px; font-weight: 500;">Виктория Витенко | Адвокат</p><p style="color: white; margin: 10px 0 10px 0; font-size: 14px; opacity: 0.9;">89998525821</p></div></div></div></div></div><!-- Адаптация для мобильных устройств (сохраняем ваши пропорции) --><style>@media (max-width: 1200px) {
+}
+    /* Базовые стили */
+    .about__inner {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .about__inner + .about__inner {
+      margin-top: 30px;
+    }
+
+    .about__cell {
+      flex: 1;
+    }
+
+    .about__cell img {
+      width: 100%;
+      border-radius: 8px;
+      display: block;
+    }
+
+    .text-block {
+      background-color: var(--color-midnight);
+      padding: 10px;
+      border-radius: 8px;
+    }
+
+    .text-block p {
+      color: white;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* АДАПТИВ: при ширине 650px и меньше */
+    @media (max-width: 650px) {
+      .about__inner {
+        flex-direction: column;
+      }
+
+      /* Для второго блока: меняем порядок, чтобы фото было после текста */
+      .about__inner:last-child {
+        flex-direction: column;
+      }
+
+      /* Если нужно, чтобы фото было строго после текста в обоих блоках */
+      .about__inner .about__cell:first-child {
+        order: 1;
+      }
+
+      .about__inner .about__cell:last-child {
+        order: 2;
+      }
+    }</style></head><body id="body"><div class="wrapper"><header class="header"><div class="header__top bg-white"><div class="container"><div class="header__top-inner bg-white"><a class="logo" href="#body"><span class="dropbtn">depo-500</span></a><nav class="menu header__nav"><button class="menu__btn"><img src="img/menu-btn.svg" alt=""></button><ul class="menu__list"><li class="menu__list-item"><a href="#services" class="menu__list-link dropbtn" onclick="myFunctionHeadphones()">Услуги</a></li><li class="menu__list-item"><a href="#about" class="menu__list-link dropbtn" onclick="myFunctionHeadphones()">About</a></li><li class="menu__list-item"><a href="#team" class="dropbtn" onclick="myFunctionWireless()">Команда</a></li><li class="menu__list-item"><a href="#property" class="dropbtn" onclick="myFunctionFind()">Недвижимость</a></li><li class="menu__list-item"><a href="#b" class="dropbtn" onclick="myFunctionFind()">Банкротство</a></li><li class="menu__list-item"><a href="#crime" class="menu__list-link dropbtn" onclick="myFunction()">Criminal</a></li><li class="menu__list-item"><a href="#contact" class="dropbtn">Контакты</a></li></ul></nav></div></div></div></header><div class="main"><div class="slider-blog"><div class="slider-blog__inner"><div class="slider-blog__item"><img class="slider-blog__img" src="img/slider/girl-in-alley.jpg" alt="img/girl-in-alley.png"></div><div class="slider-blog__item"><img class="slider-blog__img" src="img/slider/sexual.jpg" alt="img/slider/sexual.jpg"></div><div class="slider-blog__item"><img class="slider-blog__img" src="img/slider/street.jpg" alt="img/slider/street.jpg"></div><div class="slider-blog__item"><img class="slider-blog__img" src="img/slider/warehouse850.jpg" alt="img/slider/warehouse850.jpg"></div><div class="slider-blog__item"><img class="slider-blog__img" src="img/slider/m.jpg" alt="img/slider/m.jpg"></div><div class="slider-blog__item"><img class="slider-blog__img" src="img/slider/a800.jpg" alt="img/slider/a800.jpg"></div><div class="slider-blog__item"><img class="slider-blog__img" src="img/slider/al1800.jpg" alt="img/slider/al1800.jpg"></div><div class="slider-blog__item"><img class="slider-blog__img" src="img/slider/a1800.jpg" alt="img/slider/a1800.jpg"></div><div class="slider-blog__item"><img class="slider-blog__img" src="img/slider/michel.jpg" alt="img/slider/michel.jpg"></div><div class="slider-blog__item"><img class="slider-blog__img" src="img/slider/lacie850.jpg" alt="img/slider/lacie850.jpg"></div><div class="slider-blog__item"><img class="slider-blog__img" src="img/slider/c8.jpg" alt="img/slider/c8.jpg"></div><div class="slider-blog__item"><img class="slider-blog__img" src="img/slider/tt.jpg" alt="img/slider/tt.jpg"></div><div class="slider-blog__item"><img class="slider-blog__img" src="img/slider/mirror850.jpg" alt="img/slider/mirror850.jpg"></div><div class="slider-blog__item"><img class="slider-blog__img" src="img/slider/ma.jpg" alt="img/slider/ma.jpg"></div><div class="slider-blog__item"><img class="slider-blog__img" src="img/slider/pex.jpg" alt="img/slider/pex.jpg"></div><div class="slider-blog__item"><img class="slider-blog__img" src="img/slider/prison850.jpg" alt="img/prison850.jpg"></div><div class="slider-blog__item"><img class="slider-blog__img" src="img/slider/br.jpg" alt="img/slider/br.jpg"></div><div class="slider-blog__item"><img class="slider-blog__img" src="img/slider/clock.jpg" alt="img/slider/clock.jpg"></div><div class="slider-blog__item"><img class="slider-blog__img" src="img/slider/tim.jpg" alt="img/slider/tim.jpg"></div><div class="slider-blog__item"><img class="slider-blog__img" src="img/slider/l4.jpg" alt="img/l4.jpg"></div><div class="slider-blog__item"><img class="slider-blog__img" src="img/slider/hotel.jpg" alt="img/slider/hotel.jpg"></div><div class="slider-blog__item"><img class="slider-blog__img" src="img/slider/manish.jpg" alt="img/slider/manish.jpg"></div></div></div><h5 class="ml-10">Юридический сайт</h5><h5 class="ml-10">8-910-453-40-12 | Владимир</h5><h5 class="ml-10">8-999-852-58-21 | Олег</h5><section class="advantages mt-50"><div class="container1400"><div class="grid-5"><div class="col-lg-3 col-sm-6"><div class="item fas"><p></p><p class="title-6r">0001</p><p></p><h3 class="advantage-title">Банкротные дела</h3><div class="#"><h5 class="bt-2">Это самые комплексные и сложные судебные проекты. Задача должника — пройти процедуру банкротства как можно быстрее и с минимумом потерь. Задача кредитора — получить конкурентное преимущество перед другими кредиторами и взыскать задолженность частично или полностью. Мы можем выступать на стороне и тех, и других.</h5><h3 class="advantage-title">Что делаем</h3><h5 class="bt-2">Формируем стратегию проекта от первого до последнего шага<p></p><h5 class="bt-2">Если представляем кредитора — ищем активы должников, оспариваем подозрительные сделки и контролируем торги<p></p><h5 class="bt-2">Если представляем должника — отбиваем требования кредиторов и комфортно реализуем банкротную процедуру<p></p><h5 class="bt-2">Взаимодействуем со всеми участниками процесса<p></p><h5 class="bt-2">Выстраиваем единую линию поведения с другими контрагентами даже в случае, когда изначально у нас разнонаправленные интересы<p></p><h5 class="bt-2">Участвуем во всех судебных разбирательствах<p></p></h5></h5></h5></h5></h5></h5></div></div></div><div class="col-lg-3 col-sm-6"><div class="item fas"><p></p><p class="title-6r">0002</p><p></p><h3 class="advantage-title">Уголовные дела</h3><h5 class="bt-2">В последнее время в корпоративных войнах и крупных спорах все чаще присутствует уголовное направление. В отличие от многих адвокатов, специализирующихся на арбитраже, мы не боимся браться и за уголовные дела. Чаще всего уголовный адвокат считается успешным, если дело не было возбуждено. А арбитражный адвокат успешен, если он может выиграть дело в последнем заседании. При этом обычно он до самого конца не знает, выиграл он или проиграл. Как арбитражные адвокаты, мы привыкли бороться до самого конца — и применяем этот подход в том числе в уголовной практике. Наше преимущество — свежий, «незамыленный» взгляд и очень развитый инструментарий, наработанный в арбитражной практике.<p></p><h3 class="advantage-title">Что делаем</h3><h5 class="bt-2">Работаем с доказательствами, со свидетелями, с судом<p></p><h5 class="bt-2">Участвуем в следственных мероприятиях и судебных заседаниях<p></p><h5 class="bt-2">Нивелируем давление следствия и стараемся получить меру пресечения, не связанную с лишением свободы<p></p><h5 class="bt-2">Взаимодействуем со всеми участниками процесса<p></p></h5></h5></h5></h5></h5></div></div><div class="col-lg-3 col-sm-6"><div class="item fas"><p></p><p class="title-6r">0003</p><p></p><h3 class="advantage-title">Проблемные активы</h3><h5 class="bt-2">Кредиторы получают актив должника в счет непогашенной задолженности. Однако актив может быть неподконтрольным, убыточным, на него могут претендовать другие бенефициары — и тогда актив становится для клиента не выгодым, а проблемым. Наша задача — очистить актив от требований третьих лиц и подготовить его к продаже так, чтобы это было выгодно клиенту.<p></p><h3 class="advantage-title">Что делаем</h3><h5 class="bt-2">Устанавливаем контроль над активом<p></p><h5 class="bt-2">Проводим полный правовой аудит, чтобы выявить все риски и оценить возможность успешной борьбы за актив<p></p><h5 class="bt-2">При необходимости проводим финансовый аудит<p></p><h5 class="bt-2">Взаимодействуем со всеми участниками процесса<p></p><h5 class="bt-2">Вырабатываем стратегию очистки актива от притязаний бывшего менеджмента, бенефициаров и других кредиторов<p></p></h5></h5></h5></h5></h5></h5></div></div><div class="col-lg-3 col-sm-6"><div class="item fas"><p></p><p class="title-6r">0004</p><p></p><h3 class="advantage-title">Сопровождение сделок</h3><h5 class="bt-2">Сопровождаем сделки любой сложности: приобретение и отчуждение активов и бизнеса, прав требования к должникам, недвижимости. Наша задача — не просто добиться заключения сделки, а сделать так, чтобы в будущем не возникло споров и проблем.<p></p><h3 class="advantage-title">Что делаем</h3><h5 class="bt-2">Оцениваем все возможные варианты развития ситуации<p></p><h5 class="bt-2">Выявляем риски и делаем все, чтобы вовремя их хеджировать<p></p><h5 class="bt-2">Проверяем возможности другой стороны и третьих лиц оспорить сделку<p></p><h5 class="bt-2">Взаимодействуем со всеми участниками процесса<p></p><h5 class="bt-2">Боремся за клиента до конца и настроены добиться успеха даже на последней стадии рассмотрения дела<p></p></h5></h5></h5></h5></h5></h5></div></div><style>.ellipse-maroon {
+  position: relative;
+  display: inline-block; /* Чтобы обводка была только вокруг цифры */
+}
+
+.ellipse-maroon::before {
+  content: '';
+  position: absolute;
+  top: -2px;   /* Смещаем вверх */
+  left: -10px; /* Смещаем влево */
+  right: -20px; /* Растягиваем вправо */
+  bottom: -2px; /* Смещаем вниз */
+
+  /* Рисуем эллипс */
+  border: 2px solid maroon;
+  border-radius: 50% / 30% 70% 70% 30%; /* Неправильная форма */
+  transform: rotate(1deg); /* Легкий наклон */
+
+  /* Для небрежности делаем края неровными через фильтр (опционально) */
+  /* filter: url(#rough) drop-shadow(0 0 0 maroon); или просто оставить как есть */
+
+  pointer-events: none; /* Чтобы не мешать кликам */
+}</style><div class="col-lg-3 col-sm-6"><div class="item fas"><p class="title-6r"><span class="ellipse-maroon">00005</span></p><h3 class="advantage-title">Вернуть недвижимость</h3><h5 class="bt-2">Основное направление нашей деятельности. Это проекты, направленные на то, чтобы выиграть конкретное дело в суде. Работаем в арбитраже, коммерческом арбитраже (в том числе МКАС), судах общей юрисдикции и третейских судах. Работаем в судах по всей стране. Специализируемся на проектах высокой сложности. Беремся за проекты, где все уже проиграно до нас.</h5><h3 class="advantage-title">Что делаем</h3><h5 class="bt-2">Боремся за клиента до конца и настроены добиться успеха даже на последней стадии рассмотрения дела</h5></div></div></div></div><!-- </section> --><section id="services" class="services mt-100"><div class="container1800 text-grid-w23 mb-10"><h2 class="title-6r text-left text-grid-w100__content ml-10">services</h2><h3 class="text-left text-grid-w100__content ml-10" style="background-color: var(--color-space); color: white; height: 100px; width: 100%; margin-bottom: 0px;">Наши услуги</h3></div><div class="dummy08"></div><div class="container1400 text-center mt-100"><div class="container900 d-flex"><a href="./category.html" style="width: 1000px;"><button class="ffc107">Основные направления деятельности компании</button></a></div><div class="container900"><button class="grid-products__btn">Восстановление прав на недвижимость</button> <button class="grid-products__btn">Банкротство</button> <button class="grid-products__btn">Наследство</button> <button class="grid-products__btn">Автокредиты</button> <button class="grid-products__btn">Проверка авто</button> <button class="grid-products__btn">Завещания</button> <button class="grid-products__btn">Списание ЖКХ задолженностей</button> <button class="grid-products__btn">Здравоохранение</button> <button class="grid-products__btn">Неправомерное увольнение</button> <button class="grid-products__btn">Трудовые споры</button> <button class="grid-products__btn">Апелляционная защита</button></div><div class="container900"><button class="grid-products__btn-810">Уголовные преступления | Criminal Offences</button> <button class="grid-products__btn-810">Опасное вождение | Driving Offences</button> <button class="grid-products__btn-810">Владение оружием | Weapons Offences</button> <button class="grid-products__btn-810">Преступления, связанные с наркотиками | Drug Offences</button> <button class="grid-products__btn-810">Непредумышленное убийство | Murder</button> <button class="grid-products__btn-810">Торговля людьми | Human Trafficking</button> <button class="grid-products__btn-810">Нападение | Assault</button> <button class="grid-products__btn-810">Мошенничество | Fraud Robbery</button> <button class="grid-products__btn-810">Сексуальные преступления | Sexual Offences</button></div></div></section><section class="team mt-50" id="about"><!-- <h2 class=" title-6r text-left ml-10 ">o нас | our story</h2> --><div class="container1400 text-grid-w100 mb-10"><h2 class="title-6r text-left text-grid-w100__content">our story</h2><h3 class="text-center text-grid-w100__content" style="background-color: var(--color-space); color: white; height: 100px; width: 100%; margin-bottom: 0px;">О нас<br><h5 class="text-left ml-10">Мы не обещаем луну с неба. Мы просто умеем работать быстрее и качественнее других. Каждый в команде — прошедший проверку профи с реальным опытом. Никакой воды: только гарантия результата и четкое соблюдение сроков. Наша история пишется здесь и сейчас — вашими победами.</h5><h5 class="text-left ml-10">We don't promise the moon. We just work faster and better than the rest. Every team member is a qualified expert with proven track records. No fluff: just a solid guarantee and strict deadlines. Our story is being written right now — through your victories.</h5></h3></div><!-- <div class="dummy08"></div> --><div class="container1400"><!-- <h5 class="text-left ml-10">
+            Мы не обещаем луну с неба. Мы просто умеем работать быстрее и качественнее других.
+
+            Каждый в команде — прошедший проверку профи с реальным опытом.
+
+            Никакой воды: только гарантия результата и четкое соблюдение сроков.
+
+            Наша история пишется здесь и сейчас — вашими победами.
+          </h5>
+                    <h5 class="text-left ml-10">
+We don't promise the moon. We just work faster and better than the rest.
+
+Every team member is a qualified expert with proven track records.
+
+No fluff: just a solid guarantee and strict deadlines.
+
+Our story is being written right now — through your victories.
+                    </h5> --></div></section><div class="container1400"><section class="about mb-100"><div class="container1400"><div class="container1400" style="max-width: 1400px; margin: 0 auto; padding: 5px;"><!-- Первый блок: текст слева, картинка справа --><div class="about__inner"><div class="about__cell"><div class="text-block"><h5>Всё началось не с офиса и не с планов. История depo-500 началась с одного человека — Владимира Бауэрса. Он вложил в компанию не только деньги и время, а кое-что поважнее: свою целеустремлённость и настоящую страсть к делу.<br>Эти качества стали ДНК depo-500. Они передаются как семейная ценность — от основателя к каждому сотруднику. Прошло более 20 лет, но дух не изменился. Мы всё так же горим своим делом, не сдаёмся перед трудностями и верим, что честная работа всегда побеждает. depo-500 — это не просто бренд. Это характер одного человека, который стал характером целой команды.</h5></div></div><div class="about__cell"><img src="img/crime/dave.jpg" alt="img/crime/dave.jpg"></div></div><!-- Второй блок: картинка слева, текст справа --><div class="about__inner"><div class="about__cell"><img src="img/slider/j900.png" alt="img/slider/j900.png"></div><div class="about__cell"><div class="text-block"><h5>Знакомьтесь с нашим главным персонажем — это Джессика, самая последняя разработка ИИ в сфере юриспруденции, поколение Nexus-9. Этот сайт также создан с помощью Джессики, а посвящается Седе Оганесовне, моей учительнице по прикладной математике.</h5></div></div></div></div></div></section></div><!--Каталог+ Поиск --><style></style><section class="team mt-50" id="team"><div class="container1400 text-grid-w14 mb-10"><h2 class="title-6r text-center text-grid-w100__content">team</h2><h5 class="text-left text-grid-w100__content ml-10" style="background-color: transparent; width: 100%; margin-bottom: 10px;">depo-500 — это команда опытных адвокатов, удостоенная множества наград. Когда на кону ваша свобода или карьера, вы можете положиться на нашу команду, которая уже более 10 лет ведет сложные дела и добивается для вас наилучшего исхода. Наши адвокаты вели более 90 дел и судебных процессов. Мы начнем работу над вашим делом с того, что выслушаем вас, узнаем вашу историю и цели. Мы понимаем, что это может быть одним из самых стрессовых периодов в жизни. Мы будем рядом с вами, будем бороться на вашей стороне, предлагать решения и проверенные стратегии, основанные на опыте и нацеленные на вашу защиту. Если вы хотите добиться наилучшего результата, позвоните нам. Наши юристы — эксперты в области взаимодействия с правовой системой для достижения ваших целей. Мы предлагаем бесплатную консультацию, чтобы обсудить ваше дело, ваши права и то, как мы можем вам помочь.</h5></div><div class="dummy08"></div><!-- <h2 class="title-6r text-left ml-10">наша команда | our team</h2> --><div class="container1400 mt-100"><!-- <h5 class="text-left ml-10">
+            depo-500 — это команда опытных адвокатов, удостоенная множества наград.
+            Когда на кону ваша свобода или карьера, вы можете положиться на нашу команду, которая уже более 10 лет ведет сложные
+            дела и добивается для вас наилучшего исхода. Наши адвокаты вели более 90 дел и судебных процессов.
+
+            Мы начнем работу над вашим делом с того, что выслушаем вас, узнаем вашу историю и цели. Мы понимаем, что это может быть
+            одним из самых стрессовых периодов в жизни. Мы будем рядом с вами, будем бороться на вашей стороне, предлагать решения и
+            проверенные стратегии, основанные на опыте и нацеленные на вашу защиту.
+
+            Если вы хотите добиться наилучшего результата, позвоните нам. Наши юристы — эксперты в области взаимодействия с правовой
+            системой для достижения ваших целей. Мы предлагаем бесплатную консультацию, чтобы обсудить ваше дело, ваши права и то,
+            как мы можем вам помочь.
+          </h5> --><!-- <h5 class="text-left ml-10">
+                      depo-500 — award-winning attorneys. When your freedom or career is on the line, trust a team with over 10 years of combined experience and 9,0+ cases won.
+
+We listen first. We learn your story and your goals. We stay by your side, fight for you, and deliver proven strategies focused on your defense.
+
+Call us for the best result. Our legal experts know how to navigate the system to achieve your goals. Free consultation available.
+                    </h5> --></div><!--  --><div class="container1400" style="margin: 0 auto; padding: 5px; margin-top: 100px;"><div class="grid-5" style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 30px;"><!-- Карточка 01 - Murder / убийство --><div class="col-lg-3 col-sm-6"><div class="card" style="background-color: var(--color-space); border-radius: 4px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.2); transition: transform 0.3s ease; height: 100%;"><img src="img/crime/dave.jpg" alt="Murder" style="width: 100%; height: auto; display: block;"><div style="padding: 5px;"><p style="color: white; margin: 10px 0 10px 0; font-size: 14px; opacity: 0.6;">Бахром Файзуллоев<br>Адвокат<br>Недвижимость</p><p class="bt-2" style="color: white; margin: 10px 0 10px 0; font-size: 14px; opacity: 0.6;">89539690586<br>olegrewko@gmail.com</p></div></div></div><!-- Карточка 02 - Theft / кража --><div class="col-lg-3 col-sm-6"><div class="card" style="background-color: var(--color-space); border-radius: 4px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.2); transition: transform 0.3s ease; height: 100%;"><img src="img/crime/val.jpg" alt="Burglary" style="width: 100%; height: auto; display: block;"><div style="padding: 5px;"><p style="color: white; margin: 10px 0 10px 0; font-size: 16px; opacity: 0.6;">Виктория Витенко<br>Адвокат<br>Банкротство</p><p style="color: white; margin: 10px 0 10px 0; font-size: 14px; opacity: 0.6;">89998525821<br>olegrewko@gmail.com</p></div></div></div><!-- Карточка 03 - Fraud / мошенничество --><div class="col-lg-3 col-sm-6"><div class="card" style="background-color: var(--color-space); border-radius: 4px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.2); transition: transform 0.3s ease; height: 100%;"><img src="img/crime/val.jpg" alt="Burglary" style="width: 100%; height: auto; display: block;"><div style="padding: 5px;"><p style="color: white; margin: 10px 0 10px 0; font-size: 16px; opacity: 0.6;">Виктория Витенко<br>Адвокат<br>Банкротство</p><p style="color: white; margin: 10px 0 10px 0; font-size: 14px; opacity: 0.6;">89998525821<br>olegrewko@gmail.com</p></div></div></div><!-- Карточка 04 - Assault / нападение --><div class="col-lg-3 col-sm-6"><div class="card" style="background-color: var(--color-space); border-radius: 4px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.2); transition: transform 0.3s ease; height: 100%;"><img src="img/crime/val.jpg" alt="Burglary" style="width: 100%; height: auto; display: block;"><div style="padding: 5px;"><p style="color: white; margin: 10px 0 10px 0; font-size: 16px; opacity: 0.6;">Виктория Витенко<br>Адвокат<br>Банкротство</p><p style="color: white; margin: 10px 0 10px 0; font-size: 14px; opacity: 0.6;">89998525821<br>olegrewko@gmail.com</p></div></div></div><!-- Карточка 05 - Burglary / ограбление (продублирована структура) --><div class="col-lg-3 col-sm-6"><div class="card" style="background-color: var(--color-space); border-radius: 4px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.2); transition: transform 0.3s ease; height: 100%;"><img src="img/crime/val.jpg" alt="Burglary" style="width: 100%; height: auto; display: block;"><div style="padding: 5px;"><p style="color: white; margin: 10px 0 10px 0; font-size: 16px; opacity: 0.6;">Виктория Витенко<br>Адвокат<br>Банкротство</p><!-- <hr class="bt"> --><p class="bt" style="color: white; margin: 10px 0 10px 0; font-size: 14px; opacity: 0.6;">89998525821<br>olegrewko@gmail.com</p></div></div></div></div></div><!-- Адаптация для мобильных устройств (сохраняем ваши пропорции) --><style>@media (max-width: 1200px) {
     .grid-5 {
       grid-template-columns: repeat(4, 1fr) !important;
     }
@@ -4208,7 +4299,7 @@ margin: 5px;
     .about__inner {
       flex-direction: column !important;
       text-align: center;
-      padding: 30px 20px !important;
+      padding: 10px 10px !important;
     }
 
     .menu__title-white {
@@ -4221,62 +4312,11 @@ margin: 5px;
     }
 
     .about__cell img {
-      max-width: 200px !important;
+      max-width: 400px !important;
+      width: 100%;
     }
-  }</style><div class="loudspeakers mt-50" id="property"><div class="container1400" style="display: flex; gap: 10px; align-items: center; background-color: #2c3e50; border-radius: 4px; padding: 20px; flex-wrap: wrap;"><div style="flex: 1; min-width: 200px;"><div style="background-color: #2c3e50;"><div style="color: white !important; font-size: 20px; font-weight: bold; line-height: 1.3; margin: 0; font-family: Jost, sans-serif;">Перерегистрация<br>права собственности<br>на исходного владельца</div></div></div><div style="flex: 1; min-width: 350px; text-align: center;"><img src="img/f0012.png" alt="img/f0012.png" style="width: 100%; max-width: 450px; height: auto; display: block; margin: 0 auto; border-radius: 4px;"></div><div style="flex: 2; min-width: 280px;"><div style="background-color: #2c3e50;"><div style="color: white !important; line-height: 1.6; margin: 0; font-size: 14px; font-family: Jost, sans-serif;"><strong style="color: white !important; font-size: 14px;">Признание сделки недействительной (оспоримая или ничтожная сделка)</strong><br><br>Этот путь используется, когда договор был, но он незаконен с самого начала. Основания (вы должны это доказать в суде): Сделка совершена под влиянием заблуждения (продавец думал, что подписывает договор аренды или дарения). Сделка совершена под угрозой, насилием, обманом (ст. 179 ГК РФ). Продавец был недееспособен или не понимал своих действий (нужна посмертная психолого-психиатрическая экспертиза). Сделка мнимая или притворная (например, продажа для вида, чтобы не отдавать долги).<br><br><strong style="color: white !important;">Результат:</strong> Суд возвращает всё в исходное состояние (реституция). Право собственности аннулируется у покупателя и регистрируется на продавца.</div></div></div></div></div><style>/* Дополнительная защита от внешних стилей */
-  .loudspeakers * {
-    color: white !important;
-  }
-
-  .loudspeakers div {
-    background-color: #2c3e50;
-  }</style></div></div><!-- </div>
-
-
-      </div>
-
-
-    </div>
-
-
-  </div> --><!-- </div> --><div class="container1400 mt-100"><h5 class="text-left ml-10">Тема «Перерегистрация права собственности на исходного владельца» (то есть возврат квартиры, дома или земли тому, кто продал её ранее) — юридически сложный процесс. В законном поле это возможно только при наличии чётких оснований, указанных в Гражданском кодексе РФ.</h5><h5 class="text-left ml-10">Вот все законные способы, как это сделать, сгруппированные по механизмам действий.</h5><h5 class="text-left ml-10">1. Расторжение договора купли-продажи (ДКП)</h5><h5 class="text-left ml-10">Это самый частый способ, но он возможен только при взаимном согласии сторон или существенном нарушении условий сделки. По соглашению сторон (бывший владелец договаривается с нынешним). Подаётся заявление в Росреестр о регистрации прекращения права и возврате собственности. Нужно: новое соглашение о расторжении + акт приёма-передачи квартиры обратно. В судебном порядке (если покупатель не заплатил, или продавец обманул, или обнаружены скрытые дефекты). Суд обязывает вернуть квартиру.</h5><h5 class="text-left ml-10">2. Признание сделки недействительной (оспоримая или ничтожная сделка)</h5><h5 class="text-left ml-10">Этот путь используется, когда договор был, но он незаконен с самого начала. Основания (вы должны это доказать в суде): Сделка совершена под влиянием заблуждения (продавец думал, что подписывает договор аренды или дарения). Сделка совершена под угрозой, насилием, обманом (ст. 179 ГК РФ). Продавец был недееспособен или не понимал своих действий (нужна посмертная психолого-психиатрическая экспертиза). Сделка мнимая или притворная (например, продажа для вида, чтобы не отдавать долги). Результат: Суд возвращает всё в исходное состояние (реституция). Право собственности аннулируется у покупателя и регистрируется на продавца.</h5><h5 class="text-left ml-10">3. Истребование имущества у добросовестного приобретателя (Виндикация)</h5><h5 class="text-left ml-10">Это когда продавец (бывший владелец) вообще не подписывал договор — квартиру украли, подделали документы или продал мошенник по доверенности. Механизм: Подаётся иск в суд о признании отсутствующим права собственности у «покупателя» и о возврате квартиры законному хозяину. Сложность: Если новый покупатель «добросовестный» (не знал о краже и проверил документы), суд может отказать, если квартира куплена возмездно (за деньги). Но если квартира была украдена или выбыла из владения помимо воли, виндикация работает (ст. 302 ГК РФ).</h5><h5 class="text-left ml-10">4. Исполнение решения суда по «обратной купле-продаже»</h5><h5 class="text-left ml-10">Иногда бывшие владельцы выкупают квартиру обратно. Это не «перерегистрация на исходного», а новая сделка: Заключается новый договор купли-продажи (теперь исходный владелец — покупатель). Оплачивается госпошлина, налоги (если квартира была в собственности менее 3-5 лет у продавца).</h5><h5 class="text-left ml-10">5. Отмена договора дарения (если исходная передача была дарением)</h5><h5 class="text-left ml-10">Если право собственности было передано безвозмездно (дарение, а не купля-продажа), закон позволяет отменить дарение в суде в случаях: Одаряемый совершил покушение на жизнь дарителя или членов его семьи. Одаряемый умышленно нанёс тяжкий вред здоровью дарителя. Даритель переживёт одаряемого (оговорено в договоре).</h5><!-- <h5 class="text-left ml-10">
-  6. Упрощённый вариант (без суда) — Обратный возврат в Росреестре
-</h5>
-<h5 class="text-left ml-10">
-  Единственный законный вариант без суда: Вы находите того, кому продали квартиру, и он добровольно соглашается вернуть её
-  вам. Вы идёте в МФЦ и пишете:
-
-  Заявление о прекращении права собственности на покупателя.
-
-  Заявление о регистрации права собственности на продавца.
-
-  Прилагаете: паспорта, старый договор (на основании которого покупатель владел), новое соглашение о расторжении и
-  возврате.
-
-  Это не считается новой сделкой, а именно возвратом сторон в исходное положение.
-
-  Что НЕ является законным способом (не делайте):
-  Подделка задним числом расписок, доверенностей.
-
-  Оформление «фиктивного суда» (мошенничество, уголовная статья).
-
-  Обращение к «чёрным юристам», обещающим перерегистрировать квартиру через реестр (это взятка или взлом Росреестра).
-
-  Пошаговый алгоритм действий (если вы продавец и хотите вернуть):
-  Переговоры с нынешним владельцем. Если он согласен — идите в МФЦ (пункт 6).
-
-  Если не согласен — идите к адвокату по недвижимости. Определите основание (неплатёж? обман? заблуждение?).
-
-  Соберите доказательства (медицинские справки, записи разговоров, выписки по счетам).
-
-  Подавайте иск в районный суд по месту нахождения недвижимости.
-
-  Получите решение суда → идите с ним в Росреестр для регистрации возврата права собственности на вас.
-
-  Главное правило: Просто так, по своему желанию, забрать квартиру обратно у того, кому вы её законно продали и получили
-  деньги — нельзя. Для перерегистрации на исходного владельца нужны либо добровольное согласие покупателя, либо вступившее
-  в силу решение суда с законными основаниями.
-</h5> --></div><!-- </div> --><!-- tabs-styles --><style>:root {
+  }</style><!-- Недвижимость --><div class="loudspeakers mt-100" id="property"><div class="container1800 text-grid-w23 mb-10"><h2 class="title-6r text-left text-grid-w100__content ml-10" style="color: var(--color-space); border-bottom: 0px solid var(--color-maroon);
+   border-radius: 4px;">Недвижимость</h2><h3 class="text-center text-grid-w100__content ml-5" style="background-color: var(--bauhaus-dark) ; color: var(--color-gold); border: 3px solid var(--bauhaus-dark); height: 100px; width: 100%; margin: 1px; border-radius: 4px;">Вернуть недвижимость обратно</h3></div><div class="dummy08" style="background-color: #fff;"></div><div style="display: flex; min-width: 450px; text-align: center; background-color: var(--color-graphite);"><img src="img/f001.jpg" alt="img/f0012.png" style="width: 100%; max-width: 450px; height: auto; display: block; margin: 0 auto; border-radius: 4px;"> <img src="img/f002.jpg" alt="img/f0012.png" style="width: 100%; max-width: 450px; height: auto; display: block; margin: 0 auto; border-radius: 4px;"> <img src="img/f003.jpg" alt="img/f0012.png" style="width: 100%; max-width: 450px; height: auto; display: block; margin: 0 auto; border-radius: 4px;"> <img src="img/f004.jpg" alt="img/f0012.png" style="width: 100%; max-width: 450px; height: auto; display: block; margin: 0 auto; border-radius: 4px;"> <img src="img/f005.jpg" alt="img/f0012.png" style="width: 100%; max-width: 450px; height: auto; display: block; margin: 0 auto; border-radius: 4px;"></div></div><div class="dummy08" style="background-color: #fff;"></div><div class="container1400 mt-100"><h2 class="text-center" style="color: var(--color-maroon); font-size: 20px; font-weight: bold; line-height: 1.3; margin: 0; font-family: Jost, sans-serif;">Перерегистрация права собственности на исходного владельца</h2><h5 class="text-left ml-10">Тема «Перерегистрация права собственности на исходного владельца» (то есть возврат квартиры, дома или земли тому, кто продал её ранее) — юридически сложный процесс. В законном поле это возможно только при наличии чётких оснований, указанных в Гражданском кодексе РФ.</h5><h5 class="text-left ml-10">Вот все законные способы, как это сделать, сгруппированные по механизмам действий.</h5><h5 class="text-left ml-10">1. Расторжение договора купли-продажи (ДКП)</h5><h5 class="text-left ml-10">Это самый частый способ, но он возможен только при взаимном согласии сторон или существенном нарушении условий сделки. По соглашению сторон (бывший владелец договаривается с нынешним). Подаётся заявление в Росреестр о регистрации прекращения права и возврате собственности. Нужно: новое соглашение о расторжении + акт приёма-передачи квартиры обратно. В судебном порядке (если покупатель не заплатил, или продавец обманул, или обнаружены скрытые дефекты). Суд обязывает вернуть квартиру.</h5><h5 class="text-left ml-10">2. Признание сделки недействительной (оспоримая или ничтожная сделка)</h5><h5 class="text-left ml-10">Этот путь используется, когда договор был, но он незаконен с самого начала. Основания (вы должны это доказать в суде): Сделка совершена под влиянием заблуждения (продавец думал, что подписывает договор аренды или дарения). Сделка совершена под угрозой, насилием, обманом (ст. 179 ГК РФ). Продавец был недееспособен или не понимал своих действий (нужна посмертная психолого-психиатрическая экспертиза). Сделка мнимая или притворная (например, продажа для вида, чтобы не отдавать долги). Результат: Суд возвращает всё в исходное состояние (реституция). Право собственности аннулируется у покупателя и регистрируется на продавца.</h5><h5 class="text-left ml-10">3. Истребование имущества у добросовестного приобретателя (Виндикация)</h5><h5 class="text-left ml-10">Это когда продавец (бывший владелец) вообще не подписывал договор — квартиру украли, подделали документы или продал мошенник по доверенности. Механизм: Подаётся иск в суд о признании отсутствующим права собственности у «покупателя» и о возврате квартиры законному хозяину. Сложность: Если новый покупатель «добросовестный» (не знал о краже и проверил документы), суд может отказать, если квартира куплена возмездно (за деньги). Но если квартира была украдена или выбыла из владения помимо воли, виндикация работает (ст. 302 ГК РФ).</h5><h5 class="text-left ml-10">4. Исполнение решения суда по «обратной купле-продаже»</h5><h5 class="text-left ml-10">Иногда бывшие владельцы выкупают квартиру обратно. Это не «перерегистрация на исходного», а новая сделка: Заключается новый договор купли-продажи (теперь исходный владелец — покупатель). Оплачивается госпошлина, налоги (если квартира была в собственности менее 3-5 лет у продавца).</h5><h5 class="text-left ml-10">5. Отмена договора дарения (если исходная передача была дарением)</h5><h5 class="text-left ml-10">Если право собственности было передано безвозмездно (дарение, а не купля-продажа), закон позволяет отменить дарение в суде в случаях: Одаряемый совершил покушение на жизнь дарителя или членов его семьи. Одаряемый умышленно нанёс тяжкий вред здоровью дарителя. Даритель переживёт одаряемого (оговорено в договоре).</h5></div><section class="stores mt-50" id="b"><div class="container1800 text-grid-w100 mb-10"><h2 class="title-6r text-center text-grid-w100__content">Банкротство</h2><h2 class="text-center text-grid-w100__content" style="background-color: #000; color: white; height: 100px; width: 100%; margin-bottom: 0px;">Bankruptcy</h2></div><div class="dummy08"></div><div class="container1400 contact-grid-w100 mt-200"><div class="contact-grid-w100__content text-left"><div style="display: flex; max-width: 600px; width: 100%; text-align: center; background-color: var(--color-graphite);"><img src="img/matthew-henry.jpg" alt="img/matthew-henry.jpg" style="max-width: 600px; width: 100%; height: auto; display: block; margin: 0 auto; border-radius: 4px;"></div></div><div class="contact-grid-w100__content text-left"><div class="mt-10"><h2 class="mt-10" style="background-color: white; color: #000; height: 100px; width: 95%; margin-top: 40px;">Аннулировать автокредит через банкротство</h2><h2 class="mt-10" style="background-color: white; color: #000; height: 100px; width: 95%; margin-top: 10px;">Списать все ЖКХ задолженности</h2><h2 class="mt-10" style="background-color: white; color: #000; height: 100px; width: 95%; margin-top: 10px;">Списать все штрафы</h2></div></div></div></section><style>:root {
         --color-dark: #4d4d4d;
         --color-light: #808080;
         --color-accent: #4f6b88;
@@ -4647,7 +4687,48 @@ flex-direction: column;
             document.querySelector(`[data-tabs-target="${tabsPath}"]`).classList.add('tabs__content--active');
         }
     });
-});</script><!-- tabs --><div class="loudspeakers mt-50" id="b"><div class="container1400" style="display: flex; gap: 30px; align-items: center; background-color: #2c3e50; border-radius: 20px; padding: 40px; flex-wrap: wrap;"><!-- Левый блок с заголовком --><div style="flex: 1; min-width: 250px;"><div style="background-color: #2c3e50;"><div style="text-align: left; color: white; font-size: 20px;   font-weight: bold; line-height: 1.3; margin: 0; font-family: Jost, sans-serif;">Списание долга по автокредиту с сохранением права собственности на авто.</div></div></div><!-- Центральный блок с картинкой --><div style="flex: 1; min-width: 300px; text-align: center;"><img src="img/slider/bp790.jpg" alt="img/slider/bp790.jpg" style="width: 100%; max-width: 500px; height: auto; display: block; margin: 0 auto; border-radius: 4px;"></div><!-- Правый блок с текстом --><div style="flex: 2; min-width: 280px;"><div style="background-color: #2c3e50;"><div style="color: white !important; line-height: 1.6; margin: 0; font-size: 14px; font-family: Jost, sans-serif;"><strong style="color: white !important; font-size: 18px;">Реально аннулировать кредит и оставить машину можно только через:</strong><br><br>• Банкротство физического лица с исключением автомобиля из конкурсной массы (если машина — единственное средство заработка или стоит дешевле 100-200 т.р.).<br><br>• Отзыв лицензии у банка (долг продается коллекторам или списывается, но договор залога часто «теряется» — это лазейка).<br><br>• Признание договора залога недействительным (через суд, если банк нарушил условия).<br><br>• Истечение срока исковой давности (3 года после последнего платежа, но машина всё еще в залоге).</div></div></div></div></div><style>/* Адаптив для мобильных устройств */
+});</script><!-- tabs --><!-- <div class="loudspeakers mt-50" id="b" style="background-color: #E85D04;">
+  <div class="container1800 text-grid-w100 mb-10" >
+    <h2 style="background-color: #D4AF37;" class="title-6r text-center text-grid-w100__content">autoloan</h2>
+
+                           <h5 class="text-center text-grid-w100__content"
+              style="background-color: #000; color: #D4AF37; height: 100px; width: 100%; margin-bottom: 0px;">
+              Автокредит
+            </h5>
+                        </div>
+
+  <div class="container1400 mt-100"
+   style="display: flex; gap: 20px; align-items: center; background-color: var(--color-graphite); border-radius: 4px; padding: 40px; flex-wrap: wrap;">
+
+
+    <div style="flex: 1; min-width: 250px;">
+      <div style="background-color: var(--color-graphite);">
+        <div  style="text-align: left; color: white; font-size: 20px;   font-weight: bold; line-height: 1.3; margin: 0; font-family: Jost, sans-serif; background-color: var(--color-graphite);">
+          Списание долга по автокредиту с сохранением права собственности на авто.
+        </div>
+      </div>
+    </div>
+
+
+    <div style="flex: 1; min-width: 300px; text-align: center;">
+      <img src="img/slider/bp790.jpg" alt="img/slider/bp790.jpg" style="width: 100%; max-width: 500px; height: auto; display: block; margin: 0 auto; border-radius: 4px;">
+    </div>
+
+
+    <div style="flex: 2; min-width: 280px;">
+      <div style="background-color: var(--color-graphite);">
+        <div style="color: white !important; line-height: 1.6; margin: 0; font-size: 14px; font-family: Jost, sans-serif; background-color: var(--color-graphite);">
+          <h5 style="color: white !important; font-size: 18px;">Реально аннулировать кредит и оставить машину можно только через:</h5><br><br>
+          • Банкротство физического лица с исключением автомобиля из конкурсной массы (если машина — единственное средство заработка или стоит дешевле 100-200 т.р.).<br><br>
+          • Отзыв лицензии у банка (долг продается коллекторам или списывается, но договор залога часто «теряется» — это лазейка).<br><br>
+          • Признание договора залога недействительным (через суд, если банк нарушил условия).<br><br>
+          • Истечение срока исковой давности (3 года после последнего платежа, но машина всё еще в залоге).
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div> --><style>/* Адаптив для мобильных устройств */
   @media (max-width: 768px) {
     #b > div {
       flex-direction: column !important;
@@ -4663,14 +4744,6 @@ flex-direction: column;
     #b > div > div:last-child {
       text-align: left;
     }
-  }
-
-  /* Защита от внешних стилей */
-  #b * {
-    color: white !important;
-  }
-  #b div {
-    background-color: #2c3e50;
   }</style><!--  --><style>/* Адаптив для мобильных */
   @media (max-width: 768px) {
   .container1400 > div {
@@ -4698,13 +4771,18 @@ flex-direction: column;
       grid-column: auto !important;
       grid-row: auto !important;
     }
-  }
-  /* .ml-560 {
-    margin-left: 560px;
-  } */</style><section class="crime mt-50" id="crime"><div class="container1400"><h2 class="text-center title-6r">уголовные преступления | criminal offenses</h2><h5 class="text-center ml-10" style="font-size: 20px; line-height: 1.4; color: black; text-align: center;">Профессиональная защита на всех этапах уголовного процесса</h5><div style="display: flex; justify-content: center; align-items: center; width: 100%; background: transparent ; padding: 60px 0px;"><div style="display: grid; grid-template-columns: repeat(5, 1fr); grid-auto-rows: minmax(120px, auto); gap: 2px; background-color: #1a1a1a; width: 100%; margin: 0 auto;"><!-- ========================================= --><!-- РЯД 1                                      --><!-- ========================================= --><div style="grid-column: span 5; background-color: #0a0a0a; border: 0px solid #2a2a2a; overflow: hidden; min-height: 120px;"><!-- <div style="padding: 5px; color: white; height: 100%; text-align: center;"> --> <img src="img/slider/invest.jpg" alt="img/slider/invest.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block; min-height: 300px;"><!-- </div> --></div><!-- ========================================= --><!-- РЯД 2                                      --><!-- ========================================= --><div style="grid-column: span 2; background-color: #0a0a0a; border: 1px solid #2a2a2a; overflow: hidden; min-height: 120px;"><img src="img/slider/post1.jpg" alt="img/slider/post1.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div><div style="background-color: #0a0a0a; border: 1px solid #2a2a2a; overflow: hidden; min-height: 120px;"><div style="padding: 5px; color: white; height: 100%; text-align: center;"><p style="font-size: 13px;  color: #587da1; margin-bottom: 8px; text-align: center;">depo-500</p><p style="font-size: 13px; line-height: 1.4; color: #5a7fa3; text-align: left;">depo-500 — это команда опытных адвокатов, удостоенная множества наград. Когда на кону ваша свобода или карьера, вы можете положиться на нашу команду, которая уже более 10 лет ведет сложные дела и добивается для вас наилучшего исхода. Наши адвокаты вели более 90 дел и судебных процессов. Мы начнем работу над вашим делом с того, что выслушаем вас, узнаем вашу историю и цели. Мы понимаем, что это может быть одним из самых стрессовых периодов в жизни. Мы будем рядом с вами, будем бороться на вашей стороне, предлагать решения и проверенные стратегии, основанные на опыте и нацеленные на вашу защиту. Если вы хотите добиться наилучшего результата, позвоните нам. Наши юристы — эксперты в области взаимодействия с правовой системой для достижения ваших целей. Мы предлагаем бесплатную консультацию, чтобы обсудить ваше дело, ваши права и то, как мы можем вам помочь.</p></div></div><div style="background-color: #0a0a0a; border: 1px solid #2a2a2a; overflow: hidden; min-height: 120px;"><img src="img/slider/m200.jpg" alt="img/slider/m200.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div><div style="background-color: #0a0a0a; border: 1px solid #2a2a2a; overflow: hidden; min-height: 120px;"><div style="padding: 5px; color: white; height: 100%; text-align: center;"><p style="font-size: 13px; line-height: 1.4; color: #ccc; text-align: center;">Защита по делам о наркотиках</p><p style="font-size: 13px; line-height: 1.4; color: #ccc; text-align: left;">Независимо от тяжести обвинения, не стоит пытаться разобраться с уголовными делами самостоятельно. Из-за серьезных последствий, к которым может привести обвинительный приговор по делу о нападении, всегда разумно обратиться за помощью к адвокату, имеющему опыт защиты по таким делам. Наши адвокаты встретятся с вами лично, чтобы изучить все обстоятельства вашего дела. Мы оценим вашу ситуацию и подскажем возможные варианты защиты. Мы не боимся решительно отстаивать ваши права в суде и сделаем все возможное, чтобы добиться для вас наилучшего исхода с учетом обстоятельств вашего дела.</p></div></div><!-- ========================================= --><!-- РЯД 3                                      --><!-- ========================================= --><div style="background-color: #0a0a0a; border: 1px solid #2a2a2a; overflow: hidden; min-height: 120px;"><div style="padding: 5px; color: white; height: 100%; text-align: center;"><p style="font-size: 13px; line-height: 1.4; color: #ccc; text-align: center;">Коллективный опыт</p><img src="img/slider/wes.jpg" alt="img/slider/wes.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div></div><div style="grid-column: span 2; background-color: #0a0a0a; border: 1px solid #2a2a2a; overflow: hidden; min-height: 120px;"><img src="img/slider/speed.jpg" alt="img/slider/speed.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div><div style="grid-column: span 2; background-color: #0a0a0a; border: 1px solid #2a2a2a; overflow: hidden; min-height: 120px;"><p style="font-size: 13px;  color: orange; margin-bottom: 8px; text-align: center;">Автокредит</p><img src="img/slider/blogpost.jpg" alt="img/slider/w800.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div><!-- ========================================= --><!-- РЯД 4                                      --><!-- ========================================= --><div style="grid-column: span 3; grid-row: span 2; background-color: #0a0a0a; border: 1px solid #2a2a2a; overflow: hidden; min-height: 120px;"><img src="img/slider/matt.jpg" alt="img/slider/w800.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div><div style="background-color: #0a0a0a; border: 1px solid #2a2a2a; overflow: hidden; min-height: 120px;"><div style="padding: 5px; color: white; height: 100%; text-align: center;"><p style="font-size: 10px; line-height: 1.0; color: #ccc; text-align: center;">Защита по делам о наркотиках</p><img src="img/slider/gavel.jpg" alt="img/slider/gavel.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div></div><div style="background-color: #0a0a0a; border: 1px solid #2a2a2a; overflow: hidden; min-height: 120px;"><img src="img/slider/un.jpg" alt="img/slider/un.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div><!-- ========================================= --><!-- РЯД 5                                      --><!-- ========================================= --><div style="background-color: #0a0a0a; border: 1px solid #2a2a2a; overflow: hidden; min-height: 120px;"><div style="padding: 5px; color: white; height: 100%; text-align: center;"><p style="font-size: 13px; line-height: 1.4; color: #ccc; text-align: center;">Убийство первой степени</p><img src="img/slider/thomas.jpg" alt="img/slider/thomas.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div></div><div style="background-color: #0a0a0a; border: 1px solid #2a2a2a; overflow: hidden; min-height: 120px;"><div style="padding: 5px; color: white; height: 100%; text-align: center;"><p style="font-size: 13px; line-height: 1.4; color: #ccc; text-align: center;">Сексуальные преступления</p><img src="img/slider/charles.jpg" alt="img/slider/th.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div></div><!-- ========================================= --><!-- РЯД 6                                      --><!-- ========================================= --><div style="grid-column: span 5; background-color: #0a0a0a; border: 1px solid #2a2a2a; overflow: hidden; min-height: 120px;"><img src="img/slider/dr.jpg" alt="img/slider/invest.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div><!-- ========================================= --><!-- РЯД 7                                      --><!-- ========================================= --><div style="background-color: #0a0a0a; border: 1px solid #2a2a2a; overflow: hidden; min-height: 120px;"><img src="img/slider/frame.jpeg" alt="img/slider/frame.jpeg" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div><div style="grid-column: span 2; background-color: #0a0a0a; border: 1px solid #2a2a2a; overflow: hidden; min-height: 120px;"><div style="padding: 5px; color: white; height: 100%; text-align: center;"><p style="font-size: 10px; margin-bottom: 0px; color: white; text-align: center;">Индивидуальный подход</p><p style="font-size: 10px; line-height: 1.1; color: #ccc; text-align: center;">Несовершеннолетние | Профессионалы | Лица с судимостями</p><img src="img/slider/wgp.jpg" alt="img/slider/wgp.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div></div><div style="background-color: #0a0a0a; border: 1px solid #2a2a2a; overflow: hidden; min-height: 120px;"><p style="font-size: 13px; line-height: 1.4; color: #ccc; text-align: center;">Владение оружием</p><img src="img/slider/r.jpg" alt="img/slider/r.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div><div style="background-color: #0a0a0a; border: 1px solid #2a2a2a; overflow: hidden; min-height: 120px;"><div style="padding: 5px; color: white; height: 100%; text-align: center;"><p style="font-size: 13px; line-height: 1.4; color: #ccc; text-align: center;">24/7 поддержка</p><img src="img/slider/daniel.jpg" alt="img/slider/daniel.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div></div><!-- ========================================= --><!-- РЯД 8                                      --><!-- ========================================= --><div style="grid-column: span 2; background-color: #0a0a0a; border: 1px solid #2a2a2a; overflow: hidden; min-height: 120px;"><img src="img/slider/police.jpg" alt="img/slider/police.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div><div style="background-color: #0a0a0a; border: 1px solid #2a2a2a; overflow: hidden; min-height: 120px;"><div style="padding: 5px; color: white; height: 100%; text-align: center;"><p style="font-size: 13px; line-height: 1.4; color: #ccc; text-align: left;">Бегство от сотрудника полиции является серьезным правонарушением, предусмотренным Уголовным кодексом. Если вы не остановитесь по требованию сотрудника полиции в течение разумного времени или будете убегать от полиции, если вас преследуют, вас могут обвинить в бегстве от полиции. Если вас признают виновным, это будет означать, что у вас есть судимость, и вам может грозить штраф или даже тюремное заключение.</p></div></div><div style="grid-column: span 2; background-color: #0a0a0a; border: 1px solid #2a2a2a; overflow: hidden; min-height: 120px;"><img src="img/slider/police-min.jpg" alt="img/slider/police-min.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div><!-- ========================================= --><!-- РЯД 9                                      --><!-- ========================================= --><!-- <div style="grid-column: span 3; background-color: #0a0a0a; border: 1px solid #2a2a2a; overflow: hidden; min-height: 120px;">
+  }</style><section class="crime mt-200" id="crime"><div class="container1800 text-grid-w100 mb-10"><h2 class="title-6r text-grid-w100__content" style="color: #B22234;
+             border: 0px solid #1E2A3E; border-radius: 4px;">criminal</h2><h2 class="title-6r text-center text-grid-w100__content" style="background-color: white;  color: #000;  width: 100%; margin-left: 10px; margin-bottom: 10px;"><!-- Уголовные преступления --><p style="font-size: 16px; line-height: 1.4; color: var(--space-color); text-align: left;">depo-500 — это команда опытных адвокатов, удостоенная множества наград. Когда на кону ваша свобода или карьера, вы можете положиться на нашу команду, которая уже более 10 лет ведет сложные дела и добивается для вас наилучшего исхода. Наши адвокаты вели более 90 дел и судебных процессов. Мы начнем работу над вашим делом с того, что выслушаем вас, узнаем вашу историю и цели. Мы понимаем, что это может быть одним из самых стрессовых периодов в жизни. Мы будем рядом с вами, будем бороться на вашей стороне, предлагать решения и проверенные стратегии, основанные на опыте и нацеленные на вашу защиту. Если вы хотите добиться наилучшего результата, позвоните нам. Наши юристы — эксперты в области взаимодействия с правовой системой для достижения ваших целей. Мы предлагаем бесплатную консультацию, чтобы обсудить ваше дело, ваши права и то, как мы можем вам помочь.</p></h2></div><div class="container1400"><!-- <h2 class="text-left title-6r">уголовные преступления | criminal offenses</h2> --><!-- #E85D04 line-height: 1.4; color: black; text-align: left;">Профессиональная защита на всех этапах
+            уголовного процесса</h5> --><div style="display: flex; justify-content: center; align-items: center; width: 100%; background: transparent ; padding: 0px 0px;"><div style="display: grid; grid-template-columns: repeat(5, 1fr); grid-auto-rows: minmax(120px, auto); gap: 2px; background-color: transparent; width: 100%; margin: 0 auto;"><!-- ========================================= --><!-- РЯД 1                                      --><!-- ========================================= --><div style="padding: 15px; grid-column: span 5; background-color: #000 ; border: 0px solid white; overflow: hidden; min-height: 120px;"><p style="font-size: 15px; line-height: 1.4; color: #ccc; margin-bottom: 18px; text-align: center;">Уголовные преступления | Профессиональная защита на всех этапах уголовного процесса</p><!-- <h5 class="text-center ml-10 mt-50" style="font-size: 20px; line-height: 1.4; color: white; text-align: center;">
+        Профессиональная защита на всех этапах
+        уголовного процесса</h5> --> <img src="img/slider/invest.jpg" alt="img/slider/invest.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block; min-height: 300px;"><!-- </div> --></div><!-- ========================================= --><!-- РЯД 2                                      --><!-- ========================================= --><div style="grid-column: span 2; background-color: #2a2a2a; border: 1px solid #2a2a2a; overflow: hidden; min-height: 120px;"><img src="img/slider/post1.jpg" alt="img/slider/post1.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div><div style="background-color: #2a2a2a; border: 1px solid #2a2a2a; overflow: hidden; min-height: 120px;"><div style="padding: 5px; color: white; height: 100%; text-align: center;"><p style="font-size: 13px;  color: #587da1; margin-bottom: 8px; text-align: center;">depo-500</p><p style="font-size: 13px; line-height: 1.4; color: #5a7fa3; text-align: left;">depo-500 — это команда опытных адвокатов, удостоенная множества наград. Когда на кону ваша свобода или карьера, вы можете положиться на нашу команду, которая уже более 10 лет ведет сложные дела и добивается для вас наилучшего исхода. Наши адвокаты вели более 90 дел и судебных процессов. Мы начнем работу над вашим делом с того, что выслушаем вас, узнаем вашу историю и цели. Мы понимаем, что это может быть одним из самых стрессовых периодов в жизни. Мы будем рядом с вами, будем бороться на вашей стороне, предлагать решения и проверенные стратегии, основанные на опыте и нацеленные на вашу защиту. Если вы хотите добиться наилучшего результата, позвоните нам. Наши юристы — эксперты в области взаимодействия с правовой системой для достижения ваших целей. Мы предлагаем бесплатную консультацию, чтобы обсудить ваше дело, ваши права и то, как мы можем вам помочь.</p></div></div><div style="background-color: #2a2a2a; border: 0px solid #2a2a2a; overflow: hidden; min-height: 120px;"><img src="img/slider/m200.jpg" alt="img/slider/m200.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div><div style="background-color: #2a2a2a; border: 0px solid #2a2a2a; overflow: hidden; min-height: 120px;"><div style="padding: 5px; color: white; height: 100%; text-align: center;"><p style="font-size: 13px; line-height: 1.4; color: #ccc; text-align: center;">Защита по делам о наркотиках</p><p style="font-size: 13px; line-height: 1.4; color: #ccc; text-align: left;">Независимо от тяжести обвинения, не стоит пытаться разобраться с уголовными делами самостоятельно. Из-за серьезных последствий, к которым может привести обвинительный приговор по делу о нападении, всегда разумно обратиться за помощью к адвокату, имеющему опыт защиты по таким делам. Наши адвокаты встретятся с вами лично, чтобы изучить все обстоятельства вашего дела. Мы оценим вашу ситуацию и подскажем возможные варианты защиты. Мы не боимся решительно отстаивать ваши права в суде и сделаем все возможное, чтобы добиться для вас наилучшего исхода с учетом обстоятельств вашего дела.</p><!-- <img src="img/slider/gavel.jpg" alt="img/slider/gavel.jpg"
+          style="width: 100%; height: 100%; object-fit: cover; display: block;"> --></div></div><!-- ========================================= --><!-- РЯД 3                                      --><!-- ========================================= --><div style="background-color: #2a2a2a; border: 1px solid #2a2a2a; overflow: hidden; min-height: 120px;"><div style="padding: 5px; color: white; height: 100%; text-align: center;"><p style="font-size: 13px; line-height: 1.4; color: #ccc; text-align: center;">Коллективный опыт</p><img src="img/slider/wes.jpg" alt="img/slider/wes.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div></div><div style="grid-column: span 2; background-color: #2a2a2a; border: 1px solid #2a2a2a; overflow: hidden; min-height: 120px;"><img src="img/slider/speed.jpg" alt="img/slider/speed.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div><div style="grid-column: span 2; background-color: #2a2a2a; border: 1px solid #2a2a2a; overflow: hidden; min-height: 120px;"><p style="font-size: 13px;  color: orange; margin-bottom: 8px; text-align: center;">Автокредит</p><img src="img/slider/blogpost.jpg" alt="img/slider/w800.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div><!-- ========================================= --><!-- РЯД 4                                      --><!-- ========================================= --><div style="grid-column: span 3; grid-row: span 2; background-color: #2a2a2a; border: 1px solid #2a2a2a; overflow: hidden; min-height: 120px;"><img src="img/slider/matt.jpg" alt="img/slider/w800.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div><div style="background-color: #2a2a2a; border: 1px solid #2a2a2a; overflow: hidden; min-height: 120px;"><div style="padding: 5px; color: white; height: 100%; text-align: center;"><p style="font-size: 10px; line-height: 1.0; color: #ccc; text-align: center;">Защита по делам о наркотиках</p><img src="img/slider/gavel.jpg" alt="img/slider/gavel.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div></div><div style="background-color: #2a2a2a; border: 1px solid #2a2a2a; overflow: hidden; min-height: 120px;"><img src="img/slider/un.jpg" alt="img/slider/un.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div><!-- ========================================= --><!-- РЯД 5                                      --><!-- ========================================= --><div style="background-color: #2a2a2a; border: 1px solid #2a2a2a; overflow: hidden; min-height: 120px;"><div style="padding: 5px; color: white; height: 100%; text-align: center;"><p style="font-size: 13px; line-height: 1.4; color: #ccc; text-align: center;">Убийство первой степени</p><img src="img/slider/thomas.jpg" alt="img/slider/thomas.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div></div><div style="background-color: #2a2a2a; border: 1px solid #2a2a2a; overflow: hidden; min-height: 120px;"><div style="padding: 5px; color: white; height: 100%; text-align: center;"><p style="font-size: 13px; line-height: 1.4; color: #ccc; text-align: center;">Сексуальные преступления</p><img src="img/slider/charles.jpg" alt="img/slider/th.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div></div><!-- ========================================= --><!-- РЯД 6                                      --><!-- ========================================= --><div style="grid-column: span 5; background-color: #2a2a2a; border: 1px solid #2a2a2a; overflow: hidden; min-height: 120px;"><img src="img/slider/dr.jpg" alt="img/slider/invest.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div><!-- ========================================= --><!-- РЯД 7                                      --><!-- ========================================= --><div style="background-color: #2a2a2a; border: 1px solid #2a2a2a; overflow: hidden; min-height: 120px;"><img src="img/slider/frame.jpeg" alt="img/slider/frame.jpeg" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div><div style="grid-column: span 2; background-color: #2a2a2a; border: 1px solid #2a2a2a; overflow: hidden; min-height: 120px;"><div style="padding: 5px; color: white; height: 100%; text-align: center;"><p style="font-size: 10px; margin-bottom: 0px; color: white; text-align: center;">Индивидуальный подход</p><p style="font-size: 10px; line-height: 1.1; color: #ccc; text-align: center;">Несовершеннолетние | Профессионалы | Лица с судимостями</p><img src="img/slider/wgp.jpg" alt="img/slider/wgp.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div></div><div style="background-color: #2a2a2a; border: 1px solid #2a2a2a; overflow: hidden; min-height: 120px;"><p style="font-size: 13px; line-height: 1.4; color: #ccc; text-align: center;">Владение оружием</p><img src="img/slider/r.jpg" alt="img/slider/r.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div><div style="background-color: #2a2a2a; border: 1px solid #2a2a2a; overflow: hidden; min-height: 120px;"><div style="padding: 5px; color: white; height: 100%; text-align: center;"><p style="font-size: 13px; line-height: 1.4; color: #ccc; text-align: center;">24/7 поддержка</p><img src="img/slider/daniel.jpg" alt="img/slider/daniel.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div></div><!-- ========================================= --><!-- РЯД 8                                      --><!-- ========================================= --><div style="grid-column: span 2; background-color: #2a2a2a; border: 1px solid #2a2a2a; overflow: hidden; min-height: 120px;"><img src="img/slider/police.jpg" alt="img/slider/police.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div><div style="background-color: #2a2a2a; border: 1px solid #2a2a2a; overflow: hidden; min-height: 120px;"><div style="padding: 5px; color: white; height: 100%; text-align: center;"><p style="font-size: 13px; line-height: 1.4; color: #ccc; text-align: left;">Бегство от сотрудника полиции является серьезным правонарушением, предусмотренным Уголовным кодексом. Если вы не остановитесь по требованию сотрудника полиции в течение разумного времени или будете убегать от полиции, если вас преследуют, вас могут обвинить в бегстве от полиции. Если вас признают виновным, это будет означать, что у вас есть судимость, и вам может грозить штраф или даже тюремное заключение.</p></div></div><div style="grid-column: span 2; background-color: #2a2a2a; border: 1px solid #2a2a2a; overflow: hidden; min-height: 120px;"><img src="img/slider/police-min.jpg" alt="img/slider/police-min.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div><!-- ========================================= --><!-- РЯД 9                                      --><!-- ========================================= --><!-- <div style="grid-column: span 3; background-color: #2a2a2a; border: 1px solid #2a2a2a; overflow: hidden; min-height: 120px;">
         <img src="img/slider/igor.jpg" alt="img/slider/igor.jpg"
           style="width: 100%; height: 100%; object-fit: cover; display: block;">
-      </div> --><div style="grid-column: span 2; background-color: #0a0a0a; border: 1px solid #2a2a2a; overflow: hidden; min-height: 120px;"><p style="font-size: 13px;  color: orange; margin-bottom: 8px; text-align: center;">Торговля людьми</p><img src="img/slider/igor.jpg" alt="img/slider/igor.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div><div style="background-color: #0a0a0a; border: 1px solid #2a2a2a; overflow: hidden; min-height: 120px;"><div style="padding: 5px; color: white; height: 100%; text-align: center;"><p style="font-size: 13px;  color: orange; margin-bottom: 8px; text-align: center;">depo-500</p><img src="img/crime/oleg.jpg" alt="img/crime/oleg.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div></div><div style="grid-column: span 2; background-color: #0a0a0a; border: 1px solid #2a2a2a; overflow: hidden; min-height: 120px;"><div style="padding: 5px; color: white; height: 100%; text-align: center;"><p style="font-size: 10px; margin-bottom: 0px; color: white; text-align: center;">Бесплатная консультация</p><p style="font-size: 10px; line-height: 1.0; color: #ccc; text-align: center;">Конфиденциально | Круглосуточно</p><img src="img/slider/matthew.jpg" alt="img/slider/matthew.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div></div><!-- ========================================= --><!-- РЯД 2                                      --><!-- ========================================= --><div style="grid-column: span 2; background-color: #0a0a0a; border: 1px solid #2a2a2a; overflow: hidden; min-height: 120px;"><p style="font-size: 13px;  color: orange; margin-bottom: 8px; text-align: center;">Торговля людьми</p><img src="img/slider/devin.jpg" alt="img/slider/post1.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div><div style="background-color: #0a0a0a; border: 1px solid #2a2a2a; overflow: hidden; min-height: 120px;"><div style="padding: 5px; color: white; height: 100%; text-align: center;"><p style="font-size: 13px;  color: orange; margin-bottom: 8px; text-align: center;">depo-500</p><p style="font-size: 13px; line-height: 1.4; color: orange; text-align: left;">depo-500 — это команда опытных адвокатов, удостоенная множества наград. Когда на кону ваша свобода или карьера, вы можете положиться на нашу команду, которая уже более 10 лет ведет сложные дела и добивается для вас наилучшего исхода. Наши адвокаты вели более 90 дел и судебных процессов. Мы начнем работу над вашим делом с того, что выслушаем вас, узнаем вашу историю и цели. Мы понимаем, что это может быть одним из самых стрессовых периодов в жизни. Мы будем рядом с вами, будем бороться на вашей стороне, предлагать решения и проверенные стратегии, основанные на опыте и нацеленные на вашу защиту. Если вы хотите добиться наилучшего результата, позвоните нам. Наши юристы — эксперты в области взаимодействия с правовой системой для достижения ваших целей. Мы предлагаем бесплатную консультацию, чтобы обсудить ваше дело, ваши права и то, как мы можем вам помочь.</p></div></div><div style="background-color: #0a0a0a; border: 1px solid #2a2a2a; overflow: hidden; min-height: 120px;"><img src="img/slider/jeu.jpg" alt="img/slider/m200.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div><div style="background-color: #0a0a0a; border: 1px solid #2a2a2a; overflow: hidden; min-height: 120px;"><div style="padding: 5px; color: white; height: 100%; text-align: center;"><p style="font-size: 13px; line-height: 1.4; color: cadetblue; text-align: center;">Опасное вождение</p><p style="font-size: 13px; line-height: 1.4; color: cadetblue; text-align: left;">Бегство от сотрудника полиции является серьезным правонарушением, предусмотренным Уголовным кодексом. Если вы не остановитесь по требованию сотрудника полиции в течение разумного времени или будете убегать от полиции, если вас преследуют, вас могут обвинить в бегстве от полиции. Если вас признают виновным, это будет означать, что у вас есть судимость, и вам может грозить штраф или даже тюремное заключение. Адвокаты из depo-500 имеют многолетний опыт ведения дел по обвинениям в опасном вождении и уклонении от полиции. При встрече мы оценим ваше дело и вместе с вами разработаем оптимальную линию защиты. Наши адвокаты предоставляют квалифицированную и опытную защиту по уголовным делам клиентам, которым предъявлены обвинения в опасном вождении.</p></div></div><!-- ========================================= --><!-- РЯД 10                                     --><!-- ========================================= --><div style="grid-column: span 5; background-color: #0a0a0a; border: 1px solid #2a2a2a; overflow: hidden; min-height: 120px;"><img src="img/slider/michel.jpg" alt="img/slider/michel.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div></div></div></div></section><!--Уголовные end  --><!-- <p class="text-center mt-100 mb-100">Дополнительные услуги в области уголовного права</p> --><div class="container1400 d-flex"><a href="./category.html" style="width: 1400px;"><button class="ffc107">Дополнительные услуги в области уголовного права</button></a></div><div class="container1400"><div class="specs-table"><!-- Первая колонка ellipse-maroon --><div class="table-column"><div class="table-row"><div class="table-cell header-cell cell-900--flex"><h5>Владение оружием</h5><img src="img/slider/r.jpg" alt="img/slider/r.jpg"></div><div class="table-cell"><p>За хранение оружия, представляющего опасность для общества, можно получить тюремный срок до 10 лет. Приговор за хранение оружия может иметь серьезные и долгосрочные последствия для вашей жизни. Если вы впервые совершили подобное правонарушение и у вас нет судимостей, при содействии опытного адвоката можно избежать тюремного заключения и судимости.</p></div></div><div class="table-row"><div class="table-cell header-cell cell-900--flex"><h5>Производство лекарственных средств</h5><img src="img/slider/es.jpg" alt="img/es.jpg"></div><div class="table-cell"><p>Производство наркотиков может быть связано не только с лицом, которое непосредственно выращивает или производит наркотик, но и с владельцем недвижимости, который сознательно позволяет другим использовать свою собственность для производства запрещенных веществ, а также с любым лицом, которое оказывает содействие в производстве наркотиков, не ограничиваясь непосредственным участием в процессе. Важно отметить, что для вынесения обвинительного приговора по большинству преступлений, связанных с наркотиками, не обязательно, чтобы обвиняемый действительно знал о преступлении. Даже «подозрения» в том, что ведется незаконная деятельность, связанная с наркотиками, может быть достаточно, чтобы обвинить человека в производстве наркотиков, если он причастен и к другим аспектам преступления. Умышленное незнание или преднамеренная слепота не являются смягчающими обстоятельствами при обвинении в преступлениях, связанных с наркотиками, поэтому крайне важно, чтобы вашу защиту осуществлял опытный адвокат.</p></div></div><div class="table-row"><div class="table-cell header-cell cell-900--flex"><h5>Торговля людьми</h5><img src="img/slider/timon.jpg" alt="img/slider/timon.jpg"></div><div class="table-cell"><p>Торговля людьми — относительно новое преступление, которое сейчас преследуется строже, чем когда-либо. Согласно Уголовному кодексу Канады, любое лицо, которое «вербует, перевозит, передает, получает, удерживает, скрывает или укрывает человека, а также осуществляет контроль, руководство или влияние на перемещения человека с целью его эксплуатации или содействия эксплуатации», может быть обвинено в торговле людьми. Последствия обвинительного приговора могут быть весьма суровыми. Максимальное наказание за торговлю людьми — пожизненное заключение. Если жертва торговли людьми не достигла 18 лет, минимальное наказание составляет 6 лет лишения свободы, а максимальное — пожизненное заключение. Обвинения в торговле людьми также тесно связаны с обвинениями в принуждении к проституции и получении дохода от проституции.</p></div></div><div class="table-row"><div class="table-cell header-cell cell-900--flex"><h5>Убийство и непредумышленное убийство</h5><img src="img/slider/th.jpg" alt="img/slider/th.jpg"></div><div class="table-cell"><p>Хотя может показаться, что в телешоу дело об убийстве можно раскрыть за 30 минут, в реальной жизни все почти никогда не бывает так просто. Если вас обвиняют в убийстве или непредумышленном убийстве, вам грозит реальное наказание в виде тюремного заключения. Мы уделяем достаточно времени и проявляем должную осмотрительность, чтобы выстроить надежную линию защиты для клиентов, обвиняемых в убийстве или непредумышленном убийстве. Наши юристы славятся тем, что обеспечивают эффективную судебную защиту в сочетании с клиентоориентированным подходом. Как выстроить защиту от серьезных обвинений<br>В ссорах, перерастающих в тяжкие уголовные преступления, редко бывает только одна сторона. Наша задача — представить вашу точку зрения. Мы проанализируем все имеющиеся доказательства, от полицейских отчетов до свидетельских показаний, чтобы выстроить для вас максимально эффективную линию защиты.</p></div></div><div class="table-row"><div class="table-cell header-cell cell-900--flex"><h5>Нападение</h5><img src="img/slider/Police-min.jpg" alt="img/slider/Police-min.jpg"></div><div class="table-cell"><p>Независимо от тяжести обвинения, не стоит пытаться разобраться с уголовными делами самостоятельно. Из-за серьезных последствий, к которым может привести обвинительный приговор по делу о нападении, всегда разумно обратиться за помощью к адвокату, имеющему опыт защиты по таким делам. Наши адвокаты встретятся с вами лично, чтобы изучить все обстоятельства вашего дела. Мы оценим вашу ситуацию и подскажем возможные варианты защиты. Мы не боимся решительно отстаивать ваши права в суде и сделаем все возможное, чтобы добиться для вас наилучшего исхода с учетом обстоятельств вашего дела.</p></div></div></div><!-- Вторая колонка --><div class="table-column"><div class="table-row"><div class="table-cell header-cell cell-900--flex"><h5>Вождение с нарушениями</h5><img src="img/slider/dr.jpg" alt="img/slider/dr.jpg"></div><div class="table-cell"><p>Защищаться в суде по делу о вождении в состоянии алкогольного или наркотического опьянения, а также в состоянии, вызванном употреблением наркотиков, может быть непросто. Законодательство в этой сфере постоянно меняется, и существует ряд способов защиты от подобных обвинений. Обвинение в вождении в состоянии алкогольного или наркотического опьянения может повлечь за собой серьезные последствия, такие как приостановление или лишение водительских прав, повышение страховых тарифов, штрафы и даже тюремное заключение. Важно нанять адвоката, специализирующегося в этой области права, который поможет вам добиться наилучшего исхода дела. Наши юристы встретятся с вами, чтобы обсудить детали вашего дела и помочь выбрать оптимальную стратегию защиты.</p></div></div><div class="table-row"><div class="table-cell header-cell cell-900--flex"><h5>Имущественные преступления</h5><img src="img/slider/devin.jpg" alt="img/slider/devin.jpg"></div><div class="table-cell"><p>Кража в магазине или мелкая кража могут показаться не такими уж серьезными преступлениями. Однако негативные последствия осуждения за такие преступления против собственности, независимо от степени тяжести, могут преследовать вас всю жизнь. В некоторых случаях мы можем добиваться альтернативных мер наказания, таких как судебные предписания, вместо уголовного наказания. Каждое дело рассматривается индивидуально. Мы встретимся с вами, чтобы оценить вашу ситуацию и определить наилучшую стратегию защиты ваших прав и свобод. Неоднократные кражи У нас есть опыт представления интересов клиентов, ранее судимых за кражу или другие уголовные преступления. В таких случаях наказание может быть обязательным и неизбежным. Если вам предъявлено обвинение в повторном преступлении, не теряйте надежды и не пытайтесь бороться с обвинением в одиночку. Благодаря нашему многолетнему опыту в этой сфере мы можем помочь вам избежать сурового наказания. Мы будем работать с вами, чтобы защитить ваши долгосрочные интересы, ведя тщательные переговоры с обвинением. Стоит проконсультироваться со знающим юристом о возможных вариантах, о некоторых из которых вы, возможно, даже не подозревали.</p></div></div><div class="table-row"><div class="table-cell header-cell cell-900--flex"><h5>Малолетние правонарушители</h5><img src="img/slider/clown.jpg" alt="img/slider/clown.jpg"></div><div class="table-cell"><p>Родителей может сильно напугать известие о том, что их ребенку предъявлено обвинение в соответствии с Законом об уголовном судопроизводстве в отношении несовершеннолетних. Ни один родитель не хочет, чтобы его ребенок подвергся уголовному преследованию. Хорошая новость в том, что суд по делам несовершеннолетних уделяет больше внимания не наказанию, а реабилитации, чтобы помочь молодым людям найти наставников, которые помогут им изменить свою жизнь. Защита прав несовершеннолетних правонарушителей Несмотря на то, что мы сосредоточены на достижении результатов для наших клиентов и стремимся к этому, мы никогда не забываем о трудностях, с которыми сталкиваются наши клиенты в суде по делам несовершеннолетних и их семьи. Мы приветствуем участие родителей и сотрудничаем как с семьями, так и с системой судов по делам несовершеннолетних, чтобы способствовать реабилитации несовершеннолетних правонарушителей и их интеграции в общество в качестве полноценных его членов.</p></div></div><div class="table-row"><div class="table-cell header-cell cell-900--flex"><h5>Сексуальные преступления</h5><img src="img/slider/nad.jpg" alt="img/slider/nad.jpg"></div><div class="table-cell"><p>Сексуальные домогательства — одно из самых тяжких преступлений, которое влечет за собой серьезные социальные последствия. Осуждение за сексуальное преступление часто приводит к судимости, обязательной регистрации в различных реестрах лиц, совершивших преступления на сексуальной почве, и длительному тюремному заключению. Мы выстраиваем стратегию защиты таким образом, чтобы повысить доверие к вам и защитить ваше будущее. Наши юристы рассматривают все варианты защиты: от переговоров с обвинением об оптимальном решении до активной защиты в суде. Мы также действуем конфиденциально, чтобы защитить вашу личную жизнь и жизнь вашей семьи.</p></div></div><div class="table-row"><div class="table-cell header-cell cell-900--flex"><h5>Сексуальные преступления с участием детей</h5><img src="img/slider/kat.jpg" alt="img/slider/kat.jpg"></div><div class="table-cell"><p>Обвинение в сексуальном преступлении против несовершеннолетнего может перевернуть вашу жизнь с ног на голову, даже если вас не признают виновным. Если вас признают виновным в сексуальном преступлении против несовершеннолетнего, вам грозит судимость, обязательная регистрация в реестре лиц, совершивших преступления на сексуальной почве, и длительное тюремное заключение. Ваша репутация в обществе может быть разрушена, а семья — разорвана. Вас также могут обязать держаться подальше от мест, где могут собираться дети младше 16 лет, таких как общественные парки и школьные площадки. Сексуальное посягательство — это смежное правонарушение, которое заключается в сексуальных действиях в отношении лица, не достигшего 16 лет. Важно отметить, что раньше возраст согласия составлял 14 лет, но в 2008 году его повысили до 16 лет. Принуждение к сексуальным прикосновениям предполагает предложение лицу, не достигшему 16 лет, совершить любое прикосновение сексуального характера, как прямое, так и косвенное. Для предъявления этого обвинения не обязательно, чтобы прикосновение было физическим. За это преступление предусмотрено обязательное минимальное наказание в виде лишения свободы сроком на 1 год, максимальное — до 10 лет.</p></div></div></div></div></div><style>.d-flex {
+      </div> --><div style="grid-column: span 2; background-color: #2a2a2a; border: 1px solid #2a2a2a; overflow: hidden; min-height: 120px;"><p style="font-size: 13px;  color: orange; margin-bottom: 8px; text-align: center;">Торговля людьми</p><img src="img/slider/igor.jpg" alt="img/slider/igor.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div><div style="background-color: #2a2a2a; border: 1px solid #2a2a2a; overflow: hidden; min-height: 120px;"><div style="padding: 5px; color: white; height: 100%; text-align: center;"><p style="font-size: 13px;  color: orange; margin-bottom: 8px; text-align: center;">depo-500</p><img src="img/crime/oleg.jpg" alt="img/crime/oleg.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div></div><div style="grid-column: span 2; background-color: #2a2a2a; border: 1px solid #2a2a2a; overflow: hidden; min-height: 120px;"><div style="padding: 5px; color: white; height: 100%; text-align: center;"><p style="font-size: 10px; margin-bottom: 0px; color: white; text-align: center;">Бесплатная консультация</p><p style="font-size: 10px; line-height: 1.0; color: #ccc; text-align: center;">Конфиденциально | Круглосуточно</p><img src="img/slider/matthew.jpg" alt="img/slider/matthew.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div></div><!-- ========================================= --><!-- РЯД 2                                      --><!-- ========================================= --><div style="grid-column: span 2; background-color: #2a2a2a; border: 1px solid #2a2a2a; overflow: hidden; min-height: 120px;"><p style="font-size: 13px;  color: orange; margin-bottom: 8px; text-align: center;">Торговля людьми</p><img src="img/slider/devin.jpg" alt="img/slider/post1.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div><div style="background-color: #2a2a2a; border: 1px solid #2a2a2a; overflow: hidden; min-height: 120px;"><div style="padding: 5px; color: white; height: 100%; text-align: center;"><p style="font-size: 13px;  color: orange; margin-bottom: 8px; text-align: center;">depo-500</p><p style="font-size: 13px; line-height: 1.4; color: orange; text-align: left;">depo-500 — это команда опытных адвокатов, удостоенная множества наград. Когда на кону ваша свобода или карьера, вы можете положиться на нашу команду, которая уже более 10 лет ведет сложные дела и добивается для вас наилучшего исхода. Наши адвокаты вели более 90 дел и судебных процессов. Мы начнем работу над вашим делом с того, что выслушаем вас, узнаем вашу историю и цели. Мы понимаем, что это может быть одним из самых стрессовых периодов в жизни. Мы будем рядом с вами, будем бороться на вашей стороне, предлагать решения и проверенные стратегии, основанные на опыте и нацеленные на вашу защиту. Если вы хотите добиться наилучшего результата, позвоните нам. Наши юристы — эксперты в области взаимодействия с правовой системой для достижения ваших целей. Мы предлагаем бесплатную консультацию, чтобы обсудить ваше дело, ваши права и то, как мы можем вам помочь.</p></div></div><div style="background-color: #2a2a2a; border: 1px solid #2a2a2a; overflow: hidden; min-height: 120px;"><img src="img/slider/jeu.jpg" alt="img/slider/m200.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div><div style="background-color: #2a2a2a; border: 1px solid #2a2a2a; overflow: hidden; min-height: 120px;"><div style="padding: 5px; color: white; height: 100%; text-align: center;"><p style="font-size: 13px; line-height: 1.4; color: cadetblue; text-align: center;">Опасное вождение</p><p style="font-size: 13px; line-height: 1.4; color: cadetblue; text-align: left;">Бегство от сотрудника полиции является серьезным правонарушением, предусмотренным Уголовным кодексом. Если вы не остановитесь по требованию сотрудника полиции в течение разумного времени или будете убегать от полиции, если вас преследуют, вас могут обвинить в бегстве от полиции. Если вас признают виновным, это будет означать, что у вас есть судимость, и вам может грозить штраф или даже тюремное заключение. Адвокаты из depo-500 имеют многолетний опыт ведения дел по обвинениям в опасном вождении и уклонении от полиции. При встрече мы оценим ваше дело и вместе с вами разработаем оптимальную линию защиты. Наши адвокаты предоставляют квалифицированную и опытную защиту по уголовным делам клиентам, которым предъявлены обвинения в опасном вождении.</p></div></div><!-- ========================================= --><!-- РЯД 10                                     --><!-- ========================================= --><div style="grid-column: span 5; background-color: #2a2a2a; border: 1px solid #2a2a2a; overflow: hidden; min-height: 120px;"><img src="img/slider/michel.jpg" alt="img/slider/michel.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div></div></div></div></section></section></div><!--Уголовные end  --><section class="container1800"><div class="container1400 d-flex"><a href="./category.html" style="width: 1400px;"><button class="ffc107">Дополнительные услуги в области уголовного права</button></a></div><div class="container1400"><div class="specs-table"><!-- Первая колонка ellipse-maroon --><div class="table-column"><div class="table-row"><div class="table-cell header-cell cell-900--flex"><h5>Владение оружием</h5><img class="mt-10" src="img/slider/r.jpg" alt="img/slider/r.jpg"></div><div class="table-cell"><p>За хранение оружия, представляющего опасность для общества, можно получить тюремный срок до 10 лет. Приговор за хранение оружия может иметь серьезные и долгосрочные последствия для вашей жизни. Если вы впервые совершили подобное правонарушение и у вас нет судимостей, при содействии опытного адвоката можно избежать тюремного заключения и судимости.</p></div></div><div class="table-row"><div class="table-cell header-cell cell-900--flex"><h5>Производство лекарственных средств</h5><img class="mt-10" src="img/slider/es.jpg" alt="img/es.jpg"></div><div class="table-cell"><p>Производство наркотиков может быть связано не только с лицом, которое непосредственно выращивает или производит наркотик, но и с владельцем недвижимости, который сознательно позволяет другим использовать свою собственность для производства запрещенных веществ, а также с любым лицом, которое оказывает содействие в производстве наркотиков, не ограничиваясь непосредственным участием в процессе. Важно отметить, что для вынесения обвинительного приговора по большинству преступлений, связанных с наркотиками, не обязательно, чтобы обвиняемый действительно знал о преступлении. Даже «подозрения» в том, что ведется незаконная деятельность, связанная с наркотиками, может быть достаточно, чтобы обвинить человека в производстве наркотиков, если он причастен и к другим аспектам преступления. Умышленное незнание или преднамеренная слепота не являются смягчающими обстоятельствами при обвинении в преступлениях, связанных с наркотиками, поэтому крайне важно, чтобы вашу защиту осуществлял опытный адвокат.</p></div></div><div class="table-row"><div class="table-cell header-cell cell-900--flex"><h5>Торговля людьми</h5><img class="mt-10" src="img/slider/timon.jpg" alt="img/slider/timon.jpg"></div><div class="table-cell"><p>Торговля людьми — относительно новое преступление, которое сейчас преследуется строже, чем когда-либо. Согласно Уголовному кодексу Канады, любое лицо, которое «вербует, перевозит, передает, получает, удерживает, скрывает или укрывает человека, а также осуществляет контроль, руководство или влияние на перемещения человека с целью его эксплуатации или содействия эксплуатации», может быть обвинено в торговле людьми. Последствия обвинительного приговора могут быть весьма суровыми. Максимальное наказание за торговлю людьми — пожизненное заключение. Если жертва торговли людьми не достигла 18 лет, минимальное наказание составляет 6 лет лишения свободы, а максимальное — пожизненное заключение. Обвинения в торговле людьми также тесно связаны с обвинениями в принуждении к проституции и получении дохода от проституции.</p></div></div><div class="table-row"><div class="table-cell header-cell cell-900--flex"><h5>Убийство и непредумышленное убийство</h5><img class="mt-10" src="img/slider/th.jpg" alt="img/slider/th.jpg"></div><div class="table-cell"><p>Хотя может показаться, что в телешоу дело об убийстве можно раскрыть за 30 минут, в реальной жизни все почти никогда не бывает так просто. Если вас обвиняют в убийстве или непредумышленном убийстве, вам грозит реальное наказание в виде тюремного заключения. Мы уделяем достаточно времени и проявляем должную осмотрительность, чтобы выстроить надежную линию защиты для клиентов, обвиняемых в убийстве или непредумышленном убийстве. Наши юристы славятся тем, что обеспечивают эффективную судебную защиту в сочетании с клиентоориентированным подходом. Как выстроить защиту от серьезных обвинений<br>В ссорах, перерастающих в тяжкие уголовные преступления, редко бывает только одна сторона. Наша задача — представить вашу точку зрения. Мы проанализируем все имеющиеся доказательства, от полицейских отчетов до свидетельских показаний, чтобы выстроить для вас максимально эффективную линию защиты.</p></div></div><div class="table-row"><div class="table-cell header-cell cell-900--flex"><h5>Нападение</h5><img class="mt-10" src="img/slider/Police-min.jpg" alt="img/slider/Police-min.jpg"></div><div class="table-cell"><p>Независимо от тяжести обвинения, не стоит пытаться разобраться с уголовными делами самостоятельно. Из-за серьезных последствий, к которым может привести обвинительный приговор по делу о нападении, всегда разумно обратиться за помощью к адвокату, имеющему опыт защиты по таким делам. Наши адвокаты встретятся с вами лично, чтобы изучить все обстоятельства вашего дела. Мы оценим вашу ситуацию и подскажем возможные варианты защиты. Мы не боимся решительно отстаивать ваши права в суде и сделаем все возможное, чтобы добиться для вас наилучшего исхода с учетом обстоятельств вашего дела.</p></div></div></div><!-- Вторая колонка --><div class="table-column"><div class="table-row"><div class="table-cell header-cell cell-900--flex"><h5>Вождение с нарушениями</h5><img class="mt-10" src="img/slider/dr.jpg" alt="img/slider/dr.jpg"></div><div class="table-cell"><p>Защищаться в суде по делу о вождении в состоянии алкогольного или наркотического опьянения, а также в состоянии, вызванном употреблением наркотиков, может быть непросто. Законодательство в этой сфере постоянно меняется, и существует ряд способов защиты от подобных обвинений. Обвинение в вождении в состоянии алкогольного или наркотического опьянения может повлечь за собой серьезные последствия, такие как приостановление или лишение водительских прав, повышение страховых тарифов, штрафы и даже тюремное заключение. Важно нанять адвоката, специализирующегося в этой области права, который поможет вам добиться наилучшего исхода дела. Наши юристы встретятся с вами, чтобы обсудить детали вашего дела и помочь выбрать оптимальную стратегию защиты.</p></div></div><div class="table-row"><div class="table-cell header-cell cell-900--flex"><h5>Имущественные преступления</h5><img class="mt-10" src="img/slider/devin.jpg" alt="img/slider/devin.jpg"></div><div class="table-cell"><p>Кража в магазине или мелкая кража могут показаться не такими уж серьезными преступлениями. Однако негативные последствия осуждения за такие преступления против собственности, независимо от степени тяжести, могут преследовать вас всю жизнь. В некоторых случаях мы можем добиваться альтернативных мер наказания, таких как судебные предписания, вместо уголовного наказания. Каждое дело рассматривается индивидуально. Мы встретимся с вами, чтобы оценить вашу ситуацию и определить наилучшую стратегию защиты ваших прав и свобод. Неоднократные кражи У нас есть опыт представления интересов клиентов, ранее судимых за кражу или другие уголовные преступления. В таких случаях наказание может быть обязательным и неизбежным. Если вам предъявлено обвинение в повторном преступлении, не теряйте надежды и не пытайтесь бороться с обвинением в одиночку. Благодаря нашему многолетнему опыту в этой сфере мы можем помочь вам избежать сурового наказания. Мы будем работать с вами, чтобы защитить ваши долгосрочные интересы, ведя тщательные переговоры с обвинением. Стоит проконсультироваться со знающим юристом о возможных вариантах, о некоторых из которых вы, возможно, даже не подозревали.</p></div></div><div class="table-row"><div class="table-cell header-cell cell-900--flex"><h5>Малолетние правонарушители</h5><img class="mt-10" src="img/slider/clown.jpg" alt="img/slider/clown.jpg"></div><div class="table-cell"><p>Родителей может сильно напугать известие о том, что их ребенку предъявлено обвинение в соответствии с Законом об уголовном судопроизводстве в отношении несовершеннолетних. Ни один родитель не хочет, чтобы его ребенок подвергся уголовному преследованию. Хорошая новость в том, что суд по делам несовершеннолетних уделяет больше внимания не наказанию, а реабилитации, чтобы помочь молодым людям найти наставников, которые помогут им изменить свою жизнь. Защита прав несовершеннолетних правонарушителей Несмотря на то, что мы сосредоточены на достижении результатов для наших клиентов и стремимся к этому, мы никогда не забываем о трудностях, с которыми сталкиваются наши клиенты в суде по делам несовершеннолетних и их семьи. Мы приветствуем участие родителей и сотрудничаем как с семьями, так и с системой судов по делам несовершеннолетних, чтобы способствовать реабилитации несовершеннолетних правонарушителей и их интеграции в общество в качестве полноценных его членов.</p></div></div><div class="table-row"><div class="table-cell header-cell cell-900--flex"><h5>Сексуальные преступления</h5><img class="mt-10" src="img/slider/nad.jpg" alt="img/slider/nad.jpg"></div><div class="table-cell"><p>Сексуальные домогательства — одно из самых тяжких преступлений, которое влечет за собой серьезные социальные последствия. Осуждение за сексуальное преступление часто приводит к судимости, обязательной регистрации в различных реестрах лиц, совершивших преступления на сексуальной почве, и длительному тюремному заключению. Мы выстраиваем стратегию защиты таким образом, чтобы повысить доверие к вам и защитить ваше будущее. Наши юристы рассматривают все варианты защиты: от переговоров с обвинением об оптимальном решении до активной защиты в суде. Мы также действуем конфиденциально, чтобы защитить вашу личную жизнь и жизнь вашей семьи.</p></div></div></div></div></div></section><style>.mt-10 {
+          margin-top: 10px;
+        }
+        .d-flex {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -4766,13 +4844,13 @@ flex-direction: column;
           margin: 0;
           color: #2c3e50;
           font-size: 14px;
-          line-height: 1.4;
+          line-height: 120%;
         }
 
         .table-cell p {
           margin: 0;
           color: #555;
-          line-height: 1.5;
+          line-height: 120%;
           font-size: 14px;
         }
 
@@ -4836,20 +4914,127 @@ flex-direction: column;
           .specs-table-grid .header-cell {
             border-right: none;
           }
-        }</style><!-- Monitors --><!-- <div class="monitors" id="monitors"> --><div class="container1400"><!-- <h2 class="text-left">Имущественные преступления</h2> --><!-- contact --><style>.contact-grid-w100 {
+        }
+         /* ========== АДАПТИВ ДО 560px — ВСЁ В ОДНУ КОЛОНКУ ========== */
+  @media (max-width: 560px) {
+    .specs-table {
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .table-row {
+      flex-direction: column;
+      border-bottom: 1px solid #eaeaea;
+    }
+
+    .header-cell {
+      border-right: none;
+      border-bottom: 1px solid #eaeaea;
+      min-width: auto;
+    }
+
+    .table-cell {
+      width: 100%;
+    }
+
+    /* Убираем двойные границы между строками */
+    .table-row:last-child {
+      border-bottom: none;
+    }
+  }</style><style>.text-grid-w14 {
+              border: 0px solid var(--color-space);
+
+  border-radius: var(--border-radius);
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 4fr;
+      grid-auto-rows: minmax(50px, auto);
+      column-gap: 0px;
+      align-items: center;
+      margin-left: 0px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+
+      @media screen and (max-width: 600px) {
+        grid-template-columns:  1fr;
+        column-gap: 0px;
+         margin-top: 10px;
+      margin-bottom: 10px;
+      }
+
+    }
+.text-grid-w23 {
+    border: 0px solid var(--color-space);
+    border-radius: var(--border-radius);
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 3fr; /* Левая фиксируется по контенту, правая тянется/сжимается */
+    grid-auto-rows: minmax(50px, auto);
+    column-gap: 0px;
+    align-items: center;
+    margin-left: 0px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    /* Адаптация для узких экранов: правая колонка сжимается, но не ломает сетку */
+    @media screen and (max-width: 768px) {
+        grid-template-columns: 1fr minmax(auto, 3fr); /* Правая колонка не уже 150px, но сжимается */
+    }
+
+    /* На совсем маленьких экранах всё в колонку */
+    @media screen and (max-width: 600px) {
+        grid-template-columns: 1fr; /* Одна колонка */
+        column-gap: 0px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
+.text-grid-w100 {
+              border: 0px solid var(--color-space);
+
+  border-radius: var(--border-radius);
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr  1fr;
+      grid-auto-rows: minmax(200px, auto);
+      column-gap: 0px;
+      align-items: center;
+      margin-left: 0px;
+      margin-top: 0px;
+      margin-bottom: 10px;
+
+      @media screen and (max-width: 600px) {
+        grid-template-columns:  1fr;
+        column-gap: 0px;
+         margin-top: 0px;
+      margin-bottom: 10px;
+      }
+
+    }
+.text-grid-w100__content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center ;
+  /* background-color: var(--color-space); */
+  background-color: white;
+    color: var(--color-onyx);
+
+      }
+.contact-grid-w100 {
               border: 3px solid var(--color-space);
 
   border-radius: var(--border-radius);
       width: 100%;
       display: grid;
       grid-template-columns: 1fr  1fr;
-      grid-template-rows: 500px;
+      grid-template-rows: 400px;
       column-gap: 10px;
       align-items: center;
       margin-left: 5px;
       margin-top: 20px;
       margin-bottom: 20px;
-
+      background-color: white;
       @media screen and (max-width: 600px) {
         grid-template-columns:  1fr;
         column-gap: 0px;
@@ -4861,7 +5046,7 @@ flex-direction: column;
         flex-direction: column;
         justify-content: center;
         align-items: center ;
-        /* padding-left: 50px; */
+
 
       }
 
@@ -4879,7 +5064,7 @@ flex-direction: column;
 .contacts__subtitle {
       font-weight: 700;
       font-size:12px;
-      line-height: 14px;
+      line-height: 120%;
       color: black;
 		}
 .contacts__form {
@@ -4914,7 +5099,7 @@ flex-direction: column;
       font-style: normal;
       font-weight: 500;
       font-size: 12px;
-      line-height: 1.7px;
+      line-height: 120%;
       border: none;
       color: #FFFFFF;
       background-color: black;
@@ -5008,7 +5193,7 @@ flex-direction: column;
   transform: rotate(-2deg) skewX(-3deg);
   border-radius: 20px 40px 20px 50px;
   transition: all 0.3s ease;
-}</style><section class="stores mt-50" id="contact"><h2 class="title-6r text-center">Contact Us</h2><div class="container1400 contact-grid-w100"><div class="contact-grid-w100__content text-left"><h2 class="depo-title">depo-500</h2><h5>Юридическое онлайн бюро</h5><h5>Ваша защита — наша главная цель</h5><div class="dummy08"></div><h3 class="text-left">Опишите Вашу проблему</h3><h3 class="text-left">или перезвоните нам:<br>8-910-453-40-12 Владимир<br>8-999-852-58-21 Олег</h3></div><form class="contacts__form"><input class="contacts__input" type="text" id="fname" name="firstname" placeholder="Your name"> <input class="contacts__input" type="text" id="femail" name="firstemail" placeholder="Your email"> <textarea class="contacts__input" id="subject" name="subject" placeholder="Your Message" style="height: 90px; width: 100%"></textarea> <input class="contacts__submit" type="submit" value="Отправить | Send"></form></div></section><!-- Адаптация --><style>/* Добавить больше breakpoints */
+}</style><section class="stores mt-50" id="contact"><div class="container1800 text-grid-w100 mb-10"><h2 class="title-6r text-center text-grid-w100__content">contact us</h2><h2 class="text-center text-grid-w100__content" style="background-color: #000; color: white; height: 100px; width: 100%; margin-bottom: 0px;">Контакты</h2></div><div class="dummy08"></div><div class="container1400 contact-grid-w100 mt-200"><div class="contact-grid-w100__content text-left"><h2 class="depo-title">depo-500</h2><h5>Юридическое онлайн бюро</h5><h5>Ваша защита — наша главная цель</h5><div class="dummy08"></div><h3 class="text-left">Опишите Вашу проблему</h3><h3 class="text-left">или перезвоните нам:<br>8-910-453-40-12 Владимир<br>8-999-852-58-21 Олег</h3></div><form class="contacts__form"><input class="contacts__input" type="text" id="fname" name="firstname" placeholder="Your name"> <input class="contacts__input" type="text" id="femail" name="firstemail" placeholder="Your email"> <textarea class="contacts__input" id="subject" name="subject" placeholder="Your Message" style="height: 90px; width: 100%"></textarea> <input class="contacts__submit" type="submit" value="Отправить | Send"></form></div></section><!-- Адаптация --><style>/* Добавить больше breakpoints */
 @media (max-width: 768px) {
   .products-grid {
     grid-template-columns: 1fr;
@@ -5026,7 +5211,7 @@ flex-direction: column;
   }
 }</style><!-- Стили для футера --><style>/* Уменьшение высоты футера */
 .footer {
-    padding: 50px 0 10px;
+    padding: 100px 0 10px;
 }
 
 .footer__inner {
@@ -5143,7 +5328,7 @@ max-width: 600px;
 .footer__inner {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 500px;
-    gap: 30px;
+    gap: 20px;
     align-items: start;
 }
 
@@ -5159,7 +5344,7 @@ max-width: 600px;
     }
 }</style><!-- Стили для футера --></div><!-- Стили для футера --><style>/* Уменьшение высоты футера */
   .footer {
-    padding: 50px 0 10px;
+    padding: 100px 0 10px;
   }
 
   .footer__inner {
@@ -5290,7 +5475,23 @@ max-width: 600px;
     .footer__inner {
       grid-template-columns: 1fr;
     }
-  }</style><!-- Стили для футера --><footer class="footer"><div class="container1400"><div class="footer__inner"><div class="footer-widget"><ul class="list-unstyled"><li><p class="white">depo-500</p></li><li><a class="grey" href="#pro">Услуги</a></li><li><a class="grey" href="#pro">Банкротство</a></li><li><a class="grey" href="#pro">Автокредит</a></li></ul></div><div class="footer-widget"><ul class="list-unstyled"><li><p class="white">about us</p></li><li><a class="grey" href="#home"><h4>Our stories</h4></a></li><li><a class="grey" href="#first">Blog</a></li><li><a class="grey" href="#third">Careers</a></li></ul></div><div class="footer-widget"><ul class="list-unstyled"><li><p class="white">contact us</p></li><li><h4 class="white">8-910-453-40-12</h4></li><li><h4 class="white">olegrewko@gmail.com</h4></li><li><h4 class="white">8-999-852-58-21</h4></li><li><h4 class="white">olegrewko@gmail.com</h4></li></ul></div><div class="footer-widget-subscribe"><ul class="list-unstyled"><li><p class="white">Отправьте нам Ваш email</p></li><form action="" class="footer__form"><div class="subscribe-form-group"><input class="subscribe-form-input" type="email" required placeholder="Email Address"> <button class="subscribe-form-btn" type="submit">Отправить | Send</button></div></form></ul></div></div></div><div class="footer__bottom"><div class="container1400"><div class="footer__bottom-wrap"><h3 class="white">depo-500</h3><p class="white">Criminal Defence</p><div class="social"><div class="social-inner"><div class="social-icon" title="Фэйсбук"><a href="https://www.facebook.com/sharer/sharer.php?u=[URL]"><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a></div><div class="social-icon" title="Инстаграм"><a href="https://www.instagram.com/"><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a></div><div class="social-icon" title="Твиттер"><a href="https://twitter.com/share?url=[URL]&text=[TITLE]"><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg></a></div><div class="social-icon" title="Реддит"><a href="https://www.reddit.com"><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.754.786 1.754 1.754 0 .716-.435 1.333-1.01 1.614a3.111 3.111 0 0 1 .042.52c0 2.694-3.13 4.87-7.004 4.87-3.874 0-7.004-2.176-7.004-4.87 0-.183.015-.366.043-.534A1.748 1.748 0 0 1 4.028 12c0-.968.786-1.754 1.754-1.754.463 0 .898.196 1.207.49 1.207-.883 2.878-1.43 4.744-1.487l.885-4.182a.342.342 0 0 1 .14-.197.35.35 0 0 1 .238-.042l2.906.617a1.214 1.214 0 0 1 1.108-.701zM9.25 12C8.561 12 8 12.562 8 13.25c0 .687.561 1.248 1.25 1.248.687 0 1.248-.561 1.248-1.249 0-.688-.561-1.249-1.249-1.249zm5.5 0c-.687 0-1.248.561-1.248 1.25 0 .687.561 1.248 1.249 1.248.688 0 1.249-.561 1.249-1.249 0-.687-.562-1.249-1.25-1.249zm-5.466 3.99a.327.327 0 0 0-.231.094.33.33 0 0 0 0 .463c.842.842 2.484.913 2.961.913.477 0 2.105-.056 2.961-.913a.361.361 0 0 0 .029-.463.33.33 0 0 0-.464 0c-.547.533-1.684.73-2.512.73-.828 0-1.979-.196-2.512-.73a.326.326 0 0 0-.232-.095z"/></svg></a></div><div class="social-icon" title="Гитхаб"><a href="https://github.com/olegrewko/olegrewko.github.io"><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a></div><div class="social-icon" title="Ютуб"><a href="https://www.youtube.com/channel/UCU-sIbAKpKDuuheQClfKspA"><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a></div><div class="social-icon" title="Pinterest"><a href="https://pinterest.com/"><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm1.4 16.6c-1.1 0-2.1-.6-2.5-1.1 0 0-.6 2.3-.7 2.8-.4 1.4-1.5 2.8-1.6 3-.1.1-.3.1-.3 0 0-.1.7-2.1.9-3.2l.5-2c-.8-1.2-.7-2.8-.2-3.8.8-1.4 2.3-1.8 3.4-1.4 1.6.5 2.1 2.1 1.3 3.4-.5.8-1.4 1-2.2.6-.3-.2-.5-.5-.4-1 .1-.4.3-.8.5-1.1.2-.3.3-.6.2-.9 0-.4-.3-.7-.8-.7-.7 0-1.3.7-1.4 1.6-.1.8.2 1.6.8 2 .2.2.3.3.2.5 0 .1-.1.3-.2.4-.3.3-.9.4-1.3.1-.9-.6-1.2-2-1-3.2.3-1.5 1.6-2.8 3.5-3 2.3-.2 4.2 1.3 4.3 3.4.1 2.2-1.3 4.1-3.5 4z"/></svg></a></div></div></div></div></div><div class="container1400"><div class="tiny-footer"><p class="tiny-grey">© All Rights Reserved 2020 | depo-500</p><ul class="tiny-card"><li class="tiny-card__item"><a href="#" class="tiny-card__link"><img src="./img/icons/paypal.png" alt="PayPal"></a></li><li class="tiny-card__item"><a href="#" class="tiny-card__link"><img src="./img/icons/master.png" alt="MasterCard"></a></li><li class="tiny-card__item"><a href="#" class="tiny-card__link"><img src="./img/icons/visa.png" alt="Visa"></a></li></ul></div></div></div><!-- Стили для footer__bottom --><style>.social {
+  }</style><!-- Стили для футера --><footer class="footer"><div class="container1400"><div class="footer__inner"><div class="footer-widget"><ul class="list-unstyled"><li><h5 class="white">depo-500</h5></li><li><a class="white" href="#pro">Услуги</a></li><li><a class="white" href="#pro">Банкротство</a></li><li><a class="white" href="#pro">Автокредит</a></li></ul></div><div class="footer-widget"><ul class="list-unstyled"><li><h5 class="white">about us</h5></li><li><a class="white" href="#home">Our stories</a></li><li><a class="white" href="#first">Blog</a></li><li><a class="white" href="#third">Careers</a></li></ul></div><div class="footer-widget"><ul class="list-unstyled"><li><h5 class="white">contact us</h5></li><li><h4 class="white">8-910-453-40-12 | Владимир</h4></li><li><h4 class="white">4534012@gmail.com</h4></li><li><h4 class="white">8-999-852-58-21 | Олег</h4></li><li><h4 class="white">olegrewko@gmail.com</h4></li></ul></div><div class="footer-widget-subscribe"><ul class="list-unstyled"><li><p class="white">Отправьте нам Ваш email</p></li><form action="" class="footer__form"><div class="subscribe-form-group"><input class="subscribe-form-input" type="email" required placeholder="Email Address"> <button class="subscribe-form-btn" type="submit">Отправить | Send</button></div></form></ul></div></div></div><div class="footer__bottom"><div class="container1400"><div class="footer__bottom-wrap"><h3 class="white">depo-500</h3><p class="white">Criminal Defence</p><div class="social"><div class="social-inner"><div class="social-icon" title="Фэйсбук"><a href="https://www.facebook.com/sharer/sharer.php?u=[URL]"><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a></div><div class="social-icon" title="Инстаграм"><a href="https://www.instagram.com/"><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a></div><div class="social-icon" title="Твиттер"><a href="https://twitter.com/share?url=[URL]&text=[TITLE]"><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg></a></div><div class="social-icon" title="Реддит"><a href="https://www.reddit.com"><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.754.786 1.754 1.754 0 .716-.435 1.333-1.01 1.614a3.111 3.111 0 0 1 .042.52c0 2.694-3.13 4.87-7.004 4.87-3.874 0-7.004-2.176-7.004-4.87 0-.183.015-.366.043-.534A1.748 1.748 0 0 1 4.028 12c0-.968.786-1.754 1.754-1.754.463 0 .898.196 1.207.49 1.207-.883 2.878-1.43 4.744-1.487l.885-4.182a.342.342 0 0 1 .14-.197.35.35 0 0 1 .238-.042l2.906.617a1.214 1.214 0 0 1 1.108-.701zM9.25 12C8.561 12 8 12.562 8 13.25c0 .687.561 1.248 1.25 1.248.687 0 1.248-.561 1.248-1.249 0-.688-.561-1.249-1.249-1.249zm5.5 0c-.687 0-1.248.561-1.248 1.25 0 .687.561 1.248 1.249 1.248.688 0 1.249-.561 1.249-1.249 0-.687-.562-1.249-1.25-1.249zm-5.466 3.99a.327.327 0 0 0-.231.094.33.33 0 0 0 0 .463c.842.842 2.484.913 2.961.913.477 0 2.105-.056 2.961-.913a.361.361 0 0 0 .029-.463.33.33 0 0 0-.464 0c-.547.533-1.684.73-2.512.73-.828 0-1.979-.196-2.512-.73a.326.326 0 0 0-.232-.095z"/></svg></a></div><div class="social-icon" title="Гитхаб"><a href="https://github.com/olegrewko/olegrewko.github.io"><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a></div><div class="social-icon" title="Ютуб"><a href="https://www.youtube.com/channel/UCU-sIbAKpKDuuheQClfKspA"><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a></div><div class="social-icon" title="Pinterest"><a href="https://pinterest.com/"><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm1.4 16.6c-1.1 0-2.1-.6-2.5-1.1 0 0-.6 2.3-.7 2.8-.4 1.4-1.5 2.8-1.6 3-.1.1-.3.1-.3 0 0-.1.7-2.1.9-3.2l.5-2c-.8-1.2-.7-2.8-.2-3.8.8-1.4 2.3-1.8 3.4-1.4 1.6.5 2.1 2.1 1.3 3.4-.5.8-1.4 1-2.2.6-.3-.2-.5-.5-.4-1 .1-.4.3-.8.5-1.1.2-.3.3-.6.2-.9 0-.4-.3-.7-.8-.7-.7 0-1.3.7-1.4 1.6-.1.8.2 1.6.8 2 .2.2.3.3.2.5 0 .1-.1.3-.2.4-.3.3-.9.4-1.3.1-.9-.6-1.2-2-1-3.2.3-1.5 1.6-2.8 3.5-3 2.3-.2 4.2 1.3 4.3 3.4.1 2.2-1.3 4.1-3.5 4z"/></svg></a></div></div></div></div></div><div class="container1400"><div class="tiny-footer"><p class="tiny-grey mt-10">© All Rights Reserved 2026</p><!-- <ul class="tiny-card">
+          <li class="tiny-card__item">
+            <a href="#" class="tiny-card__link">
+              <img src="./img/icons/paypal.png" alt="PayPal">
+            </a>
+          </li>
+          <li class="tiny-card__item">
+            <a href="#" class="tiny-card__link">
+              <img src="./img/icons/master.png" alt="MasterCard">
+            </a>
+          </li>
+          <li class="tiny-card__item">
+            <a href="#" class="tiny-card__link">
+              <img src="./img/icons/visa.png" alt="Visa">
+            </a>
+          </li>
+        </ul> --></div></div></div><!-- Стили для footer__bottom --><style>.social {
       display: flex;
       justify-content: center;
       margin-bottom: 20px;
