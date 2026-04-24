@@ -1579,7 +1579,9 @@ font-family: 'Rubik';
 }
 
 .ffc107 {
-  width: 900px;
+
+  max-width: 1400px;
+    width: 100%;
   min-height: 40px;
 
   color: var(--text-color);
