@@ -395,7 +395,7 @@ a {
 
 a:hover {
 
-  color: darkslategray;
+  color: var(--crime-orange);
   cursor: pointer;
   transition: all 0.3s;
 }
@@ -4656,7 +4656,7 @@ margin: 5px;
 
   </div>
 
- <div  class="text-grid-w100__content">
+ <div  class="text-grid-w100__content" style="border: 3px solid black; border-radius: 4px;">
 <div id="Loudspeakers" class="tabcontent">
 
       <h3 class=" text-left  ml-10"
@@ -4703,7 +4703,7 @@ margin: 5px;
     <!-- <h4 class="section-title h5"> -->
 
           <h3 class=" text-left  ml-10"
-            style="background-color: var(--color-cyan); color: white; height: auto; width: 100%; margin: 10px; padding: 10px;">
+            style="background-color: transparent; color: white; height: auto; width: 100%; margin-right: 10px; padding-right: 10px;">
             <p>Wireless Speakers</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem consequuntur at maiores voluptas eaque
               voluptates esse fugit, maxime aut corporis facilis repellendus a assumenda, dolorem nostrum ipsum enim aperiam
@@ -4759,13 +4759,18 @@ margin: 5px;
 </div>
 
       </section>
-      <section class="team  mt-50" id="about">
+      <section class="team  mt-150" id="about">
 
-          <!-- <h2 class=" title-6r text-left ml-10 ">o нас | our story</h2> -->
-                <div class="container1400 text-grid-w100 mb-10">
+<div class="container1800 text-grid-w100 mb-10">
+   <h2 class="title-6r text-center text-grid-w100__content">Our story</h2>
+  <h2 class="title-6r text-center text-grid-w100__content" style="background-color: #000; color: white; height: 100px; width: 100%; margin-bottom: 0px;">О нас</h2>
+</div>
+                <!-- <div class="container1400 text-grid-w100 mb-10">
                   <h2 class="title-6r text-left text-grid-w100__content">our story</h2>
-                <h3 class="text-center text-grid-w100__content"
-                  style="background-color: var(--color-space); color: white; height: 100px; width: 100%; margin-bottom: 0px;">О нас<br>
+                <h3 class="container1400 text-center text-grid-w100__content"
+                  style="background-color: var(--color-space); color: white; height: 100px; width: 100%; margin-bottom: 0px;">О нас</h3> -->
+                  <div class="dummy08"></div>
+
                             <h5 class="text-left ml-10">
                               Мы не обещаем луну с неба. Мы просто умеем работать быстрее и качественнее других.
 
@@ -4784,33 +4789,16 @@ margin: 5px;
 
                               Our story is being written right now — through your victories.
                             </h5>
-                </h3>
-                </div>
+
+                <!-- </div> -->
                 <!-- <div class="dummy08"></div> -->
 <div class="container1400">
-          <!-- <h5 class="text-left ml-10">
-            Мы не обещаем луну с неба. Мы просто умеем работать быстрее и качественнее других.
 
-            Каждый в команде — прошедший проверку профи с реальным опытом.
-
-            Никакой воды: только гарантия результата и четкое соблюдение сроков.
-
-            Наша история пишется здесь и сейчас — вашими победами.
-          </h5>
-                    <h5 class="text-left ml-10">
-We don't promise the moon. We just work faster and better than the rest.
-
-Every team member is a qualified expert with proven track records.
-
-No fluff: just a solid guarantee and strict deadlines.
-
-Our story is being written right now — through your victories.
-                    </h5> -->
         </div>
 
-      </section>
+      <!-- </section> -->
       <div class="container1400 ">
-<section class="about mb-100">
+<!-- <section class="about mb-100"> -->
   <div class="container1400">
     <div class="container1400" style="max-width: 1400px; margin: 0 auto; padding: 5px;">
 
@@ -5087,6 +5075,16 @@ Call us for the best result. Our legal experts know how to navigate the system t
 
     <div style="display: flex; min-width: 450px; text-align: center; background-color: var(--color-graphite);">
       <img src="img/f001.jpg" alt="img/f0012.png"
+        style="width: 100%; max-width: 450px; height: auto; display: block; margin: 0 auto; border-radius: 4px;">
+        <img src="img/f002.jpg" alt="img/f0012.png"
+          style="width: 100%; max-width: 450px; height: auto; display: block; margin: 0 auto; border-radius: 4px;">
+        <img src="img/f003.jpg" alt="img/f0012.png"
+        style="width: 100%; max-width: 450px; height: auto; display: block; margin: 0 auto; border-radius: 4px;">
+        <img src="img/f004.jpg" alt="img/f0012.png"
+          style="width: 100%; max-width: 450px; height: auto; display: block; margin: 0 auto; border-radius: 4px;">
+         <img src="img/f005.jpg" alt="img/f0012.png"
+          style="width: 100%; max-width: 450px; height: auto; display: block; margin: 0 auto; border-radius: 4px;">
+             <img src="img/f001.jpg" alt="img/f0012.png"
         style="width: 100%; max-width: 450px; height: auto; display: block; margin: 0 auto; border-radius: 4px;">
         <img src="img/f002.jpg" alt="img/f0012.png"
           style="width: 100%; max-width: 450px; height: auto; display: block; margin: 0 auto; border-radius: 4px;">
@@ -6028,11 +6026,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
 <!--Уголовные end  -->
 
- <section class="container1800">
-      <div class="container1400 d-flex">
-        <a href="./category.html"  style="width: 1400px;">
+ <section class="container1800 ">
+      <div class="container1400 d-flex" style="max-width: 1400px; width: 100%; margin-bottom: 50px; margin-top: 150px;">
+        <!-- <a href="./category.html"  style="width: 1400px;"> -->
           <button class="ffc107">Дополнительные услуги в области уголовного права</button>
-        </a>
+        <!-- </a> -->
       </div>
       <div class="container1400">
         <div class="specs-table">
@@ -6405,7 +6403,7 @@ document.addEventListener('DOMContentLoaded', () => {
     width: 100%;
     display: grid;
     grid-template-columns: 2fr 3fr; /* Левая фиксируется по контенту, правая тянется/сжимается */
-    grid-auto-rows: minmax(50px, auto);
+    grid-auto-rows: minmax(100px, auto);
     column-gap: 0px;
     align-items: center;
     margin-left: 0px;
@@ -6413,12 +6411,13 @@ document.addEventListener('DOMContentLoaded', () => {
     margin-bottom: 10px;
 
     /* Адаптация для узких экранов: правая колонка сжимается, но не ломает сетку */
-    @media screen and (max-width: 768px) {
-        grid-template-columns: 1fr minmax(auto, 3fr); /* Правая колонка не уже 150px, но сжимается */
-    }
+    /* @media screen and (max-width: 1020px) {
+        grid-template-columns: 1fr minmax(auto, 3fr); */
+         /* Правая колонка не уже 150px, но сжимается */
+    /* } */
 
     /* На совсем маленьких экранах всё в колонку */
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 820px) {
         grid-template-columns: 1fr; /* Одна колонка */
         column-gap: 0px;
         margin-top: 10px;
@@ -6465,12 +6464,12 @@ document.addEventListener('DOMContentLoaded', () => {
       display: grid;
       grid-template-columns: 1fr  1fr;
       grid-template-rows: 400px;
-      column-gap: 10px;
+      column-gap: 5px;
       align-items: center;
-      margin-left: 10px;
-      padding-left: 10px;
-      margin-top: 20px;
-      margin-bottom: 20px;
+      margin-left: 5px;
+      padding-left: 5px;
+      margin-top: 10px;
+      margin-bottom: 10px;
       background-color: white;
       @media screen and (max-width: 600px) {
         grid-template-columns:  1fr;
@@ -6483,8 +6482,8 @@ document.addEventListener('DOMContentLoaded', () => {
         flex-direction: column;
         justify-content: center;
         align-items: center ;
-  margin-left: 10px;
-  padding-left: 10px;
+  /* margin-left: 5px;
+  padding-left: 5px; */
 
       }
 
