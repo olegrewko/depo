@@ -243,6 +243,7 @@ if(k&&j[k]&&(e||j[k].data)||void 0!==d||"string"!=typeof b)return k||(k=i?a[h]=c
     --crime-yellow: #F4B41A;   /* В розыске, предупреждение */
     --crime-orange: #F15A24;   /* Кражи, хулиганство */
     --crime-blue: #005C9E;     /* УК, приговоры, закон */
+    --crime-green: #2A6B3C;    /* Оправдан, закрыто, свидетели */
 
     /* Геометрические радиусы (баухаус - прямые углы или строгая геометрия) */
     --border-radius-bauhaus: 0px;   /* Квадратно, жестко */
@@ -1399,7 +1400,7 @@ z-index: 10;
 
 .ffc107 {
   width: 900px;
-  height: 40px;
+  height: 100px;
   color: black;
   font-weight: 800;
   font-size: 14px;
@@ -1409,31 +1410,41 @@ z-index: 10;
   margin-bottom: 5px;
 }
 
-.ffc107:hover {
+/* .ffc107:hover {
 
-  /* height: 40px; */
+
   color: black;
-  /* border: 0px solid black; */
+
   background-color: white;
   transition: all 0.3s;
   cursor: pointer;
-  /* margin-bottom: 3px; */
-}
+
+} */
 
 .grid-products__btn {
   text-align: left;
   max-width: 900px;
   width: 100%;
-  height: 40px;
+  height: 100px;
   color: black;
   font-weight: 700;
-  font-size: 14px;
-  border: 2px solid var(--color-onyx);
-  border-radius: 2px;
+  font-size: 16px;
+  border: 0px solid var(--color-onyx);
+  border-radius: 6px;
   padding-left: 10px;
   margin-bottom: 3px;
-  background-color: transparent;
+  background-color: var(--color-mist);
 }
+.grid-products__btn:hover {
+
+
+  color: white;
+  border: 0px solid black;
+  background-color: var(--crime-blue);
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
 .grid-products__btn-810 {
   color: white;
 
@@ -1455,15 +1466,7 @@ z-index: 10;
   transition: all 0.3s;
   cursor: pointer;
 }
-.grid-products__btn:hover {
 
-  height: 40px;
-  color: white;
-  border: 2px solid black;
-  background-color: black;
-  transition: all 0.3s;
-  cursor: pointer;
-}
 
 .card {
   position: relative;
@@ -3085,7 +3088,7 @@ display: flex;
 .title-12r {
   font-family: 'Rubik';
   font-style: normal;
-  font-weight: 300;
+  font-weight: 200;
   line-height: 100px;
   font-size: 10rem;
   color: var(--color-space);
@@ -3854,7 +3857,7 @@ max-width: 768px;
 }
 
 /* ===== RETRO BUTTON GRID ===== */
-.grid-products__btn-270,
+/* .grid-products__btn-270,
 .grid-products__btn-810 {
   position: relative;
   overflow: hidden;
@@ -3877,7 +3880,7 @@ max-width: 768px;
 .grid-products__btn-810:hover {
   background-color: transparent;
   color: var(--color-onyx);
-}
+} */
 
 /* ===== ENHANCED NAVIGATION ===== */
 /* .menu__list {
@@ -4200,7 +4203,7 @@ margin: 5px;
   margin-bottom: 5px;
   background-color: transparent;
 }
-.grid-products__btn {
+/* .grid-products__btn {
   text-align: left;
   max-width: 1000px;
   width: 100%;
@@ -4213,7 +4216,7 @@ margin: 5px;
   padding-left: 10px;
   margin-bottom: 3px;
   background-color: transparent;
-}
+} */
     /* Базовые стили */
     .about__inner {
       display: flex;
@@ -4604,9 +4607,9 @@ margin: 5px;
 <div class="container1800 text-grid-w23 mb-10">
    <h2 class="title-6r text-left text-grid-w100__content ml-10">services</h2>
 
-    <h3 class=" text-left text-grid-w100__content ml-10"  style="background-color: var(--color-space); color: white; height: 100px; width: 100%; margin-bottom: 0px;">
-      Основные направления деятельности компании
-    </h3>
+    <h5 class=" text-center text-grid-w100__content ml-10"  style="background-color: var(--color-midnight); color: white; height: 100px; width: 100%; margin-left: 10px;">
+      Основные направления
+    </h5>
 
 
 
@@ -4639,17 +4642,17 @@ margin: 5px;
 
         <!-- </div> -->
         <!-- <div class="container900"> -->
-          <button class="grid-products__btn-810">Уголовные преступления | Criminal Offences</button>
-          <button class="grid-products__btn-810">Опасное вождение | Driving Offences</button>
-          <button class="grid-products__btn-810">Владение оружием | Weapons Offences</button>
-          <button class="grid-products__btn-810">Преступления, связанные с наркотиками | Drug Offences</button>
+          <button class="grid-products__btn">Уголовные преступления | Criminal Offences</button>
+          <button class="grid-products__btn">Опасное вождение | Driving Offences</button>
+          <button class="grid-products__btn">Владение оружием | Weapons Offences</button>
+          <button class="grid-products__btn">Преступления, связанные с наркотиками | Drug Offences</button>
 
-          <button class="grid-products__btn-810">Непредумышленное убийство | Murder</button>
-          <button class="grid-products__btn-810">Торговля людьми | Human Trafficking</button>
-          <button class="grid-products__btn-810">Нападение | Assault</button>
+          <button class="grid-products__btn">Непредумышленное убийство | Murder</button>
+          <button class="grid-products__btn">Торговля людьми | Human Trafficking</button>
+          <button class="grid-products__btn">Нападение | Assault</button>
 
-          <button class="grid-products__btn-810">Мошенничество | Fraud Robbery</button>
-          <button class="grid-products__btn-810">Сексуальные преступления | Sexual Offences</button>
+          <button class="grid-products__btn">Мошенничество | Fraud Robbery</button>
+          <button class="grid-products__btn">Сексуальные преступления | Sexual Offences</button>
 
 
         </div>
@@ -4763,32 +4766,39 @@ margin: 5px;
 
 <div class="container1800 text-grid-w100 mb-10">
    <h2 class="title-6r text-center text-grid-w100__content">Our story</h2>
-  <h2 class="title-6r text-center text-grid-w100__content" style="background-color: #000; color: white; height: 100px; width: 100%; margin-bottom: 0px;">О нас</h2>
+  <h2 class="text-center text-grid-w100__content" style="background-color: #000; color: white; height: 100px; width: 100%; margin-bottom: 0px;">О нас</h2>
 </div>
                 <!-- <div class="container1400 text-grid-w100 mb-10">
                   <h2 class="title-6r text-left text-grid-w100__content">our story</h2>
                 <h3 class="container1400 text-center text-grid-w100__content"
                   style="background-color: var(--color-space); color: white; height: 100px; width: 100%; margin-bottom: 0px;">О нас</h3> -->
                   <div class="dummy08"></div>
+<div class="container1800 text-grid-w100 mb-10">
+   <h2 class=" text-left text-grid-w100__content">
+    <p class="text-left ml-10">
+      Мы не обещаем луну с неба. Мы просто умеем работать быстрее и качественнее других.
 
-                            <h5 class="text-left ml-10">
-                              Мы не обещаем луну с неба. Мы просто умеем работать быстрее и качественнее других.
+      Каждый в команде — прошедший проверку профи с реальным опытом.
 
-                              Каждый в команде — прошедший проверку профи с реальным опытом.
+      Никакой воды: только гарантия результата и четкое соблюдение сроков.
 
-                              Никакой воды: только гарантия результата и четкое соблюдение сроков.
+      Наша история пишется здесь и сейчас — вашими победами.
+    </p>
+    <p class="text-left ml-10 bt-2">
+      We don't promise the moon. We just work faster and better than the rest.
 
-                              Наша история пишется здесь и сейчас — вашими победами.
-                            </h5>
-                            <h5 class="text-left ml-10">
-                              We don't promise the moon. We just work faster and better than the rest.
+      Every team member is a qualified expert with proven track records.
 
-                              Every team member is a qualified expert with proven track records.
+      No fluff: just a solid guarantee and strict deadlines.
 
-                              No fluff: just a solid guarantee and strict deadlines.
+      Our story is being written right now — through your victories.
+    </p>
+   </h2>
+  <h2 class="text-center text-grid-w100__content" style="background-color: #fff; color: white; height: 100px; width: 100%; margin-bottom: 0px;">About</h2>
+</div>
 
-                              Our story is being written right now — through your victories.
-                            </h5>
+
+
 
                 <!-- </div> -->
                 <!-- <div class="dummy08"></div> -->
@@ -4809,7 +4819,7 @@ margin: 5px;
             <h5>
               Всё началось не с офиса и не с планов. История depo-500 началась с одного человека — Владимира Бауэрса. Он
               вложил в компанию не только деньги и время, а кое-что поважнее: свою целеустремлённость и настоящую страсть к делу.
-              <br>
+
               Эти качества стали ДНК depo-500. Они передаются как семейная ценность — от основателя к каждому сотруднику.
               Прошло более 20 лет, но дух не изменился. Мы всё так же горим своим делом, не сдаёмся перед трудностями и верим, что
               честная работа всегда побеждает. depo-500 — это не просто бренд. Это характер одного человека, который стал характером
@@ -4843,15 +4853,25 @@ margin: 5px;
 </section>
       </div>
 <!--Каталог+ Поиск -->
-<style>
 
-</style>
+      <section class="team  mt-150" id= "team">
+<div class="container1800 text-grid-w23 mb-10">
+  <h2 class="title-6r text-left text-grid-w100__content ml-10" style=" color: black; border: 0px solid var(--color-maroon);
+   border-radius: 4px;">Team</h2>
+
+  <h3 class=" text-center text-grid-w100__content ml-5"
+    style="background-color: var(--bauhaus-dark) ; color: white; border: 2px solid var(--bauhaus-dark); height: 100px; width: 100%; margin: 0px; border-radius: 4px;">
+    Команда
+  </h3>
 
 
-      <section class="team  mt-50" id= "team">
-                        <div class="container1400 text-grid-w14 mb-10">
+
+</div>
+<div class="dummy08" style="background-color: #fff;"></div>
+
+                        <div class="container1800 text-grid-w23 mb-10">
                           <h2 class="title-6r text-center text-grid-w100__content"
-                          >team</h2>
+                          ></h2>
                           <h5 class="text-left text-grid-w100__content ml-10"
                             style="background-color: transparent; width: 100%; margin-bottom: 10px;">
                             depo-500 — это команда опытных адвокатов, удостоенная множества наград.
@@ -4869,29 +4889,10 @@ margin: 5px;
                         </div>
                         <div class="dummy08"></div>
 
-          <!-- <h2 class="title-6r text-left ml-10">наша команда | our team</h2> -->
+<!--
           <div class="container1400 mt-100">
-          <!-- <h5 class="text-left ml-10">
-            depo-500 — это команда опытных адвокатов, удостоенная множества наград.
-            Когда на кону ваша свобода или карьера, вы можете положиться на нашу команду, которая уже более 10 лет ведет сложные
-            дела и добивается для вас наилучшего исхода. Наши адвокаты вели более 90 дел и судебных процессов.
 
-            Мы начнем работу над вашим делом с того, что выслушаем вас, узнаем вашу историю и цели. Мы понимаем, что это может быть
-            одним из самых стрессовых периодов в жизни. Мы будем рядом с вами, будем бороться на вашей стороне, предлагать решения и
-            проверенные стратегии, основанные на опыте и нацеленные на вашу защиту.
-
-            Если вы хотите добиться наилучшего результата, позвоните нам. Наши юристы — эксперты в области взаимодействия с правовой
-            системой для достижения ваших целей. Мы предлагаем бесплатную консультацию, чтобы обсудить ваше дело, ваши права и то,
-            как мы можем вам помочь.
-          </h5> -->
-                    <!-- <h5 class="text-left ml-10">
-                      depo-500 — award-winning attorneys. When your freedom or career is on the line, trust a team with over 10 years of combined experience and 9,0+ cases won.
-
-We listen first. We learn your story and your goals. We stay by your side, fight for you, and deliver proven strategies focused on your defense.
-
-Call us for the best result. Our legal experts know how to navigate the system to achieve your goals. Free consultation available.
-                    </h5> -->
-        </div>
+        </div> -->
 
 <!--  -->
 <div class="container1400" style="margin: 0 auto; padding: 5px; margin-top: 100px;">
@@ -4900,11 +4901,11 @@ Call us for the best result. Our legal experts know how to navigate the system t
     <!-- Карточка 01 - Murder / убийство -->
     <div class="col-lg-3 col-sm-6">
       <div class="card"
-        style="background-color: var(--color-space); border-radius: 4px; overflow: hidden; box-shadow: 0 10px 10px rgba(0,0,0,0.2); transition: transform 0.3s ease; height: 100%;">
+        style="background-color: var(--crime-blue); border-radius: 4px; overflow: hidden; box-shadow: 0 10px 10px rgba(0,0,0,0.2); transition: transform 0.3s ease; height: 100%;">
 
         <img src="img/crime/dave.jpg" alt="Murder" style="width: 100%; height: auto; display: block;">
         <div style="padding: 2px;">
-          <p style="color: white; margin: 5px 0 5px 0; font-size: 14px; opacity: 0.6;">Бахром Файзуллоев <br>
+          <p style="color: var(--bauhaus-white); margin: 5px 0 5px 0; font-size: 14px; opacity: 0.6;">Бахром Файзуллоев <br>
              Адвокат<br>
 
             Недвижимость<br>
@@ -4912,7 +4913,7 @@ Call us for the best result. Our legal experts know how to navigate the system t
             Недвижимость<br>
             Недвижимость<br>
           </p>
-          <p class="bt-2" style="color: white; margin: 5px 0 5px 0; font-size: 14px; opacity: 0.6;">89539690586<br>
+          <p class="bt-2" style="color: var(--bauhaus-white); margin: 5px 0 5px 0; font-size: 14px; opacity: 0.6;">89539690586<br>
             olegrewko@gmail.com
 
           </p>
@@ -4924,7 +4925,7 @@ Call us for the best result. Our legal experts know how to navigate the system t
     <!-- Карточка 02 - Theft / кража -->
     <div class="col-lg-3 col-sm-6">
       <div class="card"
-        style="background-color: var(--color-space); border-radius: 4px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.2); transition: transform 0.3s ease; height: 100%;">
+        style="background-color: var(--color-ash); border-radius: 4px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.2); transition: transform 0.3s ease; height: 100%;">
 
         <img src="img/crime/val.jpg" alt="Burglary" style="width: 100%; height: auto; display: block;">
         <div style="padding: 5px;">
@@ -4941,7 +4942,7 @@ Call us for the best result. Our legal experts know how to navigate the system t
     <!-- Карточка 03 - Fraud / мошенничество -->
     <div class="col-lg-3 col-sm-6">
       <div class="card"
-        style="background-color: var(--color-space); border-radius: 4px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.2); transition: transform 0.3s ease; height: 100%;">
+        style="background-color: var(--crime-yellow); border-radius: 4px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.2); transition: transform 0.3s ease; height: 100%;">
 
         <img src="img/crime/val.jpg" alt="Burglary" style="width: 100%; height: auto; display: block;">
         <div style="padding: 5px;">
@@ -4958,7 +4959,7 @@ Call us for the best result. Our legal experts know how to navigate the system t
     <!-- Карточка 04 - Assault / нападение -->
     <div class="col-lg-3 col-sm-6">
       <div class="card"
-        style="background-color: var(--color-space); border-radius: 4px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.2); transition: transform 0.3s ease; height: 100%;">
+        style="background-color: var(--crime-blue); border-radius: 4px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.2); transition: transform 0.3s ease; height: 100%;">
 
         <img src="img/crime/val.jpg" alt="Burglary" style="width: 100%; height: auto; display: block;">
         <div style="padding: 5px;">
@@ -4975,7 +4976,7 @@ Call us for the best result. Our legal experts know how to navigate the system t
     <!-- Карточка 05 - Burglary / ограбление (продублирована структура) -->
     <div class="col-lg-3 col-sm-6">
       <div class="card"
-        style="background-color: var(--color-space); border-radius: 4px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.2); transition: transform 0.3s ease; height: 100%;">
+        style="background-color: var(--crime-orange); border-radius: 4px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.2); transition: transform 0.3s ease; height: 100%;">
 
         <img src="img/crime/val.jpg" alt="Burglary" style="width: 100%; height: auto; display: block;">
             <div style="padding: 5px;">
@@ -5058,24 +5059,26 @@ Call us for the best result. Our legal experts know how to navigate the system t
 <div class="loudspeakers mt-100" id="property">
 
  <div class="container1800 text-grid-w23 mb-10">
-   <h2 class="title-6r text-left text-grid-w100__content ml-10"
-   style=" color: maroon; border-bottom: 0px solid var(--color-maroon);
-   border-radius: 4px;">Недвижимость</h2>
+   <h2 class="title-6r text-left text-grid-w100__content"
+   style=" color: black; border: 3px solid var(--color-maroon);
+   border-radius: 6px;">
+  Недвижимость
+   </h2>
 
-    <h3 class=" text-center text-grid-w100__content ml-5"  style="background-color: var(--bauhaus-dark) ; color: white; border: 3px solid var(--bauhaus-dark); height: 100px; width: 100%; margin: 1px; border-radius: 4px;">
+    <h3 class=" text-center text-grid-w100__content"  style="background-color: var(--bauhaus-dark) ; color: white; border: 6px solid var(--bauhaus-dark); height: 100px; width: 100%; margin: 0px; border-radius: 4px;">
       Вернуть недвижимость обратно
     </h3>
 
 
 
 </div>
-                          <div class="dummy08" style="background-color: #fff;"></div>
+<div class="dummy08" style="background-color: #fff;"></div>
 
 
 
-    <div style="display: flex; min-width: 450px; text-align: center; background-color: var(--color-graphite);">
+    <div style="display: flex; min-width: 200px; text-align: center; background-color: var(--color-graphite);">
       <img src="img/f001.jpg" alt="img/f0012.png"
-        style="width: 100%; max-width: 450px; height: auto; display: block; margin: 0 auto; border-radius: 4px;">
+        style=" max-width: 450px; width: 100%; height: auto; display: block; margin: 0 auto; border-radius: 4px;">
         <img src="img/f002.jpg" alt="img/f0012.png"
           style="width: 100%; max-width: 450px; height: auto; display: block; margin: 0 auto; border-radius: 4px;">
         <img src="img/f003.jpg" alt="img/f0012.png"
@@ -5084,7 +5087,7 @@ Call us for the best result. Our legal experts know how to navigate the system t
           style="width: 100%; max-width: 450px; height: auto; display: block; margin: 0 auto; border-radius: 4px;">
          <img src="img/f005.jpg" alt="img/f0012.png"
           style="width: 100%; max-width: 450px; height: auto; display: block; margin: 0 auto; border-radius: 4px;">
-             <img src="img/f001.jpg" alt="img/f0012.png"
+             <!-- <img src="img/f001.jpg" alt="img/f0012.png"
         style="width: 100%; max-width: 450px; height: auto; display: block; margin: 0 auto; border-radius: 4px;">
         <img src="img/f002.jpg" alt="img/f0012.png"
           style="width: 100%; max-width: 450px; height: auto; display: block; margin: 0 auto; border-radius: 4px;">
@@ -5093,7 +5096,7 @@ Call us for the best result. Our legal experts know how to navigate the system t
         <img src="img/f004.jpg" alt="img/f0012.png"
           style="width: 100%; max-width: 450px; height: auto; display: block; margin: 0 auto; border-radius: 4px;">
          <img src="img/f005.jpg" alt="img/f0012.png"
-          style="width: 100%; max-width: 450px; height: auto; display: block; margin: 0 auto; border-radius: 4px;">
+          style="width: 100%; max-width: 450px; height: auto; display: block; margin: 0 auto; border-radius: 4px;"> -->
     </div>
 
 
@@ -5101,8 +5104,8 @@ Call us for the best result. Our legal experts know how to navigate the system t
   </div>
 
 <div class="dummy08" style="background-color: #fff;"></div>
-<div class="container1400 mt-100">
-          <h2 class=" text-center"
+<div class="container1400 mt-150">
+          <h2 class=" text-left"
             style="color: var(--color-space); font-size: 20px; font-weight: bold; line-height: 1.3; margin-bottom: 50px; font-family: Jost, sans-serif;">
             Перерегистрация права собственности на исходного владельца
           </h2>
@@ -5186,35 +5189,158 @@ Call us for the best result. Our legal experts know how to navigate the system t
 
 
 </div>
-<section class="stores mt-50" id="b">
+<!--bankruptcy  -->
+<section class="stores text-left mt-150" id="b">
   <div class="container1800 text-grid-w100 mb-10">
-    <h2 class="title-6r text-center text-grid-w100__content">Банкротство</h2>
-    <h2 class="text-center text-grid-w100__content"
-      style="background-color: #000; color: white; height: 100px; width: 100%; margin-bottom: 0px;">Bankruptcy</h2>
+    <h2 class="title-6r text-left text-grid-w100__content">bankruptcy</h2>
+    <h5 class="text-center text-grid-w100__content"
+      style="background-color: #000; color: white; height: 100px; width: 100%; margin-bottom: 0px;">Банкротство</h5>
   </div>
   <div class="dummy08"></div>
-  <div class="container1400 contact-grid-w100 mt-200 ml-10">
+<div class="container1400 contact-grid-w100 mt-150" style="background-color: var(--color-space);">
 
-    <div class="contact-grid-w100__content text-left ml-10">
+  <div class="contact-grid-w100__content text-left" >
+    <!-- <h2 class="depo-title">depo-500</h2>
+    <h5>Юридическое онлайн бюро</h5>
+    <h5>Ваша защита — наша главная цель</h5>
+    <div class="dummy08"></div>
+    <h3 class="text-left">Опишите Вашу проблему</h3>
+    <h3 class="text-left">
+      или перезвоните нам:<br>
+      8-910-453-40-12 Владимир<br>
+      8-999-852-58-21 Олег
+    </h3> -->
+      <div style="display: flex; max-width: 600px; width: 100%; text-align: center; background-color: var(--color-graphite);">
+        <img src="img/matthew-henry.jpg" alt="img/matthew-henry.jpg"
+          style="max-width: 600px; width: 100%; height: auto; display: block; margin: 0 auto; border-radius: 4px;">
+      </div>
+  </div>
+
+  <!-- <form class="contacts__form">
+    <input class="contacts__input" type="text" id="fname" name="firstname" placeholder="Your name" />
+    <input class="contacts__input" type="text" id="femail" name="firstemail" placeholder="Your email" />
+    <textarea class="contacts__input" id="subject" name="subject" placeholder="Your Message"
+      style="height: 90px; width: 100%"></textarea>
+
+    <input class="contacts__submit" type="submit" value="Отправить | Send" />
+  </form> -->
+
+
+</div>
+  <!-- <div class="container1400 contact-grid-w100 mt-100 ml-10"> -->
+
+    <!-- <div class="contact-grid-w100__content text-left ml-10">
     <div style="display: flex; max-width: 600px; width: 100%; text-align: center; background-color: var(--color-graphite);">
       <img src="img/matthew-henry.jpg" alt="img/matthew-henry.jpg"
         style="max-width: 600px; width: 100%; height: auto; display: block; margin: 0 auto; border-radius: 4px;">
     </div>
-    </div>
-      <div class="contact-grid-w100__content text-left ml-10">
-       <div class=" ml-10">
+    </div> -->
+      <!-- <div class="contact-grid-w100__content text-left  ml-10" style="max-width: 600px; width: 100%;">
+       <div class="contact-grid-w100__content text-left mt-10" >
           <h2 class="mt-10"
-            style="background-color: white; color: #000; height: 100px; width: 95%; margin-top: 40px;">Аннулировать автокредит через банкротство</h2>
+            style="background-color: white; color: #000; height: 100px;   margin-top: 10px;">Аннулировать автокредит через банкротство</h2>
            <h2 class="mt-10"
-            style="background-color: white; color: #000; height: 100px; width: 95%; margin-top: 10px;">Списать все ЖКХ задолженности</h2>
-            <h2 class="mt-10" style="background-color: white; color: #000; height: 100px; width: 95%; margin-top: 10px;">Списать все
+            style="background-color: white; color: #000; height: 100px;  margin-top: 10px;">Списать все ЖКХ задолженности</h2>
+            <h2 class="mt-10" style="background-color: white; color: #000; height: 100px;  margin-top: 10px;">Списать все
               штрафы</h2>
         </div>
-      </div>
+      </div> -->
+
+
+  <!-- </div> -->
+  </section>
+  <div class="dummy08" style="background-color: #fff;"></div>
+  <div class="container1400   mt-150">
+    <h2 class=" text-center"
+      style="color: var(--color-space); font-size: 20px; font-weight: bold; line-height: 1.3; margin-bottom: 50px; font-family: Jost, sans-serif;">
+      Аннулировать автокредит через банкротство
+    </h2>
+    <h5 class="text-left ml-10">
+      Тема «Перерегистрация права собственности на исходного владельца» (то есть возврат квартиры, дома или земли тому,
+      кто
+      продал её ранее) — юридически сложный процесс. В законном поле это возможно только при наличии чётких оснований,
+      указанных в Гражданском кодексе РФ.
+    </h5>
+    <h5 class="text-left ml-10">
+      Вот все законные способы, как это сделать, сгруппированные по механизмам действий.
+    </h5>
+    <h5 class="text-left ml-10">
+      1. Расторжение договора купли-продажи (ДКП)
+    </h5>
+    <h5 class="text-left ml-10">
+      Это самый частый способ, но он возможен только при взаимном согласии сторон или существенном нарушении условий
+      сделки.
+
+      По соглашению сторон (бывший владелец договаривается с нынешним). Подаётся заявление в Росреестр о регистрации
+      прекращения права и возврате собственности. Нужно: новое соглашение о расторжении + акт приёма-передачи квартиры
+      обратно.
+
+      В судебном порядке (если покупатель не заплатил, или продавец обманул, или обнаружены скрытые дефекты). Суд
+      обязывает
+      вернуть квартиру.
+    </h5>
+    <h5 class="text-left ml-10">
+      2. Признание сделки недействительной (оспоримая или ничтожная сделка)
+    </h5>
+    <h5 class="text-left ml-10">
+      Этот путь используется, когда договор был, но он незаконен с самого начала.
+
+      Основания (вы должны это доказать в суде):
+
+      Сделка совершена под влиянием заблуждения (продавец думал, что подписывает договор аренды или дарения).
+
+      Сделка совершена под угрозой, насилием, обманом (ст. 179 ГК РФ).
+
+      Продавец был недееспособен или не понимал своих действий (нужна посмертная психолого-психиатрическая экспертиза).
+
+      Сделка мнимая или притворная (например, продажа для вида, чтобы не отдавать долги).
+
+      Результат: Суд возвращает всё в исходное состояние (реституция). Право собственности аннулируется у покупателя и
+      регистрируется на продавца.
+    </h5>
+    <h5 class="text-left ml-10">
+      3. Истребование имущества у добросовестного приобретателя (Виндикация)
+    </h5>
+    <h5 class="text-left ml-10">
+      Это когда продавец (бывший владелец) вообще не подписывал договор — квартиру украли, подделали документы или продал
+      мошенник по доверенности.
+
+      Механизм: Подаётся иск в суд о признании отсутствующим права собственности у «покупателя» и о возврате квартиры
+      законному хозяину.
+
+      Сложность: Если новый покупатель «добросовестный» (не знал о краже и проверил документы), суд может отказать, если
+      квартира куплена возмездно (за деньги). Но если квартира была украдена или выбыла из владения помимо воли,
+      виндикация
+      работает (ст. 302 ГК РФ).
+    </h5>
+    <h5 class="text-left ml-10">
+      4. Исполнение решения суда по «обратной купле-продаже»
+    </h5>
+    <h5 class="text-left ml-10">
+      Иногда бывшие владельцы выкупают квартиру обратно. Это не «перерегистрация на исходного», а новая сделка:
+
+      Заключается новый договор купли-продажи (теперь исходный владелец — покупатель).
+
+      Оплачивается госпошлина, налоги (если квартира была в собственности менее 3-5 лет у продавца).
+    </h5>
+    <h5 class="text-left ml-10">
+      5. Отмена договора дарения (если исходная передача была дарением)
+    </h5>
+    <h5 class="text-left ml-10">
+      Если право собственности было передано безвозмездно (дарение, а не купля-продажа), закон позволяет отменить дарение
+      в
+      суде в случаях:
+
+      Одаряемый совершил покушение на жизнь дарителя или членов его семьи.
+
+      Одаряемый умышленно нанёс тяжкий вред здоровью дарителя.
+
+      Даритель переживёт одаряемого (оговорено в договоре).
+    </h5>
 
 
   </div>
-</section>
+<!-- </section> -->
 
 
 <style>
@@ -5706,18 +5832,20 @@ document.addEventListener('DOMContentLoaded', () => {
       grid-row: auto !important;
     }
   }
-
+.mt-150 {
+  margin-top: 150px;
+}
 </style>
-      <section class="crime mt-200 " id="crime">
-          <div class="container1800 text-grid-w100 mb-10">
+      <section class="crime mt-150 " id="crime">
+                  <div class="container1800 text-grid-w100 mb-10">
             <h2 class="title-6r text-grid-w100__content"
-             style="color: var(--color-space);
-  border-radius: 4px;
+             style="color: var(--bauhaus-black);
+
              ">criminal</h2>
             <h2 class="text-left text-grid-w100__content"
                style="background-color: white;  color: #000;  width: 100%; padding-left: 10px; margin-bottom: 0px;">
-              <!-- Уголовные преступления -->
-                <p style="font-size: 16px; line-height: 1.4;  color: var(--space-color); text-align: left;">
+
+                <p style="font-size: 16px; line-height: 120%;  color: var(--space-color); text-align: left;">
                   depo-500 — это команда опытных адвокатов, удостоенная множества наград.
                   Когда на кону ваша свобода или карьера, вы можете положиться на нашу команду, которая уже более 10 лет ведет сложные
                   дела и добивается для вас наилучшего исхода. Наши адвокаты вели более 90 дел и судебных процессов.
@@ -5734,15 +5862,75 @@ document.addEventListener('DOMContentLoaded', () => {
                   как мы можем вам помочь.
 
                 </p>
+                      <p class="bt-2" style="font-size: 16px; line-height: 120%;  color: var(--space-color); text-align: left;">
+                        depo-500 — это команда опытных адвокатов, удостоенная множества наград.
+                        Когда на кону ваша свобода или карьера, вы можете положиться на нашу команду, которая уже более 10 лет ведет сложные
+                        дела и добивается для вас наилучшего исхода. Наши адвокаты вели более 90 дел и судебных процессов.
+
+                        Мы начнем работу над вашим делом с того, что выслушаем вас, узнаем вашу историю и цели. Мы понимаем, что это может
+                        быть
+                        одним из самых стрессовых периодов в жизни. Мы будем рядом с вами, будем бороться на вашей стороне, предлагать решения
+                        и
+                        проверенные стратегии, основанные на опыте и нацеленные на вашу защиту.
+
+                        Если вы хотите добиться наилучшего результата, позвоните нам. Наши юристы — эксперты в области взаимодействия с
+                        правовой
+                        системой для достижения ваших целей. Мы предлагаем бесплатную консультацию, чтобы обсудить ваше дело, ваши права и то,
+                        как мы можем вам помочь.
+
+                      </p>
             </h2>
 
           </div>
-        <div class="container1800 bg-black">
-        <div class="container1400">
-          <!-- <h2 class="text-left title-6r">уголовные преступления | criminal offenses</h2> -->
+          <div class="container1800 text-grid-w100 mb-10">
+            <h2 class="title-6r text-grid-w100__content"
+             style="color: var(--bauhaus-black);
 
-          <!-- #E85D04 line-height: 1.4; color: black; text-align: left;">Профессиональная защита на всех этапах
-            уголовного процесса</h5> -->
+             ">criminal</h2>
+            <h2 class="text-left text-grid-w100__content"
+               style="background-color: white;  color: #000;  width: 100%; padding-left: 10px; margin-bottom: 0px;">
+
+                <p style="font-size: 16px; line-height: 120%;  color: var(--space-color); text-align: left;">
+                  depo-500 — это команда опытных адвокатов, удостоенная множества наград.
+                  Когда на кону ваша свобода или карьера, вы можете положиться на нашу команду, которая уже более 10 лет ведет сложные
+                  дела и добивается для вас наилучшего исхода. Наши адвокаты вели более 90 дел и судебных процессов.
+
+                  Мы начнем работу над вашим делом с того, что выслушаем вас, узнаем вашу историю и цели. Мы понимаем, что это может
+                  быть
+                  одним из самых стрессовых периодов в жизни. Мы будем рядом с вами, будем бороться на вашей стороне, предлагать решения
+                  и
+                  проверенные стратегии, основанные на опыте и нацеленные на вашу защиту.
+
+                  Если вы хотите добиться наилучшего результата, позвоните нам. Наши юристы — эксперты в области взаимодействия с
+                  правовой
+                  системой для достижения ваших целей. Мы предлагаем бесплатную консультацию, чтобы обсудить ваше дело, ваши права и то,
+                  как мы можем вам помочь.
+
+                </p>
+                      <p class="bt-2" style="font-size: 16px; line-height: 120%;  color: var(--space-color); text-align: left;">
+                        depo-500 — это команда опытных адвокатов, удостоенная множества наград.
+                        Когда на кону ваша свобода или карьера, вы можете положиться на нашу команду, которая уже более 10 лет ведет сложные
+                        дела и добивается для вас наилучшего исхода. Наши адвокаты вели более 90 дел и судебных процессов.
+
+                        Мы начнем работу над вашим делом с того, что выслушаем вас, узнаем вашу историю и цели. Мы понимаем, что это может
+                        быть
+                        одним из самых стрессовых периодов в жизни. Мы будем рядом с вами, будем бороться на вашей стороне, предлагать решения
+                        и
+                        проверенные стратегии, основанные на опыте и нацеленные на вашу защиту.
+
+                        Если вы хотите добиться наилучшего результата, позвоните нам. Наши юристы — эксперты в области взаимодействия с
+                        правовой
+                        системой для достижения ваших целей. Мы предлагаем бесплатную консультацию, чтобы обсудить ваше дело, ваши права и то,
+                        как мы можем вам помочь.
+
+                      </p>
+            </h2>
+
+          </div>
+          <div class="dummy08"></div>
+        <div class="container1800  mt-150" style="background-color: var(--crime-green);">
+        <div class="container1400">
+
 <div style="display: flex; justify-content: center; align-items: center; width: 100%; background: black ; padding: 0px 0px;">
 
 
@@ -6028,7 +6216,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
  <section class="container1800 ">
       <div class="container1400 d-flex" style="max-width: 1400px; width: 100%; margin-bottom: 50px; margin-top: 150px;">
-        <!-- <a href="./category.html"  style="width: 1400px;"> -->
+        <!-- <a href="./category.html"ffc107  style="width: 1400px;"> -->
           <button class="ffc107">Дополнительные услуги в области уголовного права</button>
         <!-- </a> -->
       </div>
@@ -6463,7 +6651,7 @@ document.addEventListener('DOMContentLoaded', () => {
       width: 100%;
       display: grid;
       grid-template-columns: 1fr  1fr;
-      grid-template-rows: 400px;
+      grid-template-rows: auto;
       column-gap: 5px;
       align-items: center;
       margin-left: 5px;
@@ -6473,7 +6661,7 @@ document.addEventListener('DOMContentLoaded', () => {
       background-color: white;
       @media screen and (max-width: 600px) {
         grid-template-columns:  1fr;
-        column-gap: 0px;
+        column-gap: 10px;
       }
 
     }
@@ -6521,7 +6709,7 @@ document.addEventListener('DOMContentLoaded', () => {
 .contacts__input {
 
       width: 100%;
-    height: 40px;
+    height: 100px;
     border: none;
     border-bottom: 1px solid #eee;
     padding: 0 15px;
@@ -6531,7 +6719,7 @@ document.addEventListener('DOMContentLoaded', () => {
       margin-top: 20px;
       max-width: 900px;
       width: 100%;
-      height: 40px;
+      height: 100px;
 
       font-style: normal;
       font-weight: 500;
@@ -6641,7 +6829,7 @@ document.addEventListener('DOMContentLoaded', () => {
 <section class="stores mt-50" id="contact">
 <div class="container1800 text-grid-w100 mb-10">
    <h2 class="title-6r text-center text-grid-w100__content">contact us</h2>
-  <h2 class="text-center text-grid-w100__content" style="background-color: #000; color: white; height: 100px; width: 100%; margin-bottom: 0px;">Контакты</h2>
+  <h5 class="text-center text-grid-w100__content" style="background-color: var(--crime-blue); color: white; height: 100px; width: 100%; margin-bottom: 0px;">Контакты</h5>
 </div>
   <div class="dummy08"></div>
             <div class="container1400 contact-grid-w100 mt-200">
