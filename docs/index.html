@@ -12,7 +12,7 @@
 
 <!-- <link rel="preload" href="css/style.css" as="style"> -->
 <!-- <link rel="preload" href="js/main.js" as="script"> -->
-
+<link rel="preload" href="css/normalize.css" as="style">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1468,27 +1468,7 @@ z-index: 10;
 }
 
 
-.card {
-  position: relative;
-  max-width: 350px;
-  width: 100%;
-  padding: 2px;
-  margin: 2px 2px;
-  background-color: transparent;
-  display: flex;
-  flex-direction: column;
-  font-family: 'Jost';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 12px;
-  border: 0px solid var(--gray-color);
-  transition: all .3s;
-  cursor: pointer;
-}
 
-/* .card:hover {
-  box-shadow: 0 5px 10px -5px rgba(221, 163, 221, 0.75);
-} */
 
 .product-card-offer {
   color: #fff;
@@ -4220,16 +4200,18 @@ margin: 5px;
     /* Базовые стили */
     .about__inner {
       display: flex;
-      gap: 20px;
+      gap: 5px;
       align-items: center;
+      justify-content: start;
     }
 
     .about__inner + .about__inner {
-      margin-top: 30px;
+      margin-top: 10px;
     }
 
     .about__cell {
       flex: 1;
+      justify-content: start;
     }
 
     .about__cell img {
@@ -4240,8 +4222,9 @@ margin: 5px;
 
     .text-block {
       background-color: var(--color-midnight);
-      padding: 10px;
+      padding: 5px;
       border-radius: 8px;
+      text-align: left;
     }
 
     .text-block p {
@@ -4254,6 +4237,7 @@ margin: 5px;
     @media (max-width: 650px) {
       .about__inner {
         flex-direction: column;
+        width: auto;
       }
 
       /* Для второго блока: меняем порядок, чтобы фото было после текста */
@@ -4408,15 +4392,15 @@ margin: 5px;
         </div>
       </div>
       <div class="container1800 text-grid-w100 mb-10">
-        <h3 class=" text-grid-w100__content">depo-500</h3>
-        <h2 class=" text-grid-w100__content"
+        <h4 class=" text-grid-w100__content" style="background-color: white; color: #000;">depo-500</h4>
+        <h3 class=" text-grid-w100__content"
           style="background-color: white; color: #000;">
           <div class="#">
           <h6 class=" ml-10">Юридический сайт</h6>
           <h6 class=" ml-10">8-910-453-40-12 | Владимир</h6>
           <h6 class=" ml-10">8-999-852-58-21 | Олег</h6>
           </div>
-        </h2>
+        </h3>
       </div>
       <div class="dummy08"></div>
       <!-- <h5 class=" ml-10">Юридический сайт</h5>
@@ -4945,16 +4929,14 @@ margin: 5px;
         style="background-color: var(--crime-blue); border-radius: 4px; overflow: hidden; box-shadow: 0 10px 10px rgba(0,0,0,0.2); transition: transform 0.3s ease; height: 100%;">
 
         <img src="img/crime/dave.jpg" alt="Murder" style="width: 100%; height: auto; display: block;">
-        <div style="padding: 2px;">
-          <p style="color: var(--bauhaus-white); margin: 5px 0 5px 0; font-size: 14px; opacity: 0.6;">Бахром Файзуллоев <br>
+        <div style="padding: 5px;">
+          <p style="color: var(--bauhaus-white); margin: 10px 0 10px 0; font-size: 16px; opacity: 0.6;">Владимир Файзуллоев <br>
              Адвокат<br>
 
             Недвижимость<br>
-            Недвижимость<br>
-            Недвижимость<br>
-            Недвижимость<br>
+
           </p>
-          <p class="bt-2" style="color: var(--bauhaus-white); margin: 5px 0 5px 0; font-size: 14px; opacity: 0.6;">89539690586<br>
+          <p class="bt-2" style="color: var(--bauhaus-white); margin: 10px 0 10px 0; font-size: 14px; opacity: 0.6;">89539690586<br>
             olegrewko@gmail.com
 
           </p>
@@ -4966,7 +4948,7 @@ margin: 5px;
     <!-- Карточка 02 - Theft / кража -->
     <div class="col-lg-3 col-sm-6">
       <div class="card"
-        style="background-color: var(--color-ash); border-radius: 4px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.2); transition: transform 0.3s ease; height: 100%;">
+        style="background-color: var(--crime-blue); border-radius: 4px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.2); transition: transform 0.3s ease; height: 100%;">
 
         <img src="img/crime/val.jpg" alt="Burglary" style="width: 100%; height: auto; display: block;">
         <div style="padding: 5px;">
@@ -4983,7 +4965,7 @@ margin: 5px;
     <!-- Карточка 03 - Fraud / мошенничество -->
     <div class="col-lg-3 col-sm-6">
       <div class="card"
-        style="background-color: var(--crime-yellow); border-radius: 4px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.2); transition: transform 0.3s ease; height: 100%;">
+        style="background-color: var(--crime-blue); border-radius: 4px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.2); transition: transform 0.3s ease; height: 100%;">
 
         <img src="img/crime/val.jpg" alt="Burglary" style="width: 100%; height: auto; display: block;">
         <div style="padding: 5px;">
@@ -5017,13 +4999,13 @@ margin: 5px;
     <!-- Карточка 05 - Burglary / ограбление (продублирована структура) -->
     <div class="col-lg-3 col-sm-6">
       <div class="card"
-        style="background-color: var(--crime-orange); border-radius: 4px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.2); transition: transform 0.3s ease; height: 100%;">
+        style="background-color: var(--crime-blue); border-radius: 4px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.2); transition: transform 0.3s ease; height: 100%;">
 
         <img src="img/crime/val.jpg" alt="Burglary" style="width: 100%; height: auto; display: block;">
             <div style="padding: 5px;">
               <p style="color: white; margin: 10px 0 10px 0; font-size: 16px; opacity: 0.6;">Виктория Витенко<br>
-                 Адвокат<br>
-                Банкротство</p>
+                 Помощник юриста<br>
+                <!-- Банкротство</p> -->
                 <!-- <hr class="bt"> -->
               <p class="bt-2" style="color: white; margin: 10px 0 10px 0; font-size: 14px; opacity: 0.6;">89998525821<br>
               olegrewko@gmail.com</p>
@@ -5037,6 +5019,23 @@ margin: 5px;
 
 <!-- Адаптация для мобильных устройств (сохраняем ваши пропорции) -->
 <style>
+   .card {
+  position: relative;
+  /* max-width: 350px; */
+  width: 100%;
+  padding: 2px;
+  margin: 2px 2px;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  border: 0px solid var(--gray-color);
+  transition: all .3s;
+  cursor: pointer;
+}
   @media (max-width: 1200px) {
     .grid-5 {
       grid-template-columns: repeat(4, 1fr) !important;
@@ -5078,7 +5077,7 @@ margin: 5px;
     .about__inner {
       flex-direction: column !important;
       text-align: center;
-      padding: 10px 10px !important;
+      /* padding: 10px 10px !important; */
     }
 
     .menu__title-white {

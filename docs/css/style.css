@@ -1643,7 +1643,8 @@ font-family: 'Rubik';
   cursor: pointer;
 } */
 
-.card {
+/*
+ .card {
   position: relative;
   max-width: 350px;
   width: 100%;
@@ -1660,6 +1661,7 @@ font-family: 'Rubik';
   transition: all .3s;
   cursor: pointer;
 }
+  */
 
 /* .card:hover {
   box-shadow: 0 5px 10px -5px rgba(221, 163, 221, 0.75);
