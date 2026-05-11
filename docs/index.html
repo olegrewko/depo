@@ -4221,14 +4221,15 @@ margin: 5px;
     }
 
     .text-block {
-      background-color: var(--color-midnight);
+      background-color: transparent;
+      color: black;
       padding: 5px;
       border-radius: 8px;
       text-align: left;
     }
 
     .text-block p {
-      color: white;
+      color: black;
       line-height: 1.6;
       margin: 0;
     }
@@ -4238,6 +4239,7 @@ margin: 5px;
       .about__inner {
         flex-direction: column;
         width: auto;
+        height: auto;
       }
 
       /* Для второго блока: меняем порядок, чтобы фото было после текста */
@@ -5433,7 +5435,7 @@ margin: 5px;
 
    </h2>
   <h2 class=" text-left text-grid-w100__content">
-
+    <div class="dummy08"></div>
     <p class="text-left ml-10">
       Мы не обещаем луну с неба. Мы просто умеем работать быстрее и качественнее других.
 
@@ -5452,6 +5454,7 @@ margin: 5px;
 
       Our story is being written right now — through your victories.
     </p>
+    <div class="dummy08"></div>
   </h2>
 </div>
 
@@ -5460,9 +5463,9 @@ margin: 5px;
 
                 <!-- </div> -->
                 <!-- <div class="dummy08"></div> -->
-<div class="container1400">
+<!-- <div class="container1400">
 
-        </div>
+        </div> -->
 
       <!-- </section> -->
       <div class="container1400 ">
@@ -5706,12 +5709,12 @@ margin: 5px;
 <style>
   /* Принудительно делаем весь текст внутри about__inner белым */
 .about__inner * {
-  color: white !important;
+  color: black;
 }
 
 /* Но ссылки и кнопки, если есть, не трогаем */
 .about__inner a:not(.special) {
-  color: white !important;
+  color: black;
 }
   @media (max-width: 768px) {
     .about__inner {
@@ -5727,6 +5730,7 @@ margin: 5px;
 
     .about__cell {
       width: 100%;
+      color: #000;
     }
 
     .about__cell img {
