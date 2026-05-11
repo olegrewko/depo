@@ -4391,7 +4391,7 @@ margin: 5px;
 
         </div>
       </div>
-      <div class="container1800 text-grid-w100 mb-10">
+      <div class="container1800 text-grid-w100">
         <h4 class=" text-grid-w100__content" style="background-color: white; color: #000;">depo-500</h4>
         <h3 class=" text-grid-w100__content"
           style="background-color: white; color: #000;">
@@ -4411,8 +4411,8 @@ margin: 5px;
         <div class="container1400">
 
           <div class="grid-5">
-            <div class="col-lg-3 col-sm-6">
-              <div class="item fas">
+            <div class="#">
+              <div class="#">
               <p>
               <p class="title-6r">0001</p>
               </p>
@@ -4590,7 +4590,7 @@ margin: 5px;
 
           </div>
         </div>
-      <!-- </section> -->
+      </section>
       <section id="services" class="services mt-100">
 <div class="container1800 text-grid-w23 mb-10">
    <h2 class="title-6r text-left text-grid-w100__content ml-10">services</h2>
@@ -5036,6 +5036,13 @@ margin: 5px;
   transition: all .3s;
   cursor: pointer;
 }
+ .grid-5 {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 5px;
+  max-width: 1400px;
+  width: 100%;
+}
   @media (max-width: 1200px) {
     .grid-5 {
       grid-template-columns: repeat(4, 1fr) !important;
@@ -5051,7 +5058,7 @@ margin: 5px;
   @media (max-width: 600px) {
     .grid-5 {
       grid-template-columns: repeat(2, 1fr) !important;
-      gap: 20px !important;
+      /* gap: 20px !important; */
     }
   }
 
@@ -5116,7 +5123,7 @@ margin: 5px;
 
 
 
-    <div style="display: flex; min-width: 200px; text-align: center; background-color: var(--color-graphite);">
+    <div style="display: flex; min-width: 450px; text-align: center; background-color: var(--color-graphite); overflow: hidden;">
       <img src="img/f001.jpg" alt="img/f0012.png"
         style=" max-width: 450px; width: 100%; height: auto; display: block; margin: 0 auto; border-radius: 4px;">
         <img src="img/f002.jpg" alt="img/f0012.png"
