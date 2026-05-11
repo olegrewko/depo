@@ -3300,13 +3300,15 @@ display: flex;
   width: 100%;
 }
 
-.grid-5 {
+/*
+ .grid-5 {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 5px;
   max-width: 1400px;
   width: 100%;
 }
+  */
 .ml-560 {
   margin-left: 560px;
 }
