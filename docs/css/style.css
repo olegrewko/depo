@@ -1425,7 +1425,7 @@ font-family: 'Rubik';
     align-items: start;
 }
 
-.about__inner {
+/* .about__inner {
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
@@ -1433,7 +1433,7 @@ font-family: 'Rubik';
   padding-top: 0;
   padding-bottom: 0;
 
-}
+} */
 
 .project__inner {
   display: flex;
@@ -1463,7 +1463,7 @@ font-family: 'Rubik';
   margin-bottom: 100px;
 }
 
-.about__cell {
+/* .about__cell {
   max-width: 800px;
   width: 100%;
   margin: 0px;
@@ -1472,7 +1472,7 @@ font-family: 'Rubik';
   justify-content: center;
   align-items: center;
 
-}
+} */
 
 .about__ca {
   max-width: 700px;
@@ -1910,9 +1910,9 @@ li+li {
   margin-left: 0px;
 }
 
-.team {
+/* .team {
   padding: 20px 0 10px;
-}
+} */
 
 .connection {
   padding: 140px 0 160px;
@@ -2743,11 +2743,11 @@ display: flex;
     margin-left: 50px;
   }
 
-  .about__inner,
+  /* .about__inner,
   .cell {
     display: block;
 
-  }
+  } */
 
   .menu__list {
 
