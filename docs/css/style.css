@@ -2409,6 +2409,7 @@ form {
   color: #1a1a2e;
   margin-bottom: 10px;
   letter-spacing: 2px;
+  text-align: left;
 }
 
 .depo-title::before {
