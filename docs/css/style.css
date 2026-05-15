@@ -516,7 +516,8 @@ abbr[title] {
   width: 100%;
   padding: 0 0px;
   margin: 0 auto;
-  position: relative;
+  text-align: center;
+  /* position: relative; */
 }
 
 .container-wrap {
@@ -2842,7 +2843,7 @@ form {
   animation: pulse-glow 2s infinite;
 }
 
-.container1400::before {
+/* .container1400::before {
   content: '';
   position: absolute;
   top: 0;
@@ -2855,7 +2856,7 @@ form {
   border-right: 1px dashed rgba(96, 212, 212, 0.1);
   pointer-events: none;
   z-index: -1;
-}
+} */
 
 /* Media Queries */
 @media (max-width: 1200px) {
