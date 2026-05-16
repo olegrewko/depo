@@ -3394,12 +3394,12 @@ max-width: 768px;
 } */
 
 /* ===== RETRO FOOTER ===== */
-.footer {
+ .footer {
   background: linear-gradient(135deg, var(--color-space) 0%, var(--color-midnight) 100%);
   position: relative;
   overflow: hidden;
 }
-
+/*
 .footer::before {
   content: '';
   position: absolute;
@@ -3431,7 +3431,7 @@ max-width: 768px;
 
 .logo:hover .white__title::after {
   transform: scaleX(1);
-}
+} */
 
 /* ===== RETRO LOADING STATES ===== */
 /* .card-info__stepper {
@@ -3524,7 +3524,7 @@ max-width: 768px;
 
  </style>
     <style>
-    .cell-900--flex {
+    /* .cell-900--flex {
   max-width: 900px;
   width: 100%;
   margin: 0 auto;
@@ -3533,8 +3533,8 @@ max-width: 768px;
   justify-content: flex-start;
   align-items: flex-start;
   flex-wrap: wrap;
-}
-.ffc107-1400 {
+} */
+/* .ffc107-1400 {
   text-align: center;
   max-width: 1370px;
   width: 100%;
@@ -3548,7 +3548,7 @@ max-width: 768px;
   margin-bottom: 5px;
 
   margin: 10px;
-}
+} */
 .ffc107 {
 
   width: 100%;
@@ -3563,7 +3563,7 @@ max-width: 768px;
   margin-bottom: 3px;
 }
 
-.grid-products__btn-270 {
+/* .grid-products__btn-270 {
  text-align: center;
   max-width: 270px;
   width: 100%;
@@ -3578,14 +3578,14 @@ margin: 5px;
 
   margin-bottom: 5px;
   background-color: transparent;
-}
+} */
 
     /* Базовые стили */
     .about__inner {
       display: flex;
       gap: 5px;
       align-items: center;
-      justify-content: start;
+      justify-content: center;
     }
 
     .about__inner + .about__inner {
@@ -3626,18 +3626,18 @@ margin: 5px;
       }
 
       /* Для второго блока: меняем порядок, чтобы фото было после текста */
-      .about__inner:last-child {
+      /* .about__inner:last-child {
         flex-direction: column;
-      }
+      } */
 
       /* Если нужно, чтобы фото было строго после текста в обоих блоках */
-      .about__inner .about__cell:first-child {
+      /* .about__inner .about__cell:first-child {
         order: 1;
-      }
+      } */
 
-      .about__inner .about__cell:last-child {
+      /* .about__inner .about__cell:last-child {
         order: 2;
-      }
+      } */
     }
   </style>
 </head>
@@ -4791,7 +4791,7 @@ margin: 5px;
   <h5 class="text-center text-grid-w100__content" style="background-color: #000; color: white; height: 100px; width: 100%; margin-bottom: 0px;">О нас</h5>
 </div>
 
-                  <!-- <div class="dummy08"></div> -->
+
 <div class="container1800 text-grid-w100 mb-10">
    <h2 class=" text-left text-grid-w100__content">
 
@@ -4821,7 +4821,7 @@ margin: 5px;
 </div>
 
 
-<!-- <div class="container1800 text-center"> -->
+
 
   <div class="container1400 text-center">
     <!-- <div class="container1400"> -->
@@ -4865,7 +4865,7 @@ margin: 5px;
   </div>
 </div>
 </section>
-      <!-- </div> -->
+
 <!--team -->
 
       <section class="team  mt-100" id= "team">
@@ -5059,39 +5059,6 @@ margin: 5px;
 </style>
       </section>
 
-<!-- <style>
-
-.about__inner * {
-  color: black;
-}
-
-
-.about__inner a:not(.special) {
-  color: black;
-}
-  @media (max-width: 768px) {
-    .about__inner {
-      flex-direction: column !important;
-      text-align: center;
-
-    }
-
-    .menu__title-white {
-      font-size: 24px !important;
-      text-align: center;
-    }
-
-    .about__cell {
-      width: 100%;
-      color: #000;
-    }
-
-    .about__cell img {
-      max-width: 400px !important;
-      width: 100%;
-    }
-  }
-</style> -->
 <!-- Недвижимость -->
 <div class="loudspeakers mt-100" id="property">
 
@@ -5131,7 +5098,7 @@ margin: 5px;
 
   </div>
 
-<div class="dummy08" style="background-color: #fff;"></div>
+<div class="dummy08"></div>
 <div class="container1400 mt-150">
           <h2 class=" text-left"
             style="color: var(--color-space); font-size: 18px; font-weight: bold; line-height: 1.2; margin-bottom: 30px; font-family: Jost, sans-serif;">
@@ -5247,7 +5214,7 @@ margin: 5px;
 
 
   <!-- </div> -->
-  </section>
+  <!-- </section> -->
   <div class="dummy08" style="background-color: #fff;"></div>
   <div class="container1400   mt-150">
     <h2 class=" text-center"
@@ -5339,439 +5306,10 @@ margin: 5px;
 
 
   </div>
-<!-- </section> -->
+</section>
 
 
-<!-- <style>
-    :root {
-        --color-dark: #4d4d4d;
-        --color-light: #808080;
-        --color-accent: #4f6b88;
-    }
 
-    .search__content { padding: 30px; }
-    .search__content-item { display: none; animation: fadeIn 0.4s; }
-    .search__content-item--active { display: block; }
-
-    .search__content-form {
-        display: flex;
-        gap: 12px;
-        max-width: 900px;
-        width: 100%;
-        margin: 0 auto;
-    }
-
-    .search__content-input {
-        flex: 1;
-        max-width: 900px;
-        width: 100%;
-        padding: 14px 18px;
-        border: 2px solid #e9ecef;
-        border-radius: 10px;
-        font-size: 16px;
-        transition: border-color 0.3s;
-    }
-
-    .search__content-input:focus {
-        outline: none;
-        border-color: #007bff;
-        box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
-    }
-
-    .search__content-input::placeholder { color: #adb5bd; }
-
-
-
-    .btn {
-        border: none;
-        padding: 14px 0;
-        border-radius: 4px;
-        width: 100%;
-        color: #fff;
-        background-color: var(--color-accent);
-        cursor: pointer;
-        transition: background-color 0.3s;
-    }
-   .btn:hover {
-        border: none;
-        padding: 14px 0;
-        border-radius: 4px;
-        width: 100%;
-        color: #fff;
-        background-color: var(--text-color);
-        cursor: pointer;
-        transition: background-color 0.3s;
-    }
-
-    .btn:disabled {
-        opacity: 0.4;
-        pointer-events: none;
-    }
-
-    .tabs__list {
-      max-width: 900px;
-      width: 100%;
-        list-style: none;
-        padding: 0;
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        align-items: center;
-    }
-    @media (max-width: 768px) {
-.tabs__list {
-display: flex;
-flex-direction: column;
-}
-
-    }
-
-    .tabs__item:not(:last-child) { margin-right: 5px; }
-
-    .tabs__btn {
-      max-width: 400px;
-      width: 100%;
-      margin-bottom: 5px;
-        padding: 15px 50px;
-        border: none;
-        background-color: var(--color-accent);
-        color: #fff;
-        cursor: pointer;
-        border-radius: 4px;
-        font-weight: 600;
-        font-size: 12px;
-        text-align: center;
-        transition: background-color 0.3s, color 0.3s;
-    }
-
-    .tabs__btn:hover {
-        background-color: #fff;
-        color: var(--color-accent);
-    }
-
-    .tabs__btn--active {
-        background-color: #fff;
-        color: var(--color-accent);
-        pointer-events: none;
-    }
-
-    .tabs__content { display: none; }
-    .tabs__content--active { display: block; }
-
-    .content {
-        padding: 5px 0px;
-        max-width: 900px;
-        width: 100%;
-        margin: 0 auto;
-    }
-
-    .content__title {
-        margin: 0 0 20px;
-        font-family: 'Roboto', sans-serif;
-        font-weight: 700;
-        font-size: 24px;
-        color: var(--color-dark);
-    }
-
-    .content__descr {
-        margin: 0 0 59px;
-        font-weight: 400;
-        font-size: 14px;
-        color: var(--color-dark);
-    }
-
-    .content__list {
-        margin: 0;
-        padding: 0;
-        list-style: none;
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .content__link {
-        padding: 14px;
-        width: 200px;
-        height: 120px;
-        border-radius: 4px;
-        background-color: #ebecf3;
-    }
-
-    .content__text {
-        font-family: 'Roboto', sans-serif;
-        font-weight: 500;
-        font-size: 14px;
-        color: #a2a6c0;
-    }
-</style> -->
-
-
-<!-- <style>
-.search {
-
-    background: rgba(96, 212, 212, 0.3);
-    padding-top: 0px;
-    padding-bottom: 0px;
-    margin-top: 0px;
-    margin-bottom: 100px;
-
-    height: 400px;
-}
-
-.search-wrapper {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.tabs {
-    background: white;
-    border-radius: 5px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-}
-
-.tabs__list {
-    display: flex;
-    background: #f8f9fa;
-    border-bottom: 1px solid #e9ecef;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-}
-
-.tabs__item {
-    flex: 1;
-    text-align: center;
-}
-
-.tabs__btn {
-    width: 100%;
-    padding: 5px;
-    border: none;
-    background: transparent;
-    cursor: pointer;
-    font-size: 14px;
-    font-weight: 600;
-    color: #6c757d;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-}
-
-.tabs__btn:hover {
-    background: rgba(0, 123, 255, 0.05);
-    color: #495057;
-}
-
-.tabs__btn--active {
-    background: orange;
-    color: #121212;
-    border-bottom: 0px solid #007bff;
-}
-
-.tab-icon {
-    width: 18px;
-    height: 18px;
-}
-
-.content {
-    padding: 40px;
-}
-
-.tabs__content {
-    display: none;
-    animation: fadeIn 0.3s ease;
-}
-
-.tabs__content--active {
-    display: block;
-}
-
-.search__content-form {
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-.search-input-wrapper {
-    display: flex;
-    gap: 12px;
-    align-items: center;
-}
-
-.search__content-input {
-
-  width: 500px;
-    flex: 1;
-    padding: 16px 20px;
-    border: 2px solid #e9ecef;
-    border-radius: 12px;
-    font-size: 16px;
-    transition: all 0.3s ease;
-    background: #f8f9fa;
-}
-
-.search__content-input:focus {
-    outline: none;
-    border-color: var(--accent-color);
-    background: white;
-    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
-}
-
-.search__content-input::placeholder {
-    color: #6c757d;
-}
-
-.search-btn {
-    padding: 16px 50px;
-    background:  #34495e;;
-    color: white;
-    border: none;
-    border-radius: 12px;
-    font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    white-space: nowrap;
-}
-
-.search-btn:hover {
-  background: #000;
-  transition: all .3s;
-
-}
-
-.search-icon {
-    width: 18px;
-    height: 18px;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-
-@media (max-width: 768px) {
-    .search {
-        padding: 40px 0;
-    }
-
-    .tabs__list {
-        flex-direction: column;
-    }
-
-    .tabs__btn {
-        padding: 15px;
-        font-size: 13px;
-    }
-
-    .content {
-        padding: 30px 20px;
-    }
-
-    .search-input-wrapper {
-        flex-direction: column;
-    }
-
-    .search__content-input {
-        width: 100%;
-    }
-
-    .search-btn {
-        width: 100%;
-        justify-content: center;
-    }
-}
-
-@media (max-width: 480px) {
-    .tabs__btn {
-        flex-direction: column;
-        gap: 5px;
-    }
-
-    .tab-icon {
-        width: 16px;
-        height: 16px;
-    }
-}
-</style> -->
-
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-    const tabs = document.querySelector('.tabs');
-    const tabsBtn = document.querySelectorAll('.tabs__btn');
-    const tabsContent = document.querySelectorAll('.tabs__content');
-
-    tabs.addEventListener('click', (e) => {
-        if (e.target.classList.contains('tabs__btn')) {
-            const tabsPath = e.target.dataset.tabsPath;
-            tabsBtn.forEach(el => el.classList.remove('tabs__btn--active'));
-            e.target.classList.add('tabs__btn--active');
-            tabsContent.forEach(el => el.classList.remove('tabs__content--active'));
-            document.querySelector(`[data-tabs-target="${tabsPath}"]`).classList.add('tabs__content--active');
-        }
-    });
-});
-</script>
-<!-- tabs -->
-
-<!-- <style>
-
-  @media (max-width: 768px) {
-    #b > div {
-      flex-direction: column !important;
-      text-align: center;
-      padding: 5px 5px !important;
-    }
-
-    #b > div > div:first-child div div {
-      font-size: 16px !important;
-      text-align: center;
-    }
-
-    #b > div > div:last-child {
-      text-align: left;
-    }
-  }
-
-
-</style> -->
-
-
-
-<!--  -->
-
-<!-- <style>
-
-  @media (max-width: 768px) {
-  .container1400 > div {
-    margin-bottom: 30px;
-  }
-
-  .container1400 > div > div {
-    flex-direction: column !important;
-  }
-
-  .container1400 > div > div > div {
-    padding: 5px !important;
-  }
-
-  h2 {
-    font-size: 16px !important;
-  }
-}
-</style> -->
         <!--Уголовные  -->
         <!-- АДАПТАЦИЯ: на экранах меньше 768px всё в одну колонку -->
  <style>
@@ -6470,28 +6008,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 <style>
- /* .text-grid-w14 {
-              border: 0px solid var(--color-space);
 
-  border-radius: var(--border-radius);
-      width: 100%;
-      display: grid;
-      grid-template-columns: 1fr 4fr;
-      grid-auto-rows: minmax(50px, auto);
-      column-gap: 0px;
-      align-items: center;
-      margin-left: 0px;
-      margin-top: 10px;
-      margin-bottom: 10px;
-
-      @media screen and (max-width: 600px) {
-        grid-template-columns:  1fr;
-        column-gap: 0px;
-         margin-top: 10px;
-      margin-bottom: 10px;
-      }
-
-    } */
 .text-grid-w23 {
     border: 0px solid var(--color-space);
     border-radius: var(--border-radius);
@@ -6706,35 +6223,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 </style>
-<style>
-/* Стиль "мазок кистью" для depo-500 */
-/* .depo-title {
-  position: relative;
-  display: inline-block;
-  font-size: 2rem;
-  font-weight: 700;
-  color: #1a1a2e;
-  margin-bottom: 10px;
-  letter-spacing: 2px;
-}
 
-.depo-title::before {
-  content: '';
-  position: absolute;
-  top: -10px;
-  bottom: 0px;
-  left: -10px;
-  right: -10px;
-  height: 190%;
-  background: rgba(96, 212, 212, 0.34);
-  z-index: -1;
-  transform: rotate(-2deg) skewX(-3deg);
-  border-radius: 20px 40px 20px 50px;
-  transition: all 0.3s ease;
-} */
-
-
-</style>
 <!--contact  -->
 <div class="dummy08"></div>
 <section class="stores mt-100" id="contact">
@@ -6806,6 +6295,7 @@ document.addEventListener('DOMContentLoaded', () => {
     padding-bottom: 5px;
     margin-bottom: 5px;
     border-bottom: 0px solid rgba(255,255,255,0.1);
+
 }
 
 /* Стили для формы подписки */
@@ -6916,7 +6406,7 @@ max-width: 600px;
 .footer__inner {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 500px;
-    gap: 20px;
+    gap: 10px;
     align-items: start;
 }
 
@@ -6942,7 +6432,7 @@ max-width: 600px;
 <!-- Стили для футера -->
 <style>
   /* Уменьшение высоты футера */
-  .footer {
+  /* .footer {
     padding: 100px 0 10px;
   }
 
@@ -6950,7 +6440,7 @@ max-width: 600px;
     padding-bottom: 5px;
     margin-bottom: 5px;
     border-bottom: 0px solid rgba(255, 255, 255, 0.1);
-  }
+  } */
 
   /* Стили для формы подписки */
   .subscribe-form-group {
@@ -7057,12 +6547,12 @@ max-width: 600px;
   }
 
   /* ********************* */
-  .footer__inner {
+  /* .footer__inner {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 500px;
     gap: 30px;
     align-items: start;
-  }
+  } */
 
   @media (max-width: 992px) {
     .footer__inner {
