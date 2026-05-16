@@ -3072,451 +3072,11 @@ max-width: 768px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 </style>
-  <!-- Стили для карточек -->
-    <style>
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
 
 
-    .container-card {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      max-width: 1480px;
-      margin: 0 auto;
-    }
-
-    .container {
-      max-width: 1480px;
-
-      margin: 0 auto;
-    }
-
-    .products-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 5px;
-      margin-top: 30px;
-      margin-bottom: 30px;
-    }
-
-    /* Делаем все карточки одинаковой высоты */
-    .product-card {
-      min-height: 450px;
-      /* Минимальная высота для выравнивания */
-    }
-
-    .product-image img {
-      width: 100%;
-      height: auto;
-      border-radius: 0px;
-      object-fit: cover;
-    }
-
-    .product-content {
-      padding-left: 30px;
-      padding-right: 30px;
-      /* margin-left: 10px; */
-      flex: 1;
-      /* Занимает все доступное пространство */
-      display: flex;
-      flex-direction: column;
-    }
-
-
-
-
-    .product-card {
-      /* position: relative; */
-      max-width: 500px;
-      width: 100%;
-      height: auto;
-      background: transparent;
-      border-radius: 2px;
-      padding: 0px;
-      /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); */
-      transition: all 0.3s ease;
-      cursor: pointer;
-      border: 0px solid #e0e0e0;
-      font-weight: 500;
-      font-size: 12px;
-      /* Основная магия - flex колонка с прижатым низом */
-      display: flex;
-      flex-direction: column;
-    }
-
-    .product-card:hover {
-      transform: translateZ(-15px);
-      box-shadow: 0 8px 10px rgba(45, 1, 1, 0.15);
-      /* border-color: #007bff; */
-    }
-
-    .product-image {
-      width: 100%;
-      height: auto;
-      background: linear-gradient(135deg, #1c1c1d 0%, #181818 100%);
-      border-radius: 2px;
-      margin-bottom: 5px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-weight: bold;
-      font-size: 14px;
-    }
-
-    .product-title {
-      font-family: 'Jost';
-      font-size: 14px;
-      /* font-weight: 500; */
-      margin-bottom: 5px;
-      color: #333;
-      font-weight: 700;
-
-    }
-
-    .product-description {
-      font-family: 'Jost';
-      font-size: 14px;
-      font-weight: 500;
-      line-height: 1.5;
-      color: #666;
-      margin-bottom: 5px;
-      flex: 1;
-      /* Описание растягивается, чтобы прижать нижний блок */
-    }
-
-    .product-bottom {
-      margin-top: auto;
-      /* Прижимаем к низу */
-      padding-top: 10px;
-      border-top: 0px solid #f0f0f0;
-
-    }
-
-    .product-price {
-      font-family: 'Jost';
-      font-size: 18px;
-      font-weight: 700;
-      color: #011932;
-      margin-bottom: 2px;
-    }
-
-    .product-rating {
-      color: maroon;
-      margin-bottom: 5px;
-    }
-
-    .buy-button {
-      width: 100%;
-      padding: 5px;
-      /* background: var(--contrast-color); */
-      background: transparent;
-      color: var(--color-tundora);
-      border: 1px solid var(--color-tundora);
-      border-radius: 3px;
-
-      cursor: pointer;
-      transition: background 0.3s ease;
-      font-family: 'Jost';
-      font-size: 14px;
-      font-weight: 500;
-    }
-
-    .buy-button:hover {
-      background: var(--color-tundora);
-      color: #e0e0e0;
-    }
-
-    /* Адаптация для планшетов */
-    @media (max-width: 1200px) {
-      .products-grid {
-        grid-template-columns: repeat(3, 1fr);
-      }
-
-      .container {
-        max-width: 920px;
-      }
-    }
-
-    /* Адаптация для мобильных */
-    @media (max-width: 768px) {
-      .products-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
-      }
-
-
-      .product-card {
-        width: 100%;
-        max-width: 280px;
-        margin: 0 auto;
-      }
-    }
-
-    /* Адаптация для очень маленьких экранов */
-    @media (max-width: 480px) {
-      .products-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .product-card {
-        max-width: 100%;
-      }
-    }
-  </style>
-  <!-- Стили для карточек -->
-  <!--Вертикальный текст  -->
- <style>
-    .rotated-char {
-      display: inline-block;
-      /* Обязательно! */
-      transform: rotate(90deg);
-      /* Поворот на 90° */
-      /* или */
-      transform: rotate(-90deg);
-      /* Поворот на -90° */
-
-      transform-origin: center;
-      /* Точка вращения (по умолчанию center) */
-    }
-
-    .vertical-chars {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .vertical-chars span {
-      display: inline-block;
-      transform: rotate(90deg);
-      font-size: 28px;
-      font-weight: bold;
-      color: #333;
-      text-transform: uppercase;
-      letter-spacing: 0;
-    }
-
-    .left-chars span {
-      transform: rotate(-90deg);
-      /* Поворот в другую сторону */
-    }
-
-    .video-with-text {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 20px;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 5px;
-    }
-
-    .video-container {
-      flex: 0 0 auto;
-    }
-
-    .video-container video {
-      width: 640px;
-      height: 360px;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    }
-
-    .vertical-text {
-      font-family: 'Rubik';
-      writing-mode: vertical-rl;
-      /* Вертикальное написание */
-      text-orientation: mixed;
-      font-size: 24px;
-      font-weight: 500;
-      letter-spacing: 3px;
-      color: #333;
-      text-transform: uppercase;
-    }
-
-    .left-text {
-      transform: rotate(180deg);
-      /* Переворачиваем для чтения снизу вверх */
-    }
-
-    .right-text {
-      /* Оставляем как есть - читается сверху вниз */
-    }
-  </style> -->
-  <!-- Вертикальный текст -->
- <style>
-@media(max-width: 768px) {
-  .about__ca {
-    margin-top: 50px;
-  }
-
-  .about__cb {
-    margin-bottom: 50px;
-  }
-
-  .container-wrap {
-    margin-left: 50px;
-  }
-
-  .about__inner {
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   justify-content: center;
-   max-width: 600px;
-   width: 100%;
-  }
-  .cell {
-    display: block;
-
-  }
-
-  /* .menu__list {
-
-    position: absolute;
-    left: 0;
-    right: 30%;
-    top: 62.36px;
-    background: rgba(96, 212, 212, 0.4);
-     display: flex;
-    flex-direction: column;
-    margin-left: 10px;
-    text-align: left;
-    transform: translateY(-300%);
-    transition: all .5s;
-
-  }
-
-  .menu__list.menu__list--active {
-    transform: translateY(0);
-    transition: all .5s;
-
-  }
-
-  ul.menu__list {
-    padding: 0px 0;
-  }
-
-  .menu__list-item {
-    position: relative;
-    display: inline-block;
-    padding: 30px 5px;
-  }
-
-  .menu__list-item+.menu__list-item {
-    margin-left: 0;
-  }
-
-  .menu__list-link {
-    display: block;
-    padding: 10px 0;
-  } */
-
-  .header__title {
-    font-size: 54px;
-    line-height: 48px;
-
-  }
-
-  .header__subtitle {
-    font-size: 12px;
-    line-height: 12px;
-  }
-
-  .menu__btn {
-    display: block;
-    background-color: transparent;
-    border: none;
-    padding: 0;
-    cursor: pointer;
-    margin-top: 15px;
-    margin-bottom: 16px;
-    ;
-  }
-
-  .expertise__items {
-    display: block;
-  }
-
-  .portfolio__item-link {
-
-    font-size: 8px;
-    line-height: 8px;
-  }
-
-  .portfolio__content {
-    column-count: 2;
-    column-gap: 12px;
-  }
-
-  .pricing {
-    background-color: #F6F8FA;
-    padding: 40px 10px;
-  }
-
-  .pricing__item {
-    max-width: 400px;
-    margin: 5px;
-  }
-
-  .pricing__item .pricing__item-num {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 300;
-    font-size: 40px;
-    line-height: 45px;
-  }
-
-  .pricing__item li {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 300;
-    font-size: 10px;
-    line-height: 12px;
-  }
-
-  .pricing__item-num sup {
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 300;
-    font-size: 10px;
-    line-height: 14px;
-
-  }
-
-  ul.footer__social {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    max-width: 100%;
-    margin: 0 auto;
-    margin-bottom: 65px;
-  }
-
-  .footer__social-list {
-    max-width: 33.33%;
-    margin-bottom: 25px;
-  }
-
-  .video-container {
-
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 30px;
-  }
-}
-</style> -->
 <!-- deep-seek -->
-  <style>
+   <style>
   /* ===== RETRO-MINIMALISM CORE STYLES ===== */
 :root {
   --color-space: #2F394D;
@@ -3548,7 +3108,7 @@ max-width: 768px;
 }
 
 /* ===== ENHANCED CARD STYLES ===== */
-.products-grid {
+/* .products-grid {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
   margin: 60px auto;
@@ -3677,10 +3237,10 @@ max-width: 768px;
 
 .buy-button:hover::before {
   left: 0;
-}
+} */
 
 /* ===== RETRO SECTION HEADERS ===== */
-.menu__title {
+/* .menu__title {
   position: relative;
   font-family: var(--font-retro);
   font-size: 28px;
@@ -3700,10 +3260,10 @@ max-width: 768px;
   width: 100px;
   height: 4px;
   background: linear-gradient(90deg, transparent, var(--color-cyan), transparent);
-}
+} */
 
 /* ===== ENHANCED SEARCH SECTION ===== */
-.search {
+/* .search {
   background: linear-gradient(135deg, var(--color-cyan-light) 0%, rgba(230, 174, 5, 0.1) 100%);
   position: relative;
   overflow: hidden;
@@ -3760,68 +3320,12 @@ max-width: 768px;
   color: var(--color-space);
   background: var(--color-vapor);
   box-shadow: var(--shadow-sm);
-}
-
-/* ===== RETRO BUTTON GRID ===== */
-/* .grid-products__btn-270,
-.grid-products__btn-810 {
-  position: relative;
-  overflow: hidden;
-   text-align: left;
-  max-width: 1000px;
-  width: 100%;
-  height: 40px;
-  color: white;
-  font-weight: 700;
-  font-size: 14px;
-  border: 2px solid var(--color-onyx);
-  border-radius: 2px;
-  padding-left: 10px;
-  margin-bottom: 3px;
-  background-color: var(--color-onyx);
-  cursor: pointer;
-}
-
-.grid-products__btn-270:hover,
-.grid-products__btn-810:hover {
-  background-color: transparent;
-  color: var(--color-onyx);
 } */
 
-/* ===== ENHANCED NAVIGATION ===== */
-/* .menu__list {
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
-  border: 0px solid var(--color-silver);
-}
 
-.menu__list-link {
-  position: relative;
-  color: var(--color-steel);
-  transition: var(--transition);
-}
-
-.menu__list-link::before {
-  content: '▶';
-  position: absolute;
-  left: -20px;
-  opacity: 0;
-  transition: var(--transition);
-  color: var(--color-cyan);
-}
-
-.menu__list-link:hover {
-  color: var(--color-space);
-  padding-left: 25px;
-}
-
-.menu__list-link:hover::before {
-  opacity: 1;
-  left: 0;
-} */
 
 /* ===== RETRO VIDEO SECTION ===== */
-.video-with-text {
+/* .video-with-text {
   position: relative;
   margin: 80px auto;
 }
@@ -3876,12 +3380,7 @@ max-width: 768px;
   background: var(--color-cyan);
 }
 
-/* ===== RETRO MARQUEE ===== */
-/* .marquee-container {
-  background: linear-gradient(90deg, var(--color-space) 0%, var(--color-steel) 100%);
-  border: 2px solid var(--color-cyan);
-  box-shadow: var(--retro-glow);
-} */
+
 
 .marquee-item {
   border: 2px solid transparent;
@@ -3892,7 +3391,7 @@ max-width: 768px;
   border-color: var(--color-gold);
   transform: scale(1.02);
   box-shadow: 0 0 20px rgba(230, 174, 5, 0.3);
-}
+} */
 
 /* ===== RETRO FOOTER ===== */
 .footer {
@@ -3935,7 +3434,7 @@ max-width: 768px;
 }
 
 /* ===== RETRO LOADING STATES ===== */
-.card-info__stepper {
+/* .card-info__stepper {
   border: 2px solid var(--color-silver);
   border-radius: var(--border-radius);
   overflow: hidden;
@@ -3956,10 +3455,10 @@ max-width: 768px;
   border-right: 1px solid var(--color-silver);
   font-family: var(--font-accent);
   font-weight: 600;
-}
+} */
 
 /* ===== RETRO SCROLLBAR ===== */
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   width: 10px;
 }
 
@@ -3974,22 +3473,22 @@ max-width: 768px;
 
 ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(180deg, var(--color-gold), var(--color-maroon));
-}
+} */
 
 /* ===== RETRO SELECTION ===== */
-::selection {
+/* ::selection {
   background: rgba(96, 212, 212, 0.3);
   color: var(--color-space);
-}
+} */
 
 /* ===== RETRO FOCUS STATES ===== */
-:focus {
+/* :focus {
   outline: 2px solid var(--color-cyan);
   outline-offset: 2px;
-}
+} */
 
 /* ===== RETRO PULSE ANIMATION ===== */
-@keyframes pulse-glow {
+/* @keyframes pulse-glow {
   0%, 100% {
     box-shadow: 0 0 5px rgba(96, 212, 212, 0.3);
   }
@@ -4000,10 +3499,10 @@ max-width: 768px;
 
 .highlight-item {
   animation: pulse-glow 2s infinite;
-}
+} */
 
 /* ===== RETRO GRID LINES ===== */
-.container1400 {
+/* .container1400 {
   position: relative;
 }
 
@@ -4020,39 +3519,10 @@ max-width: 768px;
   border-right: 1px dashed rgba(96, 212, 212, 0.1);
   pointer-events: none;
   z-index: -1;
-}
-
-/* ===== RETRO RESPONSIVE ENHANCEMENTS ===== */
-/* @media (max-width: 768px) {
-  .menu__title {
-    font-size: 32px;
-    letter-spacing: 1px;
-  }
-
-  .product-card {
-    min-height: auto;
-  }
-
-  .vertical-text {
-    writing-mode: horizontal-tb;
-    font-size: 18px;
-    margin: 20px 0;
-  }
-
-  .video-with-text {
-    flex-direction: column;
-  }
-
-  .tabs__list {
-    flex-direction: column;
-  }
-
-  .tabs__btn {
-    width: 100%;
-    margin-bottom: 10px;
-  }
 } */
- </style> -->
+
+
+ </style>
     <style>
     .cell-900--flex {
   max-width: 900px;
@@ -5360,7 +4830,7 @@ margin: 5px;
       <div class="about__inner">
         <div class="about__cell">
           <div class="text-block">
-            <h5>
+            <h6>
               Всё началось не с офиса и не с планов. История depo-500 началась с одного человека — Владимира Бауэрса. Он
               вложил в компанию не только деньги и время, а кое-что поважнее: свою целеустремлённость и настоящую страсть к делу.
 
@@ -5368,7 +4838,7 @@ margin: 5px;
               Прошло более 20 лет, но дух не изменился. Мы всё так же горим своим делом, не сдаёмся перед трудностями и верим, что
               честная работа всегда побеждает. depo-500 — это не просто бренд. Это характер одного человека, который стал характером
               целой команды.
-            </h5>
+            </h6>
           </div>
         </div>
         <div class="about__cell">
@@ -5383,10 +4853,10 @@ margin: 5px;
         </div>
         <div class="about__cell">
           <div class="text-block">
-            <h5>
+            <h6>
               Знакомьтесь с нашим главным персонажем — это Джессика, самая последняя разработка ИИ в сфере юриспруденции. Этот сайт также создан с помощью Джессики, а посвящается Седе Оганесовне, моей учительнице
               по прикладной математике.
-            </h5>
+            </h6>
           </div>
         </div>
       </div>
@@ -5443,7 +4913,7 @@ margin: 5px;
   <div class="grid-5" style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 30px;">
 
     <!-- Карточка 01 - Murder / убийство -->
-    <div class="col-lg-3 col-sm-6">
+    <div class="#">
       <div class="card"
         style="background-color: var(--crime-blue); border-radius: 4px; overflow: hidden; box-shadow: 0 10px 10px rgba(0,0,0,0.2); transition: transform 0.3s ease; height: 100%;">
 
@@ -5465,7 +4935,7 @@ margin: 5px;
     </div>
 
     <!-- Карточка 02 - Theft / кража -->
-    <div class="col-lg-3 col-sm-6">
+    <div class="#">
       <div class="card"
         style="background-color: var(--crime-blue); border-radius: 4px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.2); transition: transform 0.3s ease; height: 100%;">
 
@@ -5482,7 +4952,7 @@ margin: 5px;
     </div>
 
     <!-- Карточка 03 - Fraud / мошенничество -->
-    <div class="col-lg-3 col-sm-6">
+    <div class="#">
       <div class="card"
         style="background-color: var(--crime-blue); border-radius: 4px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.2); transition: transform 0.3s ease; height: 100%;">
 
@@ -5499,7 +4969,7 @@ margin: 5px;
     </div>
 
     <!-- Карточка 04 - Assault / нападение -->
-    <div class="col-lg-3 col-sm-6">
+    <div class="#">
       <div class="card"
         style="background-color: var(--crime-blue); border-radius: 4px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.2); transition: transform 0.3s ease; height: 100%;">
 
@@ -5516,7 +4986,7 @@ margin: 5px;
     </div>
 
     <!-- Карточка 05 - Burglary / ограбление (продублирована структура) -->
-    <div class="col-lg-3 col-sm-6">
+    <div class="#">
       <div class="card"
         style="background-color: var(--crime-blue); border-radius: 4px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.2); transition: transform 0.3s ease; height: 100%;">
 
@@ -5542,8 +5012,8 @@ margin: 5px;
   position: relative;
   /* max-width: 350px; */
   width: 100%;
-  padding: 2px;
-  margin: 2px 2px;
+  padding: 0 0px;
+  margin:  0px;
   background-color: transparent;
   display: flex;
   flex-direction: column;
@@ -5558,7 +5028,7 @@ margin: 5px;
  .grid-5 {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 5px;
+  gap: 2px;
   max-width: 1400px;
   width: 100%;
 }
