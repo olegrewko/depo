@@ -956,18 +956,7 @@ abbr[title] {
 }
 
 /* Buttons */
-.ffc107 {
-  width: 100%;
-  height: 100px;
-  color: black;
-  font-family: 'Rubik';
-  font-weight: 700;
-  font-size: 20px;
-  border: 4px solid #d29f05;
-  border-radius: 6px;
-  background-color: #d29f05;
-  margin-bottom: 3px;
-}
+
 
 .ffc107-1400 {
   text-align: center;
@@ -2738,7 +2727,7 @@ form {
 }
 
 /* Text Block */
-.text-block {
+/* .text-block {
   background-color: transparent;
   color: black;
   padding: 5px;
@@ -2750,7 +2739,7 @@ form {
   color: black;
   line-height: 120%;
   margin: 0;
-}
+} */
 
 /* Retro & Root Variables */
 :root {
