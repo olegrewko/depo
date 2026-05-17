@@ -2121,14 +2121,14 @@ form {
   margin-top: 50px;
 }
 
-.title-6r {
+/* .title-6r {
   font-family: 'Rubik';
   font-style: normal;
   font-weight: 400;
   line-height: 100px;
   font-size: 40px;
   color: var(--color-space);
-}
+} */
 
 .blog-content__content {
   max-width: 800px;
@@ -2268,12 +2268,12 @@ form {
   background-color: white;
 }
 
-.contact-grid-w100__content {
+/* .contact-grid-w100__content {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
+} */
 
 .contacts__title {
   font-weight: 700;
