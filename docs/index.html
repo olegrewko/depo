@@ -2995,7 +2995,16 @@ display: flex;
   font-style: normal;
   font-weight: 400;
   line-height: 100px;
-  font-size: 40px;
+  font-size: 35px;
+  color: var(--color-space);
+
+}
+.title-3r {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100px;
+  font-size: 25px;
   color: var(--color-space);
 
 }
@@ -3107,291 +3116,7 @@ max-width: 768px;
   --retro-glow: 0 0 10px rgba(96, 212, 212, 0.5);
 }
 
-/* ===== ENHANCED CARD STYLES ===== */
-/* .products-grid {
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-  margin: 60px auto;
-}
 
-.product-card {
-  position: relative;
-  background: var(--color-vapor);
-  border: 1px solid transparent;
-  border-radius: var(--border-radius);
-  padding: 0;
-  overflow: hidden;
-  transition: var(--transition);
-  min-height: 500px;
-  display: flex;
-  flex-direction: column;
-}
-
-.product-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, var(--color-cyan), var(--color-gold));
-  transform: scaleX(0);
-  transition: transform 0.5s ease;
-  transform-origin: left;
-}
-
-.product-card:hover::before {
-  transform: scaleX(1);
-}
-
-.product-card:hover {
-  transform: translateY(-8px);
-  border-color: var(--color-cyan);
-  box-shadow: var(--shadow-lg);
-}
-
-.product-image {
-  position: relative;
-  overflow: hidden;
-  background: linear-gradient(135deg, var(--color-space) 0%, var(--color-steel) 100%);
-  border-radius: var(--border-radius) var(--border-radius) 0 0;
-}
-
-.product-image img {
-  transition: transform 0.8s ease;
-  filter: grayscale(20%);
-}
-
-.product-card:hover .product-image img {
-  transform: scale(1.05);
-  filter: grayscale(0%);
-}
-
-.product-title {
-  font-family: var(--font-retro);
-  font-size: 18px;
-  letter-spacing: 0.5px;
-  margin-bottom: 10px;
-  color: var(--color-space);
-  position: relative;
-  display: inline-block;
-}
-
-.product-title::after {
-  content: '';
-  position: absolute;
-  bottom: -5px;
-  left: 0;
-  width: 40px;
-  height: 2px;
-  background: var(--color-gold);
-  transition: width 0.3s ease;
-}
-
-.product-card:hover .product-title::after {
-  width: 100%;
-}
-
-.product-price {
-  font-family: var(--font-accent);
-  font-size: 24px;
-  font-weight: 800;
-  color: var(--color-space);
-  position: relative;
-  display: inline-block;
-}
-
-
-
-.buy-button {
-  position: relative;
-  overflow: hidden;
-  background: transparent;
-  color: var(--color-space);
-  border: 2px solid var(--color-space);
-  border-radius: var(--border-radius);
-  padding: 12px;
-  font-family: var(--font-accent);
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-  transition: var(--transition);
-}
-
-.buy-button::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: var(--color-space);
-  transition: left 0.4s ease;
-  z-index: -1;
-}
-
-.buy-button:hover {
-  color: var(--color-vapor);
-  border-color: var(--color-space);
-}
-
-.buy-button:hover::before {
-  left: 0;
-} */
-
-/* ===== RETRO SECTION HEADERS ===== */
-/* .menu__title {
-  position: relative;
-  font-family: var(--font-retro);
-  font-size: 28px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  margin-bottom: 60px;
-  text-align: center;
-  color: var(--color-space);
-}
-
-.menu__title::after {
-  content: '';
-  position: absolute;
-  bottom: -15px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100px;
-  height: 4px;
-  background: linear-gradient(90deg, transparent, var(--color-cyan), transparent);
-} */
-
-/* ===== ENHANCED SEARCH SECTION ===== */
-/* .search {
-  background: linear-gradient(135deg, var(--color-cyan-light) 0%, rgba(230, 174, 5, 0.1) 100%);
-  position: relative;
-  overflow: hidden;
-  margin: 80px 0;
-}
-
-.search::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: repeating-linear-gradient(
-    45deg,
-    transparent,
-    transparent 10px,
-    rgba(96, 212, 212, 0.05) 10px,
-    rgba(96, 212, 212, 0.05) 20px
-  );
-  pointer-events: none;
-}
-
-.tabs__btn {
-  position: relative;
-  overflow: hidden;
-  background: var(--color-vapor);
-  border: 2px solid var(--color-silver);
-  color: var(--color-steel);
-  font-family: var(--font-accent);
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  transition: var(--transition);
-}
-
-.tabs__btn::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 3px;
-  background: var(--color-cyan);
-  transition: width 0.3s ease;
-}
-
-.tabs__btn:hover::after {
-  width: 100%;
-}
-
-.tabs__btn--active {
-  border-color: var(--color-cyan);
-  color: var(--color-space);
-  background: var(--color-vapor);
-  box-shadow: var(--shadow-sm);
-} */
-
-
-
-/* ===== RETRO VIDEO SECTION ===== */
-/* .video-with-text {
-  position: relative;
-  margin: 80px auto;
-}
-
-.video-container {
-  position: relative;
-  border: 3px solid var(--color-space);
-  border-radius: var(--border-radius);
-  overflow: hidden;
-  box-shadow: var(--shadow-lg);
-}
-
-.video-container::before {
-  content: '';
-  position: absolute;
-  top: -10px;
-  left: -10px;
-  right: -10px;
-  bottom: -10px;
-  border: 1px solid var(--color-cyan);
-  border-radius: calc(var(--border-radius) + 5px);
-  opacity: 0;
-  transition: var(--transition);
-  z-index: -1;
-}
-
-.video-container:hover::before {
-  opacity: 1;
-  top: -15px;
-  left: -15px;
-  right: -15px;
-  bottom: -15px;
-}
-
-.vertical-text {
-  font-family: var(--font-retro);
-  writing-mode: vertical-rl;
-  font-size: 24px;
-  font-weight: 700;
-  letter-spacing: 3px;
-  color: var(--color-space);
-  text-transform: uppercase;
-  position: relative;
-}
-
-.vertical-text::before {
-  content: '';
-  position: absolute;
-  top: -20px;
-  width: 2px;
-  height: 30px;
-  background: var(--color-cyan);
-}
-
-
-
-.marquee-item {
-  border: 2px solid transparent;
-  transition: var(--transition);
-}
-
-.marquee-item:hover {
-  border-color: var(--color-gold);
-  transform: scale(1.02);
-  box-shadow: 0 0 20px rgba(230, 174, 5, 0.3);
-} */
 
 /* ===== RETRO FOOTER ===== */
  .footer {
@@ -3399,157 +3124,13 @@ max-width: 768px;
   position: relative;
   overflow: hidden;
 }
-/*
-.footer::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, var(--color-cyan), transparent);
-}
 
-.white__title {
-  font-family: var(--font-retro);
-  letter-spacing: 2px;
-  position: relative;
-  display: inline-block;
-}
-
-.white__title::after {
-  content: '';
-  position: absolute;
-  bottom: -5px;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: var(--color-cyan);
-  transform: scaleX(0);
-  transition: transform 0.3s ease;
-}
-
-.logo:hover .white__title::after {
-  transform: scaleX(1);
-} */
-
-/* ===== RETRO LOADING STATES ===== */
-/* .card-info__stepper {
-  border: 2px solid var(--color-silver);
-  border-radius: var(--border-radius);
-  overflow: hidden;
-}
-
-.stepper__btn {
-  background: var(--color-vapor);
-  border: none;
-  transition: var(--transition);
-}
-
-.stepper__btn:hover:not(.stepper__btn--disabled) {
-  background: var(--color-cyan-light);
-}
-
-.stepper__input {
-  border-left: 1px solid var(--color-silver);
-  border-right: 1px solid var(--color-silver);
-  font-family: var(--font-accent);
-  font-weight: 600;
-} */
-
-/* ===== RETRO SCROLLBAR ===== */
-/* ::-webkit-scrollbar {
-  width: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background: var(--color-vapor);
-}
-
-::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, var(--color-cyan), var(--color-steel));
-  border-radius: var(--border-radius);
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, var(--color-gold), var(--color-maroon));
-} */
-
-/* ===== RETRO SELECTION ===== */
-/* ::selection {
-  background: rgba(96, 212, 212, 0.3);
-  color: var(--color-space);
-} */
-
-/* ===== RETRO FOCUS STATES ===== */
-/* :focus {
-  outline: 2px solid var(--color-cyan);
-  outline-offset: 2px;
-} */
-
-/* ===== RETRO PULSE ANIMATION ===== */
-/* @keyframes pulse-glow {
-  0%, 100% {
-    box-shadow: 0 0 5px rgba(96, 212, 212, 0.3);
-  }
-  50% {
-    box-shadow: 0 0 20px rgba(96, 212, 212, 0.6);
-  }
-}
-
-.highlight-item {
-  animation: pulse-glow 2s infinite;
-} */
-
-/* ===== RETRO GRID LINES ===== */
-/* .container1400 {
-  position: relative;
-}
-
-.container1400::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  max-width: 1400px;
-  height: 100%;
-  border-left: 1px dashed rgba(96, 212, 212, 0.1);
-  border-right: 1px dashed rgba(96, 212, 212, 0.1);
-  pointer-events: none;
-  z-index: -1;
-} */
 
 
  </style>
     <style>
-    /* .cell-900--flex {
-  max-width: 900px;
-  width: 100%;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-wrap: wrap;
-} */
-/* .ffc107-1400 {
-  text-align: center;
-  max-width: 1370px;
-  width: 100%;
-  height: 60px;
-  font-family: 'Rubik';
-  font-weight: 400;
-  font-size: 14px;
-  border: 4px solid #e6ae05;
-  border-radius: 5px;
-  background-color: #e6ae05;
-  margin-bottom: 5px;
 
-  margin: 10px;
-} */
-.ffc107 {
+/* .ffc107 {
 
   width: 100%;
   height: 100px;
@@ -3561,24 +3142,9 @@ max-width: 768px;
   border-radius: 6px;
   background-color: #d29f05;
   margin-bottom: 3px;
-}
-
-/* .grid-products__btn-270 {
- text-align: center;
-  max-width: 270px;
-  width: 100%;
- height: 100px;
-margin: 5px;
-  color: black;
-  font-family: 'Rubik';
-  font-weight: 800;
-  font-size: 20px;
-  border: 4px solid black;
-  border-radius: 6px;
-
-  margin-bottom: 5px;
-  background-color: transparent;
 } */
+
+
 
     /* Базовые стили */
     .about__inner {
@@ -3625,19 +3191,6 @@ margin: 5px;
         height: auto;
       }
 
-      /* Для второго блока: меняем порядок, чтобы фото было после текста */
-      /* .about__inner:last-child {
-        flex-direction: column;
-      } */
-
-      /* Если нужно, чтобы фото было строго после текста в обоих блоках */
-      /* .about__inner .about__cell:first-child {
-        order: 1;
-      } */
-
-      /* .about__inner .about__cell:last-child {
-        order: 2;
-      } */
     }
   </style>
 </head>
@@ -3975,15 +3528,12 @@ margin: 5px;
         </div>
       </section>
       <section id="services" class="services mt-100">
-<div class="container1800 text-grid-w23 mb-10">
-   <h2 class="title-6r text-left text-grid-w100__content ml-10">services</h2>
 
-    <h5 class=" text-center text-grid-w100__content ml-10"  style="background-color: var(--color-midnight); color: white; height: 100px; width: 100%; margin-left: 10px;">
-      Наши услуги
-    </h5>
-
-
-
+<div class="container1800 text-grid-w100 mt-100" style="text-align: center;">
+  <h2 class="title-6r" style="display: inline-block; margin: 0; vertical-align: middle;">services</h2>
+  <h1
+    style="background-color: #000; color: white; display: inline-block; padding: 35px 20px; margin: 0; vertical-align: middle;">
+    Наши услуги</h1>
 </div>
 
 <div class="dummy08"></div>
@@ -4786,11 +4336,13 @@ margin: 5px;
         <div class="dummy08"></div>
       <section class="about  mt-100" id="about">
 
-<div class="container1800 text-grid-w100 mt-100">
-   <h2 class="title-6r text-center text-grid-w100__content">about us</h2>
-  <h5 class="text-center text-grid-w100__content" style="background-color: #000; color: white; height: 100px; width: 100%; margin-bottom: 0px;">О нас</h5>
-</div>
 
+<div class="container1800 text-grid-w100 mt-100" style="text-align: center;">
+  <h2 class="title-6r" style="display: inline-block; margin: 0; vertical-align: middle;">about us</h2>
+  <h1
+    style="background-color: #000; color: white; display: inline-block; padding: 35px 20px; margin: 0; vertical-align: middle;">
+    О нас</h1>
+</div>
 
 <div class="container1800 text-grid-w100 mb-10">
    <h2 class=" text-left text-grid-w100__content">
@@ -4870,38 +4422,15 @@ margin: 5px;
 <!--team -->
 
       <section class="team  mt-100" id= "team">
-<div class="container1800 text-grid-w100 mb-10">
-  <h2 class="title-6r text-left text-grid-w100__content ml-10" style=" color: black; border: 0px solid var(--color-maroon);
-   border-radius: 4px;">team</h2>
 
-  <h5 class=" text-center text-grid-w100__content ml-5"
-    style="background-color: var(--bauhaus-dark) ; color: white; border: 2px solid var(--bauhaus-dark); height: 100px; width: 100%; margin: 0px; border-radius: 4px;">
-    Команда
-  </h5>
-
-
-
+<div class="container1800 text-grid-w100 mt-100" style="text-align: center;">
+  <h2 class="title-6r" style="display: inline-block; margin: 0; vertical-align: middle;">team</h2>
+  <h2
+    style="background-color: #000; color: white; display: inline-block; padding: 35px 20px; margin: 0; vertical-align: middle; border-radius: 4px;">
+    Команда</h2>
 </div>
 <div class="dummy08"></div>
 
-                        <!-- <div class="container1800 text-grid-w100 padding: 5px 15px;">
-                          <h2 class="title-6r text-center text-grid-w100__content"
-                          ></h2>
-                          <h5 class="text-left text-grid-w100__content ml-5"
-                            style="width: 100%; margin-bottom: 10px;">
-                            depo-500 — это команда опытных адвокатов, удостоенная множества наград.
-                            Когда на кону ваша свобода или карьера, вы можете положиться на нашу команду, которая уже более 10 лет ведет сложные
-                            дела и добивается для вас наилучшего исхода. Наши адвокаты вели более 90 дел и судебных процессов.
-
-                            Мы начнем работу над вашим делом с того, что выслушаем вас, узнаем вашу историю и цели. Мы понимаем, что это может быть
-                            одним из самых стрессовых периодов в жизни. Мы будем рядом с вами, будем бороться на вашей стороне, предлагать решения и
-                            проверенные стратегии, основанные на опыте и нацеленные на вашу защиту.
-
-                            Если вы хотите добиться наилучшего результата, позвоните нам. Наши юристы — эксперты в области взаимодействия с правовой
-                            системой для достижения ваших целей. Мы предлагаем бесплатную консультацию, чтобы обсудить ваше дело, ваши права и то,
-                            как мы можем вам помочь.
-                          </h5>
-                        </div> -->
                         <div class="container1800 text-grid-w100" style="max-width: 1800px; margin: 0 auto; padding: 5px 15px;">
                           <h2 class="title-6r text-center text-grid-w100__content"></h2>
                           <h5 class="text-left text-grid-w100__content" style="margin: 0 0 10px 0; padding: 0; width: 100%;">
@@ -5073,19 +4602,11 @@ margin: 5px;
 <!-- Недвижимость -->
 <div class="loudspeakers mt-100" id="property">
 
- <div class="container1800 text-grid-w100 mb-10">
-   <h2 class="title-6r text-left text-grid-w100__content"
-   style=" color: black; border: 0px solid var(--color-maroon);
-   border-radius: 6px;">
-  property
-   </h2>
-
-    <h3 class=" text-center text-grid-w100__content"  style="background-color: var(--bauhaus-dark) ; color: white; border: 4px solid var(--bauhaus-dark); height: 100px; width: 100%; margin: 0px; border-radius: 6px;">
-      Недвижимость
-    </h3>
-
-
-
+<div class="container1800 text-grid-w100 mt-100" style="text-align: center;">
+  <h2 class="title-6r" style="display: inline-block; margin: 0; vertical-align: middle;">property</h2>
+  <h2
+    style="background-color: #000; color: white; display: inline-block; padding: 35px 20px; margin: 0; vertical-align: middle; border-radius: 4px;">
+    Недвижимость</h2>
 </div>
 <div class="dummy08" style="background-color: #fff;"></div>
 
@@ -5202,10 +4723,12 @@ margin: 5px;
 <!--bankruptcy  -->
 <div class="dummy08"></div>
 <section class="stores text-left mt-100" id="b">
-  <div class="container1800 text-grid-w100 mb-10">
-    <h2 class="title-6r text-left text-grid-w100__content">bankruptcy</h2>
-    <h5 class="text-center text-grid-w100__content"
-      style="background-color: #000; color: white; height: 100px; width: 100%; margin-bottom: 0px;">Банкротство</h5>
+
+  <div class="container1800 text-grid-w100 mt-100" style="text-align: center;">
+    <h2 class="title-6r" style="display: inline-block; margin: 0; vertical-align: middle;">bankruptcy</h2>
+    <h2
+      style="background-color: #000; color: white; display: inline-block; padding: 35px 20px; margin: 0; vertical-align: middle; border-radius: 4px;">
+      Банкротство</h2>
   </div>
   <div class="dummy08"></div>
 <div class="container1400 contact-grid-w100 mt-150" style="background-color: var(--color-space);">
@@ -5342,13 +4865,13 @@ margin: 5px;
 <!--crime  -->
 <div class="dummy08"></div>
       <section class="crime mt-100 " id="crime">
+  <div class="container1800 text-grid-w100 mt-100" style="text-align: center;">
+    <h2 class="title-6r" style="display: inline-block; margin: 0; vertical-align: middle;">criminal</h2>
+    <h2
+      style="background-color: #000; color: white; display: inline-block; padding: 35px 20px; margin: 0; vertical-align: middle; border-radius: 4px;">
+      Уголовные преступления</h2>
+  </div>
                   <div class="container1800 text-grid-w100 mb-10">
-            <h2 class="title-6r text-grid-w100__content"
-             style="color: var(--bauhaus-black);
-
-             ">criminal</h2>
-            <h5 class="text-center text-grid-w100__content"
-              style="background-color: #000; color: white; height: 100px; width: 100%; margin-bottom: 0px;">Уголовные преступления</h5>
 
 <h2 class="text-left text-grid-w100__content"
   style="background-color: white;  color: #000;  width: 100%; padding-left: 10px; margin-bottom: 0px;">
@@ -6088,27 +5611,27 @@ margin: 5px;
       }
 
     }
-.text-grid-w100__content{
+/* .text-grid-w100__content{
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center ;
 
-      }
+      } */
 .contact-grid-w100 {
               border: 3px solid var(--color-space);
 
+    box-sizing: border-box;  /* важно: чтобы padding не увеличивал ширину */
+padding: 10px;
   border-radius: var(--border-radius);
+  max-width: 1400px;
       width: 100%;
       display: grid;
       grid-template-columns: 1fr  1fr;
       grid-template-rows: auto;
       column-gap: 5px;
       align-items: center;
-
-
-      margin-top: 10px;
-      margin-bottom: 10px;
+      margin: 10px auto;  /* центрирование + отступы */
       background-color: white;
       @media screen and (max-width: 600px) {
         grid-template-columns:  1fr;
@@ -6123,7 +5646,21 @@ margin: 5px;
         align-items: center ;
 
       }
+  @media screen and (max-width: 600px) {
+    .contact-grid-w100 {
+      grid-template-columns: 1fr;
+      gap: 20px;
+      padding: 15px;  /* отступы внутри рамки */
+      margin: 10px 15px;  /* отступы снаружи рамки (справа и слева) */
+    }
+  }
 
+  /* Дополнительно для очень узких экранов */
+  @media screen and (max-width: 400px) {
+    .contact-grid-w100 {
+      margin: 10px 10px;  /* еще меньше отступы снаружи, но рамка не прилипает */
+    }
+  }
 .contacts__title {
 
       font-weight: 700;
@@ -6249,15 +5786,20 @@ margin: 5px;
 
 <!--contact  -->
 <div class="dummy08"></div>
+<div class="dummy08"></div>
 <section class="stores mt-100" id="contact">
-<div class="container1800 text-grid-w100">
-   <h2 class="title-6r text-center text-grid-w100__content">contact us</h2>
-  <h5 class="text-center text-grid-w100__content" style="background-color: var(--crime-blue); color: white; height: 100px; width: 100%; margin-bottom: 0px;">Контакты</h5>
-</div>
-  <div class="dummy08"></div>
-  <div class="dummy08"></div>
-            <div class="container1400 contact-grid-w100 mt-200 ml-10">
 
+  <div class="container1800 text-grid-w100 mt-100" style="text-align: center;">
+    <h2 class="title-6r" style="display: inline-block; margin: 0; vertical-align: middle;">contact us</h2>
+    <h2
+      style="background-color: #000; color: white; display: inline-block; padding: 35px 20px; margin: 0; vertical-align: middle; border-radius: 4px;">
+      Контакты</h2>
+  </div>
+  <div class="dummy08"></div>
+  <div class="dummy08"></div>
+            <!-- <div class="container1400 contact-grid-w100 mt-150 ml-10"> -->
+<div class="container1400 mt-150" style="max-width: 1400px; margin: 0 auto; padding: 0 10px;">
+  <div class="contact-grid-w100">
               <div class="contact-grid-w100__content">
                 <div class="dummy08"></div>
                 <h2 class="depo-title">depo-500</h2>
@@ -6282,7 +5824,7 @@ margin: 5px;
                 <input class="contacts__submit" type="submit" value="Отправить | Send" />
               </form>
 
-
+</div>
             </div>
 </section>
 
@@ -6446,25 +5988,10 @@ max-width: 600px;
     }
 }
   </style>
- <!-- Стили для футера -->
 
-
-
-
-
-    <!-- </div> -->
 <!-- Стили для футера -->
 <style>
-  /* Уменьшение высоты футера */
-  /* .footer {
-    padding: 100px 0 10px;
-  }
 
-  .footer__inner {
-    padding-bottom: 5px;
-    margin-bottom: 5px;
-    border-bottom: 0px solid rgba(255, 255, 255, 0.1);
-  } */
 
   /* Стили для формы подписки */
   .subscribe-form-group {
