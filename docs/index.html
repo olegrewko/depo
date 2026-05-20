@@ -2512,7 +2512,21 @@ max-width: 768px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 </style>
+<style>
+  /* Адаптация для мобильных устройств */
+  @media (max-width: 768px) {
+    .container1800.text-grid-w23.mt-100 h2 {
+      display: block !important;
+      width: 100% !important;
+      margin: 10px 0 !important;
+      text-align: center !important;
+    }
 
+    .container1800.text-grid-w23.mt-100 h2[style*="background-color"] {
+      padding: 20px 15px !important;
+    }
+  }
+</style>
 
 
 <!-- deep-seek -->
