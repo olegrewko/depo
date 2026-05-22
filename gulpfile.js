@@ -94,7 +94,12 @@ function watch() {
 // Основные задачи
 const build = gulp.series(clean, gulp.parallel(fonts, img, html), watch);
 const dev = gulp.series(clean, gulp.parallel(fonts, img, html));
+const ghPages = require('gh-pages');
 
+gulp.task('deploy', function (cb) {
+  // Вместо 'dist' укажите название вашей папки с готовым сайтом
+  ghPages.publish('dist', cb);
+});
 // Экспорт задач
 exports.clean = clean;
 exports.html = html;
