@@ -2461,7 +2461,75 @@ max-width: 768px;
   height: auto;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}</style><style>/* Адаптация для мобильных устройств */
+}</style><style>/* ========== BAUHAUS MINIMALIST THEME ========== */
+:root {
+    --bg: #FFFFFF;
+    --surface: #F5F5F5;
+    --text-primary: #1A1A1A;
+    --text-secondary: #616161;
+    --border: #E0E0E0;
+    --accent: #E03C31;
+    --accent-alt: #1A5F7A;
+    --success: #2A6B3C;
+    --warning: #E6AE05;
+    --radius: 0px;
+    --shadow: none;
+}
+
+* {
+    box-shadow: var(--shadow) !important;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text-primary);
+}
+
+a, .dropbtn {
+    color: var(--text-secondary);
+    text-decoration: none;
+}
+
+a:hover, .dropbtn:hover {
+    color: var(--accent);
+}
+
+button, .grid-products__btn, .contacts__submit {
+    background: transparent;
+    border: 2px solid var(--text-primary);
+    color: var(--text-primary);
+    border-radius: var(--radius);
+}
+
+button:hover, .grid-products__btn:hover {
+    background: var(--text-primary);
+    color: var(--bg);
+}
+
+h1, h2, h3, .title-6r {
+    font-family: 'Rubik', monospace;
+    font-weight: 500;
+    letter-spacing: -0.5px;
+}
+
+.container1400, .container1800 {
+    border: none;
+}
+
+.bg-grey, .bg-white {
+    background: var(--surface);
+}
+
+/* Красный для преступлений */
+.crime-accent {
+    color: var(--accent);
+}
+
+/* Синий для закона */
+.law-accent {
+    color: var(--accent-alt);
+}
+  /* Адаптация для мобильных устройств */
   @media (max-width: 768px) {
     .container1800.text-grid-w23.mt-100 h2 {
       display: block !important;
@@ -2480,6 +2548,7 @@ max-width: 768px;
   display: block;
 }
   /* ===== RETRO-MINIMALISM CORE STYLES ===== */
+
 :root {
   --color-space: #2F394D;
   --color-midnight: #1a1a2e;
@@ -2509,6 +2578,43 @@ max-width: 768px;
   --retro-glow: 0 0 10px rgba(96, 212, 212, 0.5);
 }
 
+:root {
+    /* === БАЗОВЫЕ ЦВЕТА (Монохром) === */
+    --bauhaus-black: #1A1A1A;
+    --bauhaus-dark: #2D2D2D;
+    --bauhaus-gray: #7A7A7A;
+    --bauhaus-light: #E0E0E0;
+    --bauhaus-white: #FFFFFF;
+    --bauhaus-offwhite: #F5F5F5;
+
+    /* === АКЦЕНТНЫЕ ЦВЕТА (Только 2!) === */
+    --crime-red: #E03C31;      /* Для кнопок, важных элементов */
+    --crime-blue: #1A5F7A;     /* Для ссылок, иконок, акцентов */
+
+    /* === ДЛЯ ПРАВОВЫХ СЕКЦИЙ === */
+    --law-positive: #2A6B3C;   /* Оправдан, закрыто */
+    --law-warning: #E6AE05;     /* В розыске, предупреждения */
+
+    /* === ГЕОМЕТРИЯ === */
+    --border-radius: 0px;       /* Баухаус = прямые углы! */
+    --box-shadow: none;         /* Без теней — минимализм */
+}
+:root {
+    /* ЧИСТЫЙ МИНИМАЛИЗМ БАУХАУС */
+    --black: #1A1A1A;
+    --white: #FFFFFF;
+    --gray-100: #F5F5F5;
+    --gray-300: #E0E0E0;
+    --gray-500: #9E9E9E;
+    --gray-700: #616161;
+    --gray-900: #2D2D2D;
+
+    --accent-red: #E03C31;
+    --accent-blue: #1A5F7A;
+
+    --border: 0px;
+    --shadow: none;
+}
 
 
 /* ===== RETRO FOOTER ===== */
