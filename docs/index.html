@@ -7,14 +7,15 @@
 <meta name="description" content="Criminal Defence - юридические услуги">
 <meta property="og:description" content="Профессиональная юридическая помощь">
   <title>depo</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/normalize.css">
 
 
 
 
-<link rel="preload" href="css/style.css" as="style">
 <!-- <link rel="preload" href="js/main.js" as="script"> -->
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-<link rel="preload" href="css/normalize.css" as="style">
+
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -6908,17 +6909,17 @@ padding: 0px;
   /* Оверлей поверх карты */
   .map-overlay {
     position: absolute;
-    bottom: 1px;
-    left: 2px;
-    right: 2px;
+    bottom: 0px;
+    left: auto;
+    right: 1px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
     gap: 2px;
     padding: 10px 16px;
-    background: rgba(0, 0, 0, 0.9);
-    backdrop-filter: blur(8px);
-    border-radius: 8px;
+    /* background: rgba(0, 0, 0, 0.9); */
+    /* backdrop-filter: blur(8px); */
+    border-radius: 4px;
     border: 1px solid rgba(255, 255, 255, 0.08);
     z-index: 10;
     flex-wrap: wrap;
@@ -6926,7 +6927,7 @@ padding: 0px;
 
   .map-address {
     color: #e0e0e0;
-    font-family: system-ui, -apple-system, sans-serif;
+    /* font-family: system-ui, -apple-system, sans-serif; */
     font-size: 14px;
     display: flex;
     align-items: center;
@@ -6955,7 +6956,7 @@ padding: 0px;
     border-radius: 6px;
     padding: 6px 14px;
     cursor: pointer;
-    font-family: Jost;
+    /* font-family: Jost; */
     font-size: 14px;
     transition: all 0.3s ease;
     white-space: nowrap;
@@ -7067,10 +7068,10 @@ padding: 0px;
 
     <!-- Оверлей поверх карты -->
     <div class="map-overlay">
-      <div class="map-address">
-        <!-- <span class="icon">📍</span> -->
+      <!-- <div class="map-address">
+
         <span>Наш офис: <span class="highlight">метро Селигерская</span>, Бескудниковский б-р д23 корп 2</span>
-      </div>
+      </div> -->
       <button class="map-reload-btn" id="reloadBtn" onclick="reloadMap()">
         <svg viewBox="0 0 24 24">
           <path d="M21 3v6h-6" />
@@ -7132,6 +7133,7 @@ padding: 0px;
       }
     }, 8000);
   }
+
 </script>
 <div class="dummy08"></div>
 
