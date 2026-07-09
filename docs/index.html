@@ -6894,31 +6894,23 @@ padding: 0px;
   ymaps.ready(init);
 
   function init() {
-    var coords = [55.8652, 37.5450];
+    // Координаты Бескудниковский бульвар, 25 корп. 1
+    var coords = [55.8668, 37.5410];
 
     var myMap = new ymaps.Map("map", {
       center: coords,
-      zoom: 17,
+      zoom: 16,
       controls: ['zoomControl']
     });
 
-    // Жёлтый круг с буквой "A"
-    var svgMarker = `
-            <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70">
-                <circle cx="35" cy="35" r="30" fill="#FFD600" stroke="#FFFFFF" stroke-width="3"/>
-                <text x="35" y="44" font-size="32" text-anchor="middle" fill="#000000" font-weight="bold" font-family="Arial">A</text>
-                <circle cx="35" cy="35" r="30" fill="none" stroke="#000000" stroke-width="1" opacity="0.1"/>
-            </svg>
-        `;
-
+    // ОЧЕНЬ БОЛЬШОЙ ЖЁЛТЫЙ МАРКЕР
     var myPlacemark = new ymaps.Placemark(coords, {
-      hintContent: 'Селигерская ул., д. 14 корп. 1',
-      balloonContent: '<b>📍 Адвокатское бюро "Бартолиус"</b><br>Селигерская ул., д. 14 корп. 1<br>Москва, Россия'
+      hintContent: 'Бескудниковский бульвар, д. 25 корп. 1',
+      balloonContent: '<b>📍 Адвокатское бюро "Бартолиус"</b><br>Бескудниковский бульвар, д. 25 корп. 1<br>Москва, Россия'
     }, {
-      iconLayout: 'default#image',
-      iconImageHref: 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(svgMarker),
-      iconImageSize: [70, 70],
-      iconImageOffset: [-35, -35],
+      preset: 'islands#yellowIcon',
+      iconImageSize: [60, 84],
+      iconImageOffset: [-30, -42],
       balloonMaxWidth: 300
     });
 
@@ -6933,7 +6925,7 @@ padding: 0px;
   </h2>
   <h2 class=" text-left"
     style="color: var(--color-space); font-size: 18px; font-weight: bold; line-height: 1.2; margin-bottom: 30px; font-family: Jost, sans-serif;">
-    Адрес: 115054, Москва, Бескудниковский б-р, дом 38
+    Адрес: Бескудниковский бульвар, д. 25 корп. 1
   </h2>
     <h2 class=" text-left"
       style="color: var(--color-space); font-size: 18px; font-weight: bold; line-height: 1.2; margin-bottom: 30px; font-family: Jost, sans-serif;">

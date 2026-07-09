@@ -4800,37 +4800,29 @@ padding: 0px;
   }</style><div class="dummy08"></div><div class="dummy08"></div><section class="stores mt-100" id="contact"><div class="dummy08"></div><div class="container1800 text-grid-w100 mt-100" style="text-align: center;"><h2 class="#" style="display: inline-block; margin: 0;  vertical-align: middle;  padding: 30px 20px; border-radius: 4px; border: 3px solid var(--contrast-color);">Контакты</h2><h2 style="background-color: var(--contrast-color); color: var(--bauhaus-white); display: inline-block; padding: 30px 20px; margin: 0; vertical-align: middle; border-radius: 4px; border: 3px solid var(--contrast-color);">contact us</h2></div><div class="dummy08"></div><div class="dummy08"></div><div class="container1400" style="max-width: 1400px; width: 100%; margin: 0 auto; padding: 0 10px;"><div class="contact-grid-w100"><div class="contact-grid-w100__content"><h2 class="depo-title">depo-500</h2><h3 class="text-left">Опишите Вашу проблему<br>или перезвоните нам:<br>8-910-453-40-12 Владимир<br>8-999-852-58-21 Олег</h3></div><form class="contacts__form"><input class="contacts__input" type="text" id="fname" name="firstname" placeholder="Your name"> <input class="contacts__input" type="text" id="femail" name="firstemail" placeholder="Your email"> <textarea class="contacts__input" id="subject" name="subject" placeholder="Your Message" style="height: 90px; width: 100%"></textarea> <input class="contacts__submit" type="submit" value="Отправить | Send"></form></div></div><div class="dummy08"></div><script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=ваш_ключ" type="text/javascript"></script><div id="map" style="width: 100%; height: 450px;"></div><script type="text/javascript">ymaps.ready(init);
 
   function init() {
-    var coords = [55.8652, 37.5450];
+    // Координаты Бескудниковский бульвар, 25 корп. 1
+    var coords = [55.8668, 37.5410];
 
     var myMap = new ymaps.Map("map", {
       center: coords,
-      zoom: 17,
+      zoom: 16,
       controls: ['zoomControl']
     });
 
-    // Жёлтый круг с буквой "A"
-    var svgMarker = `
-            <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70">
-                <circle cx="35" cy="35" r="30" fill="#FFD600" stroke="#FFFFFF" stroke-width="3"/>
-                <text x="35" y="44" font-size="32" text-anchor="middle" fill="#000000" font-weight="bold" font-family="Arial">A</text>
-                <circle cx="35" cy="35" r="30" fill="none" stroke="#000000" stroke-width="1" opacity="0.1"/>
-            </svg>
-        `;
-
+    // ОЧЕНЬ БОЛЬШОЙ ЖЁЛТЫЙ МАРКЕР
     var myPlacemark = new ymaps.Placemark(coords, {
-      hintContent: 'Селигерская ул., д. 14 корп. 1',
-      balloonContent: '<b>📍 Адвокатское бюро "Бартолиус"</b><br>Селигерская ул., д. 14 корп. 1<br>Москва, Россия'
+      hintContent: 'Бескудниковский бульвар, д. 25 корп. 1',
+      balloonContent: '<b>📍 Адвокатское бюро "Бартолиус"</b><br>Бескудниковский бульвар, д. 25 корп. 1<br>Москва, Россия'
     }, {
-      iconLayout: 'default#image',
-      iconImageHref: 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(svgMarker),
-      iconImageSize: [70, 70],
-      iconImageOffset: [-35, -35],
+      preset: 'islands#yellowIcon',
+      iconImageSize: [60, 84],
+      iconImageOffset: [-30, -42],
       balloonMaxWidth: 300
     });
 
     myMap.geoObjects.add(myPlacemark);
     myMap.behaviors.disable('scrollZoom');
-  }</script><div class="container1400 mt-50"><h2 class="text-left" style="color: var(--color-space); font-size: 18px; font-weight: bold; line-height: 1.2; margin-bottom: 30px; font-family: Jost, sans-serif;">Контакты</h2><h2 class="text-left" style="color: var(--color-space); font-size: 18px; font-weight: bold; line-height: 1.2; margin-bottom: 30px; font-family: Jost, sans-serif;">Адрес: 115054, Москва, Бескудниковский б-р, дом 38</h2><h2 class="text-left" style="color: var(--color-space); font-size: 18px; font-weight: bold; line-height: 1.2; margin-bottom: 30px; font-family: Jost, sans-serif;">8-910-453-40-12 | Владимир</h2><h2 class="text-left" style="color: var(--color-space); font-size: 18px; font-weight: bold; line-height: 1.2; margin-bottom: 30px; font-family: Jost, sans-serif;">8-999-852-58-21 | Олег</h2></div></section><style>/* Добавить больше breakpoints */
+  }</script><div class="container1400 mt-50"><h2 class="text-left" style="color: var(--color-space); font-size: 18px; font-weight: bold; line-height: 1.2; margin-bottom: 30px; font-family: Jost, sans-serif;">Контакты</h2><h2 class="text-left" style="color: var(--color-space); font-size: 18px; font-weight: bold; line-height: 1.2; margin-bottom: 30px; font-family: Jost, sans-serif;">Адрес: Бескудниковский бульвар, д. 25 корп. 1</h2><h2 class="text-left" style="color: var(--color-space); font-size: 18px; font-weight: bold; line-height: 1.2; margin-bottom: 30px; font-family: Jost, sans-serif;">8-910-453-40-12 | Владимир</h2><h2 class="text-left" style="color: var(--color-space); font-size: 18px; font-weight: bold; line-height: 1.2; margin-bottom: 30px; font-family: Jost, sans-serif;">8-999-852-58-21 | Олег</h2></div></section><style>/* Добавить больше breakpoints */
 @media (max-width: 768px) {
   .products-grid {
     grid-template-columns: 1fr;
