@@ -1,45 +1,253 @@
-iframe {
-  display: block;
-  vertical-align: top;
+/* ============================================================ */
+/* СОВРЕМЕННЫЙ ФУТЕР — СТИЛИ                                    */
+/* ============================================================ */
+
+.footer {
+  background: linear-gradient(145deg, #0d0d0d 0%, #1a1a2e 100%);
+  padding: 60px 0 20px;
+  margin-top: 60px;
+  position: relative;
+  overflow: hidden;
+  border-top: 2px solid rgba(255, 215, 0, 0.15);
 }
-        .map-container {
-          /* max-width: 1400px; */
-          width: 100%;
-          height: 100%;
-          margin: 0 auto;
-          position: relative;
-          border-radius: 4px;
-          overflow: hidden;
-          box-sizing: border-box;
 
-          /* Запрещаем сжатие */
-        }
+.footer__wave {
+  position: absolute;
+  top: -2px;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #ffd700, #ff6b35, #ffd700);
+  background-size: 200% 100%;
+  animation: waveMove 4s ease-in-out infinite;
+}
 
-        .map-container iframe {
-          width: 100%;
-          height: 100%;
-          border: none;
-          display: block;
-          filter: grayscale(100%) contrast(1.05);
-        }
-     /* Адрес внизу карты */
-     .map-address {
-       position: absolute;
-       bottom: 15px;
-       left: 50%;
-       transform: translateX(-50%);
-       z-index: 10;
-       background: rgba(0, 0, 0, 0.75);
-       color: #fff;
-       padding: 6px 18px;
-       border-radius: 4px;
-       font-family: system-ui, sans-serif;
-       font-size: 13px;
-       backdrop-filter: blur(4px);
-       border: 1px solid rgba(255, 255, 255, 0.1);
-       pointer-events: none;
-       white-space: nowrap;
-     }
+@keyframes waveMove {
+  0% {
+    background-position: 0% 0%;
+  }
+
+  50% {
+    background-position: 100% 0%;
+  }
+
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+.footer__inner {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr 1.5fr;
+  gap: 30px;
+  padding: 20px 10px 40px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* === Виджеты === */
+.footer-widget__title {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 18px;
+  letter-spacing: 0.3px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.footer-widget__title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 30px;
+  height: 2px;
+  background: linear-gradient(90deg, #ffd700, #ff6b35);
+  border-radius: 2px;
+}
+
+.footer-widget__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-widget__list li {
+  margin-bottom: 10px;
+}
+
+.footer-widget__list a {
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.footer-widget__list a:hover {
+  color: #ffd700;
+  transform: translateX(4px);
+}
+
+.footer-widget__list a span {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 12px;
+}
+
+/* === Бренд === */
+.footer__logo {
+  font-size: 28px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 8px 0;
+  letter-spacing: -0.5px;
+}
+
+.footer__tagline {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 14px;
+  margin: 0 0 20px 0;
+}
+
+/* === Социальные иконки === */
+.footer__social {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.06);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.social-link svg {
+  width: 18px;
+  height: 18px;
+  fill: rgba(255, 255, 255, 0.5);
+  transition: all 0.3s ease;
+}
+
+.social-link:hover {
+  background: rgba(255, 215, 0, 0.15);
+  border-color: rgba(255, 215, 0, 0.3);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(255, 215, 0, 0.15);
+}
+
+.social-link:hover svg {
+  fill: #ffd700;
+}
+
+/* === Форма подписки === */
+.subscribe-form__group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 320px;
+}
+
+.subscribe-form__input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.subscribe-form__input::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.subscribe-form__input:focus {
+  border-color: #ffd700;
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.05);
+}
+
+.subscribe-form__btn {
+  width: 100%;
+  padding: 12px 16px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #ffd700, #f5a623);
+  color: #1a1a2e;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.subscribe-form__btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 215, 0, 0.3);
+}
+
+/* === Нижняя часть === */
+.footer__bottom {
+  padding-top: 20px;
+}
+
+.footer__bottom-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.footer__copyright,
+.footer__made {
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 13px;
+  margin: 0;
+}
+
+/* ============================================================ */
+/* АДАПТИВНОСТЬ                                                 */
+/* ============================================================ */
+
+@media (max-width: 992px) {
+  .footer__inner {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  .footer-widget--brand {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer__inner {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .footer-widget--brand {
+    grid-column: span 1;
+  }
+
+  .footer__bottom-wrap {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .subscribe-form__group {
+    max-width: 100%;
+  }
+}
 
 
 

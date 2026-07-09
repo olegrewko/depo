@@ -1285,7 +1285,7 @@ li {
   align-items: center;
   max-width: 800px;
   width: 100%;
-  margin: 0px;
+
   padding: 5px;
   margin: 0 auto;
 
@@ -1294,7 +1294,7 @@ li {
 
   max-width: 800px;
   width: 100%;
-  margin: 0px;
+
   padding: 5px;
   margin: 0 auto;
 
@@ -1303,7 +1303,7 @@ li {
 .cell-800--black {
   max-width: 800px;
   width: 100%;
-  margin: 0px;
+
   padding: 5px;
   margin: 0 auto;
   background-color: black;
@@ -1358,17 +1358,7 @@ li {
 
 }
 
-/* .ffc107 {
-  width: 900px;
-  height: 100px;
-  color: black;
-  font-weight: 800;
-  font-size: 14px;
-  border: 0px solid #fad973;
-  border-radius: 2px;
-  background-color: #fad35d;
-  margin-bottom: 5px;
-} */
+
 
 .grid-products__btn {
   text-align: left;
@@ -4357,28 +4347,28 @@ h1, h2, h3, .title-6r {
 
 
                 <li class="menu__list-item">
-                  <a href="#services" class="dropbtn" onclick="myFunctionHeadphones()">Услуги</a>
+                  <a href="#services" class="dropbtn">Услуги</a>
 
                 </li>
 
                 <li class="menu__list-item">
-                  <a href="#about" class="dropbtn" onclick="myFunctionHeadphones()">About</a>
+                  <a href="#about" class="dropbtn">About</a>
 
                 </li>
                 <li class="menu__list-item">
-                  <a href="#team" class="dropbtn" onclick="myFunctionWireless()">Команда</a>
+                  <a href="#team" class="dropbtn">Команда</a>
 
 
                 </li>
                                 <li class="menu__list-item">
-                                  <a href="#property" class="dropbtn" onclick="myFunctionFind()">Недвижимость</a>
+                                  <a href="#property" class="dropbtn">Недвижимость</a>
 
                                 </li>
                 <li class="menu__list-item">
-                  <a href="#bankruptcy" class="dropbtn" onclick="myFunctionFind()">Банкротство</a>
+                  <a href="#bankruptcy" class="dropbtn">Банкротство</a>
                </li>
                 <li class="menu__list-item">
-                  <a href="#crime" class="dropbtn" onclick="myFunction()">Criminal</a>
+                  <a href="#crime" class="dropbtn">Criminal</a>
                 </li>
                 <li class="menu__list-item">
                   <a href="#contact" class="dropbtn">Контакты</a>
@@ -5565,8 +5555,11 @@ h1, h2, h3, .title-6r {
           <div class="text-block">
              <h6 class="text-left text-grid-w100__content"
                 style="font-size: 12px;">
-              Знакомьтесь с нашим главным персонажем — это Джессика, самая последняя разработка ИИ в сфере юриспруденции. Этот сайт также создан с помощью Джессики, а посвящается Седе Оганесовне, моей учительнице
-              по прикладной математике.
+              Всё началось не с шаблонов и не с готовых решений. Цифровая вселенная depo-500 началась с одного человека — Олега. Он
+              вложил в разработку не только строки кода, а кое-что поважнее: свою въедливость и настоящее стремление к идеалу. Эти
+              качества стали фундаментом сайта depo-500. Они зашиты в каждый пиксель и каждую кнопку. Прошло более 5 лет, но стандарты
+              не изменились. Мы всё так же проверяем каждую деталь, не боимся сложных задач и верим, что качественная работа всегда
+              заметна. depo-500 — это не просто веб-сайт. Это подход одного человека, который стал подходом всей команды.
             </h6>
           </div>
         </div>
@@ -6878,66 +6871,41 @@ padding: 0px;
             </div>
 <div class="dummy08"></div>
 <!-- map -->
-<!-- Контейнер для карты на всю ширину -->
-<!-- <div style="width: 100%; height: 450px; position: relative;">
-  <iframe
-    src="https://yandex.ru/map-widget/v1/?um=constructor%3A9b1e7f8c3d4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c&source=constructor"
-    width="100%" height="100%" frameborder="0" style="border: 0; display: block;" allowfullscreen="false">
+
+<div style="width: 100%; height: 450px; position: relative; overflow: hidden; border-radius: 4px;">
+  <iframe src="https://yandex.ru/map-widget/v1/?ll=37.545000%2C55.865200&z=17&source=constructor" width="100%"
+    height="100%" frameborder="0" style="border: 0; display: block;" allowfullscreen="false">
   </iframe>
-</div> -->
-<!-- Подключение API Яндекс.Карт -->
-<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=ваш_ключ" type="text/javascript"></script>
-
-<div id="map" style="width: 100%; height: 450px;"></div>
-
-<script type="text/javascript">
-  ymaps.ready(init);
-
-  function init() {
-    // Координаты Бескудниковский бульвар, 25 корп. 1
-    var coords = [55.8668, 37.5410];
-
-    var myMap = new ymaps.Map("map", {
-      center: coords,
-      zoom: 16,
-      controls: ['zoomControl']
-    });
-
-    // ОЧЕНЬ БОЛЬШОЙ ЖЁЛТЫЙ МАРКЕР
-    var myPlacemark = new ymaps.Placemark(coords, {
-      hintContent: 'Бескудниковский бульвар, д. 25 корп. 1',
-      balloonContent: '<b>📍 Адвокатское бюро "Бартолиус"</b><br>Бескудниковский бульвар, д. 25 корп. 1<br>Москва, Россия'
-    }, {
-      preset: 'islands#yellowIcon',
-      iconImageSize: [60, 84],
-      iconImageOffset: [-30, -42],
-      balloonMaxWidth: 300
-    });
-
-    myMap.geoObjects.add(myPlacemark);
-    myMap.behaviors.disable('scrollZoom');
-  }
-</script>
+  <!-- Подпись поверх карты -->
+  <div style="position: absolute; bottom: 15px; left: 50%; transform: translateX(-50%);
+                background: rgba(0,0,0,0.6); color: #fff; padding: 6px 18px; border-radius: 2px;
+                font-family: system-ui, sans-serif; font-size: 13px; backdrop-filter: blur(4px);
+                border: 1px solid rgba(255,255,255,0.1); pointer-events: none; white-space: nowrap;">
+    🚇 Метро Селигерская
+  </div>
+</div>
+<!--  -->
 <div class="container1400 mt-50">
   <h2 class=" text-left"
-    style="color: var(--color-space); font-size: 18px; font-weight: bold; line-height: 1.2; margin-bottom: 30px; font-family: Jost, sans-serif;">
+    style="color: var(--color-space); font-size: 18px; font-weight: bold; line-height: 1.2; margin-bottom: 20px; font-family: Jost, sans-serif;">
     Контакты
   </h2>
   <h2 class=" text-left"
-    style="color: var(--color-space); font-size: 18px; font-weight: bold; line-height: 1.2; margin-bottom: 30px; font-family: Jost, sans-serif;">
+    style="color: var(--color-space); font-size: 18px; font-weight: bold; line-height: 1.2; margin-bottom: 20px; font-family: Jost, sans-serif;">
     Адрес: Бескудниковский бульвар, д. 25 корп. 1
   </h2>
-    <h2 class=" text-left"
-      style="color: var(--color-space); font-size: 18px; font-weight: bold; line-height: 1.2; margin-bottom: 30px; font-family: Jost, sans-serif;">
-      8-910-453-40-12 | Владимир
-    </h2>
-    <h2 class=" text-left"
-      style="color: var(--color-space); font-size: 18px; font-weight: bold; line-height: 1.2; margin-bottom: 30px; font-family: Jost, sans-serif;">
-      8-999-852-58-21 | Олег
+  <h2 class=" text-left"
+    style="color: var(--color-space); font-size: 18px; font-weight: bold; line-height: 1.2; margin-bottom: 20px; font-family: Jost, sans-serif;">
+    8-910-453-40-12 | Владимир
+  </h2>
+  <h2 class=" text-left"
+    style="color: var(--color-space); font-size: 18px; font-weight: bold; line-height: 1.2; margin-bottom: 20px; font-family: Jost, sans-serif;">
+    8-999-852-58-21 | Олег
 
-    </h2>
+  </h2>
 
 </div>
+
 </section>
 
 
@@ -7235,10 +7203,10 @@ max-width: 600px;
         <ul class="list-unstyled">
           <li>
             <!-- <h5 class="white">depo-500</h5> -->
-            <h5 style=" line-height: 1.4; color: white; text-align: left;">depo-500</р>
+            <h3 style=" line-height: 1.4; color: var(--color-gold); text-align: left;">depo-500</р>
           </li>
           <li><a class="grey" href="#services">Услуги</a></li>
-          <li><a class="grey" href="#b">Банкротство</a></li>
+          <li><a class="grey" href="#bankruptcy">Банкротство</a></li>
           <li><a class="grey" href="#property">Недвижимость</a></li>
         </ul>
       </div>
@@ -7247,7 +7215,7 @@ max-width: 600px;
         <ul class="list-unstyled">
           <li>
 
-            <h5 style="font-size: 13px; line-height: 1.4; color: white; text-align: left;">about us</h5>
+            <h3 style="line-height: 1.4; color: var(--color-gold); text-align: left;">about us</h3>
           </li>
           <li><a class="grey" href="#">Our stories</a></li>
           <li><a class="grey" href="#">Blog</a></li>
@@ -7259,7 +7227,7 @@ max-width: 600px;
         <ul class="list-unstyled">
           <li>
 
-            <h5 style=" line-height: 1.4; color: white; text-align: left;">contact us</h5>
+            <h3 style=" line-height: 1.4; color: var(--color-gold); text-align: left;">contact us</h3>
           </li>
           <li><h4 class="white">8-910-453-40-12 | Владимир</h4></li>
           <li><h4 class="white">4534012@gmail.com</h4></li>
@@ -7273,7 +7241,7 @@ max-width: 600px;
         <ul class="list-unstyled">
           <li>
             <!-- <p class="white">Отправьте нам Ваш email</p> -->
-            <h5 style="line-height: 1.4; color: white; text-align: left;">Отправьте нам Ваш email</h5>
+            <h3 style="line-height: 1.4; color: var(--color-gold); text-align: left;">Отправьте нам Ваш email</h3>
           </li>
           <form action="" class="footer__form" id="subscribeForm">
             <div class="subscribe-form-group">
@@ -7291,7 +7259,7 @@ max-width: 600px;
 
       <div class="footer__bottom-wrap">
         <h3 class="white">depo-500</h3>
-        <p class="white">Criminal Defence</p>
+        <p class="white">Your Criminal Defence | Ваша уголовная защита</p>
         <div class="social">
           <div class="social-inner">
             <div class="social-icon" title="Фэйсбук">
@@ -7361,7 +7329,7 @@ max-width: 600px;
       </div>
     </div>
 
-    <div class="container1400">
+    <div class="#">
       <div class="tiny-footer">
         <p class="tiny-grey mb-10">
           © All Rights Reserved
@@ -7375,6 +7343,8 @@ max-width: 600px;
   </div>
 
 </footer>
+<!-- footer002 -->
+
 
   <!-- ЗДЕСЬ ЗАКРЫВАЕТСЯ .wrapper -->
   </div>
@@ -7451,22 +7421,23 @@ $(function () {
   </script>
 
 
-  <script type="text/javascript">
-    $(document).ready(function () {
-      var defaults = {
-        containerID: "toTop",
-        containerHoverID: "toTopHover",
-        scrollSpeed: 1200,
-        easingType: "linear",
-      };
 
-      $().UItoTop({
-        easingType: "easeOutQuart",
-      });
+<script>
+  // Простая кнопка "Наверх" без ошибок
+  document.addEventListener('DOMContentLoaded', function () {
+    var btn = document.getElementById('toTop');
+    if (!btn) return;
+
+    window.addEventListener('scroll', function () {
+      btn.style.display = window.scrollY > 300 ? 'block' : 'none';
     });
 
-  </script>
-
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  });
+</script>
 
 
   <a href="#" id="toTop" style="display: block">
