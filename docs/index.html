@@ -1889,13 +1889,21 @@ display: flex;
 
 
 .tiny-footer {
-
-  height: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 10px;
+  height: 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   padding: 5px 10px;
+
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+
+
+
 }
 
 .tiny-grey {
@@ -1921,18 +1929,7 @@ display: flex;
 
 
 
-.tiny-footer {
-  min-height: 60px;
-  max-width: 1200px;
-  width: 100%;
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
 
-  padding: 10px 5px 5px;
-}
 
 #toTop {
   display: none;
@@ -2341,7 +2338,7 @@ display: flex;
   font-weight: 400;
   line-height: 100px;
   font-size: 35px;
-  color: var(--color-space);
+  color: var(--accent-alt);
 
 }
 .title-3r {
@@ -4042,19 +4039,10 @@ h1, h2, h3, .title-6r {
     justify-content: space-between;
     align-items: center;
     padding: 0 10px;
+    margin-bottom: 20px;
   }
 
-  .tiny-footer {
-    min-height: 60px;
-    max-width: 1200px;
-    width: 100%;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 5px 5px;
-  }
+
 
   .tiny-grey {
     font-weight: 500;
@@ -5950,12 +5938,12 @@ h1, h2, h3, .title-6r {
   <div class="#" >
 
       <div style="display: flex; max-width: 1400px;  justify-content: space-around; text-align: center; flex-wrap: wrap; ">
-        <div style="max-width: 700px;  min-height: 292px; text-align: center;   border-radius: 4px; margin: 10px; ">
+        <div style="max-width: 700px;  min-height: 270px; text-align: center; margin-top: 7px;     border-radius: 4px;  ; ">
         <img src="img/matthew-henry.jpg" alt="img/matthew-henry.jpg"
           >
         </div>
-        <div class="about__cell" style="max-width: 700px; min-height: 292px; text-align: center;   color: #fff; ">
-                              <div class="text-block" style=" text-align: center; margin: 10px;" >
+        <div class="about__cell" style="max-width: 700px; min-height: 270px; text-align: center;   color: #fff; ">
+                              <div class="#" style=" text-align: center; margin: 10px;" >
 
                                 <h5 class="text-center" style="font-size: 12px; line-height: 120%;  color: #fff; text-align: left;">
                                 Наши юристы вот уже двадцать пять лет изо дня в день участвуют в судебных процессах. Это дает нам ценный опыт,
@@ -5988,7 +5976,7 @@ h1, h2, h3, .title-6r {
   <!-- </div> -->
   <!-- </section> -->
   <div class="dummy08" style="background-color: #fff;"></div>
-  <div class="container1400   mt-150">
+  <div class="container1400">
     <h2 class=" text-center"
       style="color: var(--color-space); font-size: 18px; font-weight: bold; line-height: 1.2; margin-bottom: 30px; font-family: Jost, sans-serif;">
       Аннулировать автокредит через банкротство
@@ -6435,7 +6423,7 @@ h1, h2, h3, .title-6r {
 <!--Уголовные end  -->
 
  <section class="container1800 ">
-      <div class="container1400 d-flex" style="max-width: 1400px; width: 100%; margin-bottom: 50px; margin-top: 150px;">
+      <div class="container1400 d-flex" style="max-width: 1400px; width: 100%; margin-bottom: 50px; margin-top: 50px;">
 
           <button class="ffc107">Дополнительные услуги в области уголовного права</button>
 
@@ -7023,10 +7011,10 @@ max-width: 600px;
     padding-top: 5px;
 }
 
-.tiny-footer {
+/* .tiny-footer {
     padding: 5px 0 5px;
-    border-top: 0px solid rgba(255,255,255,0.1);
-}
+    border-top: 1px solid rgba(255,255,255,0.1);
+} */
 
 /* Адаптивность для мобильных */
 @media (max-width: 768px) {
@@ -7150,11 +7138,11 @@ max-width: 600px;
   .footer__bottom {
     padding-top: 5px;
   }
-
+/*
   .tiny-footer {
     padding: 5px 0 5px;
-    border-top: 0px solid rgba(255, 255, 255, 0.1);
-  }
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  } */
 
   /* Адаптивность для мобильных */
   @media (max-width: 768px) {

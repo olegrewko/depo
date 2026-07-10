@@ -242,6 +242,7 @@
   .footer__bottom-wrap {
     flex-direction: column;
     text-align: center;
+    
   }
 
   .subscribe-form__group {
