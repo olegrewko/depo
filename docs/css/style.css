@@ -493,7 +493,7 @@ p {
 
 .text-block {
   background-color: transparent;
-  color: black;
+
   padding: 0px;
   border-radius: 8px;
   text-align: left;
@@ -1086,6 +1086,7 @@ p {
 
 .footer__bottom {
   padding-top: 20px;
+
 }
 
 .footer__bottom-wrap {
@@ -1094,6 +1095,7 @@ p {
   align-items: center;
   flex-wrap: wrap;
   gap: 10px;
+  margin-bottom: 30px;
 }
 
 .footer__copyright,
@@ -1354,8 +1356,8 @@ p {
 /* ===== TINY FOOTER ===== */
 .tiny-footer {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
-  margin-top: 10px;
-  min-height: 60px;
+  margin-top: 40px;
+  min-height: 80px;
   max-width: 1400px;
   width: 100%;
   margin: 0 auto;
