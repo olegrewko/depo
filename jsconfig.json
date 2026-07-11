@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 {
   "compilerOptions": {
     "target": "es6",
@@ -22,28 +21,3 @@
     "dist"
   ]
 }
-=======
-{
-  "compilerOptions": {
-    "target": "es6",
-    "baseUrl": ".",
-    "paths": {
-      "*": [
-        "*",
-        "src/*",
-        "css/*",
-        "styles/*"
-      ]
-    }
-  },
-  "include": [
-    "**/*",
-    "docs/js/jquery1111.min.js",
-    "docs/js/fotorama464.min.js"
-  ],
-  "exclude": [
-    "node_modules",
-    "dist"
-  ]
-}
->>>>>>> b0d6ca30bc3f6c6312454ff9d6121918993999ce
