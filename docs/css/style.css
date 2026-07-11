@@ -6,42 +6,42 @@
 @font-face {
   font-family: "Jost";
   font-weight: 700;
-  src: url("./fonts/Jost-Bold.woff2") format("woff2");
+  src: url("../fonts/Jost-Bold.woff2") format("woff2");
   font-display: swap;
 }
 
 @font-face {
   font-family: "Jost";
   font-weight: 500;
-  src: url("./fonts/Jost-Medium.woff2") format("woff2");
+  src: url("../fonts/Jost-Medium.woff2") format("woff2");
   font-display: swap;
 }
 
 @font-face {
   font-family: "Jost";
   font-weight: 400;
-  src: url("./fonts/Jost-Regular.woff2") format("woff2");
+  src: url("../fonts/Jost-Regular.woff2") format("woff2");
   font-display: swap;
 }
 
 @font-face {
   font-family: "Jost";
   font-weight: 300;
-  src: url("./fonts/Jost-Regular.woff2") format("woff2");
+  src: url("../fonts/Jost-Regular.woff2") format("woff2");
   font-display: swap;
 }
 
 @font-face {
   font-family: "Jost";
   font-weight: 200;
-  src: url("./fonts/Jost-Italic.woff2") format("woff2");
+  src: url("../fonts/Jost-Italic.woff2") format("woff2");
   font-display: swap;
 }
 
 @font-face {
   font-family: "Jost";
   font-weight: 100;
-  src: url("./fonts/Jost-Thin.woff2") format("woff2");
+  src: url("../fonts/Jost-Thin.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -51,7 +51,7 @@
   font-weight: 800;
   src: local('Montserrat-ExtraBold'),
     url('./fonts/Montserrat-ExtraBold.woff2') format('woff2'),
-    url('./fonts/Montserrat-ExtraBold.woff') format('woff');
+    url('../fonts/Montserrat-ExtraBold.woff') format('woff');
   font-display: swap;
 }
 
@@ -60,8 +60,8 @@
   font-style: normal;
   font-weight: 700;
   src: local('Montserrat-Bold'),
-    url('./fonts/Montserrat-Bold.woff2') format('woff2'),
-    url('./fonts/Montserrat-Bold.woff') format('woff');
+    url('../fonts/Montserrat-Bold.woff2') format('woff2'),
+    url('../fonts/Montserrat-Bold.woff') format('woff');
   font-display: swap;
 }
 
@@ -70,8 +70,8 @@
   font-style: normal;
   font-weight: 600;
   src: local('Montserrat-SemiBold'),
-    url('./fonts/Montserrat-SemiBold.woff2') format('woff2'),
-    url('./fonts/Montserrat-SemiBold.woff') format('woff');
+    url('../fonts/Montserrat-SemiBold.woff2') format('woff2'),
+    url('../fonts/Montserrat-SemiBold.woff') format('woff');
   font-display: swap;
 }
 
@@ -80,8 +80,8 @@
   font-style: normal;
   font-weight: 500;
   src: local('Montserrat-Medium'),
-    url('./fonts/Montserrat-Medium.woff2') format('woff2'),
-    url('./fonts/Montserrat-Medium.woff') format('woff');
+    url('../fonts/Montserrat-Medium.woff2') format('woff2'),
+    url('../fonts/Montserrat-Medium.woff') format('woff');
   font-display: swap;
 }
 
@@ -90,8 +90,8 @@
   font-style: normal;
   font-weight: 400;
   src: local('Montserrat-Regular'),
-    url('./fonts/Montserrat-Regular.woff2') format('woff2'),
-    url('./fonts/Montserrat-Regular.woff') format('woff');
+    url('../fonts/Montserrat-Regular.woff2') format('woff2'),
+    url('../fonts/Montserrat-Regular.woff') format('woff');
   font-display: swap;
 }
 
@@ -100,8 +100,8 @@
   font-style: normal;
   font-weight: 900;
   src: local('Rubik-Black'),
-    url('./fonts/Rubik-Black.woff2') format('woff2'),
-    url('./fonts/Rubik-Black.woff') format('woff');
+    url('../fonts/Rubik-Black.woff2') format('woff2'),
+    url('../fonts/Rubik-Black.woff') format('woff');
   font-display: swap;
 }
 
