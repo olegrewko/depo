@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/normalize.css">
 
-
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 <!-- шрифт  Jost-->
 <!-- <link href="https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700;800;900&display=swap"
   rel="stylesheet"> -->
@@ -20,15 +20,6 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'GA_MEASUREMENT_ID');
-</script>
 
 <script type="application/ld+json">
 {
@@ -3174,22 +3165,36 @@ $(function () {
 
 
   </script>
-  <script>
-    $('.search__tabs-item').on('click', function (e) {
-
-      e.preventDefault();
-      $('.search__tabs-item').removeClass('search__tabs-item--active');
-      $('.search__content-item').removeClass('search__content-item--active');
-      $(this).addClass('search__tabs-item--active');
-      $($(this).attr('href')).addClass('search__content-item--active');
-
-    });
-  </script>
+<!--  -->
 
 
+
+<!-- кнопка НАВЕРХ -->
+<style>
+  #toTop:hover {
+    transform: scale(1.1) !important;
+    filter: drop-shadow(0 6px 25px rgba(0, 0, 0, 0.5)) !important;
+  }
+</style>
+
+<a href="#" id="toTop" style="
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 52px;
+  height: 52px;
+  background: url('./img/up.png') no-repeat center center;
+  background-size: contain;
+  border: none;
+  cursor: pointer;
+  z-index: 999;
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 4px 15px rgba(0, 0, 0, 0.3));
+">
+</a>
 
 <script>
-  // Простая кнопка "Наверх" без ошибок
   document.addEventListener('DOMContentLoaded', function () {
     var btn = document.getElementById('toTop');
     if (!btn) return;
@@ -3206,8 +3211,7 @@ $(function () {
 </script>
 
 
-  <a href="#" id="toTop" style="display: block">
-    <span id="toTopHover" style="opacity: 1"> </span></a>
+
 <script>
   // Исправление работы кнопки отправки в футере
   document.addEventListener('DOMContentLoaded', function () {
@@ -3316,7 +3320,76 @@ $(function () {
   // Открыть вкладку по умолчанию
   document.getElementById("defaultOpen").click();
 </script>
+<script>
+  // Инициализация EmailJS с вашим PUBLIC_KEY
+  (function () {
+    emailjs.init("YOUR_PUBLIC_KEY"); // Замените на ваш публичный ключ
+  })();
+</script>
 
+<script>
+  // ===== ФОРМА ПОДПИСКИ В ФУТЕРЕ =====
+  document.addEventListener('DOMContentLoaded', function () {
+    const subscribeForm = document.getElementById('subscribeForm');
+    if (subscribeForm) {
+      subscribeForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+        const emailInput = this.querySelector('input[type="email"]');
+        if (emailInput && emailInput.value) {
+          alert('Спасибо за подписку! На указанный email ' + emailInput.value + ' отправлено подтверждение.');
+          emailInput.value = '';
+        } else {
+          alert('Пожалуйста, введите email адрес.');
+        }
+      });
+    }
+  });
+
+  // ===== ФОРМА КОНТАКТОВ =====
+  document.addEventListener('DOMContentLoaded', function () {
+    const contactForm = document.querySelector('.contacts__form');
+    if (!contactForm) return;
+
+    contactForm.addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      const submitBtn = contactForm.querySelector('.contacts__submit');
+      const originalText = submitBtn.value;
+
+      // Собираем данные
+      const templateParams = {
+        from_name: contactForm.querySelector('input[name="firstname"]')?.value || '',
+        from_email: contactForm.querySelector('input[name="firstemail"]')?.value || '',
+        message: contactForm.querySelector('textarea[name="subject"]')?.value || '',
+        to_email: 'olegrewko@gmail.com'
+      };
+
+      // Проверка на пустые поля
+      if (!templateParams.from_name || !templateParams.from_email || !templateParams.message) {
+        alert('Пожалуйста, заполните все поля формы.');
+        return;
+      }
+
+      // Отправка через EmailJS
+      submitBtn.value = 'Отправка...';
+      submitBtn.disabled = true;
+
+      emailjs.send('service_depo500', 'template_contact', templateParams)
+        .then(function (response) {
+          alert('Спасибо! Ваше сообщение отправлено. Мы свяжемся с вами в ближайшее время.');
+          contactForm.reset();
+        })
+        .catch(function (error) {
+          console.error('Ошибка EmailJS:', error);
+          alert('Произошла ошибка при отправке. Пожалуйста, позвоните нам: 8-910-453-40-12');
+        })
+        .finally(function () {
+          submitBtn.value = originalText;
+          submitBtn.disabled = false;
+        });
+    });
+  });
+</script>
 </body>
 
 </html>
