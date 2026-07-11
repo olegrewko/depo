@@ -303,7 +303,7 @@ p {
 }
 
 .bt-2 {
-  border-top: 1px solid #ccc;
+  border-top: 1px solid var(--color-graphite);
   padding-top: 10px;
   padding-bottom: 10px;
 
