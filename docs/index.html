@@ -3336,7 +3336,29 @@ $(function () {
     });
   });
 </script>
+<script>
+  // Автоматическая замена JPG/PNG на WebP (если браузер поддерживает)
+  document.addEventListener('DOMContentLoaded', function () {
+    function supportsWebP() {
+      var canvas = document.createElement('canvas');
+      return canvas.toDataURL('image/webp').indexOf('image/webp') === 0;
+    }
 
+    if (supportsWebP()) {
+      document.querySelectorAll('img[src$=".jpg"], img[src$=".jpeg"], img[src$=".png"]').forEach(function (img) {
+        var webpSrc = img.src.replace(/\.(jpg|jpeg|png)$/, '.webp');
+        // Проверяем, существует ли WebP файл
+        fetch(webpSrc, { method: 'HEAD' })
+          .then(function (response) {
+            if (response.ok) {
+              img.src = webpSrc;
+            }
+          })
+          .catch(function () { });
+      });
+    }
+  });
+</script>
 </body>
 
 </html>

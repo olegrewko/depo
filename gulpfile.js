@@ -179,14 +179,11 @@ const clean = () => del(['dist/*']);
 // ===== ВСТРАИВАНИЕ CSS/JS В HTML =====
 function inlineAssets() {
   const Transform = require('stream').Transform;
-
   return new Transform({
     objectMode: true,
     transform(file, enc, callback) {
       if (file.isBuffer() && path.extname(file.path) === '.html') {
         let contents = file.contents.toString();
-
-        // Встраиваем CSS
         contents = contents.replace(/<link rel="stylesheet" href="([^"]+\.css)">/g, (match, cssPath) => {
           try {
             const fullPath = path.join('docs', cssPath);
@@ -199,8 +196,6 @@ function inlineAssets() {
           }
           return match;
         });
-
-        // Встраиваем JS
         contents = contents.replace(/<script src="([^"]+\.js)"><\/script>/g, (match, jsPath) => {
           try {
             const fullPath = path.join('docs', jsPath);
@@ -213,7 +208,6 @@ function inlineAssets() {
           }
           return match;
         });
-
         file.contents = Buffer.from(contents);
       }
       callback(null, file);
@@ -221,7 +215,7 @@ function inlineAssets() {
   });
 }
 
-// ===== ОБРАБОТКА HTML =====
+// ===== HTML =====
 function html() {
   return gulp.src('docs/*.html')
     .pipe(inlineAssets())
@@ -239,32 +233,9 @@ function fonts() {
     .pipe(gulp.dest('dist/fonts'));
 }
 
-// ===== ИЗОБРАЖЕНИЯ (ОПТИМИЗАЦИЯ) =====
-function img() {
-  return gulp.src('docs/img/**/*.{jpg,jpeg,png,svg,gif,ico}')
-    .pipe(newer('dist/img'))
-    .pipe(cache(imagemin([
-      imagemin.mozjpeg({ quality: 75, progressive: true }),
-      imagemin.optipng({ optimizationLevel: 5 }),
-      imagemin.svgo({ plugins: [{ removeViewBox: false }] }),
-      imagemin.gifsicle({ interlaced: true })
-    ])))
-    .pipe(gulp.dest('dist/img'));
-}
-
-// ===== КОНВЕРТАЦИЯ В WEBP =====
-function webpImages() {
-  return gulp.src('docs/img/**/*.{jpg,jpeg,png}')
-    .pipe(newer('dist/img'))
-    .pipe(webp({ quality: 75 }))
-    .pipe(rename({ extname: '.webp' }))
-    .pipe(gulp.dest('dist/img'));
-}
-
-// ===== ВСЕ ИЗОБРАЖЕНИЯ (ОПТИМИЗАЦИЯ + WEBP) =====
+// ===== ИЗОБРАЖЕНИЯ =====
 function images() {
   console.log('🔄 Начинаем оптимизацию изображений...');
-
   const optimizeStream = gulp.src('docs/img/**/*.{jpg,jpeg,png,svg,gif,ico}')
     .pipe(newer('dist/img'))
     .pipe(cache(imagemin([
@@ -321,8 +292,6 @@ gulp.task('deploy', function (cb) {
 exports.clean = clean;
 exports.html = html;
 exports.fonts = fonts;
-exports.img = img;
-exports.webp = webpImages;
 exports.images = images;
 exports.watch = watch;
 exports.dev = gulp.series(clean, gulp.parallel(fonts, images, html));
