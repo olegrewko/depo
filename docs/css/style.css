@@ -930,6 +930,7 @@ width: 100%;
 
 .d-flex {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-bottom: 5px;
