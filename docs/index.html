@@ -3018,7 +3018,7 @@ max-width: 600px;
       <div class="footer-widget-subscribe">
         <ul class="list-unstyled">
           <li>
-            <!-- <p class="white">Отправьте нам Ваш email</p> -->
+
             <h3 style="line-height: 1.4; color: var(--color-gold); text-align: left;">Отправьте нам Ваш email</h3>
           </li>
           <form action="" class="footer__form" id="subscribeForm">
@@ -3295,19 +3295,55 @@ $(function () {
 </script>
 
 <script>
-  // ===== ФОРМА ПОДПИСКИ В ФУТЕРЕ =====
+  // ===== ФОРМА ПОДПИСКИ В ФУТЕРЕ (с EmailJS) =====
   document.addEventListener('DOMContentLoaded', function () {
     const subscribeForm = document.getElementById('subscribeForm');
     if (subscribeForm) {
       subscribeForm.addEventListener('submit', function (e) {
         e.preventDefault();
+
         const emailInput = this.querySelector('input[type="email"]');
-        if (emailInput && emailInput.value) {
-          alert('Спасибо за подписку! На указанный email ' + emailInput.value + ' отправлено подтверждение.');
-          emailInput.value = '';
-        } else {
+        const email = emailInput ? emailInput.value : '';
+
+        // Проверка на пустой email
+        if (!email) {
           alert('Пожалуйста, введите email адрес.');
+          return;
         }
+
+        // Параметры для отправки
+        const templateParams = {
+          user_email: email,
+          subscribe_time: new Date().toLocaleString('ru-RU', {
+            day: '2-digit',
+            month: '2-digit',
+            year: 'numeric',
+            hour: '2-digit',
+            minute: '2-digit'
+          })
+        };
+
+        // Меняем кнопку
+        const submitBtn = this.querySelector('.subscribe-form-btn');
+        const originalText = submitBtn.textContent;
+        submitBtn.textContent = 'Отправка...';
+        submitBtn.disabled = true;
+
+        // Отправка через EmailJS
+        emailjs.send('service_zd0rflv', 'template_ojddyqj', templateParams)
+          .then(function (response) {
+            console.log('✅ Подписка отправлена!', response);
+            alert('Спасибо за подписку! На указанный email ' + email + ' отправлено подтверждение.');
+            emailInput.value = '';
+          })
+          .catch(function (error) {
+            console.error('❌ Ошибка подписки:', error);
+            alert('Произошла ошибка. Пожалуйста, попробуйте позже.');
+          })
+          .finally(function () {
+            submitBtn.textContent = originalText;
+            submitBtn.disabled = false;
+          });
       });
     }
   });
