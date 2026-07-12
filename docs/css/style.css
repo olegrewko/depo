@@ -310,7 +310,7 @@ p {
 }
 
 .bt-2 {
-  border-top: 1px solid var(--color-graphite);
+  border-top: 1px solid var(--bauhaus-gray);
   padding-top: 10px;
   padding-bottom: 10px;
 
