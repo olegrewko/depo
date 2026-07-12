@@ -2324,6 +2324,7 @@ max-width: 600px;
   });
 
   // ===== ФОРМА КОНТАКТОВ =====
+  // ===== ФОРМА КОНТАКТОВ =====
   document.addEventListener('DOMContentLoaded', function () {
     const contactForm = document.querySelector('.contacts__form');
     if (!contactForm) return;
@@ -2336,14 +2337,14 @@ max-width: 600px;
 
       // Собираем данные
       const templateParams = {
-        from_name: contactForm.querySelector('input[name="firstname"]')?.value || '',
-        from_email: contactForm.querySelector('input[name="firstemail"]')?.value || '',
+        name: contactForm.querySelector('input[name="firstname"]')?.value || '',
+        email: contactForm.querySelector('input[name="firstemail"]')?.value || '', // если нужно
         message: contactForm.querySelector('textarea[name="subject"]')?.value || '',
-        to_email: 'olegrewko@gmail.com'
+        time: new Date().toLocaleString('ru-RU') // Автоматически добавляем время
       };
 
       // Проверка на пустые поля
-      if (!templateParams.from_name || !templateParams.from_email || !templateParams.message) {
+      if (!templateParams.name || !templateParams.message) {
         alert('Пожалуйста, заполните все поля формы.');
         return;
       }
@@ -2352,13 +2353,16 @@ max-width: 600px;
       submitBtn.value = 'Отправка...';
       submitBtn.disabled = true;
 
+      console.log('📤 Отправка письма...', templateParams);
+
       emailjs.send('service_zd0rflv', 'template_contact', templateParams)
         .then(function (response) {
+          console.log('✅ Письмо отправлено!', response);
           alert('Спасибо! Ваше сообщение отправлено. Мы свяжемся с вами в ближайшее время.');
           contactForm.reset();
         })
         .catch(function (error) {
-          console.error('Ошибка EmailJS:', error);
+          console.error('❌ Ошибка EmailJS:', error);
           alert('Произошла ошибка при отправке. Пожалуйста, позвоните нам: 8-999-852-58-21');
         })
         .finally(function () {
