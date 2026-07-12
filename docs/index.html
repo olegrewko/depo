@@ -100,6 +100,7 @@
 
     </header>
     <div class="main" style="padding-top: 8px;">
+
       <div class="slider-blog">
         <div class="slider-blog__inner">
           <div class="slider-blog__item">
@@ -130,8 +131,15 @@
               <img class="slider-blog__img" src="img/slider/a1800.jpg" alt="description" loading="lazy" />
             </div>
           <div class="slider-blog__item">
-            <img class="slider-blog__img" src="img/slider/michel.jpg" alt="description" loading="lazy" />
+            <picture>
+              <source srcset="img/slider/michel.avif" type="image/avif" />
+              <source srcset="img/slider/michel.webp" type="image/webp" />
+              <img class="slider-blog__img" src="img/slider/michel.jpg" alt="Мишель" loading="lazy" decoding="async" />
+            </picture>
           </div>
+          <!-- <div class="slider-blog__item">
+            <img class="slider-blog__img" src="img/slider/michel.jpg" alt="Мишель" loading="lazy" decoding="async" />
+          </div> -->
           <div class="slider-blog__item">
             <img class="slider-blog__img" src="img/slider/lacie850.jpg" alt="description" loading="lazy" />
           </div>
@@ -168,6 +176,12 @@
           </div>
           <div class="slider-blog__item">
             <img class="slider-blog__img" src="img/slider/hotel.jpg" alt="description" loading="lazy" />
+            <!-- <picture>
+              <source srcset="img/slider/hotel.avif" type="image/avif" />
+              <source srcset="img/slider/hotel.webp" type="image/webp" />
+              <img class="slider-blog__img" src="img/slider/hotel.jpg" alt="Отель" width="1400" height="661" loading="lazy"
+                decoding="async" style="width: 100%; height: auto; max-width: 1400px; display: block;" />
+            </picture> -->
           </div>
            <div class="slider-blog__item">
             <img class="slider-blog__img" src="img/slider/manish.jpg" alt="description" loading="lazy" />
@@ -175,6 +189,7 @@
 
         </div>
       </div>
+
       <div class="dummy08"></div>
 
       <div class="container1800" style="max-width: 1400px; margin: 0 auto; padding: 20px;">
@@ -1517,22 +1532,28 @@
 <!-- <div class="dummy08"></div> -->
 <div class="dummy08" style="background-color: #fff;"></div>
 
+<!-- Вариант 1: Самый простой (inline стили) -->
+<div
+  style="display: flex; background-color: var(--color-graphite); padding: 0; overflow: hidden; width: 100%; box-sizing: border-box;">
+  <img src="img/f001.jpg" alt="img/f0012.png"
+    style="flex: 1 1 0; min-width: 0; width: 100%; height: auto; display: block;">
+  <img src="img/f002.jpg" alt="img/f0012.png"
+    style="flex: 1 1 0; min-width: 0; width: 100%; height: auto; display: block;" class="mobile-hide">
+  <img src="img/f003.jpg" alt="img/f0012.png"
+    style="flex: 1 1 0; min-width: 0; width: 100%; height: auto; display: block;" class="mobile-hide">
+  <img src="img/f004.jpg" alt="img/f0012.png"
+    style="flex: 1 1 0; min-width: 0; width: 100%; height: auto; display: block;" class="mobile-hide">
+  <img src="img/f005.jpg" alt="img/f0012.png"
+    style="flex: 1 1 0; min-width: 0; width: 100%; height: auto; display: block;" class="mobile-hide">
+</div>
 
-
-    <div style="display: flex; min-width: 450px; text-align: center; background-color: var(--color-graphite); overflow: hidden;">
-      <img src="img/f001.jpg" alt="img/f0012.png"
-        style=" max-width: 450px; width: 100%; height: auto; display: block; margin: 0 auto; border-radius: 4px;">
-        <img src="img/f002.jpg" alt="img/f0012.png"
-          style="width: 100%; max-width: 450px; height: auto; display: block; margin: 0 auto; border-radius: 4px;">
-        <img src="img/f003.jpg" alt="img/f0012.png"
-        style="width: 100%; max-width: 450px; height: auto; display: block; margin: 0 auto; border-radius: 4px;">
-        <img src="img/f004.jpg" alt="img/f0012.png"
-          style="width: 100%; max-width: 450px; height: auto; display: block; margin: 0 auto; border-radius: 4px;">
-         <img src="img/f005.jpg" alt="img/f0012.png"
-          style="width: 100%; max-width: 450px; height: auto; display: block; margin: 0 auto; border-radius: 4px;">
-
-    </div>
-
+<style>
+  @media (max-width: 768px) {
+    .mobile-hide {
+      display: none !important;
+    }
+  }
+</style>
 
 
   </div>
@@ -1704,12 +1725,12 @@
   <div class="container1400 bt-2">
 
     <div style="display: flex; max-width: 1400px;  justify-content: space-around; text-align: center; flex-wrap: wrap; ">
-      <div class="about__cell" style="max-width: 700px;  min-height: 270px; text-align: center; margin-top: 7px; color: var(--color-graphite); ">
-        <h4 style="text-align: left;">
+      <div class="about__cell" style="max-width: 700px;  min-height: 270px; text-align: center; margin-top: 7px; color: var(--bauhaus-white); ">
+        <h3 style="text-align: left;">
         Следуя закону, действуй
         по справедливости<br>
         Бартоло
-        да Сассоферрато</h4>
+        да Сассоферрато</h3>
       </h3>
       </div>
       <div class="#" style="max-width: 700px; min-height: 270px; text-align: center; ">

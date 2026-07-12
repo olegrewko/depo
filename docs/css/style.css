@@ -1,7 +1,14 @@
 /* ============================================================
    FINAL CLEAN STYLES — depo-500
    ============================================================ */
-
+/* Если используете слайдер-библиотеку */
+.slick-slide .slider-blog__img,
+.glide__slide .slider-blog__img,
+.swiper-slide .slider-blog__img {
+  width: 100% !important;
+  max-width: 1400px !important;
+  height: auto !important;
+}
 /* ========== ШРИФТЫ ========== */
 @font-face {
   font-family: "Jost";
@@ -408,17 +415,72 @@ p {
 }
 
 /* ========== SLIDER ========== */
+/* Обертка с черным фоном */
+
+/* .slider-blog-wrapper {
+  background-color: #000000;
+  width: 100%;
+  position: relative;
+}
+
 .slider-blog {
   background-color: black;
   padding: 0;
+  width: 100%;
+
+    margin: 0 auto;
+    overflow: hidden;
+    max-width: 1400px;
+
+}
+
+.slider-blog__item {
+  width: 100%;
 }
 
 .slider-blog__img {
-  max-width: 800px;
+width: 100%;
+  height: auto;
+  display: block;
+} */
+/* Фон на всю ширину */
+.slider-blog {
+  position: relative;
   width: 100%;
-  margin: 0 auto;
+  background-color: #000000;
+  padding: 0;
+  margin: 0;
 }
 
+/* Внутренний контейнер с ограничением */
+.slider-blog__inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0;
+  overflow: hidden;
+  width: 100%;
+}
+
+.slider-blog__item {
+  width: 100%;
+}
+
+.slider-blog__img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+@media (max-width: 992px) {
+  .slider-blog__img {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .slider-blog__item {
+    padding: 0 10px;
+  }
+}
 .slick-dots {
   display: flex;
   justify-content: center;
