@@ -2635,7 +2635,7 @@ padding: 0px;
               <form class="contacts__form">
                 <input class="contacts__input" type="text" id="fname" name="firstname" placeholder="Your name" />
                 <input class="contacts__input" type="text" id="femail" name="firstemail" placeholder="Your email" />
-                <textarea class="contacts__input" id="subject" name="subject" placeholder="Your Message"
+                <textarea class="contacts__input" id="subject" name="subject" placeholder="Your phone number"
                   style="height: 90px; width: 100%"></textarea>
 
                 <input class="contacts__submit" type="submit" value="Отправить | Send" />
@@ -3320,7 +3320,8 @@ $(function () {
             year: 'numeric',
             hour: '2-digit',
             minute: '2-digit'
-          })
+          }),
+           title: 'Новая подписка на сайте' // ← Это значение попадет в {{title}}
         };
 
         // Меняем кнопку
