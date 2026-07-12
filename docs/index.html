@@ -3313,7 +3313,6 @@ $(function () {
   });
 
   // ===== ФОРМА КОНТАКТОВ =====
-  // ===== ФОРМА КОНТАКТОВ =====
   document.addEventListener('DOMContentLoaded', function () {
     const contactForm = document.querySelector('.contacts__form');
     if (!contactForm) return;
@@ -3324,30 +3323,45 @@ $(function () {
       const submitBtn = contactForm.querySelector('.contacts__submit');
       const originalText = submitBtn.value;
 
-      // Собираем данные
+      // Получаем значения полей
+      const nameInput = contactForm.querySelector('input[name="firstname"]');
+      const emailInput = contactForm.querySelector('input[name="firstemail"]');
+      const messageInput = contactForm.querySelector('textarea[name="subject"]');
+
+      // Проверяем, что поля существуют
+      if (!nameInput || !emailInput || !messageInput) {
+        alert('Ошибка: не все поля формы найдены.');
+        return;
+      }
+
+      // Собираем данные для шаблона
       const templateParams = {
-        name: contactForm.querySelector('input[name="firstname"]')?.value || '',
-        email: contactForm.querySelector('input[name="firstemail"]')?.value || '', // если нужно
-        message: contactForm.querySelector('textarea[name="subject"]')?.value || '',
-        time: new Date().toLocaleString('ru-RU') // Автоматически добавляем время
+        name: nameInput.value || '',
+        email: emailInput.value || '',
+        message: messageInput.value || '',
+        time: new Date().toLocaleString('ru-RU', {
+          day: '2-digit',
+          month: '2-digit',
+          year: 'numeric',
+          hour: '2-digit',
+          minute: '2-digit'
+        })
       };
 
       // Проверка на пустые поля
-      if (!templateParams.name || !templateParams.message) {
-        alert('Пожалуйста, заполните все поля формы.');
-        return;
-      }
       if (!templateParams.name || !templateParams.email || !templateParams.message) {
         alert('Пожалуйста, заполните все поля формы.');
         return;
       }
+
       // Отправка через EmailJS
       submitBtn.value = 'Отправка...';
       submitBtn.disabled = true;
 
       console.log('📤 Отправка письма...', templateParams);
 
-      emailjs.send('service_zd0rflv', 'template_contact', templateParams)
+      // ✅ ИСПРАВЛЕНО: используем ваш реальный ID шаблона
+      emailjs.send('service_zd0rflv', 'template_magyps5', templateParams)
         .then(function (response) {
           console.log('✅ Письмо отправлено!', response);
           alert('Спасибо! Ваше сообщение отправлено. Мы свяжемся с вами в ближайшее время.');
