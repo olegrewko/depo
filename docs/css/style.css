@@ -364,6 +364,7 @@ p {
 }
 
 .header__top {
+  height: 60px;
   position: fixed;
   left: 0;
   right: 0;
@@ -395,16 +396,16 @@ p {
 .menu__list-item {
   position: relative;
   display: inline-block;
-  padding: 5px 10px;
+  padding: 0px 10px;
 }
 
 .dropbtn {
   display: block;
   padding: 10px 0;
   font-family: 'Jost';
-  font-weight: 700;
-  font-size: 12px;
-  line-height: 14px;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 120%;
   color: var(--black);
   cursor: pointer;
   transition: all .4s;
@@ -687,11 +688,11 @@ width: 100%;
 .grid-products__btn:hover {
   color: white;
   border: 0px solid black;
-  background-color: var(--crime-blue);
+  background-color: var(--color-tundora);
 }
 
 .grid-products__btn.active {
-  background-color: var(--crime-blue);
+  background-color: var(--color-tundora);
   color: white;
 }
 
