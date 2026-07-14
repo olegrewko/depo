@@ -1,7 +1,7 @@
  <!DOCTYPE html>
 <html lang="en">
 
-<head>
+<!-- <head>
   <meta charset="UTF-8" />
 
 <meta name="description" content="Criminal Defence - юридические услуги">
@@ -9,6 +9,7 @@
   <title>depo</title>
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/normalize.css">
+
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
 
@@ -23,23 +24,59 @@
   "description": "Criminal defence"
 }
 </script>
-<!--
- jQuery (обязательно перед Slick)
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
- Slick Slider CSS и JS
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
-<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
- -->
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js" defer></script>
+<script src="js/main.js" defer></script>
 
+</head> -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <!-- ===== SEO ===== -->
+  <title>depo-500 | Юридическая помощь</title>
+  <meta name="description"
+    content="Criminal Defence - профессиональные юридические услуги. Защита прав, банкротство, недвижимость." />
+  <meta property="og:description" content="Профессиональная юридическая помощь" />
+
+  <!-- ===== PREFETCH / PRECONNECT (ускоряет загрузку) ===== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+  <link rel="preconnect" href="https://code.jquery.com" />
+
+  <!-- ===== СТИЛИ (критичные — загружаем сразу) ===== -->
+  <link rel="stylesheet" href="css/normalize.css" />
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- ===== Slick CSS (не критичный — загружаем асинхронно) ===== -->
+  <link rel="preload" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" as="style"
+    onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  </noscript>
+
+  <!-- ===== BIBLIOTHEKI (с defer) ===== -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js" defer></script>
+
+  <!-- ===== ОСНОВНОЙ СКРИПТ (с defer) ===== -->
+  <script src="js/main.js" defer></script>
+
+  <!-- ===== STRUCTURED DATA ===== -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "depo-500",
+      "description": "Criminal defence"
+    }
+  </script>
 </head>
-
 <body id="body">
   <div class="wrapper">
     <header class="header">
@@ -3110,8 +3147,8 @@ max-width: 600px;
 
 
   </div><!-- ЗДЕСЬ ЗАКРЫВАЕТСЯ .wrapper -->
-
-  <script>
+<!-- кнопка НАВЕРХ -->
+  <!-- <script>
 $(function () {
 
   $(".menu a, .totop").on("click", function (event) {
@@ -3169,12 +3206,12 @@ $(function () {
  });
 
 
-  </script>
+  </script> -->
 
 
 
 
-<!-- кнопка НАВЕРХ -->
+
 <style>
   #toTop:hover {
     transform: scale(1.1) !important;
@@ -3199,7 +3236,7 @@ $(function () {
 ">
 </a>
 
-<script>
+<!-- <script>
   document.addEventListener('DOMContentLoaded', function () {
     var btn = document.getElementById('toTop');
     if (!btn) return;
@@ -3213,7 +3250,7 @@ $(function () {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   });
-</script>
+</script> -->
 
 
 
@@ -3223,7 +3260,7 @@ $(function () {
 
 
 
-<script>
+<!-- <script>
   function openCity(evt, cityName) {
     var i, tabcontent, tablinks;
 
@@ -3243,161 +3280,13 @@ $(function () {
 
   // Открыть вкладку по умолчанию
   document.getElementById("defaultOpen").click();
-</script>
+</script> -->
 <!--EmailJS  -->
 
-<script>
 
-  // Инициализация EmailJS с вашим PUBLIC_KEY
-  (function () {
-    emailjs.init("QtQs0hpE6RP4L7imF"); // Замените на ваш публичный ключQtQs0hpE6RP4L7imF
-  })();
-</script>
 
-<script>
-  // ===== ФОРМА ПОДПИСКИ В ФУТЕРЕ (с EmailJS) =====
-  document.addEventListener('DOMContentLoaded', function () {
-    const subscribeForm = document.getElementById('subscribeForm');
-    if (subscribeForm) {
-      subscribeForm.addEventListener('submit', function (e) {
-        e.preventDefault();
 
-        const emailInput = this.querySelector('input[type="email"]');
-        const email = emailInput ? emailInput.value : '';
 
-        // Проверка на пустой email
-        if (!email) {
-          alert('Пожалуйста, введите email адрес.');
-          return;
-        }
-
-        // Параметры для отправки
-        const templateParams = {
-          user_email: email,
-          subscribe_time: new Date().toLocaleString('ru-RU', {
-            day: '2-digit',
-            month: '2-digit',
-            year: 'numeric',
-            hour: '2-digit',
-            minute: '2-digit'
-          }),
-           title: 'Новая подписка на сайте' // ← Это значение попадет в {{title}}
-        };
-
-        // Меняем кнопку
-        const submitBtn = this.querySelector('.subscribe-form-btn');
-        const originalText = submitBtn.textContent;
-        submitBtn.textContent = 'Отправка...';
-        submitBtn.disabled = true;
-
-        // Отправка через EmailJS
-        emailjs.send('service_zd0rflv', 'template_ojddyqj', templateParams)
-          .then(function (response) {
-            console.log('✅ Подписка отправлена!', response);
-            alert('Спасибо за подписку! На указанный email ' + email + ' отправлено подтверждение.');
-            emailInput.value = '';
-          })
-          .catch(function (error) {
-            console.error('❌ Ошибка подписки:', error);
-            alert('Произошла ошибка. Пожалуйста, попробуйте позже.');
-          })
-          .finally(function () {
-            submitBtn.textContent = originalText;
-            submitBtn.disabled = false;
-          });
-      });
-    }
-  });
-
-  // ===== ФОРМА КОНТАКТОВ =====
-  document.addEventListener('DOMContentLoaded', function () {
-    const contactForm = document.querySelector('.contacts__form');
-    if (!contactForm) return;
-
-    contactForm.addEventListener('submit', function (event) {
-      event.preventDefault();
-
-      const submitBtn = contactForm.querySelector('.contacts__submit');
-      const originalText = submitBtn.value;
-
-      // Получаем значения полей
-      const nameInput = contactForm.querySelector('input[name="firstname"]');
-      const emailInput = contactForm.querySelector('input[name="firstemail"]');
-      const messageInput = contactForm.querySelector('textarea[name="subject"]');
-
-      // Проверяем, что поля существуют
-      if (!nameInput || !emailInput || !messageInput) {
-        alert('Ошибка: не все поля формы найдены.');
-        return;
-      }
-
-      // Собираем данные для шаблона
-      const templateParams = {
-        name: nameInput.value || '',
-        email: emailInput.value || '',
-        message: messageInput.value || '',
-        time: new Date().toLocaleString('ru-RU', {
-          day: '2-digit',
-          month: '2-digit',
-          year: 'numeric',
-          hour: '2-digit',
-          minute: '2-digit'
-        })
-      };
-
-      // Проверка на пустые поля
-      if (!templateParams.name || !templateParams.email || !templateParams.message) {
-        alert('Пожалуйста, заполните все поля формы.');
-        return;
-      }
-
-      // Отправка через EmailJS
-      submitBtn.value = 'Отправка...';
-      submitBtn.disabled = true;
-
-      console.log('📤 Отправка письма...', templateParams);
-
-      // ✅ ИСПРАВЛЕНО: используем ваш реальный ID шаблона
-      emailjs.send('service_zd0rflv', 'template_kvbjjar', templateParams)
-        .then(function (response) {
-          console.log('✅ Письмо отправлено!', response);
-          alert('Спасибо! Ваше сообщение отправлено. Мы свяжемся с вами в ближайшее время.');
-          contactForm.reset();
-        })
-        .catch(function (error) {
-          console.error('❌ Ошибка EmailJS:', error);
-          alert('Произошла ошибка при отправке. Пожалуйста, позвоните нам: 8-999-852-58-21');
-        })
-        .finally(function () {
-          submitBtn.value = originalText;
-          submitBtn.disabled = false;
-        });
-    });
-  });
-</script>
-<script>
-  // Автоматическая замена JPG/PNG на WebP (если браузер поддерживает)
-  document.addEventListener('DOMContentLoaded', function () {
-    function supportsWebP() {
-      var canvas = document.createElement('canvas');
-      return canvas.toDataURL('image/webp').indexOf('image/webp') === 0;
-    }
-
-    if (supportsWebP()) {
-      document.querySelectorAll('img[src$=".jpg"], img[src$=".jpeg"], img[src$=".png"]').forEach(function (img) {
-        var webpSrc = img.src.replace(/\.(jpg|jpeg|png)$/, '.webp');
-        // Проверяем, существует ли WebP файл
-        fetch(webpSrc, { method: 'HEAD' })
-          .then(function (response) {
-            if (response.ok) {
-              img.src = webpSrc;
-            }
-          })
-          .catch(function () { });
-      });
-    }
-  });
-</script>
 </body>
 
 </html>
