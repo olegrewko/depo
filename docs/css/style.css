@@ -474,7 +474,7 @@ width: 100%;
   .slider-blog .slick-track,
   .slider-blog .slick-slide,
   .slider-blog .slick-slide>div {
-    max-height: 400px !important;
+    /* max-height: 400px !important; */
     height: 400px !important;
   }
 
