@@ -1,7 +1,8 @@
 /* ============================================================
    FINAL CLEAN STYLES — depo-500
    ============================================================ */
-/* Если используете слайдер-библиотеку */
+
+/* ========== СЛАЙДЕР ========== */
 .slick-slide .slider-blog__img,
 .glide__slide .slider-blog__img,
 .swiper-slide .slider-blog__img {
@@ -9,6 +10,7 @@
   max-width: 1400px !important;
   height: auto !important;
 }
+
 /* ========== ШРИФТЫ ========== */
 @font-face {
   font-family: "Jost";
@@ -32,77 +34,6 @@
 }
 
 @font-face {
-  font-family: "Jost";
-  font-weight: 300;
-  src: url("../fonts/Jost-Regular.woff2") format("woff2");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Jost";
-  font-weight: 200;
-  src: url("../fonts/Jost-Italic.woff2") format("woff2");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Jost";
-  font-weight: 100;
-  src: url("../fonts/Jost-Thin.woff2") format("woff2");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 800;
-  src: local('Montserrat-ExtraBold'),
-    url('./fonts/Montserrat-ExtraBold.woff2') format('woff2'),
-    url('../fonts/Montserrat-ExtraBold.woff') format('woff');
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Montserrat-Bold'),
-    url('../fonts/Montserrat-Bold.woff2') format('woff2'),
-    url('../fonts/Montserrat-Bold.woff') format('woff');
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 600;
-  src: local('Montserrat-SemiBold'),
-    url('../fonts/Montserrat-SemiBold.woff2') format('woff2'),
-    url('../fonts/Montserrat-SemiBold.woff') format('woff');
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 500;
-  src: local('Montserrat-Medium'),
-    url('../fonts/Montserrat-Medium.woff2') format('woff2'),
-    url('../fonts/Montserrat-Medium.woff') format('woff');
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Montserrat-Regular'),
-    url('../fonts/Montserrat-Regular.woff2') format('woff2'),
-    url('../fonts/Montserrat-Regular.woff') format('woff');
-  font-display: swap;
-}
-
-@font-face {
   font-family: 'Rubik';
   font-style: normal;
   font-weight: 900;
@@ -121,7 +52,7 @@
   --gray-color: #ccc;
   --red-color: #ee6e73;
   --light-grey-color: #eee;
-  
+
   --color-tundora: #2c3e50;
   --bauhaus-black: #000000;
   --bauhaus-dark: #1A1A1A;
