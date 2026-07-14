@@ -1,6 +1,42 @@
 // js/main.js
 
+// ============================================================
+// ГЛОБАЛЬНЫЕ ФУНКЦИИ (доступны из HTML)
+// ============================================================
+
+// ==================== ВКЛАДКИ (TABS) ====================
+window.openCity = function (evt, cityName) {
+  var i, tabcontent, tablinks;
+
+  tabcontent = document.getElementsByClassName('tabcontent');
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = 'none';
+  }
+
+  tablinks = document.getElementsByClassName('tablinks');
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].classList.remove('active');
+  }
+
+  var targetTab = document.getElementById(cityName);
+  if (targetTab) {
+    targetTab.style.display = 'block';
+  }
+  if (evt && evt.currentTarget) {
+    evt.currentTarget.classList.add('active');
+  }
+};
+
+// ============================================================
+// ОСНОВНОЙ КОД (выполняется после загрузки DOM)
+// ============================================================
 document.addEventListener('DOMContentLoaded', function () {
+
+  // ==================== ВКЛАДКИ: ОТКРЫТЬ ПО УМОЛЧАНИЮ ====================
+  var defaultTab = document.getElementById('defaultOpen');
+  if (defaultTab) {
+    defaultTab.click();
+  }
 
   // ==================== ПЛАВНАЯ ПРОКРУТКА ====================
   document.querySelectorAll('.menu a, .totop').forEach(function (link) {
@@ -60,30 +96,6 @@ document.addEventListener('DOMContentLoaded', function () {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   }
-
-  // ==================== ВКЛАДКИ (TABS) ====================
-  var defaultTab = document.getElementById('defaultOpen');
-  if (defaultTab) {
-    defaultTab.click();
-  }
-
-  window.openCity = function (evt, cityName) {
-    var tabcontent = document.getElementsByClassName('tabcontent');
-    for (var i = 0; i < tabcontent.length; i++) {
-      tabcontent[i].style.display = 'none';
-    }
-
-    var tablinks = document.getElementsByClassName('tablinks');
-    for (var i = 0; i < tablinks.length; i++) {
-      tablinks[i].classList.remove('active');
-    }
-
-    var targetTab = document.getElementById(cityName);
-    if (targetTab) {
-      targetTab.style.display = 'block';
-    }
-    evt.currentTarget.classList.add('active');
-  };
 
   // ==================== EMAILJS: ПОДПИСКА ====================
   emailjs.init('QtQs0hpE6RP4L7imF');
