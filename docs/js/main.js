@@ -59,13 +59,23 @@ document.addEventListener('DOMContentLoaded', function () {
       autoplay: true,
       autoplaySpeed: 3000,
       fade: true,
+      adaptiveHeight: false, // ← ВАЖНО: отключаем адаптивную высоту
       responsive: [{
         breakpoint: 768,
-        settings: { arrows: false }
+        settings: {
+          arrows: false,
+          adaptiveHeight: false // ← и здесь
+      }
       }]
     });
   }
-
+  $(slickSlider).on('afterChange', function () {
+    $('.slider-blog .slick-slide > div').css({
+      'display': 'flex !important',
+      'align-items': 'center !important',
+      'justify-content': 'center !important'
+    });
+  });
   // ==================== МОБИЛЬНОЕ МЕНЮ ====================
   var menuBtn = document.querySelector('.menu__btn');
   var menuList = document.querySelector('.menu__list');
