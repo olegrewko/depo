@@ -874,20 +874,7 @@ width: 100%;
 }
 
 /* ========== TO TOP ========== */
-/* #toTop {
-  display: none;
-  text-decoration: none;
-  position: fixed;
-  bottom: 25px;
-  right: 10px;
-  overflow: hidden;
-  width: 52px;
-  height: 52px;
-  border: none;
-  text-indent: 100%;
-  background: url('./img/up.png') no-repeat 0px 0px;
-  box-shadow: 0 0 1px 1px rgba(255, 255, 255, 0.9);
-} */
+
 
 /* ========== FOOTER ========== */
 .footer {
