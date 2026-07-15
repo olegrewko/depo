@@ -1,15 +1,47 @@
 /* ============================================================
    FINAL CLEAN STYLES — depo-500
    ============================================================ */
+/* advantages */
+.ml-10 {
+   margin-left: 10px;
+   margin-right: 10px;
+ }
+
+ .ellipse-maroon {
+   position: relative;
+   display: inline-block;
+   /* Чтобы обводка была только вокруг цифры */
+ }
+
+ .ellipse-maroon::before {
+   content: '';
+   position: absolute;
+   top: -2px;
+   /* Смещаем вверх */
+   left: -10px;
+   /* Смещаем влево */
+   right: -20px;
+   /* Растягиваем вправо */
+   bottom: -2px;
+   /* Смещаем вниз */
+
+   /* Рисуем эллипс */
+   border: 2px solid maroon;
+   border-radius: 50% / 30% 70% 70% 30%;
+   /* Неправильная форма */
+   transform: rotate(1deg);
+   /* Легкий наклон */
+
+   /* Для небрежности делаем края неровными через фильтр (опционально) */
+   /* filter: url(#rough) drop-shadow(0 0 0 maroon); или просто оставить как есть */
+
+   pointer-events: none;
+   /* Чтобы не мешать кликам */
+ }
+
 
 /* ========== СЛАЙДЕР ========== */
-/* .slick-slide .slider-blog__img,
-.glide__slide .slider-blog__img,
-.swiper-slide .slider-blog__img {
-  width: 100% !important;
-  max-width: 1400px !important;
-  height: auto !important;
-} */
+
 
 /* ========== ШРИФТЫ ========== */
 @font-face {
@@ -177,6 +209,7 @@ h3,
   font-family: 'Rubik', monospace;
   font-weight: 500;
   letter-spacing: -0.5px;
+
 }
 
 h4 {
@@ -291,6 +324,7 @@ p {
 .header {
   min-height: 60px;
   width: 100%;
+
 }
 
 .header__top {
@@ -301,8 +335,8 @@ p {
   top: 0;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   z-index: 1;
-  background: var(--white);
-  border-bottom: 1px solid #ccc;
+  background: var(--light-grey-color);
+  border-bottom: 1px solid var(--gray-400);
 }
 .main {
   padding-top: 60px;
@@ -312,6 +346,7 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background: var(--light-grey-color);
   z-index: 10;
 }
 
@@ -337,7 +372,7 @@ p {
   padding: 10px 0;
   font-family: 'Jost';
   font-weight: bold;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 120%;
   color: var(--black);
   cursor: pointer;
@@ -348,42 +383,14 @@ p {
   color: var(--crime-orange);
 }
 
-/* ========== SLIDER ========== */
-/* Обертка с черным фоном */
 
-/* .slider-blog-wrapper {
-  background-color: #000000;
-  width: 100%;
-  position: relative;
-}
-
-.slider-blog {
-  background-color: black;
-  padding: 0;
-  width: 100%;
-
-    margin: 0 auto;
-    overflow: hidden;
-    max-width: 1400px;
-
-}
-
-.slider-blog__item {
-  width: 100%;
-}
-
-.slider-blog__img {
-width: 100%;
-  height: auto;
-  display: block;
-} */
 /* ===== СЛАЙДЕР (с центровкой) ===== */
-.slider-blog {
+ .slider-blog {
   background: #000;
   width: 100%;
   overflow: hidden;
   padding-top: 60px;
-  /* ← отступ под фиксированный хедер */
+
 }
 
 .slider-blog__inner {
@@ -409,18 +416,18 @@ width: 100%;
   display: block;
 }
 
-/* Центровка на мобильных */
+
 @media (max-width: 768px) {
   .slider-blog__item {
     aspect-ratio: 4 / 3;
-    max-height: 400px;
+    max-height: 300px;
   }
 
   .slider-blog__img {
     object-fit: contain;
   }
 
-  /* Центровка Slick-оберток */
+
   .slider-blog .slick-slide>div {
     display: flex !important;
     align-items: center !important;
@@ -442,13 +449,13 @@ width: 100%;
   .slider-blog .slick-slide {
     height: 320px !important;
   }
-        /* ← ДОБАВЛЯЕМ этот блок для очень маленьких экранов */
+
         .slider-blog .slick-slide>div {
           height: 320px !important;
         }
         }
 
-        /* ===== ОЧЕНЬ МАЛЕНЬКИЕ ТЕЛЕФОНЫ (менее 360px) ===== */
+
         @media (max-width: 360px) {
           .slider-blog__item {
             aspect-ratio: 4 / 3;
@@ -551,7 +558,7 @@ width: 100%;
 }
 
 /* ========== PRODUCT CARD ========== */
-.product-card {
+/* .product-card {
   min-height: 350px;
   max-width: 500px;
   width: 100%;
@@ -639,7 +646,7 @@ width: 100%;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 5px;
-}
+} */
 
 /* ========== TABS ========== */
 .tabcontent {

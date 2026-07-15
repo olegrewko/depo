@@ -88,33 +88,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // ==================== ФИКС ВЫСОТЫ СЛАЙДЕРА НА МОБИЛЬНЫХ ====================
-  function fixSlickHeight() {
-    var width = window.innerWidth;
-    var height = 660;
-
-    if (width <= 360) height = 180;
-    else if (width <= 480) height = 220;
-    else if (width <= 768) height = 300;
-
-    // Применяем только если слайдер существует
-    if ($('.slider-blog .slick-list').length) {
-      $('.slider-blog .slick-list, .slider-blog .slick-track, .slider-blog .slick-slide, .slider-blog .slick-slide > div').css({
-        'height': height + 'px',
-        'max-height': height + 'px'
-      });
-    }
-  }
-
-  // Вызываем при загрузке и изменении размера
-  $(window).on('load resize', function () {
-    fixSlickHeight();
-  });
-
-  // Вызываем после каждого изменения слайда (для fade)
-  $(slickSlider).on('afterChange', function () {
-    fixSlickHeight();
-  });
   // ==================== КНОПКА "НАВЕРХ" ====================
   var toTopBtn = document.getElementById('toTop');
   if (toTopBtn) {
