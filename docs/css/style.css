@@ -3,13 +3,13 @@
    ============================================================ */
 
 /* ========== СЛАЙДЕР ========== */
-.slick-slide .slider-blog__img,
+/* .slick-slide .slider-blog__img,
 .glide__slide .slider-blog__img,
 .swiper-slide .slider-blog__img {
   width: 100% !important;
   max-width: 1400px !important;
   height: auto !important;
-}
+} */
 
 /* ========== ШРИФТЫ ========== */
 @font-face {
@@ -76,8 +76,7 @@
   --accent-alt: #1A5F7A;
   --success: #2A6B3C;
   --warning: #E6AE05;
-  --radius: 0px;
-  --shadow: none;
+
   --black: #1A1A1A;
   --white: #FFFFFF;
   --gray-100: #F5F5F5;
@@ -295,7 +294,7 @@ p {
 }
 
 .header__top {
-  height: 60px;
+  min-height: 60px;
   position: fixed;
   left: 0;
   right: 0;
@@ -305,7 +304,10 @@ p {
   background: var(--white);
   border-bottom: 1px solid #ccc;
 }
-
+.main {
+  padding-top: 60px;
+  /* ← чтобы контент не перекрывался */
+}
 .header__top-inner {
   display: flex;
   justify-content: space-between;
@@ -375,41 +377,31 @@ width: 100%;
   height: auto;
   display: block;
 } */
-/* ========== СЛАЙДЕР ========== */
-/* Фон на всю ширину */
+/* ===== СЛАЙДЕР (с центровкой) ===== */
 .slider-blog {
-  position: relative;
+  background: #000;
   width: 100%;
-  background-color: #000000;
-  padding: 0;
-  margin: 0;
   overflow: hidden;
+  padding-top: 60px;
+  /* ← отступ под фиксированный хедер */
 }
 
-/* Внутренний контейнер с ограничением */
 .slider-blog__inner {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 0;
   overflow: hidden;
-  width: 100%;
 }
 
-/* Элемент слайда с фиксированными пропорциями */
 .slider-blog__item {
   width: 100%;
   aspect-ratio: 1400 / 660;
   overflow: hidden;
-  background-color: #000000;
+  background: #000;
   display: flex;
-  /* ← добавляем flex */
   align-items: center;
-  /* ← центрируем по вертикали */
   justify-content: center;
-  /* ← центрируем по горизонтали */
 }
 
-/* Изображение внутри слайда */
 .slider-blog__img {
   width: 100%;
   height: 100%;
@@ -417,76 +409,27 @@ width: 100%;
   display: block;
 }
 
-/* ===== Ограничиваем высоту Slick-обёрток ===== */
-.slider-blog .slick-list,
-.slider-blog .slick-track,
-.slider-blog .slick-slide,
-.slider-blog .slick-slide>div {
-  height: 100% !important;
-  max-height: 660px !important;
-}
-
-.slider-blog .slick-slide {
-  height: auto !important;
-}
-
-.slider-blog .slick-slide>div {
-  height: 100% !important;
-  display: flex !important;
-  /* ← добавляем flex */
-  align-items: center !important;
-  /* ← центрируем */
-  justify-content: center !important;
-}
-
-/* ===== АДАПТИВ ===== */
-@media (max-width: 992px) {
-  .slider-blog__img {
-    max-width: 100%;
-  }
-
-  .slider-blog .slick-list,
-  .slider-blog .slick-track,
-  .slider-blog .slick-slide,
-  .slider-blog .slick-slide>div {
-    max-height: 500px !important;
-  }
-}
-
+/* Центровка на мобильных */
 @media (max-width: 768px) {
   .slider-blog__item {
-    padding: 0 10px;
     aspect-ratio: 4 / 3;
     max-height: 400px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
 
   .slider-blog__img {
     object-fit: contain;
-    /* ← показывает всю картинку */
-    width: 100%;
-    height: 100%;
   }
 
-  .slider-blog .slick-list,
-  .slider-blog .slick-track,
-  .slider-blog .slick-slide,
+  /* Центровка Slick-оберток */
   .slider-blog .slick-slide>div {
-    /* max-height: 400px !important; */
-    height: 400px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    height: 100% !important;
   }
 
   .slider-blog .slick-slide {
     height: 400px !important;
-  }
-
-  .slider-blog .slick-slide>div {
-    height: 400px !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
   }
 }
 
@@ -494,31 +437,33 @@ width: 100%;
   .slider-blog__item {
     aspect-ratio: 3 / 2;
     max-height: 320px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .slider-blog .slick-list,
-  .slider-blog .slick-track,
-  .slider-blog .slick-slide,
-  .slider-blog .slick-slide>div {
-    max-height: 320px !important;
-    height: 320px !important;
   }
 
   .slider-blog .slick-slide {
     height: 320px !important;
   }
+        /* ← ДОБАВЛЯЕМ этот блок для очень маленьких экранов */
+        .slider-blog .slick-slide>div {
+          height: 320px !important;
+        }
+        }
 
-  .slider-blog .slick-slide>div {
-    height: 320px !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-  }
+        /* ===== ОЧЕНЬ МАЛЕНЬКИЕ ТЕЛЕФОНЫ (менее 360px) ===== */
+        @media (max-width: 360px) {
+          .slider-blog__item {
+            aspect-ratio: 4 / 3;
+            max-height: 260px;
+          }
+
+          .slider-blog .slick-slide {
+            height: 260px !important;
+          }
+
+          .slider-blog .slick-slide>div {
+            height: 260px !important;
+          }
 }
-/*slider end  */
+/*slider end  *****************************************************************************/
 .slick-dots {
   display: flex;
   justify-content: center;
