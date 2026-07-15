@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      
+
       - name: Create _headers file
         run: |
           echo "# Cache headers" > _headers
@@ -26,11 +26,11 @@ jobs:
           echo "  Cache-Control: public, max-age=86400, immutable" >> _headers
           echo "*.html" >> _headers
           echo "  Cache-Control: public, max-age=0, must-revalidate" >> _headers
-          
+
       - name: Copy _headers to docs
         run: |
           cp _headers docs/
-          
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
