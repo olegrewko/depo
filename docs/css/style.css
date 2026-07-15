@@ -304,8 +304,9 @@ p {
   top: 0;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   z-index: 1;
-  background: var(--light-grey-color);
-  border-bottom: 1px solid var(--gray-400);
+  background: var(--gray-300);
+  /* background: var(--light-grey-color); */
+  border-bottom: 0px solid var(--gray-400);
 }
 .main {
   padding-top: 60px;
@@ -315,7 +316,7 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: var(--light-grey-color);
+  background: var(--gray-300);
   z-index: 10;
 }
 
