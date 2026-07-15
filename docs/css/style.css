@@ -10,6 +10,7 @@
  .ellipse-maroon {
    position: relative;
    display: inline-block;
+
    /* Чтобы обводка была только вокруг цифры */
  }
 
@@ -307,8 +308,8 @@ p {
   text-align: center;
   font-family: 'Jost';
   font-weight: 700;
-  font-size: 24px;
-  line-height: 1.5;
+  font-size: 14px;
+  line-height: 120%;
   color: #101c10;
 }
 
@@ -649,12 +650,54 @@ p {
 } */
 
 /* ========== TABS ========== */
+/* Закрепляем высоту контейнера с табами */
 .tabcontent {
   display: none;
+  height: 500px;
+  /* ← фиксированная высота */
+  overflow-y: auto;
+  /* ← прокрутка внутри */
+  padding: 10px;
+  box-sizing: border-box;
 }
 
 .tabcontent:first-of-type {
   display: block;
+}
+/* ===== СКРОЛЛБАР ДЛЯ ТАБОВ ===== */
+.tabcontent::-webkit-scrollbar {
+  width: 18px;
+  /* ← в 3 раза толще (было 6px) */
+}
+
+.tabcontent::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.tabcontent::-webkit-scrollbar-thumb {
+  background: #000000;
+  /* ← чёрный */
+  border-radius: 4px;
+}
+
+.tabcontent::-webkit-scrollbar-thumb:hover {
+  background: #333333;
+  /* ← тёмно-серый при наведении */
+}
+/* Для мобильных устройств */
+@media (max-width: 768px) {
+  .tabcontent {
+    height: 400px;
+    /* ← меньше высота на мобильных */
+  }
+}
+
+@media (max-width: 480px) {
+  .tabcontent {
+    height: 300px;
+    /* ← ещё меньше */
+  }
 }
 
 .grid-products__btn {
