@@ -2,6 +2,9 @@
    FINAL CLEAN STYLES — depo-500
    ============================================================ */
 /* advantages */
+.text-right {
+  text-align: right;
+}
 .ml-10 {
    margin-left: 10px;
    margin-right: 10px;
@@ -203,10 +206,13 @@ p {
   padding: 0;
   margin: 0 auto;
 }
-
-.container1800 {
-  border: none;
+.container1400 {
+  /* max-width: 1400px; */
+  width: 100%;
+  padding: 0;
+  margin: 0 auto;
 }
+
 
 .mt-50 {
   margin-top: 50px;
@@ -306,22 +312,37 @@ p {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   z-index: 1;
   background: var(--gray-300);
-  /* background: var(--light-grey-color); */
-  border-bottom: 0px solid var(--gray-400);
+
+  border-bottom: 1px solid var(--gray-300);
 }
 .main {
   padding-top: 60px;
   /* ← чтобы контент не перекрывался */
 }
-.header__top-inner {
+/* .header__top-inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background: var(--gray-300);
   z-index: 10;
-  margin: 10px;
+  padding: 0px;
+  margin: 0px;
+} */
+.header__top-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* ← центрирует по вертикали */
+  background: var(--gray-300);
+  z-index: 10;
+  padding: 0 15px;
+  /* ← одинаковые отступы слева и справа */
+  margin: 0;
+  /* ← убираем margin, чтобы не сбивалось */
+  min-height: 60px;
+  /* ← фиксированная высота для хедера */
+  box-sizing: border-box;
 }
-
 .menu__btn {
   display: none;
   background: transparent;
@@ -335,10 +356,27 @@ p {
 
 .menu__list-item {
   position: relative;
-  display: inline-block;
+  display: flex;
+    align-items: center;
+    height: 100%;
+
   padding: 0px 10px;
 }
+/* .menu__list {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
 
+.menu__list-item {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 10px;
+} */
 .dropbtn {
   display: block;
   padding: 10px 0;
@@ -629,9 +667,9 @@ p {
 /* ========== SPECS TABLE ========== */
 .specs-table {
   display: flex;
-  gap: 20px;
+  gap: 10px;
   background: #fff;
-  border-radius: 12px;
+  border-radius: 4px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   overflow: hidden;
 }
@@ -722,9 +760,9 @@ p {
 /* ========== TITLE STYLES ========== */
 .title-6r {
   font-family: 'Rubik';
-  font-weight: 400;
-  line-height: 100px;
-  font-size: 35px;
+  font-weight: 900;
+  line-height: 100%;
+  font-size: 30px;
   color: var(--color-space);
 }
 
@@ -853,7 +891,8 @@ p {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 10px;
+  padding: 0px;
+
 }
 
 /* ========== TO TOP ========== */
@@ -1235,12 +1274,12 @@ p {
   margin: 0 0 10px 0;
 }
 /* ===== АДАПТИВНОСТЬ ДЛЯ SPECS TABLE ===== */
-@media (max-width: 768px) {
-  .specs-table {
-    flex-direction: column !important;
-    gap: 0 !important;
-    border-radius: 8px !important;
-  }
+    @media (max-width: 768px) {
+      .specs-table {
+        flex-direction: column !important;
+        gap: 0 !important;
+        border-radius: 8px !important;
+      }
 
   .table-column {
     width: 100% !important;
